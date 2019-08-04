@@ -89,7 +89,7 @@ $this->title = 'POINT OF SALE';
 				     		<a href="#">BAYAR <span class="pull-right">
 				     		<input type="text" class="form-control input-sm" size="8" ></span>
 				     		</a></li>
-				     	<li><a href="#">KEMBALIAN <span class="pull-right">Rp. 250.000,00</span></a></li>
+				     	<li><a href="#">KEMBALI <span class="pull-right">Rp. 250.000,00</span></a></li>
 				     	<li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
 				    </ul>
 				</div>
