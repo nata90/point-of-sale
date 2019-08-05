@@ -48,6 +48,7 @@ $this->title = 'POINT OF SALE';
 								<th>Qty</th>
 								<th>Diskon</th>
 								<th>Subtotal</th>
+								<th></th>
 							</tr>
 							<tr>
 								<td>1.</td>
@@ -56,6 +57,7 @@ $this->title = 'POINT OF SALE';
 								<td>5</td>
 								<td></td>
 								<td>Rp. 50.000,00</td>
+								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
 							</tr>
 							<tr>
 								<td>2.</td>
@@ -64,6 +66,7 @@ $this->title = 'POINT OF SALE';
 								<td>5</td>
 								<td></td>
 								<td>Rp. 125.000,00</td>
+								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
 							</tr>
 							<tr>
 								<td>3.</td>
@@ -72,6 +75,7 @@ $this->title = 'POINT OF SALE';
 								<td>5</td>
 								<td></td>
 								<td>Rp. 75.000,00</td>
+								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
 							</tr>
 						</tbody>
 					</table>
@@ -81,17 +85,27 @@ $this->title = 'POINT OF SALE';
 		<div class="col-md-4">
 			<div class="box box-danger">
 				<div class="box-body">
-				    <ul class="nav nav-stacked">
+					<ul class="todo-list ui-sortable">
+					    <li><span class="text">SUBTOTAL</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
+					    <li><span class="text">DISKON</span><span class="pull-right"><strong>Rp. 0,00</strong></span></li>
+					    <li><span class="text">TOTAL</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input type="text" class="form-control input-sm" size="8"></span></li>
+					    <li><span class="text">KEMBALI</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
+					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
+					</ul>	
+				    <?php /*<ul class="nav nav-stacked">
 				        <li><a href="#">SUBTOTAL <span class="pull-right">Rp. 250.000,00</span></a></li>
 				        <li><a href="#">DISKON <span class="pull-right">Rp. 0,00</span></a></li>
 				     	<li><a href="#">TOTAL <span class="pull-right">Rp. 250.000,00</span></a></li>
 				     	<li>
 				     		<a href="#">BAYAR <span class="pull-right">
-				     		<input type="text" class="form-control input-sm" size="8" ></span>
-				     		</a></li>
-				     	<li><a href="#">KEMBALI <span class="pull-right">Rp. 250.000,00</span></a></li>
+				     		<input type="text" class="form-control input-sm" size="8" style=""></span>
+				     		</a>
+				     	</li>
+				     	<li><a href="#">KEMBALI <span class="pull-right">Rp. 0,00</span></a></li>
+
 				     	<li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
-				    </ul>
+				    </ul>*/ ?>
 				</div>
 			</div>
 		</div>		
