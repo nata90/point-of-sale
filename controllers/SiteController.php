@@ -74,6 +74,7 @@ class SiteController extends Controller
             'model' => $model,
             'data'=>$data
         ]);
+        
     }
 
     /**
