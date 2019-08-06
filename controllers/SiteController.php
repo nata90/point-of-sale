@@ -9,6 +9,7 @@ use yii\web\Response;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
+use app\models\FileBarang;
 
 class SiteController extends Controller
 {
@@ -61,8 +62,18 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $model = new FileBarang();
 
-        return $this->render('index');
+        $data = FileBarang::find()
+        ->select(['nama_barang as value', 'nama_barang as  label','id as id'])
+        ->where(['aktif'=>1])
+        ->asArray()
+        ->all();
+
+        return $this->render('index', [
+            'model' => $model,
+            'data'=>$data
+        ]);
     }
 
     /**

@@ -35,7 +35,6 @@ class m190806_064512_file_barang extends Migration
           'nama_barang' => $this->string(200)->notNull(),
           'harga_beli' => $this->integer(11)->defaultValue(0),
           'harga_jual' => $this->integer(11)->defaultValue(0),
-          'qty' => $this->integer(10),
           'aktif' => $this->tinyInteger(1)->defaultValue(1),
         ]);
     }

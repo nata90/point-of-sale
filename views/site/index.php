@@ -1,6 +1,10 @@
 <?php
 
 /* @var $this yii\web\View */
+use yii\helpers\Html;
+use yii\bootstrap\ActiveForm;
+use yii\jui\AutoComplete;
+use yii\web\JsExpression;
 
 $this->title = 'POINT OF SALE';
 
@@ -16,8 +20,23 @@ $this->title = 'POINT OF SALE';
 					<div class="form-group">
 						<div class="col-md-8">
 							<div class="input-group">
-								<span class="input-group-addon"><i class="fa fa-search"></i></span>
-								<input type="text" class="form-control" name="" placeholder="Nama Barang">
+									<span class="input-group-addon"><i class="fa fa-search"></i></span>
+									<?php 
+									echo AutoComplete::widget([
+									    'model' => $model,
+									    'attribute' => 'nama_barang',
+									    'options' => ['class' => 'form-control'],
+									    'clientOptions' => [
+									        'source' => $data,
+									        'minLength'=>'2', 
+											'autoFill'=>true,
+											/*'select' => new JsExpression("function( event, ui ) {
+										        $('#memberssearch-family_name_id').val(ui.item.id);//#memberssearch-family_name_id is the id of hiddenInput.
+										     }")*/
+									    ],
+									]);
+									 ?>
+
 							</div>
 						</div>			
 						<div class="col-md-4">
