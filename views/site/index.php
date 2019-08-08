@@ -7,7 +7,14 @@ use yii\jui\AutoComplete;
 use yii\web\JsExpression;
 
 $this->title = 'POINT OF SALE';
+$this->registerJs(<<<JS
+	$('#filebarang-nama_barang').focus();
 
+    $('#process-transaction').on('click', function() { 
+
+    });
+JS
+);
 ?>
 
 
@@ -17,15 +24,15 @@ $this->title = 'POINT OF SALE';
 			<div class="box box-danger">
 				
 				<div class="box-body">
-					<div class="form-group">
-						<div class="col-md-8">
-							<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-search"></i></span>
+					<div class="row">
+		                <div class="col-xs-7">
+		                	<div class="input-group">
+		                		<span class="input-group-addon"><i class="fa fa-search"></i></span>
 									<?php 
 									echo AutoComplete::widget([
 									    'model' => $model,
 									    'attribute' => 'nama_barang',
-									    'options' => ['class' => 'form-control'],
+									    'options' => ['class' => 'form-control input-sm'],
 									    'clientOptions' => [
 									        'source' => $data,
 									        'minLength'=>'2', 
@@ -34,19 +41,19 @@ $this->title = 'POINT OF SALE';
 										        $('#memberssearch-family_name_id').val(ui.item.id);//#memberssearch-family_name_id is the id of hiddenInput.
 										     }")*/
 									    ],
-									]);
-									 ?>
-
-							</div>
-						</div>			
-						<div class="col-md-4">
-							<div class="input-group col-xs-3">
-								<button type="button" class="btn btn-block btn-danger pull-right">BATALKAN</button>
-							</div>
-						</div>
+									]); ?>
+		                	</div>
+		                 	
+		                </div>
+		                <div class="col-xs-2">
+		                	<input type="text" class="form-control input-sm" placeholder="QTY">
+		                </div>
+		                <div class="col-xs-2">
+		                	<button id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
+		                </div>	
+						
 						
 					</div>
-					
 					
 				</div>
 			</div>
@@ -65,7 +72,6 @@ $this->title = 'POINT OF SALE';
 								<th>Nama Barang</th>
 								<th>Harga</th>
 								<th>Qty</th>
-								<th>Diskon</th>
 								<th>Subtotal</th>
 								<th></th>
 							</tr>
@@ -74,29 +80,41 @@ $this->title = 'POINT OF SALE';
 								<td>PARACETAMOL 500 MG</td>
 								<td>Rp. 10.000,00</td>
 								<td>5</td>
-								<td></td>
 								<td>Rp. 50.000,00</td>
-								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
+								<td style="text-align:center;">
+						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
+								</td>
 							</tr>
 							<tr>
 								<td>2.</td>
 								<td>AMBROXOL 500 MG</td>
 								<td>Rp. 25.000,00</td>
 								<td>5</td>
-								<td></td>
 								<td>Rp. 125.000,00</td>
-								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
+								<td style="text-align:center;">
+						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
+								</td>
 							</tr>
 							<tr>
 								<td>3.</td>
 								<td>FLUCADEC</td>
 								<td>Rp. 15.000,00</td>
 								<td>5</td>
-								<td></td>
 								<td>Rp. 75.000,00</td>
-								<td><button type="button" class="btn btn-block btn-danger btn-sm">HAPUS</button></td>
+								<td style="text-align:center;">
+						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
+								</td>
 							</tr>
 						</tbody>
+						<tfoot>
+							<tr>
+								<td colspan="6">
+									<div class="col-xs-4">
+										<button type="button" class="btn btn-block btn-danger btn-sm">BATALKAN TRANSAKSI</button>
+									</div>
+								</td>
+							</tr>
+						</tfoot>
 					</table>
 				</div>
 			</div>
@@ -112,19 +130,7 @@ $this->title = 'POINT OF SALE';
 					    <li><span class="text">KEMBALI</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
 					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
 					</ul>	
-				    <?php /*<ul class="nav nav-stacked">
-				        <li><a href="#">SUBTOTAL <span class="pull-right">Rp. 250.000,00</span></a></li>
-				        <li><a href="#">DISKON <span class="pull-right">Rp. 0,00</span></a></li>
-				     	<li><a href="#">TOTAL <span class="pull-right">Rp. 250.000,00</span></a></li>
-				     	<li>
-				     		<a href="#">BAYAR <span class="pull-right">
-				     		<input type="text" class="form-control input-sm" size="8" style=""></span>
-				     		</a>
-				     	</li>
-				     	<li><a href="#">KEMBALI <span class="pull-right">Rp. 0,00</span></a></li>
-
-				     	<li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
-				    </ul>*/ ?>
+				    
 				</div>
 			</div>
 		</div>		
