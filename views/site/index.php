@@ -5,13 +5,26 @@ use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\jui\AutoComplete;
 use yii\web\JsExpression;
+use yii\helpers\Url;
 
 $this->title = 'POINT OF SALE';
 $this->registerJs(<<<JS
 	$('#filebarang-nama_barang').focus();
 
-    $('#process-transaction').on('click', function() { 
+	$(document).on("click", "#process-transaction", function () {
+		var url = $(this).attr('url');
+		var kodebarang = $('#field-kode-barang').val();
+		var qty = $('#qty-barang').val();
 
+		$.ajax({
+			type: 'get',
+			url: url,
+			dataType: 'json',
+			data: {'kodebarang':kodebarang, 'qty':qty},
+			success: function(v){
+				$('#data-transaksi table tbody tr.table-title').after(v.data);
+			}
+		});
     });
 JS
 );
@@ -28,7 +41,10 @@ JS
 		                <div class="col-xs-7">
 		                	<div class="input-group">
 		                		<span class="input-group-addon"><i class="fa fa-search"></i></span>
+
 									<?php 
+									echo Html::hiddenInput('kode_barang', '', ['id'=>'field-kode-barang']);
+
 									echo AutoComplete::widget([
 									    'model' => $model,
 									    'attribute' => 'nama_barang',
@@ -37,19 +53,19 @@ JS
 									        'source' => $data,
 									        'minLength'=>'2', 
 											'autoFill'=>true,
-											/*'select' => new JsExpression("function( event, ui ) {
-										        $('#memberssearch-family_name_id').val(ui.item.id);//#memberssearch-family_name_id is the id of hiddenInput.
-										     }")*/
+											'select' => new JsExpression("function( event, ui ) {
+										        $('#field-kode-barang').val(ui.item.id);
+										     }")
 									    ],
 									]); ?>
 		                	</div>
 		                 	
 		                </div>
 		                <div class="col-xs-2">
-		                	<input type="text" class="form-control input-sm" placeholder="QTY">
+		                	<input type="text" class="form-control input-sm" placeholder="QTY" id="qty-barang">
 		                </div>
 		                <div class="col-xs-2">
-		                	<button id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
+		                	<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
 		                </div>	
 						
 						
@@ -64,10 +80,10 @@ JS
 		<div class="col-md-8">
 			<div class="box box-danger">
 				
-				<div class="box-body">
+				<div class="box-body" id="data-transaksi">
 					<table class="table">
 						<tbody>
-							<tr>
+							<tr class="table-title">
 								<th>No</th>
 								<th>Nama Barang</th>
 								<th>Harga</th>
@@ -75,36 +91,7 @@ JS
 								<th>Subtotal</th>
 								<th></th>
 							</tr>
-							<tr>
-								<td>1.</td>
-								<td>PARACETAMOL 500 MG</td>
-								<td>Rp. 10.000,00</td>
-								<td>5</td>
-								<td>Rp. 50.000,00</td>
-								<td style="text-align:center;">
-						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>2.</td>
-								<td>AMBROXOL 500 MG</td>
-								<td>Rp. 25.000,00</td>
-								<td>5</td>
-								<td>Rp. 125.000,00</td>
-								<td style="text-align:center;">
-						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
-								</td>
-							</tr>
-							<tr>
-								<td>3.</td>
-								<td>FLUCADEC</td>
-								<td>Rp. 15.000,00</td>
-								<td>5</td>
-								<td>Rp. 75.000,00</td>
-								<td style="text-align:center;">
-						            <a href="#" title="Delete"><i class="fa fa-trash"></i></a>
-								</td>
-							</tr>
+							
 						</tbody>
 						<tfoot>
 							<tr>

@@ -1413,3 +1413,1888 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1565247480.099
     'REQUEST_TIME' => 1565247480
 ]
+2019-08-11 13:13:59 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: url_proses_transaksi in /var/www/html/pos/views/site/index.php:17
+Stack trace:
+#0 /var/www/html/pos/views/site/index.php(17): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 17, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-08-11 13:13:59 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43654'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565529239.357
+    'REQUEST_TIME' => 1565529239
+]
+2019-08-11 13:14:11 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: url_proses_transaksi in /var/www/html/pos/views/site/index.php:17
+Stack trace:
+#0 /var/www/html/pos/views/site/index.php(17): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 17, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-08-11 13:14:11 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43658'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565529251.055
+    'REQUEST_TIME' => 1565529251
+]
+2019-08-11 13:16:06 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][Error] Error: Class 'demogorgorn\ajax\AjaxSubmitButton' not found in /var/www/html/pos/views/site/index.php:52
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#5 [internal function]: app\controllers\SiteController->actionIndex()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2019-08-11 13:16:06 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43670'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565529366.836
+    'REQUEST_TIME' => 1565529366
+]
+2019-08-11 13:23:11 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: url_proses_transaksi in /var/www/html/pos/views/site/index.php:16
+Stack trace:
+#0 /var/www/html/pos/views/site/index.php(16): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 16, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-08-11 13:23:11 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43872'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565529791.502
+    'REQUEST_TIME' => 1565529791
+]
+2019-08-11 13:25:47 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:2] yii\base\ErrorException: Use of undefined constant Yii - assumed 'Yii' (this will throw an Error in a future version of PHP) in /var/www/html/pos/views/site/index.php:112
+Stack trace:
+#0 /var/www/html/pos/views/site/index.php(112): yii\base\ErrorHandler->handleError(2, 'Use of undefine...', '/var/www/html/p...', 112, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-08-11 13:25:47 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43946'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565529947.64
+    'REQUEST_TIME' => 1565529947
+]
+2019-08-11 13:32:48 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][ParseError] ParseError: syntax error, unexpected '$this' (T_VARIABLE), expecting ',' or ';' in /var/www/html/pos/views/site/index.php:11
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2019-08-11 13:32:48 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '44996'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530368.549
+    'REQUEST_TIME' => 1565530368
+]
+2019-08-11 13:33:02 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:64] yii\base\ErrorException: Cannot use yii\helpers\Html as Html because the name is already in use in /var/www/html/pos/views/site/index.php:9
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-08-11 13:33:02 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45000'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530382.639
+    'REQUEST_TIME' => 1565530382
+]
+2019-08-11 13:36:40 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][ParseError] ParseError: syntax error, unexpected '=>' (T_DOUBLE_ARROW), expecting ',' or ')' in /var/www/html/pos/views/site/index.php:44
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#4 [internal function]: app\controllers\SiteController->actionIndex()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2019-08-11 13:36:40 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46734'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530600.817
+    'REQUEST_TIME' => 1565530600
+]
+2019-08-11 13:37:15 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:8] yii\base\ErrorException: Array to string conversion in /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php:562
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php(562): yii\base\ErrorHandler->handleError(8, 'Array to string...', '/var/www/html/p...', 562, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php(644): yii\helpers\BaseHtml::input('hidden', 'kode_barang', Array, Array)
+#2 /var/www/html/pos/views/site/index.php(44): yii\helpers\BaseHtml::hiddenInput('kode_barang', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#7 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2019-08-11 13:37:15 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47010'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530635.164
+    'REQUEST_TIME' => 1565530635
+]
+2019-08-11 13:37:38 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\base\ErrorException:2] yii\base\ErrorException: Illegal string offset 'type' in /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php:559
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php(559): yii\base\ErrorHandler->handleError(2, 'Illegal string ...', '/var/www/html/p...', 559, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/helpers/BaseHtml.php(644): yii\helpers\BaseHtml::input('hidden', 'kode_barang', '', '')
+#2 /var/www/html/pos/views/site/index.php(44): yii\helpers\BaseHtml::hiddenInput('kode_barang', '', '', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(app\controllers\SiteController))
+#7 /var/www/html/pos/controllers/SiteController.php(75): yii\base\Controller->render('index', Array)
+#8 [internal function]: app\controllers\SiteController->actionIndex()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#14 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#15 {main}
+2019-08-11 13:37:38 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47206'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530658.769
+    'REQUEST_TIME' => 1565530658
+]
+2019-08-11 13:40:14 [::1][-][pt9rtc7cph6kcv99r8rguutpre][error][yii\db\Exception] PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'kode_barang' in 'field list' in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `nama_ba...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /var/www/html/pos/controllers/SiteController.php(71): yii\db\ActiveQuery->all()
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+
+Next yii\db\Exception: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'kode_barang' in 'field list'
+The SQL being executed was: SELECT `nama_barang` AS `value`, `nama_barang` AS `label`, `id`, `kode_barang` AS `kd` FROM `file_barang` WHERE `aktif`=1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'SELECT `nama_ba...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1158): yii\db\Command->internalExecute('SELECT `nama_ba...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(399): yii\db\Command->queryInternal('fetchAll', NULL)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/Query.php(237): yii\db\Command->queryAll()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveQuery.php(133): yii\db\Query->all(NULL)
+#5 /var/www/html/pos/controllers/SiteController.php(71): yii\db\ActiveQuery->all()
+#6 [internal function]: app\controllers\SiteController->actionIndex()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+Additional Information:
+Array
+(
+    [0] => 42S22
+    [1] => 1054
+    [2] => Unknown column 'kode_barang' in 'field list'
+)
+
+2019-08-11 13:40:14 [::1][-][pt9rtc7cph6kcv99r8rguutpre][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pt9rtc7cph6kcv99r8rguutpre'
+    '_csrf' => 'b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PlomYmoLyvnSvANn9ot72wzjwryvVyMf\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pt9rtc7cph6kcv99r8rguutpre; _csrf=b21685ea77ef521202e917d8a8c4fe57049f9e079e351525fb6f7a8f6c9ba90ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PlomYmoLyvnSvANn9ot72wzjwryvVyMf%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47820'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565530814.308
+    'REQUEST_TIME' => 1565530814
+]
+2019-08-14 07:04:43 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '$file_barang' (T_VARIABLE) in /var/www/html/pos/controllers/SiteController.php:150
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 07:04:43 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_PURPOSE' => 'prefetch'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '38288'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565766283.233
+    'REQUEST_TIME' => 1565766283
+]
+2019-08-14 07:04:43 [::1][-][-][error][ParseError] ParseError: syntax error, unexpected '$file_barang' (T_VARIABLE) in /var/www/html/pos/controllers/SiteController.php:150
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 07:04:43 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '38290'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565766283.83
+    'REQUEST_TIME' => 1565766283
+]
+2019-08-14 07:05:21 [::1][-][-][error][Error] Error: Call to undefined method app\models\FileBarang::model() in /var/www/html/pos/controllers/SiteController.php:65
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionIndex()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2019-08-14 07:05:21 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '38296'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565766321.241
+    'REQUEST_TIME' => 1565766321
+]
+2019-08-14 12:34:55 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:34:55 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => ''
+    'qty' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'xqng3fMzTO6iRbpHBcZx4jy2-RYcujOYFOPqpss7WGOHzIeYuAIAn80P6BJVggvba9irWizedN4krKjA-WQ9Cg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '39198'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=&qty='
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=&qty='
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786095.168
+    'REQUEST_TIME' => 1565786095
+]
+2019-08-14 12:35:53 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:35:53 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => ''
+    'qty' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '0M9b7PKSCJBgbP0xfE3dB2wR23EADaSuu5NHdQAahU-RqjypuaNE4Q8mr2QsCac-O3-JPTBp4-iL3AUTMkXgJg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '39684'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=&qty='
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=&qty='
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786153.377
+    'REQUEST_TIME' => 1565786153
+]
+2019-08-14 12:36:21 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:36:21 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'yI5ukHa7smmTgBC7rj_Q-hU3r75su7iQdyqVhkqdkUaJ6wnVPYr-GPzKQu7-e6rDQln98lzf_9ZHZdfgeML0Lw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '39920'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786181.969
+    'REQUEST_TIME' => 1565786181
+]
+2019-08-14 12:37:01 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:37:01 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '40258'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/prosestransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site/prosestransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786221.237
+    'REQUEST_TIME' => 1565786221
+]
+2019-08-14 12:37:36 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:37:36 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '40522'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/prosestransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site/prosestransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786256.62
+    'REQUEST_TIME' => 1565786256
+]
+2019-08-14 12:37:51 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/prosestransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:37:51 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '40682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/prosestransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site/prosestransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786271.947
+    'REQUEST_TIME' => 1565786271
+]
+2019-08-14 12:37:57 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/about in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('about', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/about', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-08-14 12:37:57 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/about'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '40684'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/about'
+    'REQUEST_URI' => '/pos/web/index.php?r=site/about'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786277.916
+    'REQUEST_TIME' => 1565786277
+]
+2019-08-14 12:38:24 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined index: kodebarang in /var/www/html/pos/controllers/SiteController.php:145
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(145): yii\base\ErrorHandler->handleError(8, 'Undefined index...', '/var/www/html/p...', 145, Array)
+#1 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 12:38:24 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '40952'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site/prosestransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site/prosestransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565786304.758
+    'REQUEST_TIME' => 1565786304
+]
+2019-08-14 12:58:10 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: table in /var/www/html/pos/controllers/SiteController.php:153
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(153): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 153, Array)
+#1 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 12:58:10 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => ''
+    'qty' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'IxQ46rZYs_ccXR_rqt9eY0-0MoglL3g1we_9UXlmHo9icV-v_Wn_hnMXTb76myRaGNpgxBVLP3PxoL83Szl75g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '50430'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=&qty='
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=&qty='
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565787490.913
+    'REQUEST_TIME' => 1565787490
+]
+2019-08-14 12:58:12 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: table in /var/www/html/pos/controllers/SiteController.php:153
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(153): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 153, Array)
+#1 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 12:58:12 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => ''
+    'qty' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'IxQ46rZYs_ccXR_rqt9eY0-0MoglL3g1we_9UXlmHo9icV-v_Wn_hnMXTb76myRaGNpgxBVLP3PxoL83Szl75g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '50432'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=&qty='
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=&qty='
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565787492.367
+    'REQUEST_TIME' => 1565787492
+]
+2019-08-14 12:58:15 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: table in /var/www/html/pos/controllers/SiteController.php:153
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(153): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 153, Array)
+#1 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 12:58:15 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => ''
+    'qty' => ''
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'IxQ46rZYs_ccXR_rqt9eY0-0MoglL3g1we_9UXlmHo9icV-v_Wn_hnMXTb76myRaGNpgxBVLP3PxoL83Szl75g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '50482'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=&qty='
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=&qty='
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565787495.208
+    'REQUEST_TIME' => 1565787495
+]
+2019-08-14 12:58:44 [::1][-][93na22qufepn1k4gi17ilh878s][error][ParseError] ParseError: syntax error, unexpected ''<tr>' (T_CONSTANT_ENCAPSED_STRING) in /var/www/html/pos/controllers/SiteController.php:160
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-08-14 12:58:44 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '50724'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565787524.664
+    'REQUEST_TIME' => 1565787524
+]
+2019-08-14 13:31:33 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\components\Utility' in file: /var/www/html/pos/components/Utility.php. Namespace missing? in /var/www/html/pos/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\components\\...')
+#1 /var/www/html/pos/controllers/SiteController.php(155): spl_autoload_call('app\\components\\...')
+#2 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-08-14 13:31:32 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0001'
+    'qty' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'EE8bQVjwn6lacLDPVhqpF3J9rcOILRAkJ_SNMMvkoqJRKnwEE8HT2DU64poGXtMuJRP_j7hJV2IXu89W-bvHyw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57252'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565789492.885
+    'REQUEST_TIME' => 1565789492
+]
+2019-08-14 13:31:48 [::1][-][93na22qufepn1k4gi17ilh878s][error][yii\base\UnknownClassException] yii\base\UnknownClassException: Unable to find 'app\components\Utility' in file: /var/www/html/pos/components/Utility.php. Namespace missing? in /var/www/html/pos/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\components\\...')
+#1 /var/www/html/pos/controllers/SiteController.php(155): spl_autoload_call('app\\components\\...')
+#2 [internal function]: app\controllers\SiteController->actionProsestransaksi()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('prosestransaksi', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/prosestran...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-08-14 13:31:48 [::1][-][93na22qufepn1k4gi17ilh878s][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0001'
+    'qty' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '93na22qufepn1k4gi17ilh878s'
+    '_csrf' => 'a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'EE8bQVjwn6lacLDPVhqpF3J9rcOILRAkJ_SNMMvkoqJRKnwEE8HT2DU64poGXtMuJRP_j7hJV2IXu89W-bvHyw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.87 Chrome/76.0.3809.87 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=93na22qufepn1k4gi17ilh878s; _csrf=a2bcfb0066e509af06bd489e37d215a5a7f1ed4c5ef8cf4877cb996e71fe2ae6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AegEK1LqoJRUPDz9WnRL0dGF0OBf2_ei%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57324'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1565789508.843
+    'REQUEST_TIME' => 1565789508
+]

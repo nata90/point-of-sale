@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\FileBarang;
+use app\components\Utility;
+use yii\helpers\Json;
 
 class SiteController extends Controller
 {
@@ -62,10 +64,11 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+
         $model = new FileBarang();
 
         $data = FileBarang::find()
-        ->select(['nama_barang as value', 'nama_barang as  label','id as id'])
+        ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
         ->where(['aktif'=>1])
         ->asArray()
         ->all();
@@ -137,5 +140,28 @@ class SiteController extends Controller
     public function actionAbout()
     {
         return $this->render('about');
+    }
+
+    public function actionProsestransaksi(){
+        $kd_barang = $_GET['kodebarang'];
+        $qty = $_GET['qty'];
+
+        $file_barang = FileBarang::find()->where(['kd_barang'=>$kd_barang])->one();
+        $total = $file_barang->harga_jual * $qty;
+
+        $table = '<tr>
+            <td>1.</td>
+            <td>'.$file_barang->nama_barang.'</td>
+            <td>'.Utility::rupiah($file_barang->harga_jual).'</td>
+            <td>'.$qty.'</td>
+            <td>'.Utility::rupiah($total).'</td>
+            <td style="text-align:center;"><a href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
+        </tr>';
+                            
+
+        $arr_data['data'] = $table;
+
+        echo Json::encode($arr_data);
+
     }
 }
