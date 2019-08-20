@@ -22,10 +22,35 @@ $this->registerJs(<<<JS
 			dataType: 'json',
 			data: {'kodebarang':kodebarang, 'qty':qty},
 			success: function(v){
-				$('#data-transaksi table tbody tr.table-title').after(v.data);
+				$('#data-transaksi').html(v.data);
+				$('#filebarang-nama_barang').val('');
+				$('#qty-barang').val('');
+				$('#filebarang-nama_barang').focus();
+				$('#subtotal').html(v.subtotal);
+				$('#total').html(v.total);
+				$('#diskon').html(v.diskon);
 			}
 		});
     });
+
+    $(document).on("click", ".delete-item", function () {
+    	rel = $(this).attr('rel');
+    	url = $(this).attr('url');
+
+    	$.ajax({
+			type: 'get',
+			url: url,
+			dataType: 'json',
+			data: {'rel':rel},
+			success: function(v){
+				$('#data-transaksi').html(v.data);
+				$('#subtotal').html(v.subtotal);
+				$('#total').html(v.total);
+				$('#diskon').html(v.diskon);
+			}
+		});
+    });
+    
 JS
 );
 ?>
@@ -93,7 +118,7 @@ JS
 							</tr>
 							
 						</tbody>
-						<tfoot>
+						<?php /*<tfoot>
 							<tr>
 								<td colspan="6">
 									<div class="col-xs-4">
@@ -101,7 +126,7 @@ JS
 									</div>
 								</td>
 							</tr>
-						</tfoot>
+						</tfoot>*/ ?>
 					</table>
 				</div>
 			</div>
@@ -110,11 +135,11 @@ JS
 			<div class="box box-danger">
 				<div class="box-body">
 					<ul class="todo-list ui-sortable">
-					    <li><span class="text">SUBTOTAL</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
-					    <li><span class="text">DISKON</span><span class="pull-right"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">TOTAL</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
+					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
+					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
+					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">BAYAR</span><span class="pull-right"><input type="text" class="form-control input-sm" size="8"></span></li>
-					    <li><span class="text">KEMBALI</span><span class="pull-right"><strong>Rp. 250.000,00</strong></span></li>
+					    <li><span class="text">KEMBALI</span><span class="pull-right"><strong>Rp. 0,00</strong></span></li>
 					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
 					</ul>	
 				    

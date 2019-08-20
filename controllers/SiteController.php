@@ -12,6 +12,8 @@ use app\models\ContactForm;
 use app\models\FileBarang;
 use app\components\Utility;
 use yii\helpers\Json;
+use yii\helpers\Url;
+use yii\web\Session;
 
 class SiteController extends Controller
 {
@@ -64,6 +66,9 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $session = new Session;
+        $session->open();
+        unset($session['datatransaksi']);
 
         $model = new FileBarang();
 
@@ -146,22 +151,135 @@ class SiteController extends Controller
         $kd_barang = $_GET['kodebarang'];
         $qty = $_GET['qty'];
 
+        $subtotal = 0;
+        $diskon = 0;
+        $total = 0;
+
         $file_barang = FileBarang::find()->where(['kd_barang'=>$kd_barang])->one();
         $total = $file_barang->harga_jual * $qty;
 
-        $table = '<tr>
-            <td>1.</td>
-            <td>'.$file_barang->nama_barang.'</td>
-            <td>'.Utility::rupiah($file_barang->harga_jual).'</td>
-            <td>'.$qty.'</td>
-            <td>'.Utility::rupiah($total).'</td>
-            <td style="text-align:center;"><a href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
-        </tr>';
-                            
+        $session = new Session;
+        $session->open();
 
-        $arr_data['data'] = $table;
+        if(!isset($session['datatransaksi'])){
+            $array_data = array();
+            $array_data[] = array(
+                'kodebarang'=>$kd_barang,
+                'namabarang'=>$file_barang->nama_barang,
+                'qty'=>$qty,
+                'harga'=>$file_barang->harga_jual,
+                'total'=>$total
+            );
 
-        echo Json::encode($arr_data);
+           $session['datatransaksi'] = $array_data;
+        }else{
+            $array_data = $session['datatransaksi'];
+            $new_data = array(
+                'kodebarang'=>$kd_barang,
+                'namabarang'=>$file_barang->nama_barang,
+                'qty'=>$qty,
+                'harga'=>$file_barang->harga_jual,
+                'total'=>$total
+            );
+            array_push($array_data,$new_data);
+            $session['datatransaksi'] = $array_data;
+        }
 
+
+        $table = '<table class="table">
+                        <tbody>
+                            <tr class="table-title">
+                                <th>No</th>
+                                <th>Nama Barang</th>
+                                <th>Harga</th>
+                                <th>Qty</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </tbody>';
+        if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
+            $no = 1;
+            foreach($session['datatransaksi'] as $key=>$value){
+                $subtotal = $subtotal + $value['total'];
+                $total = $subtotal - $diskon;
+                $table .= '<tr>
+                    <td>'.$no.'</td>
+                    <td>'.$value['namabarang'].'</td>
+                    <td>'.Utility::rupiah($value['harga']).'</td>
+                    <td>'.$value['qty'].'</td>
+                    <td>'.Utility::rupiah($value['total']).'</td>
+                    <td style="text-align:center;"><a rel="'.$key.'" url="'.Url::to(['site/deleteitem']).'" class="delete-item" href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
+                </tr>';
+
+                $no++;
+            }
+        }
+
+        $table .= '</table>';
+        
+        $arr_return['data'] = $table;
+        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
+        $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
+        $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+
+
+        echo Json::encode($arr_return);
+
+    }
+
+
+    public function actionDeleteitem(){
+        $key = $_GET['rel'];
+
+        $subtotal = 0;
+        $diskon = 0;
+        $total = 0;
+        $arr_return = array();
+
+        $session = new Session;
+        $session->open();
+
+        $arr_data = $session['datatransaksi'];
+        unset($arr_data[$key]);
+
+        $session['datatransaksi'] = $arr_data;
+
+        $table = '<table class="table">
+                        <tbody>
+                            <tr class="table-title">
+                                <th>No</th>
+                                <th>Nama Barang</th>
+                                <th>Harga</th>
+                                <th>Qty</th>
+                                <th>Subtotal</th>
+                                <th></th>
+                            </tr>
+                        </tbody>';
+        if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
+            $no = 1;
+            foreach($session['datatransaksi'] as $key=>$value){
+                $subtotal = $subtotal + $value['total'];
+                $total = $subtotal - $diskon;
+                $table .= '<tr>
+                    <td>'.$no.'</td>
+                    <td>'.$value['namabarang'].'</td>
+                    <td>'.Utility::rupiah($value['harga']).'</td>
+                    <td>'.$value['qty'].'</td>
+                    <td>'.Utility::rupiah($value['total']).'</td>
+                    <td style="text-align:center;"><a rel="'.$key.'" url="'.Url::to(['site/deleteitem']).'" class="delete-item" href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
+                </tr>';
+
+                $no++;
+            }
+        }
+
+        $table .= '</table>';
+
+        $arr_return['data'] = $table;
+        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
+        $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
+        $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+
+        echo Json::encode($arr_return);
     }
 }

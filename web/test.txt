@@ -1,0 +1,11 @@
+Array
+(
+    [0] => Array
+        (
+            [kodebarang] => A0002
+            [hargasatuan] => 15000
+            [qty] => 2
+            [subtotal] => 30000
+        )
+
+)
