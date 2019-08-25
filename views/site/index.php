@@ -16,21 +16,30 @@ $this->registerJs(<<<JS
 		var kodebarang = $('#field-kode-barang').val();
 		var qty = $('#qty-barang').val();
 
-		$.ajax({
-			type: 'get',
-			url: url,
-			dataType: 'json',
-			data: {'kodebarang':kodebarang, 'qty':qty},
-			success: function(v){
-				$('#data-transaksi').html(v.data);
-				$('#filebarang-nama_barang').val('');
-				$('#qty-barang').val('');
-				$('#filebarang-nama_barang').focus();
-				$('#subtotal').html(v.subtotal);
-				$('#total').html(v.total);
-				$('#diskon').html(v.diskon);
-			}
-		});
+		if(kodebarang == ''){
+			alert('Nama barang tidak boleh kosong');
+		}else if(qty == ''){
+			alert('QTY barang tidak boleh kosong');
+		}else{
+			$.ajax({
+				type: 'get',
+				url: url,
+				dataType: 'json',
+				data: {'kodebarang':kodebarang, 'qty':qty},
+				success: function(v){
+					$('#data-transaksi').html(v.data);
+					$('#filebarang-nama_barang').val('');
+					$('#field-kode-barang').val('');
+					$('#qty-barang').val('');
+					$('#filebarang-nama_barang').focus();
+					$('#subtotal').html(v.subtotal);
+					$('#total').html(v.total);
+					$('#diskon').html(v.diskon);
+					$('#field-total-tagihan').val(v.hidtotal);
+				}
+			});
+		}
+		
     });
 
     $(document).on("click", ".delete-item", function () {
@@ -51,6 +60,17 @@ $this->registerJs(<<<JS
 		});
     });
     
+   var rupiah = document.getElementById('jumlah-bayar');
+	rupiah.addEventListener('keyup', function(e){
+		var bayar = this.value;
+		var total = $('#field-total-tagihan').val();
+		var cashback = parseInt(bayar) - parseInt(total);
+
+		rupiah.value = formatRupiah(this.value, 'Rp. ');
+
+		$('#cashback').html(cashback);
+	});
+    
 JS
 );
 ?>
@@ -69,7 +89,7 @@ JS
 
 									<?php 
 									echo Html::hiddenInput('kode_barang', '', ['id'=>'field-kode-barang']);
-
+									echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
 									echo AutoComplete::widget([
 									    'model' => $model,
 									    'attribute' => 'nama_barang',
@@ -138,8 +158,8 @@ JS
 					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input type="text" class="form-control input-sm" size="8"></span></li>
-					    <li><span class="text">KEMBALI</span><span class="pull-right"><strong>Rp. 0,00</strong></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8"></span></li>
+					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
 					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
 					</ul>	
 				    

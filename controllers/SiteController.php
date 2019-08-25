@@ -221,7 +221,7 @@ class SiteController extends Controller
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
-
+        $arr_return['hidtotal'] = $total;
 
         echo Json::encode($arr_return);
 
@@ -278,6 +278,7 @@ class SiteController extends Controller
         $arr_return['data'] = $table;
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
+        $arr_return['hidden-total'] = $total;
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
 
         echo Json::encode($arr_return);
