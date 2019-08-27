@@ -36,6 +36,8 @@ $this->registerJs(<<<JS
 					$('#total').html(v.total);
 					$('#diskon').html(v.diskon);
 					$('#field-total-tagihan').val(v.hidtotal);
+					$('#jumlah-bayar').val('');
+					$('#cashback').html('<b>Rp.0,00</b>')
 				}
 			});
 		}
@@ -60,16 +62,28 @@ $this->registerJs(<<<JS
 		});
     });
     
-   var rupiah = document.getElementById('jumlah-bayar');
+    var rupiah = document.getElementById('jumlah-bayar');
 	rupiah.addEventListener('keyup', function(e){
-		var bayar = this.value;
-		var total = $('#field-total-tagihan').val();
-		var cashback = parseInt(bayar) - parseInt(total);
-
 		rupiah.value = formatRupiah(this.value, 'Rp. ');
-
-		$('#cashback').html(cashback);
+		
 	});
+    
+	$(document).on("keyup", "#jumlah-bayar", function () {
+    	var bayar = $(this).val();
+    	var remrp = bayar.replace("Rp. ","");
+    	var remdot = remrp.split(".").join("");
+
+		var total = $('#field-total-tagihan').val();
+		var cashback = parseInt(remdot) - parseInt(total);
+		var nilai = formatRupiah(cashback.toString(), 'Rp. ');
+
+		if(cashback < 0){
+			$('#cashback').html("<b>Rp. 0,00</b>");
+		}else{
+			$('#cashback').html("<b>"+nilai+"</b>");
+		}
+		
+    });
     
 JS
 );
@@ -158,7 +172,7 @@ JS
 					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8"></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8" ></span></li>
 					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
 					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
 					</ul>	
