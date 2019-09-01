@@ -37,7 +37,9 @@ $this->registerJs(<<<JS
 					$('#diskon').html(v.diskon);
 					$('#field-total-tagihan').val(v.hidtotal);
 					$('#jumlah-bayar').val('');
-					$('#cashback').html('<b>Rp.0,00</b>')
+					$('#cashback').html('<b>Rp.0,00</b>');
+					$('#field-total-bayar').val('');
+					$('#field-total-cashback').val('');
 				}
 			});
 		}
@@ -58,6 +60,12 @@ $this->registerJs(<<<JS
 				$('#subtotal').html(v.subtotal);
 				$('#total').html(v.total);
 				$('#diskon').html(v.diskon);
+				$('#field-total-tagihan').val(v.hidtotal);
+
+				$('#jumlah-bayar').val('');
+				$('#cashback').html('<b>Rp.0,00</b>');
+				$('#field-total-bayar').val('');
+				$('#field-total-cashback').val('');
 			}
 		});
     });
@@ -77,6 +85,9 @@ $this->registerJs(<<<JS
 		var cashback = parseInt(remdot) - parseInt(total);
 		var nilai = formatRupiah(cashback.toString(), 'Rp. ');
 
+		$('#field-total-bayar').val(remdot);
+		$('#field-total-cashback').val(cashback);
+
 		if(cashback < 0){
 			$('#cashback').html("<b>Rp. 0,00</b>");
 		}else{
@@ -84,6 +95,37 @@ $this->registerJs(<<<JS
 		}
 		
     });
+
+    $(document).on("click", "#proses-trans", function () {
+    	var totaltagihan = $('#field-total-tagihan').val();
+    	var totalbayar = $('#field-total-bayar').val();
+    	var cashback = $('#field-total-cashback').val();
+    	var url = $(this).attr('url');
+
+    	if(totalbayar == 0){
+    		alert('Jumlah Bayar Wajib di Isi !');
+		}else{
+			if(cashback < 0){
+	    		alert('Jumlah Bayar Kurang dari Total Tagihan !')
+	    	}else{
+	    		$.ajax({
+					type: 'post',
+					url: url,
+					dataType: 'json',
+					data: {
+						'totaltagihan':totaltagihan, 
+						'totalbayar':totalbayar, 
+						'cashback':cashback
+					},
+					success: function(v){
+						
+					}
+				});
+	    	}
+		}
+    	
+    });
+    
     
 JS
 );
@@ -104,6 +146,8 @@ JS
 									<?php 
 									echo Html::hiddenInput('kode_barang', '', ['id'=>'field-kode-barang']);
 									echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
+									echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
+									echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
 									echo AutoComplete::widget([
 									    'model' => $model,
 									    'attribute' => 'nama_barang',
@@ -174,7 +218,7 @@ JS
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8" ></span></li>
 					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
-					    <li><button type="button" class="btn btn-block btn-success">PROSES</button></li>
+					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans">PROSES</button></li>
 					</ul>	
 				    
 				</div>

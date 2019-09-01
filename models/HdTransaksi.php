@@ -12,6 +12,7 @@ use Yii;
  * @property string $tgl_bayar
  * @property int $status_bayar
  * @property int $total
+ * @property int $jumlah_bayar
  * @property int $status_hapus
  * @property string $tgl_hapus
  */
@@ -33,7 +34,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
         return [
             [['no_transaksi'], 'required'],
             [['tgl_bayar', 'tgl_hapus'], 'safe'],
-            [['status_bayar', 'total', 'status_hapus'], 'integer'],
+            [['status_bayar', 'total', 'status_hapus','jumlah_bayar'], 'integer'],
             [['no_transaksi'], 'string', 'max' => 64],
         ];
     }
@@ -49,6 +50,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
             'tgl_bayar' => 'Tgl Bayar',
             'status_bayar' => 'Status Bayar',
             'total' => 'Total',
+            'jumlah_bayar' => 'Jumlah Bayar',
             'status_hapus' => 'Status Hapus',
             'tgl_hapus' => 'Tgl Hapus',
         ];

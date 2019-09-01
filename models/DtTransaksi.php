@@ -32,7 +32,7 @@ class DtTransaksi extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['no_transaksi', 'kd_barang', 'tgl_hapus'], 'required'],
+            [['no_transaksi', 'kd_barang'], 'required'],
             [['harga_satuan', 'qty', 'total_harga', 'status_hapus'], 'integer'],
             [['tgl_hapus'], 'safe'],
             [['no_transaksi'], 'string', 'max' => 64],

@@ -10,6 +10,8 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\FileBarang;
+use app\models\HdTransaksi;
+use app\models\DtTransaksi;
 use app\components\Utility;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -278,9 +280,39 @@ class SiteController extends Controller
         $arr_return['data'] = $table;
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
-        $arr_return['hidden-total'] = $total;
+        $arr_return['hidtotal'] = $total;
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
 
         echo Json::encode($arr_return);
+    }
+
+
+    public function actionSimpantransaksi(){
+        $total_tagihan = $_POST['totaltagihan'];
+        $total_bayar = $_POST['totalbayar'];
+        $cashback = $_POST['cashback'];
+
+        $session = new Session;
+        $session->open();
+
+        $model = new HdTransaksi;
+        $model->no_transaksi = 'A0001';
+        $model->tgl_bayar = date('Y-m-d H:i:s');
+        $model->status_bayar = 1;
+        $model->total = $total_tagihan;
+        $model->jumlah_bayar = $total_bayar;
+        if($model->save()){
+            if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
+                foreach($session['datatransaksi'] as $key=>$value){
+                    $detail = new DtTransaksi;
+                    $detail->no_transaksi = $model->no_transaksi;
+                    $detail->kd_barang = $value['kodebarang'];
+                    $detail->harga_satuan = $value['harga'];
+                    $detail->qty = $value['qty'];
+                    $detail->total_harga = $value['harga'] * $value['qty'];
+                    $detail->save();
+                }
+            }
+        }
     }
 }

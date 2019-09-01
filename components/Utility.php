@@ -15,4 +15,10 @@ class Utility extends Model
         $rupiah = "Rp "  . $rupiah . ",00";
         return $rupiah;
     }
+
+    public static function getNoTransaksi($id_type){
+    	if($id_type == 1){ //no transaksi penjualan
+    		$urutan = UrutanTransaksi::find()->where(['id'=>1])->one();
+    	}
+    }
 }
