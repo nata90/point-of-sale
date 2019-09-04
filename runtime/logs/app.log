@@ -22147,3 +22147,1005 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1567338199.337
     'REQUEST_TIME' => 1567338199
 ]
+2019-09-04 11:25:30 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:25:30 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33316'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596330.701
+    'REQUEST_TIME' => 1567596330
+]
+2019-09-04 11:26:12 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:26:12 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33328'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596372.962
+    'REQUEST_TIME' => 1567596372
+]
+2019-09-04 11:26:26 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:26:26 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33332'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596386.756
+    'REQUEST_TIME' => 1567596386
+]
+2019-09-04 11:30:39 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:30:39 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33342'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596639.603
+    'REQUEST_TIME' => 1567596639
+]
+2019-09-04 11:30:45 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:163
+2019-09-04 11:30:45 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0001'
+    'qty' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '2'
+            'harga' => 20000
+            'total' => 40000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '91Ku2w8JDljs2MjEdv1zfzDks-acb-NAw0anG3kwyguHYtSEQGtaYK-wgP0PiTQcaovsp9dbjAKrL-1dVF2mUg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33342'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0001&qty=2'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596645.69
+    'REQUEST_TIME' => 1567596645
+]
+2019-09-04 11:30:50 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:295
+2019-09-04 11:30:50 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][error][Error] Error: Class 'app\components\UrutanTransaksi' not found in /var/www/html/pos/components/Utility.php:21
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(299): app\components\Utility::getNoTransaksi(1)
+#1 [internal function]: app\controllers\SiteController->actionSimpantransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpantransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/simpantran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-09-04 11:30:50 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '40000'
+    'totalbayar' => '50000'
+    'cashback' => '10000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '2'
+            'harga' => 20000
+            'total' => 40000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '50'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '91Ku2w8JDljs2MjEdv1zfzDks-acb-NAw0anG3kwyguHYtSEQGtaYK-wgP0PiTQcaovsp9dbjAKrL-1dVF2mUg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33342'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596650.423
+    'REQUEST_TIME' => 1567596650
+]
+2019-09-04 11:31:12 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:295
+2019-09-04 11:31:12 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][error][Error] Error: Class 'app\components\UrutanTransaksi' not found in /var/www/html/pos/components/Utility.php:21
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(299): app\components\Utility::getNoTransaksi(1)
+#1 [internal function]: app\controllers\SiteController->actionSimpantransaksi()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpantransaksi', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/simpantran...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2019-09-04 11:31:12 [::1][-][ghpokhholcl5fvt9cmk7qqqivc][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '40000'
+    'totalbayar' => '50000'
+    'cashback' => '10000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '2'
+            'harga' => 20000
+            'total' => 40000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '50'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '91Ku2w8JDljs2MjEdv1zfzDks-acb-NAw0anG3kwyguHYtSEQGtaYK-wgP0PiTQcaovsp9dbjAKrL-1dVF2mUg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33354'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596672.749
+    'REQUEST_TIME' => 1567596672
+]
+2019-09-04 11:31:58 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:295
+2019-09-04 11:31:58 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '40000'
+    'totalbayar' => '50000'
+    'cashback' => '10000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '2'
+            'harga' => 20000
+            'total' => 40000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '50'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '91Ku2w8JDljs2MjEdv1zfzDks-acb-NAw0anG3kwyguHYtSEQGtaYK-wgP0PiTQcaovsp9dbjAKrL-1dVF2mUg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33740'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596718.622
+    'REQUEST_TIME' => 1567596718
+]
+2019-09-04 11:32:27 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:32:27 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33974'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596747.248
+    'REQUEST_TIME' => 1567596747
+]
+2019-09-04 11:32:42 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:163
+2019-09-04 11:32:42 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0002'
+    'qty' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0002'
+            'namabarang' => 'PARACETAMOL CAIR'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '3FmdZSOV_rgA3SLqW4JDWfoli-KaH9B3XO4RH1VrVd2saec6bPeqgEO1atMi9gQ6oErUo9ErvzU0h1tZeAY5hA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0002&qty=3'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0002&qty=3'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596762.446
+    'REQUEST_TIME' => 1567596762
+]
+2019-09-04 11:32:48 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:163
+2019-09-04 11:32:48 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '6'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0002'
+            'namabarang' => 'PARACETAMOL CAIR'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+        ]
+        1 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '6'
+            'harga' => 20000
+            'total' => 120000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '3FmdZSOV_rgA3SLqW4JDWfoli-KaH9B3XO4RH1VrVd2saec6bPeqgEO1atMi9gQ6oErUo9ErvzU0h1tZeAY5hA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34148'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=6'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=6'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596768.017
+    'REQUEST_TIME' => 1567596768
+]
+2019-09-04 11:33:00 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:295
+2019-09-04 11:33:00 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '165000'
+    'totalbayar' => '170000'
+    'cashback' => '5000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0002'
+            'namabarang' => 'PARACETAMOL CAIR'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+        ]
+        1 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '6'
+            'harga' => 20000
+            'total' => 120000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '51'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '3FmdZSOV_rgA3SLqW4JDWfoli-KaH9B3XO4RH1VrVd2saec6bPeqgEO1atMi9gQ6oErUo9ErvzU0h1tZeAY5hA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34198'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567596780.741
+    'REQUEST_TIME' => 1567596780
+]
+2019-09-04 11:38:07 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:71
+2019-09-04 11:38:07 [::1][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34200'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/index.php'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567597087.857
+    'REQUEST_TIME' => 1567597087
+]
+2019-09-04 11:38:16 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:163
+2019-09-04 11:38:16 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0002'
+    'qty' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0002'
+            'namabarang' => 'PARACETAMOL CAIR'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'jWZY-QXTrSJ_y2dxSPnvF7k1K0Az9SHetN_mj2L8R-P9ViKmSrH5GjyjL0gxjah041p0AXjBTpzctqzJT5Erug=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34202'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0002&qty=3'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0002&qty=3'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567597096.175
+    'REQUEST_TIME' => 1567597096
+]
+2019-09-04 11:38:21 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:295
+2019-09-04 11:38:21 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '45000'
+    'totalbayar' => '50000'
+    'cashback' => '5000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ghpokhholcl5fvt9cmk7qqqivc'
+    '_csrf' => '0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0002'
+            'namabarang' => 'PARACETAMOL CAIR'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '49'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'jWZY-QXTrSJ_y2dxSPnvF7k1K0Az9SHetN_mj2L8R-P9ViKmSrH5GjyjL0gxjah041p0AXjBTpzctqzJT5Erug=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ghpokhholcl5fvt9cmk7qqqivc; _csrf=0a61d71aaf0b53707e8921254c94ce76069efc3bd10e3dcf88c6c5117dce8608a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22p0z_ObT8ChH9ytGcZo_AK4oBhiJF-mlY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1567597101.259
+    'REQUEST_TIME' => 1567597101
+]

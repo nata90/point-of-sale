@@ -296,7 +296,7 @@ class SiteController extends Controller
         $session->open();
 
         $model = new HdTransaksi;
-        $model->no_transaksi = 'A0001';
+        $model->no_transaksi = Utility::getNoTransaksi(1);
         $model->tgl_bayar = date('Y-m-d H:i:s');
         $model->status_bayar = 1;
         $model->total = $total_tagihan;
