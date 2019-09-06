@@ -42,6 +42,10 @@ class ComposerStaticInitd69fa755d572392ea13d883c0dc9d081
         array (
             'phpDocumentor\\Reflection\\' => 25,
         ),
+        'e' => 
+        array (
+            'edwinhaq\\simpleloading\\' => 23,
+        ),
         'd' => 
         array (
             'dmstr\\' => 6,
@@ -149,6 +153,10 @@ class ComposerStaticInitd69fa755d572392ea13d883c0dc9d081
             0 => __DIR__ . '/..' . '/phpdocumentor/reflection-common/src',
             1 => __DIR__ . '/..' . '/phpdocumentor/reflection-docblock/src',
             2 => __DIR__ . '/..' . '/phpdocumentor/type-resolver/src',
+        ),
+        'edwinhaq\\simpleloading\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/edwinhaq/yii2-simple-loading',
         ),
         'dmstr\\' => 
         array (

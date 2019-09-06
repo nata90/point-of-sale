@@ -7,6 +7,7 @@ use yii\jui\AutoComplete;
 use yii\web\JsExpression;
 use yii\helpers\Url;
 
+
 $this->title = 'POINT OF SALE';
 $this->registerJs(<<<JS
 	$('#filebarang-nama_barang').focus();
@@ -112,6 +113,10 @@ $this->registerJs(<<<JS
 					type: 'post',
 					url: url,
 					dataType: 'json',
+					'beforeSend':function(json)
+					{ 
+						SimpleLoading.start('gears'); 
+					},
 					data: {
 						'totaltagihan':totaltagihan, 
 						'totalbayar':totalbayar, 
@@ -119,7 +124,11 @@ $this->registerJs(<<<JS
 					},
 					success: function(v){
 						
-					}
+					},
+					'complete':function(json)
+					{
+						SimpleLoading.stop();
+					},
 				});
 	    	}
 		}
@@ -129,6 +138,7 @@ $this->registerJs(<<<JS
     
 JS
 );
+
 ?>
 
 
