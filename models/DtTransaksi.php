@@ -56,4 +56,12 @@ class DtTransaksi extends \yii\db\ActiveRecord
             'tgl_hapus' => 'Tgl Hapus',
         ];
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBarang()
+    {
+        return $this->hasOne(FileBarang::className(), ['kd_barang' => 'kd_barang']);
+    }
 }

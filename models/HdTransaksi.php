@@ -55,4 +55,12 @@ class HdTransaksi extends \yii\db\ActiveRecord
             'tgl_hapus' => 'Tgl Hapus',
         ];
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDetails()
+    {
+        return $this->hasMany(DtTransaksi::className(), ['no_transaksi' => 'no_transaksi']);
+    }
 }

@@ -123,7 +123,7 @@ $this->registerJs(<<<JS
 						'cashback':cashback
 					},
 					success: function(v){
-						
+						location.replace(v.redirect);
 					},
 					'complete':function(json)
 					{

@@ -295,6 +295,8 @@ class SiteController extends Controller
         $session = new Session;
         $session->open();
 
+        $return = array();
+
         $model = new HdTransaksi;
         $model->no_transaksi = Utility::getNoTransaksi(1);
         $model->tgl_bayar = date('Y-m-d H:i:s');
@@ -313,6 +315,19 @@ class SiteController extends Controller
                     $detail->save();
                 }
             }
+
+            $return['success'] = 1;
+            $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
         }
+
+        echo Json::encode($return);
+    }
+
+    public function actionResumetransaksi($id){
+        $model = HdTransaksi::findOne($id);;
+
+        return $this->render('resume',[
+            'model'=>$model
+        ]);
     }
 }
