@@ -7,15 +7,40 @@ use yii\jui\AutoComplete;
 use yii\web\JsExpression;
 use yii\helpers\Url;
 use app\components\Utility;
+use yii\web\View;
 
 
 $this->title = 'RESUME TRANSAKSI';
 $this->registerJs(<<<JS
-	function newTransaction() {
-	  var url = $(this).attr('url');
-	  
-	  location.replace(url);
-	}
+	$(document).on("click", "#new-transaction", function () {
+    	var url = $(this).attr("url");
+    	location.replace(url);
+    });   
+
+    $(document).on("click", "#cancel-transaction", function () {
+    	var url = $(this).attr("url");
+    	
+    	if(confirm("Anda yakin ingin menghapus transaksi ini ?")){
+    		$.ajax({
+				type: 'get',
+				url: url,
+				dataType: 'json',
+				'beforeSend':function(json)
+				{ 
+					SimpleLoading.start('gears'); 
+				},
+				success: function(v){
+					location.replace(v.redirect);
+				},
+				'complete':function(json)
+				{
+					SimpleLoading.stop();
+				},
+			});
+    	}
+    	
+    }); 
+
 JS
 );
 
@@ -89,8 +114,8 @@ JS
 			                    <td></td>
 			                    <td></td>
 			                    <td></td>
-			                    <td><button type="button" class="btn btn-block btn-success" onclick="newTransaction()" url="<?php echo Url::to(['site/index']);?>">BARU</button></td>
-			                    <td><button type="button" class="btn btn-block btn-danger">BATAL</button></td>
+			                    <td><button type="button" class="btn btn-block btn-success" id="new-transaction" url="<?php echo Url::to(['site/index']);?>">BARU</button></td>
+			                    <td><button id="cancel-transaction" type="button" class="btn btn-block btn-danger" url="<?php echo Url::to(['site/canceltransaction','id'=>$id]);?>">BATAL</button></td>
 							</tr>
 						</tfoot>
 					</table>

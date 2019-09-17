@@ -43,13 +43,13 @@ $config = [
             ],
         ],
         'db' => $db,
-        'view' => [
+        /*'view' => [
              'theme' => [
                  'pathMap' => [
                     '@app/views' => '@vendor/dmstr/yii2-adminlte-asset/example-views/yiisoft/yii2-app'
                  ],
              ],
-        ],
+        ],*/
         /*'assetManager' => [
             'bundles' => [
                 'dmstr\web\AdminLteAsset' => [
