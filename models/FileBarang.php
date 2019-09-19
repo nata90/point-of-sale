@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\KodeGenerate;
 
 /**
  * This is the model class for table "file_barang".
@@ -31,8 +32,8 @@ class FileBarang extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['kd_barang', 'nama_barang'], 'required'],
-            [['harga_beli', 'harga_jual', 'qty', 'aktif'], 'integer'],
+            [['kd_barang', 'nama_barang', 'harga_beli', 'harga_jual',], 'required'],
+            [['harga_beli', 'harga_jual', 'aktif'], 'integer'],
             [['kd_barang'], 'string', 'max' => 30],
             [['nama_barang'], 'string', 'max' => 200],
         ];
@@ -49,8 +50,8 @@ class FileBarang extends \yii\db\ActiveRecord
             'nama_barang' => 'Nama Barang',
             'harga_beli' => 'Harga Beli',
             'harga_jual' => 'Harga Jual',
-            'qty' => 'Qty',
             'aktif' => 'Aktif',
         ];
     }
+
 }

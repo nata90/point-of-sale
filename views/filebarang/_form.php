@@ -20,7 +20,7 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'harga_jual')->textInput() ?>
 
-            <?= $form->field($model, 'aktif')->textInput() ?>
+            <?= $form->field($model, 'aktif')->checkBox() ?>
 
             <div class="form-group">
                 <?= Html::submitButton(Yii::t('app', 'Save'), ['class' => 'btn btn-success']) ?>

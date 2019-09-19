@@ -5,6 +5,7 @@ namespace app\components;
 use Yii;
 use yii\base\Model;
 use app\models\UrutanTransaksi;
+use app\models\KodeGenerate;
 
 /**
  * ContactForm is the model behind the contact form.
@@ -39,5 +40,19 @@ class Utility extends Model
     	}
 
     	return $return;
+    }
+
+    public static function generateKodeBarang(){
+        $model = KodeGenerate::find()->where(['nama_alias'=>'BRG'])->one();
+
+        if($model){
+            $char = $model->nama_alias;
+
+            $kode_barang = $char . sprintf("%06s", $model->urutan);
+        }else{
+            $kode_barang = '-';
+        }
+
+        return $kode_barang;
     }
 }

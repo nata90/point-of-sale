@@ -4,10 +4,12 @@ namespace app\controllers;
 
 use Yii;
 use app\models\FileBarang;
+use app\components\Utility;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use app\models\KodeGenerate;
 
 /**
  * FilebarangController implements the CRUD actions for FileBarang model.
@@ -66,8 +68,16 @@ class FilebarangController extends Controller
     {
         $model = new FileBarang();
 
+        $kode_barang = Utility::generateKodeBarang();
+        $model->kd_barang = $kode_barang;
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();
+
+            $update->urutan = $update->urutan + 1;
+            $update->save(false);
+
+            return $this->redirect(['index']);
         }
 
         return $this->render('create', [
@@ -87,7 +97,8 @@ class FilebarangController extends Controller
         $model = $this->findModel($id);
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+
+            return $this->redirect(['index']);
         }
 
         return $this->render('update', [
