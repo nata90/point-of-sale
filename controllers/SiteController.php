@@ -325,7 +325,7 @@ class SiteController extends Controller
     }
 
     public function actionResumetransaksi($id){
-        $model = HdTransaksi::findOne($id);;
+        $model = HdTransaksi::findOne($id);
 
         return $this->render('resume',[
             'model'=>$model,
@@ -360,4 +360,17 @@ class SiteController extends Controller
             'dataProvider' => $dataProvider,
         ]);
     }
+
+    public function actionDetailtransaksi($id){
+        $model = HdTransaksi::findOne($id);
+
+        $return['data'] = $this->renderPartial('detail_transaksi', [
+            'model' => $model,
+        ]);
+        $return['header'] = 'NO TRANSAKSI : '.$model->no_transaksi;
+
+        echo Json::encode($return);
+    }
+
+    
 }

@@ -32664,3 +32664,634 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1569147499.201
     'REQUEST_TIME' => 1569147499
 ]
+2019-09-22 11:19:17 [::1][100][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-09-22 11:19:17 [::1][100][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54710'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151157.387
+    'REQUEST_TIME' => 1569151157
+]
+2019-09-22 11:19:47 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/detailtransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-09-22 11:19:47 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'dbeRDy697lzO-kiekoh8Kq126489MIw6KPJVyu55oRVC--RNV-qJcZe1Je3xvyNszCSp0Atk-0IbnheSoRCTZQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54722'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151187.37
+    'REQUEST_TIME' => 1569151187
+]
+2019-09-22 11:19:49 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/detailtransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-09-22 11:19:49 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '2'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'dbeRDy697lzO-kiekoh8Kq126489MIw6KPJVyu55oRVC--RNV-qJcZe1Je3xvyNszCSp0Atk-0IbnheSoRCTZQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54722'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=2'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=2'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151189.289
+    'REQUEST_TIME' => 1569151189
+]
+2019-09-22 11:19:57 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][yii\web\HttpException:404] yii\base\InvalidRouteException: Unable to resolve the request: site/detailtransaksi in /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php:128
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#3 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#4 {main}
+
+Next yii\web\NotFoundHttpException: Page not found. in /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php:115
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#2 {main}
+2019-09-22 11:19:57 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'dbeRDy697lzO-kiekoh8Kq126489MIw6KPJVyu55oRVC--RNV-qJcZe1Je3xvyNszCSp0Atk-0IbnheSoRCTZQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54766'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151197.644
+    'REQUEST_TIME' => 1569151197
+]
+2019-09-22 11:29:27 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][Error] Error: Class 'Utility' not found in /var/www/html/pos/views/site/detail_transaksi.php:20
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(417): yii\base\View->render('detail_transaks...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/controllers/SiteController.php(368): yii\base\Controller->renderPartial('detail_transaks...', Array)
+#5 [internal function]: app\controllers\SiteController->actionDetailtransaksi('1')
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2019-09-22 11:29:27 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '86sUZqbMiE7yVBNF6fD4Kf2dJB0FrSMYR8u0I6huu_LE52Ek35vvY6sbfjaKx6dvnM9mQjP5VGB0p_Z75weJgg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57734'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151767.046
+    'REQUEST_TIME' => 1569151767
+]
+2019-09-22 11:32:14 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][Error] Error: Class 'Utility' not found in /var/www/html/pos/views/site/detail_transaksi.php:20
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(417): yii\base\View->render('detail_transaks...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/controllers/SiteController.php(368): yii\base\Controller->renderPartial('detail_transaks...', Array)
+#5 [internal function]: app\controllers\SiteController->actionDetailtransaksi('1')
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2019-09-22 11:32:14 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'lNFjNbuRQVYav4pebJJJEWI2FhGbXVeNfgLnH7p967qjnRZ3wsYme0Pw5y0PpRZXA2RUTq0JIPVNbqVH9RTZyg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57770'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151934.767
+    'REQUEST_TIME' => 1569151934
+]
+2019-09-22 11:32:19 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][Error] Error: Class 'Utility' not found in /var/www/html/pos/views/site/detail_transaksi.php:20
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(417): yii\base\View->render('detail_transaks...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/controllers/SiteController.php(368): yii\base\Controller->renderPartial('detail_transaks...', Array)
+#5 [internal function]: app\controllers\SiteController->actionDetailtransaksi('1')
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2019-09-22 11:32:19 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'lNFjNbuRQVYav4pebJJJEWI2FhGbXVeNfgLnH7p967qjnRZ3wsYme0Pw5y0PpRZXA2RUTq0JIPVNbqVH9RTZyg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57772'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151939.5
+    'REQUEST_TIME' => 1569151939
+]
+2019-09-22 11:33:02 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: id in /var/www/html/pos/views/site/detail_transaksi.php:67
+Stack trace:
+#0 /var/www/html/pos/views/site/detail_transaksi.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 67, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(417): yii\base\View->render('detail_transaks...', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(368): yii\base\Controller->renderPartial('detail_transaks...', Array)
+#6 [internal function]: app\controllers\SiteController->actionDetailtransaksi('3')
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-09-22 11:33:02 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'yYUGgiKvm1QE8oAAwoDiTsZuEH7f_RIP87P4veeYhBL-yXPAW_j8eV297XOht70IpzxSIempZXfA37rlqPG2Yg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58142'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=3'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=3'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569151982.812
+    'REQUEST_TIME' => 1569151982
+]
+2019-09-22 11:33:45 [::1][100][r7u0g61fp8llj4bgkkuukj503b][error][yii\base\ErrorException:8] yii\base\ErrorException: Undefined variable: id in /var/www/html/pos/views/site/detail_transaksi.php:67
+Stack trace:
+#0 /var/www/html/pos/views/site/detail_transaksi.php(67): yii\base\ErrorHandler->handleError(8, 'Undefined varia...', '/var/www/html/p...', 67, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(417): yii\base\View->render('detail_transaks...', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/controllers/SiteController.php(369): yii\base\Controller->renderPartial('detail_transaks...', Array)
+#6 [internal function]: app\controllers\SiteController->actionDetailtransaksi()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('detailtransaksi', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/detailtran...', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#12 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#13 {main}
+2019-09-22 11:33:45 [::1][100][r7u0g61fp8llj4bgkkuukj503b][info][application] $_GET = [
+    'r' => 'site/detailtransaksi'
+    'id' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'r7u0g61fp8llj4bgkkuukj503b'
+    '_csrf' => 'c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Uw6sRN7IKaWRcXlwzysiEzu2UWAYnyNwSE-tVcswBw5kQtkGp59OiMg-FAOsHH1VWuQTPy7LVAh7I-8NhFk1fg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/76.0.3809.100 Chrome/76.0.3809.100 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Frekaptransaksi'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=r7u0g61fp8llj4bgkkuukj503b; _csrf=c32faad4f184e9ab9839ad4de3bdd46783ec6dc54c0db7747bf9df71f0bd90c4a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227LuByWg-YOmsc7_FaRB_6Twx3lBXOi2p%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdetailtransaksi&id=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdetailtransaksi&id=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1569152025.273
+    'REQUEST_TIME' => 1569152025
+]
