@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Html;
 use edwinhaq\simpleloading\SimpleLoading;
+use yii\bootstrap\Modal;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -60,6 +61,16 @@ if (Yii::$app->controller->action->id === 'login') {
     </head>
     <body class="hold-transition skin-red sidebar-mini">
     <?php $this->beginBody() ?>
+
+    <?php 
+        Modal::begin([
+                'header'=>'<h4></h4>',
+                'id'=>'modal',
+                'size'=>'modal-lg',
+            ]);
+        echo "<div id='modalContent'></div>";
+        Modal::end();
+    ?>
     <div class="wrapper">
 
         <?= $this->render(

@@ -16,6 +16,7 @@ use app\components\Utility;
 use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\Session;
+use yii\data\ActiveDataProvider;
 
 class SiteController extends Controller
 {
@@ -100,7 +101,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
+            return $this->redirect(['index']);
         }
 
         $model->password = '';
@@ -348,5 +349,15 @@ class SiteController extends Controller
         }
 
         echo Json::encode($return);
+    }
+
+    public function actionRekaptransaksi(){
+        $dataProvider = new ActiveDataProvider([
+            'query' => HdTransaksi::find(),
+        ]);
+
+        return $this->render('rekap_transaksi', [
+            'dataProvider' => $dataProvider,
+        ]);
     }
 }

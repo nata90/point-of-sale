@@ -32,9 +32,10 @@
                 'items' => [
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
+                    ['label' => 'Rekap Penjualan', 'icon' => 'archive', 'url' => ['site/rekaptransaksi']],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
-                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
-                    ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],*/
+                    ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/
+                    
                     [
                         'label' => 'Master',
                         'icon' => 'book',
@@ -43,6 +44,7 @@
                             ['label' => 'Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
                         ],
                     ],
+                    ['label' => 'Logout', 'url' => ['site/logout'], 'visible' => !Yii::$app->user->isGuest],
                 ],
             ]
         ) ?>
