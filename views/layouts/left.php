@@ -32,7 +32,7 @@
                 'items' => [
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
-                    ['label' => 'Rekap Penjualan', 'icon' => 'archive', 'url' => ['site/rekaptransaksi']],
+                    ['label' => 'Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/
                     

@@ -18,6 +18,7 @@ use Yii;
  */
 class DtTransaksi extends \yii\db\ActiveRecord
 {
+    public $nama_barang;
     /**
      * {@inheritdoc}
      */
@@ -48,7 +49,7 @@ class DtTransaksi extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'no_transaksi' => 'No Transaksi',
-            'kd_barang' => 'Kd Barang',
+            'kd_barang' => 'Kode Barang',
             'harga_satuan' => 'Harga Satuan',
             'qty' => 'Qty',
             'total_harga' => 'Total Harga',
