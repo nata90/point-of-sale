@@ -31,9 +31,12 @@ class Utility extends Model
     				$return = date('Ymd').$new_urut->urutan;
     			} 
     		}else{
-    			$return = date('Y').date('m').date('d').$urutan->urutan;
 
-	    		$urutan->urutan = $urutan->urutan + 1;
+                $new_urutan = $urutan->urutan + 1;
+
+                $return = date('Y').date('m').date('d').$new_urutan;   			
+
+	    		$urutan->urutan = $new_urutan;
 	    		$urutan->save(false);
     		}
     		
