@@ -12,6 +12,9 @@ use app\models\DtTransaksi;
 class DtTransaksiSearch extends DtTransaksi
 {
     public $nama_barang;
+    public $start_date;
+    public $end_date;
+
     /**
      * {@inheritdoc}
      */
@@ -19,7 +22,19 @@ class DtTransaksiSearch extends DtTransaksi
     {
         return [
             [['id', 'harga_satuan', 'qty', 'total_harga', 'status_hapus'], 'integer'],
-            [['no_transaksi', 'kd_barang', 'tgl_hapus','nama_barang'], 'safe'],
+            [['no_transaksi', 'kd_barang', 'tgl_hapus','nama_barang','start_date','end_date'], 'safe'],
+        ];
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function attributeLabels()
+    {
+        return [
+            'start_date' => 'Tanggal Mulai',
+            'end_date' => 'Sampai',
+            
         ];
     }
 
@@ -62,7 +77,7 @@ class DtTransaksiSearch extends DtTransaksi
         }
 
         // grid filtering conditions
-        $query->select(['harga_satuan','kd_barang','SUM(qty) AS qty','SUM(total_harga) AS total_harga']);
+        //$query->select(['kd_barang','qty','SUM(total_harga) AS total_harga']);
         $query->andFilterWhere([
             'id' => $this->id,
             'harga_satuan' => $this->harga_satuan,
@@ -75,8 +90,8 @@ class DtTransaksiSearch extends DtTransaksi
         $query->andFilterWhere(['like', 'no_transaksi', $this->no_transaksi])->andFilterWhere(['like', 'kd_barang', $this->kd_barang]);
 
         //$query->andWhere(['hd_transaksi.tgl_bayar']);
-        $query->andWhere(['between', 'hd_transaksi.tgl_bayar', date('Y-m-d')." 00:00:00", date('Y-m-d')." 23:59:59"]);
-        $query->groupBy(['kd_barang']);
+        $query->andFilterWhere(['between', 'hd_transaksi.tgl_bayar', date('Y-m-d', strtotime($this->start_date))." 00:00:00", date('Y-m-d', strtotime($this->end_date))." 23:59:59"]);
+        //$query->groupBy(['kd_barang']);
 
         return $dataProvider;
     }

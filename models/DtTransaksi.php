@@ -65,4 +65,12 @@ class DtTransaksi extends \yii\db\ActiveRecord
     {
         return $this->hasOne(FileBarang::className(), ['kd_barang' => 'kd_barang']);
     }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getHeader()
+    {
+        return $this->hasOne(HdTransaksi::className(), ['no_transaksi' => 'no_transaksi']);
+    }
 }

@@ -36,6 +36,8 @@ class TransaksiController extends Controller
     public function actionIndex()
     {
         $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = date('Y-m-d');
+        $searchModel->end_date = date('Y-m-d');
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [

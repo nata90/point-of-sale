@@ -335,16 +335,12 @@ class SiteController extends Controller
 
     public function actionCanceltransaction($id){
         $model = HdTransaksi::findOne($id);
-        $model->status_hapus = 0;
+        $model->status_hapus = 1;
         $model->tgl_hapus = date('Y-m-d H:i:s');
 
         $return = array();
         if($model->save()){
-            $criteria = new CDbCriteria;
-            $criteria->condition = 'no_transaksi = :not';
-            $criteria->params = array(':not'=>$model->no_transaksi);
-
-            DtTransaksi::model()->updateAll(array('status_hapus'=>1, 'tgl_hapus'=>date('Y-m-d H:i:s')),$criteria);
+            
             $return['redirect'] = Url::to(['site/index']);
         }
 

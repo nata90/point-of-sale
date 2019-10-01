@@ -19,8 +19,13 @@ $this->title = Yii::t('app', 'Rekap Penjualan');
             </div>
             <div class="box-body">
 
-                <?php Pjax::begin(); ?>
-                <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+                <?php Pjax::begin([
+                    'id'=>'grid-penjualan',
+                    'timeout'=>false,
+                    'enablePushState'=>false,
+                    'clientOptions'=>['method'=>'GET']
+                ]); ?>
+                <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
@@ -31,6 +36,13 @@ $this->title = Yii::t('app', 'Rekap Penjualan');
                         //'id',
                         //'no_transaksi',
                         'kd_barang',
+                        [
+                            'label'=>'Tanggal Transaksi',
+                            'format'=>'raw',
+                            'value'=>function($model){
+                                return date('d-m-Y', strtotime($model->header->tgl_bayar));
+                            },
+                        ],
                         [
                             'attribute'=>'nama_barang',
                             'format'=>'raw',

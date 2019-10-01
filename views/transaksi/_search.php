@@ -18,25 +18,28 @@ use yii\widgets\ActiveForm;
         ],
     ]); ?>
 
-    <?= $form->field($model, 'id') ?>
-
-    <?= $form->field($model, 'no_transaksi') ?>
-
-    <?= $form->field($model, 'kd_barang') ?>
-
-    <?= $form->field($model, 'harga_satuan') ?>
-
-    <?= $form->field($model, 'qty') ?>
-
-    <?php // echo $form->field($model, 'total_harga') ?>
-
-    <?php // echo $form->field($model, 'status_hapus') ?>
-
-    <?php // echo $form->field($model, 'tgl_hapus') ?>
-
-    <div class="form-group">
-        <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
-        <?= Html::resetButton(Yii::t('app', 'Reset'), ['class' => 'btn btn-outline-secondary']) ?>
+    <div class="box-body">
+        <div class="col-lg-2">
+            <div class="input-group">
+                <?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::class,[
+                    'options'=>['class'=>'form-control'],
+                ]) ?>
+            </div>
+        </div> 
+        <div class="col-lg-2">
+            <div class="input-group">
+                 <?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::class,[
+                    'options'=>['class'=>'form-control'],
+                ]) ?>
+            </div>
+        </div>            
+    </div>
+    <div class="box-footer">
+        <div class="col-lg-2">
+            <div class="input-group">
+                <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
+            </div>
+        </div>
     </div>
 
     <?php ActiveForm::end(); ?>
