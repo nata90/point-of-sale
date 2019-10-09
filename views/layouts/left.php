@@ -44,6 +44,15 @@
                             ['label' => 'Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
                         ],
                     ],
+                    [
+                        'label' => 'User',
+                        'icon' => 'book',
+                        'url' => '#',
+                        'items' => [
+                            ['label' => 'Kelola User', 'icon' => 'folder', 'url' => ['user/index'],],
+                            //['label' => 'Kelola User Group', 'icon' => 'folder', 'url' => ['usergroup/index'],],
+                        ],
+                    ],
                     ['label' => 'Logout', 'url' => ['site/logout'], 'visible' => !Yii::$app->user->isGuest],
                 ],
             ]
