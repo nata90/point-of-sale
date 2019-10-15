@@ -10,6 +10,7 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\KodeGenerate;
+use yii\filters\AccessControl;
 
 /**
  * FilebarangController implements the CRUD actions for FileBarang model.
@@ -22,10 +23,15 @@ class FilebarangController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index','update','delete','create'],
+                'rules' => [
+                    [
+                        'actions' => ['index','update','delete','create'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
         ];

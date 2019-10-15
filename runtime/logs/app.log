@@ -43468,3 +43468,1153 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1570970803.985
     'REQUEST_TIME' => 1570970803
 ]
+2019-10-15 02:43:02 [::1][100][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 02:43:02 [::1][100][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k3nbgi0ci0blqrr372mqueq8c3'
+    '_csrf' => '469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b_OLEkRJyUymT5KwmECkRULUKuNCILzC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=k3nbgi0ci0blqrr372mqueq8c3; _csrf=469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b_OLEkRJyUymT5KwmECkRULUKuNCILzC%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571107382.367
+    'REQUEST_TIME' => 1571107382
+]
+2019-10-15 03:02:10 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][error][ParseError] ParseError: syntax error, unexpected '}' in /var/www/html/pos/models/AppUser.php:105
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\models\\AppU...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/web/User.php(690): spl_autoload_call('app\\models\\AppU...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/web/User.php(192): yii\web\User->renewAuthStatus()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/web/User.php(360): yii\web\User->getIdentity()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(139): yii\web\User->getIsGuest()
+#5 /var/www/html/pos/vendor/yiisoft/yii2-debug/src/panels/UserPanel.php(83): yii\base\Component->__get('isGuest')
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\panels\UserPanel->init()
+#7 [internal function]: yii\base\BaseObject->__construct(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/di/Container.php(384): ReflectionClass->newInstanceArgs(Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\panel...', Array, Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\panel...', Array, Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2-debug/src/Module.php(247): yii\BaseYii::createObject(Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2-debug/src/Module.php(218): yii\debug\Module->initPanels()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\debug\Module->init()
+#14 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(158): yii\base\BaseObject->__construct(Array)
+#15 [internal function]: yii\base\Module->__construct('debug', Object(yii\web\Application), Array)
+#16 /var/www/html/pos/vendor/yiisoft/yii2/di/Container.php(376): ReflectionClass->newInstanceArgs(Array)
+#17 /var/www/html/pos/vendor/yiisoft/yii2/di/Container.php(156): yii\di\Container->build('yii\\debug\\Modul...', Array, Array)
+#18 /var/www/html/pos/vendor/yiisoft/yii2/BaseYii.php(349): yii\di\Container->get('yii\\debug\\Modul...', Array, Array)
+#19 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(427): yii\BaseYii::createObject(Array, Array)
+#20 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(315): yii\base\Module->getModule('debug')
+#21 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(69): yii\base\Application->bootstrap()
+#22 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(273): yii\web\Application->bootstrap()
+#23 /var/www/html/pos/vendor/yiisoft/yii2/base/BaseObject.php(109): yii\base\Application->init()
+#24 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(206): yii\base\BaseObject->__construct(Array)
+#25 /var/www/html/pos/web/index.php(12): yii\base\Application->__construct(Array)
+#26 {main}
+2019-10-15 03:02:10 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k3nbgi0ci0blqrr372mqueq8c3'
+    '_csrf' => '469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b_OLEkRJyUymT5KwmECkRULUKuNCILzC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=k3nbgi0ci0blqrr372mqueq8c3; _csrf=469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b_OLEkRJyUymT5KwmECkRULUKuNCILzC%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571108530.903
+    'REQUEST_TIME' => 1571108530
+]
+2019-10-15 03:05:25 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][error][yii\base\ErrorException:1] yii\base\ErrorException: Interface 'yii\web\IdentifyInterface' not found in /var/www/html/pos/models/AppUser.php:21
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2019-10-15 03:05:25 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k3nbgi0ci0blqrr372mqueq8c3'
+    '_csrf' => '469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b_OLEkRJyUymT5KwmECkRULUKuNCILzC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=k3nbgi0ci0blqrr372mqueq8c3; _csrf=469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b_OLEkRJyUymT5KwmECkRULUKuNCILzC%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60326'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571108725.558
+    'REQUEST_TIME' => 1571108725
+]
+2019-10-15 03:06:11 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][error][yii\base\ErrorException:8] yii\base\ErrorException: Trying to get property 'username' of non-object in /var/www/html/pos/views/layouts/left.php:11
+Stack trace:
+#0 /var/www/html/pos/views/layouts/left.php(11): yii\base\ErrorHandler->handleError(8, 'Trying to get p...', '/var/www/html/p...', 11, Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, NULL)
+#4 /var/www/html/pos/views/layouts/main.php(83): yii\base\View->render('left.php', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(401): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\UserController))
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(387): yii\base\Controller->renderContent('<div class="row...')
+#9 /var/www/html/pos/controllers/UserController.php(45): yii\base\Controller->render('index', Array)
+#10 [internal function]: app\controllers\UserController->actionIndex()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#14 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/index', Array)
+#15 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#16 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#17 {main}
+2019-10-15 03:06:11 [::1][-][k3nbgi0ci0blqrr372mqueq8c3][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'k3nbgi0ci0blqrr372mqueq8c3'
+    '_csrf' => '469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"b_OLEkRJyUymT5KwmECkRULUKuNCILzC\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => '100'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=k3nbgi0ci0blqrr372mqueq8c3; _csrf=469a0811df291c6f029676d63b17274da5d9b722999ccf19bb28e83cb4f9a913a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22b_OLEkRJyUymT5KwmECkRULUKuNCILzC%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60330'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571108771.001
+    'REQUEST_TIME' => 1571108771
+]
+2019-10-15 03:32:38 [::1][2][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 03:32:37 [::1][2][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'fd8e9o2uhaijtdpigmmcra6qft'
+    '_identity' => '11eae88fe2d84056c6831537ed06eb349c951640bd070521ca401712923e6a38a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[2,\"ad05429e26523ef6568800fdcc307139\",2592000]\";}'
+    '_csrf' => '316a40b97ded88d906e32ec577cf9c860c43fac6c61a522c2e928973db43491fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"8rgK2BzS9NAstffuaUYPl2zktCswBBm-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=fd8e9o2uhaijtdpigmmcra6qft; _identity=11eae88fe2d84056c6831537ed06eb349c951640bd070521ca401712923e6a38a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B2%2C%22ad05429e26523ef6568800fdcc307139%22%2C2592000%5D%22%3B%7D; _csrf=316a40b97ded88d906e32ec577cf9c860c43fac6c61a522c2e928973db43491fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%228rgK2BzS9NAstffuaUYPl2zktCswBBm-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60376'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571110357.9
+    'REQUEST_TIME' => 1571110357
+]
+2019-10-15 06:35:44 [::1][2][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:35:44 [::1][2][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '8n0krba0vjdjfpunqn3h0k55go'
+    '_csrf' => '359beadc72393928a29fdb6ee4c0cbf7c8eff684b03245500844e85130bd5172a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"2sKfyReiqAp_7b7Q0rX1UJ1aQSKgF7jV\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=8n0krba0vjdjfpunqn3h0k55go; _csrf=359beadc72393928a29fdb6ee4c0cbf7c8eff684b03245500844e85130bd5172a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%222sKfyReiqAp_7b7Q0rX1UJ1aQSKgF7jV%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54064'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121344.448
+    'REQUEST_TIME' => 1571121344
+]
+2019-10-15 06:36:04 [::1][2][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:36:04 [::1][2][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'h3qk47c7i4keiu63dodnqrfam9'
+    '_csrf' => 'fd8a43cb62c3f793e60b91778c4e468d73554b561cd9ee24c8e34576fd222742a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qP2zVB85IMJMuBMC3BDh1DBhu4W8R6M8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=h3qk47c7i4keiu63dodnqrfam9; _csrf=fd8a43cb62c3f793e60b91778c4e468d73554b561cd9ee24c8e34576fd222742a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qP2zVB85IMJMuBMC3BDh1DBhu4W8R6M8%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121364.731
+    'REQUEST_TIME' => 1571121364
+]
+2019-10-15 06:37:08 [::1][-][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:37:08 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'h3qk47c7i4keiu63dodnqrfam9'
+    '_csrf' => 'fd8a43cb62c3f793e60b91778c4e468d73554b561cd9ee24c8e34576fd222742a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"qP2zVB85IMJMuBMC3BDh1DBhu4W8R6M8\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 2
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=user%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=h3qk47c7i4keiu63dodnqrfam9; _csrf=fd8a43cb62c3f793e60b91778c4e468d73554b561cd9ee24c8e34576fd222742a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22qP2zVB85IMJMuBMC3BDh1DBhu4W8R6M8%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121428.681
+    'REQUEST_TIME' => 1571121428
+]
+2019-10-15 06:37:21 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:37:21 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd7n9pogjugt21urfr3al73gd2s'
+    '_identity' => '6f35a865c26495fae3667132097b4590a1e85cdea4e3534f2648587d08cb7c8da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"f7700fd6671892bb24883dd2745933e9\",2592000]\";}'
+    '_csrf' => 'a64e5809d722e717c6ba9359cb8d59076231805ecd08d1576e67c79521a0e936a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7h328LcrZ-f--4b3Yo_nMUvGHqY9pdQP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site/logout'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=d7n9pogjugt21urfr3al73gd2s; _identity=6f35a865c26495fae3667132097b4590a1e85cdea4e3534f2648587d08cb7c8da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22f7700fd6671892bb24883dd2745933e9%22%2C2592000%5D%22%3B%7D; _csrf=a64e5809d722e717c6ba9359cb8d59076231805ecd08d1576e67c79521a0e936a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227h328LcrZ-f--4b3Yo_nMUvGHqY9pdQP%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121441.303
+    'REQUEST_TIME' => 1571121441
+]
+2019-10-15 06:37:28 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:37:28 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'd7n9pogjugt21urfr3al73gd2s'
+    '_identity' => '6f35a865c26495fae3667132097b4590a1e85cdea4e3534f2648587d08cb7c8da:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"f7700fd6671892bb24883dd2745933e9\",2592000]\";}'
+    '_csrf' => 'a64e5809d722e717c6ba9359cb8d59076231805ecd08d1576e67c79521a0e936a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"7h328LcrZ-f--4b3Yo_nMUvGHqY9pdQP\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site/logout'
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=user%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=d7n9pogjugt21urfr3al73gd2s; _identity=6f35a865c26495fae3667132097b4590a1e85cdea4e3534f2648587d08cb7c8da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22f7700fd6671892bb24883dd2745933e9%22%2C2592000%5D%22%3B%7D; _csrf=a64e5809d722e717c6ba9359cb8d59076231805ecd08d1576e67c79521a0e936a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%227h328LcrZ-f--4b3Yo_nMUvGHqY9pdQP%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121448.933
+    'REQUEST_TIME' => 1571121448
+]
+2019-10-15 06:37:51 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:37:51 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Flogin'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121471.48
+    'REQUEST_TIME' => 1571121471
+]
+2019-10-15 06:37:54 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:37:54 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54106'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121474.766
+    'REQUEST_TIME' => 1571121474
+]
+2019-10-15 06:38:23 [::1][3][6n8angc166kau756go12kajp83][error][yii\web\HttpException:403] yii\web\ForbiddenHttpException: You are not allowed to perform this action. in /var/www/html/pos/vendor/yiisoft/yii2/filters/AccessControl.php:158
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/filters/AccessControl.php(140): yii\filters\AccessControl->denyAccess(Object(yii\web\User))
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/ActionFilter.php(77): yii\filters\AccessControl->beforeAction(Object(yii\base\InlineAction))
+#2 [internal function]: yii\base\ActionFilter->beforeFilter(Object(yii\base\ActionEvent))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(627): call_user_func(Array, Object(yii\base\ActionEvent))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/index', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2019-10-15 06:38:23 [::1][3][6n8angc166kau756go12kajp83][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54110'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121503.879
+    'REQUEST_TIME' => 1571121503
+]
+2019-10-15 06:38:57 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:38:57 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54116'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121537.967
+    'REQUEST_TIME' => 1571121537
+]
+2019-10-15 06:39:52 [::1][3][6n8angc166kau756go12kajp83][error][Error] Error: Class 'app\controllers\AccessControl' not found in /var/www/html/pos/controllers/TransaksiController.php:24
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(733): app\controllers\TransaksiController->behaviors()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/index', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-10-15 06:39:52 [::1][3][6n8angc166kau756go12kajp83][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54120'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121592.776
+    'REQUEST_TIME' => 1571121592
+]
+2019-10-15 06:41:05 [::1][3][6n8angc166kau756go12kajp83][error][Error] Error: Class 'app\controllers\AccessControl' not found in /var/www/html/pos/controllers/FilebarangController.php:26
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(733): app\controllers\FilebarangController->behaviors()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('filebarang/inde...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-10-15 06:41:05 [::1][3][6n8angc166kau756go12kajp83][info][application] $_GET = [
+    'r' => 'filebarang/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54128'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=filebarang%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=filebarang%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121665.888
+    'REQUEST_TIME' => 1571121665
+]
+2019-10-15 06:43:21 [::1][3][6n8angc166kau756go12kajp83][error][Error] Error: Class 'app\controllers\AccessControl' not found in /var/www/html/pos/controllers/UserController.php:26
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(733): app\controllers\UserController->behaviors()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php(603): yii\base\Component->ensureBehaviors()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(276): yii\base\Component->trigger('beforeAction', Object(yii\base\ActionEvent))
+#3 /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php(164): yii\base\Controller->beforeAction(Object(yii\base\InlineAction))
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('user/index', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2019-10-15 06:43:21 [::1][3][6n8angc166kau756go12kajp83][info][application] $_GET = [
+    'r' => 'user/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54142'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=user%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=user%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121801.408
+    'REQUEST_TIME' => 1571121801
+]
+2019-10-15 06:44:13 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2019-10-15 06:44:13 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '6n8angc166kau756go12kajp83'
+    '_csrf' => 'ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"HiokvZ88oboJwzzkEDuwrC5u9pcJJklA\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/77.0.3865.90 Chrome/77.0.3865.90 Safari/537.36'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=6n8angc166kau756go12kajp83; _csrf=ce4e1c598c35c22b4a878c75de2163385d5b19ae2dcc862183135e55c0a92f69a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22HiokvZ88oboJwzzkEDuwrC5u9pcJJklA%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1571121853.445
+    'REQUEST_TIME' => 1571121853
+]

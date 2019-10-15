@@ -18,7 +18,7 @@ use Yii;
  * @property string $created_at
  * @property string $updated_at
  */
-class AppUser extends \yii\db\ActiveRecord
+class AppUser extends \yii\db\ActiveRecord implements \yii\web\IdentityInterface
 {
     /**
      * {@inheritdoc}
@@ -76,5 +76,33 @@ class AppUser extends \yii\db\ActiveRecord
         return false;
     }
 
+    public static function findIdentity($id){
+        return AppUser::findOne($id);
+    }
+
+    public static function findByUsername($username){
+        return AppUser::findOne(['username'=>$username]);
+    }
+
+    public function getId(){
+        return $this->id;
+    }
+
+    public function getAuthKey(){
+        return $this->authkey;
+    }
+
+    public function validateAuthKey($authKey){
+        return $this->authkey === $authKey;
+    }
+
+    public function validatePassword($password, $authkey){
+        return $this->password === md5($password.$authkey);
+    }
+
+    public static function findIdentityByAccessToken($token, $type = null)
+    {
+        return AppUser::findOne(['accessToken'=>$token]);
+    }
 
 }
