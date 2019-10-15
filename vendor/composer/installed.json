@@ -3810,17 +3810,17 @@
     },
     {
         "name": "yiisoft/yii2",
-        "version": "2.0.27",
-        "version_normalized": "2.0.27.0",
+        "version": "2.0.28",
+        "version_normalized": "2.0.28.0",
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-framework.git",
-            "reference": "6793f8f9b4cd891dbf475cfbb88cf480f74eaa85"
+            "reference": "80bf3a6e04a0128f753cb73ba7255d8e2ae3a02f"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/6793f8f9b4cd891dbf475cfbb88cf480f74eaa85",
-            "reference": "6793f8f9b4cd891dbf475cfbb88cf480f74eaa85",
+            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/80bf3a6e04a0128f753cb73ba7255d8e2ae3a02f",
+            "reference": "80bf3a6e04a0128f753cb73ba7255d8e2ae3a02f",
             "shasum": ""
         },
         "require": {
@@ -3836,7 +3836,7 @@
             "php": ">=5.4.0",
             "yiisoft/yii2-composer": "~2.0.4"
         },
-        "time": "2019-09-18T13:04:16+00:00",
+        "time": "2019-10-08T13:14:18+00:00",
         "bin": [
             "yii"
         ],
@@ -4143,17 +4143,17 @@
     },
     {
         "name": "yiisoft/yii2-gii",
-        "version": "2.1.1",
-        "version_normalized": "2.1.1.0",
+        "version": "2.1.2",
+        "version_normalized": "2.1.2.0",
         "source": {
             "type": "git",
             "url": "https://github.com/yiisoft/yii2-gii.git",
-            "reference": "6ebe5e1550030b9b65beaf656cd175577eb74975"
+            "reference": "cf3e81953a9e9796eed4021f3065bc5c18ee3356"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/6ebe5e1550030b9b65beaf656cd175577eb74975",
-            "reference": "6ebe5e1550030b9b65beaf656cd175577eb74975",
+            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/cf3e81953a9e9796eed4021f3065bc5c18ee3356",
+            "reference": "cf3e81953a9e9796eed4021f3065bc5c18ee3356",
             "shasum": ""
         },
         "require": {
@@ -4164,7 +4164,7 @@
             "phpunit/phpunit": "<7",
             "yiisoft/yii2-coding-standards": "~2.0"
         },
-        "time": "2019-08-13T14:34:28+00:00",
+        "time": "2019-10-08T10:28:42+00:00",
         "type": "yii2-extension",
         "extra": {
             "branch-alias": {
