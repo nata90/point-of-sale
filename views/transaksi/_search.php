@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use yii\helpers\Url;
 
 /* @var $this yii\web\View */
 /* @var $model app\models\DtTransaksiSearch */
@@ -35,9 +36,10 @@ use yii\widgets\ActiveForm;
         </div>            
     </div>
     <div class="box-footer">
-        <div class="col-lg-2">
+        <div class="col-lg-3">
             <div class="input-group">
-                <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>
+                <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>&nbsp;
+                <button type="button" id="xls-rekap" class="btn btn-success" url="<?php echo Url::to(['transaksi/excelrekap']);?>">Download(.xls)</button>
             </div>
         </div>
     </div>

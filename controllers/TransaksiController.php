@@ -9,6 +9,10 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii2tech\spreadsheet\Spreadsheet;
+use yii\data\ArrayDataProvider;
+use yii\data\ActiveDataProvider;
+use app\components\Utility;
 
 /**
  * TransaksiController implements the CRUD actions for DtTransaksi model.
@@ -23,10 +27,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index'],
+                'only' => ['index','excelrekap'],
                 'rules' => [
                     [
-                        'actions' => ['index'],
+                        'actions' => ['index','excelrekap'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -115,6 +119,61 @@ class TransaksiController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionExcelrekap(){
+        $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = date('Y-m-d');
+        $searchModel->end_date = date('Y-m-d');
+
+        $exporter = new Spreadsheet([
+            'dataProvider' => $searchModel->search(Yii::$app->request->queryParams),
+            'columns' => [
+                'kd_barang',
+                [
+                    'label'=>'Tanggal Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return date('d-m-Y', strtotime($model->header->tgl_bayar));
+                    },
+                ],
+                [
+                    'attribute'=>'nama_barang',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->barang->nama_barang;
+                    },
+                ],
+                [
+                    'attribute'=>'harga_satuan',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->harga_satuan;
+                    },
+                ],
+                'qty',
+                [
+                    'label'=>'Total',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->harga_satuan * $model->qty;
+                    },
+                ],
+            ],
+        ]);
+
+        $exporter->title = 'Laporan Rekap Penjualan';
+
+        $exporter->headerColumnUnions = 
+        [
+            [
+                'header' => 'LAPORAN PENJUALAN '.date('d/m/Y', strtotime($searchModel->start_date)).' - '.date('d/m/Y', strtotime($searchModel->end_date)),
+                'offset' => 0,
+                'length' => 6,
+            ]
+        ];
+
+        return $exporter->send('laporan-penjualan.xls');
     }
 
     /**

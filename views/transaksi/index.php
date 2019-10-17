@@ -10,6 +10,15 @@ use app\components\Utility;
 
 $this->title = Yii::t('app', 'Rekap Penjualan');
 //$this->params['breadcrumbs'][] = $this->title;
+$this->registerJs(<<<JS
+    $(document).on("click", "#xls-rekap", function () {
+        var url = $(this).attr('url');
+
+        window.open(url);
+
+    });
+JS
+);
 ?>
 <div class="row">
     <div class="col-md-12">
