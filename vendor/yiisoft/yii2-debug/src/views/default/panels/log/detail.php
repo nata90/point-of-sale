@@ -46,6 +46,9 @@ echo GridView::widget([
         [
             'attribute' => 'id',
             'label' => '#',
+            'contentOptions' => [
+                'class' => 'word-break-keep'
+            ]
         ],
         [
             'attribute' => 'time',
@@ -57,6 +60,9 @@ echo GridView::widget([
             },
             'headerOptions' => [
                 'class' => 'sort-numerical'
+            ],
+            'contentOptions' => [
+                'class' => 'word-break-keep'
             ]
         ],
         [
@@ -85,38 +91,23 @@ echo GridView::widget([
                 $formattedDiff[] = $diffMs . 'ms';
                 $formattedDiff = implode('&nbsp;', $formattedDiff);
 
-                $previousBtnOptions = [
-                    'class' => 'btn btn-light',
-                ];
-                $nextBtnOptions = [
-                    'class' => 'btn btn-light',
-                ];
                 if ($data['id_of_previous'] === null) {
-                    Html::addCssClass($previousBtnOptions, 'disabled');
+                    $previous = Html::tag('span', '< ', ['class' => 'button']);
+                } else {
+                    $previous = Html::a('< ', '#log-' . $data['id_of_previous'], ['class' => 'button']);
                 }
+
                 if ($data['id_of_next'] === null) {
-                    Html::addCssClass($nextBtnOptions, 'disabled');
+                    $next = Html::tag('span', ' >', ['class' => 'button']);
+                } else {
+                    $next = Html::a(' >', '#log-' . $data['id_of_next'], ['class' => 'button']);
                 }
 
                 return
-                    '<div class="btn-group" role="group">' .
-                    Html::a(
-                        '◀',
-                        '#log-' . $data['id_of_previous'],
-                        $previousBtnOptions
-                    ) .
-                    Html::a(
-                        $formattedDiff,
-                        '#log-' . $data['id'],
-                        [
-                            'class' => 'btn btn-light',
-                        ]
-                    ) .
-                    Html::a(
-                        '▶',
-                        '#log-' . $data['id_of_next'],
-                        $nextBtnOptions
-                    ) .
+                    '<div class="since-previous">' .
+                    $previous .
+                    $formattedDiff .
+                    $next .
                     '</div>';
             },
             'format' => 'raw',

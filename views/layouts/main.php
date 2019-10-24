@@ -58,6 +58,8 @@ if (Yii::$app->controller->action->id === 'login') {
                 return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
             }
         </script>
+
+        <!-- ChartJS -->
     </head>
     <body class="hold-transition skin-red sidebar-mini">
     <?php $this->beginBody() ?>

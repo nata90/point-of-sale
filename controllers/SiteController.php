@@ -28,10 +28,10 @@ class SiteController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['logout','index'],
+                'only' => ['logout','index','dashboard'],
                 'rules' => [
                     [
-                        'actions' => ['logout','index'],
+                        'actions' => ['logout','index','dashboard'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -366,6 +366,10 @@ class SiteController extends Controller
         $return['header'] = 'NO TRANSAKSI : '.$model->no_transaksi;
 
         echo Json::encode($return);
+    }
+
+    public function actionDashboard(){
+        return $this->render('dashboard');
     }
 
     
