@@ -63,4 +63,23 @@ class HdTransaksi extends \yii\db\ActiveRecord
     {
         return $this->hasMany(DtTransaksi::className(), ['no_transaksi' => 'no_transaksi']);
     }
+
+    public static function getProdukTerlaris(){
+        $command = Yii::$app->db->createCommand('SELECT a.`kd_barang`,c.`nama_barang`,SUM(a.qty) AS total FROM `dt_transaksi` AS a 
+            LEFT JOIN `hd_transaksi` AS b ON a.`no_transaksi` = b.`no_transaksi`
+            LEFT JOIN `file_barang` AS c ON a.`kd_barang` = c.`kd_barang`
+            WHERE MONTH(b.`tgl_bayar`) = MONTH(NOW()) AND a.`status_hapus` = 0 GROUP BY a.`kd_barang`,c.`nama_barang` ORDER BY total DESC LIMIT 10');
+
+        $result= $command->queryAll();
+
+        return $result;
+    }
+
+    public static function getTotalTransaksi($date){
+        $command = Yii::$app->db->createCommand('SELECT SUM(total) AS total FROM `hd_transaksi` WHERE tgl_bayar BETWEEN "'.date('Y-m-d', strtotime($date)).' 00:00:00" AND "'.date('Y-m-d', strtotime($date)).' 23:59:59"');
+
+        $result= $command->queryOne();
+
+        return $result['total'];
+    }
 }

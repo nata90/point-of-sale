@@ -31,6 +31,7 @@
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
                 'items' => [
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
+                    ['label' => 'Dashboard', 'icon' => 'bar-chart', 'url' => ['site/dashboard']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
