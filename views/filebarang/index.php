@@ -25,6 +25,7 @@ $this->title = Yii::t('app', 'Barang');
 
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
+                    'filterModel' => $searchModel,
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
 

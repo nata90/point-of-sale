@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\FileBarang;
+use app\models\FileBarangSearch;
 use app\components\Utility;
 use yii\data\ActiveDataProvider;
 use yii\web\Controller;
@@ -43,11 +44,14 @@ class FilebarangController extends Controller
      */
     public function actionIndex()
     {
-        $dataProvider = new ActiveDataProvider([
+        /*$dataProvider = new ActiveDataProvider([
             'query' => FileBarang::find(),
-        ]);
+        ]);*/
+        $searchModel = new FileBarangSearch();
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('index', [
+            'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
     }
