@@ -76,7 +76,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
     }
 
     public static function getTotalTransaksi($date){
-        $command = Yii::$app->db->createCommand('SELECT SUM(total) AS total FROM `hd_transaksi` WHERE tgl_bayar BETWEEN "'.date('Y-m-d', strtotime($date)).' 00:00:00" AND "'.date('Y-m-d', strtotime($date)).' 23:59:59"');
+        $command = Yii::$app->db->createCommand('SELECT SUM(total) AS total FROM `hd_transaksi` WHERE tgl_bayar BETWEEN "'.date('Y-m-d', strtotime($date)).' 00:00:00" AND "'.date('Y-m-d', strtotime($date)).' 23:59:59" AND status_hapus = 0');
 
         $result= $command->queryOne();
 

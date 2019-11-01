@@ -83,7 +83,7 @@ class DtTransaksiSearch extends DtTransaksi
             'harga_satuan' => $this->harga_satuan,
             'qty' => $this->qty,
             'total_harga' => $this->total_harga,
-            'status_hapus' => $this->status_hapus,
+            'dt_transaksi.status_hapus' => 0,
             'tgl_hapus' => $this->tgl_hapus,
         ]);
 
