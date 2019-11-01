@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use app\components\Utility;
+use app\models\DtTransaksiSearch;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\DtTransaksiSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -39,6 +40,7 @@ JS
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
                     //'filterModel' => $searchModel,
+                    'showFooter' => true,
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
 
@@ -73,6 +75,7 @@ JS
                             'value'=>function($model){
                                 return Utility::rupiah($model->harga_satuan * $model->qty);
                             },
+                            'footer' => '<strong>'.Utility::rupiah(DtTransaksiSearch::getTotal($dataProvider->models, 'harga_satuan','qty')).'</strong>',
                         ],
                         //'total_harga',
                         //'status_hapus',

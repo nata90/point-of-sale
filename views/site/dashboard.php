@@ -65,8 +65,6 @@ $this->registerJs(<<<JS
 			}
 		});
 	});
-	
-	
 JS
 );
 ?>

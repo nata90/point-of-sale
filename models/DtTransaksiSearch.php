@@ -95,4 +95,15 @@ class DtTransaksiSearch extends DtTransaksi
 
         return $dataProvider;
     }
+
+    public static function getTotal($provider, $field_name_1, $field_name_2)
+    {
+        $total = 0;
+
+        foreach ($provider as $item) {
+            $total += ($item[$field_name_1] * $item[$field_name_2]);
+        }
+
+        return $total;
+    }
 }
