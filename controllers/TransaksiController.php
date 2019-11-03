@@ -13,6 +13,7 @@ use yii2tech\spreadsheet\Spreadsheet;
 use yii\data\ArrayDataProvider;
 use yii\data\ActiveDataProvider;
 use app\components\Utility;
+use yii\web\Session;
 
 /**
  * TransaksiController implements the CRUD actions for DtTransaksi model.
@@ -122,12 +123,17 @@ class TransaksiController extends Controller
     }
 
     public function actionExcelrekap(){
+        $session = new Session;
+        $session->open();
+        
         $searchModel = new DtTransaksiSearch();
-        $searchModel->start_date = date('Y-m-d');
-        $searchModel->end_date = date('Y-m-d');
+        $searchModel->start_date = $session['start-date'];
+        $searchModel->end_date = $session['end-date'];
+
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         $exporter = new Spreadsheet([
-            'dataProvider' => $searchModel->search(Yii::$app->request->queryParams),
+            'dataProvider' => $dataProvider,
             'columns' => [
                 'kd_barang',
                 [
@@ -172,6 +178,8 @@ class TransaksiController extends Controller
                 'length' => 6,
             ]
         ];
+
+
 
         return $exporter->send('laporan-penjualan.xls');
     }

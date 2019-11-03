@@ -5,6 +5,7 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\DtTransaksi;
+use yii\web\Session;
 
 /**
  * DtTransaksiSearch represents the model behind the search form of `app\models\DtTransaksi`.
@@ -57,6 +58,8 @@ class DtTransaksiSearch extends DtTransaksi
     public function search($params)
     {
         $query = DtTransaksi::find()->leftJoin('hd_transaksi','dt_transaksi.no_transaksi = hd_transaksi.no_transaksi');
+        $session = new Session;
+        $session->open();
 
         // add conditions that should always apply here
 
@@ -89,9 +92,10 @@ class DtTransaksiSearch extends DtTransaksi
 
         $query->andFilterWhere(['like', 'no_transaksi', $this->no_transaksi])->andFilterWhere(['like', 'kd_barang', $this->kd_barang]);
 
-        //$query->andWhere(['hd_transaksi.tgl_bayar']);
+        $session['start-date'] = date('Y-m-d', strtotime($this->start_date));
+        $session['end-date'] = date('Y-m-d', strtotime($this->end_date));
         $query->andFilterWhere(['between', 'hd_transaksi.tgl_bayar', date('Y-m-d', strtotime($this->start_date))." 00:00:00", date('Y-m-d', strtotime($this->end_date))." 23:59:59"]);
-        //$query->groupBy(['kd_barang']);
+        
 
         return $dataProvider;
     }
