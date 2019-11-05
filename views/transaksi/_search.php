@@ -36,10 +36,11 @@ use yii\helpers\Url;
         </div>            
     </div>
     <div class="box-footer">
-        <div class="col-lg-3">
+        <div class="col-lg-6">
             <div class="input-group">
-                <?= Html::submitButton(Yii::t('app', 'Search'), ['class' => 'btn btn-primary']) ?>&nbsp;
-                <button type="button" id="xls-rekap" class="btn btn-success" url="<?php echo Url::to(['transaksi/excelrekap']);?>">Download(.xls)</button>
+                <?= Html::submitButton(Yii::t('app', 'Cari'), ['class' => 'btn btn-primary']) ?>&nbsp;
+                <button type="button" id="xls-rekap" class="btn btn-success" url="<?php echo Url::to(['transaksi/excelrekap']);?>">Download(.xls)</button>&nbsp;
+                <button type="button" id="xls-rekap" class="btn btn-danger" url="<?php echo Url::to(['transaksi/reportpenjualan']);?>">Download(.PDF)</button>
             </div>
         </div>
     </div>

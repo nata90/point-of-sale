@@ -14,6 +14,7 @@ use yii\data\ArrayDataProvider;
 use yii\data\ActiveDataProvider;
 use app\components\Utility;
 use yii\web\Session;
+use kartik\mpdf\Pdf;
 
 /**
  * TransaksiController implements the CRUD actions for DtTransaksi model.
@@ -28,10 +29,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap'],
+                'only' => ['index','excelrekap','reportpenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap'],
+                        'actions' => ['index','excelrekap','reportpenjualan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -125,7 +126,7 @@ class TransaksiController extends Controller
     public function actionExcelrekap(){
         $session = new Session;
         $session->open();
-        
+
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
@@ -182,6 +183,53 @@ class TransaksiController extends Controller
 
 
         return $exporter->send('laporan-penjualan.xls');
+    }
+
+    public function actionReportpenjualan(){
+        $session = new Session;
+        $session->open();
+
+        $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = $session['start-date'];
+        $searchModel->end_date = $session['end-date'];
+
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $model = $dataProvider->getModels();
+
+        // get your HTML raw content without any layouts or scripts
+        $content = $this->renderPartial('report_penjualan_pdf', [
+            'model' => $model,
+            'searchModel'=>$searchModel
+        ]);
+        
+        // setup kartik\mpdf\Pdf component
+        $pdf = new Pdf([
+            // set to use core fonts only
+            'mode' => Pdf::MODE_CORE, 
+            // A4 paper format
+            'format' => Pdf::FORMAT_A4, 
+            // portrait orientation
+            'orientation' => Pdf::ORIENT_PORTRAIT, 
+            // stream to browser inline
+            'destination' => Pdf::DEST_BROWSER, 
+            // your html content input
+            'content' => $content,  
+            // format content from your own css file if needed or use the
+            // enhanced bootstrap css built by Krajee for mPDF formatting 
+            'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
+            // any css to be embedded if required
+            'cssInline' => '.kv-heading-1{font-size:18px}', 
+             // set mPDF properties on the fly
+            'options' => ['title' => 'LAPORAN REPORT PENJUALAN'],
+             // call mPDF methods on the fly
+            'methods' => [ 
+                'SetHeader'=>['LAPORAN REPORT PENJUALAN'], 
+                'SetFooter'=>['{PAGENO}'],
+            ]
+        ]);
+        
+        // return the pdf output as per the destination setting
+        return $pdf->render();
     }
 
     /**
