@@ -22,7 +22,7 @@
 				<td><?php echo date('d-m-Y', strtotime($val->header->tgl_bayar));?></td>
 				<td><?php echo $val->barang->nama_barang;?></td>
 				<td align="right"><?php echo Utility::rupiah($val->harga_satuan)?></td>
-				<td><?php echo $val->qty;?></td>
+				<td align="center"><?php echo $val->qty;?></td>
 				<td align="right"><?php echo Utility::rupiah($val->harga_satuan * $val->qty)?></td>
 			</tr>
 <?php	$no++;

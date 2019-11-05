@@ -36,6 +36,7 @@ class FileBarang extends \yii\db\ActiveRecord
             [['harga_beli', 'harga_jual', 'aktif'], 'integer'],
             [['kd_barang'], 'string', 'max' => 30],
             [['nama_barang'], 'string', 'max' => 200],
+            [['lokasi'], 'string', 'max' => 100],
         ];
     }
 
@@ -48,6 +49,7 @@ class FileBarang extends \yii\db\ActiveRecord
             'id' => 'ID',
             'kd_barang' => 'Kd Barang',
             'nama_barang' => 'Nama Barang',
+            'lokasi' => 'Lokasi',
             'harga_beli' => 'Harga Beli',
             'harga_jual' => 'Harga Jual',
             'aktif' => 'Aktif',

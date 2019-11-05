@@ -21,7 +21,12 @@ $this->title = Yii::t('app', 'Barang');
                     <?= Html::a(Yii::t('app', 'Tambah Barang'), ['create'], ['class' => 'btn btn-success']) ?>
                 </p>
 
-                <?php Pjax::begin(); ?>
+                <?php Pjax::begin([
+                    'id'=>'grid-barang',
+                    'timeout'=>false,
+                    'enablePushState'=>false,
+                    'clientOptions'=>['method'=>'GET']
+                ]); ?>
 
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
@@ -32,7 +37,7 @@ $this->title = Yii::t('app', 'Barang');
                         //'id',
                         'kd_barang',
                         'nama_barang',
-                        //'harga_beli',
+                        'lokasi',
                         [
                             'label'=>'Harga Beli',
                             'format'=>'raw',
