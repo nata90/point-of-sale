@@ -18,7 +18,7 @@ class FileBarangSearch extends FileBarang
     {
         return [
             [['id', 'harga_beli', 'harga_jual', 'aktif'], 'integer'],
-            [['kd_barang', 'nama_barang'], 'safe'],
+            [['kd_barang', 'nama_barang','lokasi'], 'safe'],
         ];
     }
 
@@ -66,6 +66,7 @@ class FileBarangSearch extends FileBarang
 
         $query->andFilterWhere(['like', 'kd_barang', $this->kd_barang])
             ->andFilterWhere(['like', 'nama_barang', $this->nama_barang]);
+            ->andFilterWhere(['like', 'lokasi', $this->lokasi]);
 
         return $dataProvider;
     }
