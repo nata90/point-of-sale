@@ -5,6 +5,8 @@ namespace app\controllers;
 use Yii;
 use app\models\DtTransaksi;
 use app\models\DtTransaksiSearch;
+use app\models\HdTransaksiSearch;
+use app\models\HdTransaksi;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -230,6 +232,18 @@ class TransaksiController extends Controller
         
         // return the pdf output as per the destination setting
         return $pdf->render();
+    }
+
+    public function actionKelolapenjualan(){
+        $searchModel = new HdTransaksiSearch();
+        $searchModel->tgl_bayar = date('Y-m-d');
+
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('kelola_penjualan', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
     }
 
     /**

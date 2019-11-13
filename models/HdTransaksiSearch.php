@@ -4,12 +4,12 @@ namespace app\models;
 
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
-use app\models\FileBarang;
+use app\models\HdTransaksi;
 
 /**
- * FileBarangSearch represents the model behind the search form of `app\models\FileBarang`.
+ * HdTransaksiSearch represents the model behind the search form of `app\models\HdTransaksi`.
  */
-class FileBarangSearch extends FileBarang
+class HdTransaksiSearch extends HdTransaksi
 {
     /**
      * {@inheritdoc}
@@ -17,8 +17,8 @@ class FileBarangSearch extends FileBarang
     public function rules()
     {
         return [
-            [['id', 'harga_beli', 'harga_jual', 'aktif'], 'integer'],
-            [['kd_barang', 'nama_barang','lokasi'], 'safe'],
+            [['id', 'status_bayar', 'total', 'jumlah_bayar', 'status_hapus'], 'integer'],
+            [['no_transaksi', 'tgl_bayar', 'tgl_hapus'], 'safe'],
         ];
     }
 
@@ -40,7 +40,7 @@ class FileBarangSearch extends FileBarang
      */
     public function search($params)
     {
-        $query = FileBarang::find();
+        $query = HdTransaksi::find();
 
         // add conditions that should always apply here
 
@@ -59,14 +59,15 @@ class FileBarangSearch extends FileBarang
         // grid filtering conditions
         $query->andFilterWhere([
             'id' => $this->id,
-            'harga_beli' => $this->harga_beli,
-            'harga_jual' => $this->harga_jual,
-            'aktif' => $this->aktif,
+            'DATE(tgl_bayar)' => $this->tgl_bayar,
+            'status_bayar' => $this->status_bayar,
+            'total' => $this->total,
+            'jumlah_bayar' => $this->jumlah_bayar,
+            'status_hapus' => $this->status_hapus,
+            'tgl_hapus' => $this->tgl_hapus,
         ]);
 
-        $query->andFilterWhere(['like', 'kd_barang', $this->kd_barang])
-            ->andFilterWhere(['like', 'nama_barang', $this->nama_barang])
-            ->andFilterWhere(['like', 'lokasi', $this->lokasi]);
+        $query->andFilterWhere(['like', 'no_transaksi', $this->no_transaksi]);
 
         return $dataProvider;
     }

@@ -3,6 +3,7 @@
 namespace app\models;
 
 use Yii;
+use app\models\DtTransaksi;
 
 /**
  * This is the model class for table "hd_transaksi".
@@ -81,5 +82,23 @@ class HdTransaksi extends \yii\db\ActiveRecord
         $result= $command->queryOne();
 
         return $result['total'];
+    }
+
+    public static function getListObat($no_transaksi){
+
+        $command = Yii::$app->db->createCommand('SELECT b.`nama_barang` FROM `dt_transaksi` AS a LEFT JOIN `file_barang` AS b ON a.`kd_barang` = b.`kd_barang` WHERE no_transaksi = "'.$no_transaksi.'"');
+
+        $result= $command->queryAll();
+        
+
+        $arr_data = array();
+
+        if($result != null){
+            foreach($result as $key=>$row){
+                $arr_data[] = $row['nama_barang'];
+            }
+        }
+
+       return implode(', ', $arr_data);
     }
 }
