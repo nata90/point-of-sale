@@ -57,8 +57,8 @@ $this->title = Yii::t('app', 'Barang');
 
                         [
                             'class' => 'yii\grid\ActionColumn',
-                            'template'=>'{delete}',
-                            'buttons'  =>
+                            'template'=>'{update}&nbsp{delete}',
+                            //'buttons'  =>
                         ],
                     ],
                 ]); ?>

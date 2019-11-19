@@ -31,10 +31,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap','reportpenjualan'],
+                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
