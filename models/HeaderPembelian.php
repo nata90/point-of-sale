@@ -18,6 +18,12 @@ use Yii;
  */
 class HeaderPembelian extends \yii\db\ActiveRecord
 {
+    public $kd_barang;
+    public $nama_barang;
+    public $satuan;
+    public $jumlah;
+    public $harga_beli;
+    public $harga_jual;
     /**
      * {@inheritdoc}
      */
@@ -32,7 +38,7 @@ class HeaderPembelian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['tgl_pembelian', 'keterangan', 'total_pembelian', 'tgl_delete'], 'required'],
+            [['tgl_pembelian', 'keterangan'], 'required'],
             [['tgl_pembelian', 'tgl_delete'], 'safe'],
             [['keterangan'], 'string'],
             [['total_pembelian'], 'number'],

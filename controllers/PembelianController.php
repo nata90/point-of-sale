@@ -5,9 +5,11 @@ namespace app\controllers;
 use Yii;
 use app\models\HeaderPembelian;
 use app\models\HeaderPembelianSearch;
+use app\models\FileBarang;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
+use yii\filters\AccessControl;
 
 /**
  * PembelianController implements the CRUD actions for HeaderPembelian model.
@@ -20,10 +22,15 @@ class PembelianController extends Controller
     public function behaviors()
     {
         return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
+            'access' => [
+                'class' => AccessControl::className(),
+                'only' => ['index','create'],
+                'rules' => [
+                    [
+                        'actions' => ['index','create'],
+                        'allow' => true,
+                        'roles' => ['@'],
+                    ],
                 ],
             ],
         ];
@@ -65,6 +72,13 @@ class PembelianController extends Controller
     public function actionCreate()
     {
         $model = new HeaderPembelian();
+        $model->tgl_pembelian = date('Y-m-d');
+
+        $data = FileBarang::find()
+        ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
+        ->where(['aktif'=>1])
+        ->asArray()
+        ->all();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_pembelian]);
@@ -72,6 +86,7 @@ class PembelianController extends Controller
 
         return $this->render('create', [
             'model' => $model,
+            'data'=>$data
         ]);
     }
 
