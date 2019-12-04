@@ -6,10 +6,13 @@ use Yii;
 use app\models\HeaderPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
+use app\components\Utility;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
+use yii\web\Session;
+use yii\helpers\Json;
 
 /**
  * PembelianController implements the CRUD actions for HeaderPembelian model.
@@ -24,10 +27,10 @@ class PembelianController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','create'],
+                'only' => ['index','create','listpembelian','deleteitem'],
                 'rules' => [
                     [
-                        'actions' => ['index','create'],
+                        'actions' => ['index','create','listpembelian','deleteitem'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -71,6 +74,11 @@ class PembelianController extends Controller
      */
     public function actionCreate()
     {
+        $session = new Session;
+        $session->open();
+
+        unset($session['datapembelian']);
+
         $model = new HeaderPembelian();
         $model->tgl_pembelian = date('Y-m-d');
 
@@ -123,6 +131,68 @@ class PembelianController extends Controller
 
         return $this->redirect(['index']);
     }
+
+    public function actionListpembelian(){
+        $tgl = $_POST['tgl'];
+        $kd_bar = $_POST['kd_bar'];
+        $nm_barang = $_POST['nm_barang'];
+        $jumlah = $_POST['jumlah'];
+        $harga_beli = (int)$_POST['harga_beli'];
+        $harga_jual = (int)$_POST['harga_jual'];
+
+        $session = new Session;
+        $session->open();
+
+        if(!isset($session['datapembelian'])){
+            $array_data = array();
+            $array_data[] = array(
+                'tgl'=>$tgl,
+                'kodebarang'=>$kd_bar,
+                'namabarang'=>$nm_barang,
+                'jumlah'=>$jumlah,
+                'hargabeli'=>$harga_beli,
+                'hargajual'=>$harga_jual
+            );
+
+           $session['datapembelian'] = $array_data;
+        }else{
+            $array_data = $session['datapembelian'];
+            $new_data = array(
+                'tgl'=>$tgl,
+                'kodebarang'=>$kd_bar,
+                'namabarang'=>$nm_barang,
+                'jumlah'=>$jumlah,
+                'hargabeli'=>$harga_beli,
+                'hargajual'=>$harga_jual
+            );
+            array_push($array_data,$new_data);
+            $session['datapembelian'] = $array_data;
+        }
+
+        $data['table'] = $this->renderPartial('list_pembelian', [
+            'arr_data' => $session['datapembelian'],
+        ],true,false);
+
+        echo Json::encode($data);
+    }
+
+     public function actionDeleteitem(){
+        $key = $_GET['key'];
+
+        $session = new Session;
+        $session->open();
+
+        $arr_data = $session['datapembelian'];
+        unset($arr_data[$key]);
+
+        $session['datapembelian'] = $arr_data;
+
+         $data['table'] = $this->renderPartial('list_pembelian', [
+            'arr_data' => $session['datapembelian'],
+        ],true,false);
+
+        echo Json::encode($data);
+     }
 
     /**
      * Finds the HeaderPembelian model based on its primary key value.
