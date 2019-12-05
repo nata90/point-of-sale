@@ -80,7 +80,19 @@ $this->registerJs(<<<JS
         });
     });
     
-    
+    $(document).on("click", "#dialog-barang", function () {
+        var url = $(this).attr('url');
+        
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: 'json',
+            success: function(v){
+                show_modal(v.title,v.msg);
+            },
+
+        });
+    });
 JS
 );
 ?>
@@ -100,8 +112,8 @@ JS
 
             <?= $form->field($model, 'kd_barang')->hiddenInput()->label(false) ?>
 
-            <?= $form->field($model, 'nama_barang')->widget(\yii\jui\AutoComplete::classname(), [
-                'options' => ['class' => 'form-control input-sm'],
+            <?= $form->field($model, 'nama_barang',['template'=>'<label class=" control-label">{label}</label><div class="col-sm-9" style="padding-left:0px;">{input}</div><button type="button" class="btn btn-success pull-right" id="dialog-barang" url="'.Url::to(['pembelian/loadformbarang']).'">+ Barang</button>'])->widget(\yii\jui\AutoComplete::classname(), [
+                'options' => ['class' => 'form-control'],
                 'clientOptions' => [
                     'source' => $data,
                     'minLength'=>'2', 
@@ -122,7 +134,7 @@ JS
         </div>
 
         <div class="box-footer">
-            <?= Html::button(Yii::t('app', 'Tambah'), ['class' => 'btn btn-success pull-right', 'id' => 'tambah-beli', 'url'=>Url::to(['pembelian/listpembelian'])]) ?>
+            <?= Html::button(Yii::t('app', 'Tambah'), ['class' => 'btn btn-info pull-right', 'id' => 'tambah-beli', 'url'=>Url::to(['pembelian/listpembelian'])]) ?>
         </div>
 
         <?php ActiveForm::end(); ?>

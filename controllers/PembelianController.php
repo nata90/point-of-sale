@@ -27,10 +27,10 @@ class PembelianController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','create','listpembelian','deleteitem'],
+                'only' => ['index','create','listpembelian','deleteitem','loadformbarang'],
                 'rules' => [
                     [
-                        'actions' => ['index','create','listpembelian','deleteitem'],
+                        'actions' => ['index','create','listpembelian','deleteitem','loadformbarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -187,12 +187,25 @@ class PembelianController extends Controller
 
         $session['datapembelian'] = $arr_data;
 
-         $data['table'] = $this->renderPartial('list_pembelian', [
+        $data['table'] = $this->renderPartial('list_pembelian', [
             'arr_data' => $session['datapembelian'],
         ],true,false);
 
         echo Json::encode($data);
      }
+
+    public function actionLoadformbarang(){
+        $model = new FileBarang();
+        $kode_barang = Utility::generateKodeBarang();
+        $model->kd_barang = $kode_barang;
+
+        $data['title'] = '<strong>TAMBAH BARANG</strong>';
+        $data['msg'] = $this->renderPartial('ajax_form_barang', [
+            'model' => $model,
+        ],true,false);
+
+        echo Json::encode($data);
+    }
 
     /**
      * Finds the HeaderPembelian model based on its primary key value.

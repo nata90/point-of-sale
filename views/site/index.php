@@ -18,9 +18,9 @@ $this->registerJs(<<<JS
 		var qty = $('#qty-barang').val();
 
 		if(kodebarang == ''){
-			alert('Nama barang tidak boleh kosong');
+			show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>NAMA BARANG TIDAK BOLEH KOSONG</strong></p>");
 		}else if(qty == ''){
-			alert('QTY barang tidak boleh kosong');
+			show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>QTY BARANG TIDAK BOLEH KOSONG</strong></p>");
 		}else{
 			$.ajax({
 				type: 'get',
@@ -104,10 +104,10 @@ $this->registerJs(<<<JS
     	var url = $(this).attr('url');
 
     	if(totalbayar == 0){
-    		alert('Jumlah Bayar Wajib di Isi !');
+    		show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>JUMLAH BAYAR WAJIB DI ISI !</strong></p>");
 		}else{
 			if(cashback < 0){
-	    		alert('Jumlah Bayar Kurang dari Total Tagihan !')
+	    		show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>JUMLAH BAYAR KURANG DARI TOTAL TAGIHAN</strong></p>");
 	    	}else{
 	    		$.ajax({
 					type: 'post',

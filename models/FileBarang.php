@@ -47,7 +47,7 @@ class FileBarang extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'kd_barang' => 'Kd Barang',
+            'kd_barang' => 'Kode Barang',
             'nama_barang' => 'Nama Barang',
             'lokasi' => 'Lokasi',
             'harga_beli' => 'Harga Beli',

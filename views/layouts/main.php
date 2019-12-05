@@ -66,9 +66,9 @@ if (Yii::$app->controller->action->id === 'login') {
 
     <?php 
         Modal::begin([
-                'header'=>'<h4></h4>',
+                'header'=>'<span id="header-info"></span>',
                 'id'=>'modal',
-                'size'=>'modal-lg',
+                'size'=>'modal-md',
             ]);
         echo "<div id='modalContent'></div>";
         Modal::end();
