@@ -6,6 +6,7 @@ use Yii;
 use app\models\HeaderPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
+use app\models\KodeGenerate;
 use app\components\Utility;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -205,6 +206,44 @@ class PembelianController extends Controller
         ],true,false);
 
         echo Json::encode($data);
+    }
+
+    public function actionSimpanbarang(){
+        $kd_barang = $_POST['kd_barang'];
+        $nama_barang = $_POST['nama_barang'];
+        $lokasi = $_POST['lokasi'];
+
+        $model = new FileBarang();
+        $model->kd_barang = $kd_barang;
+        $model->nama_barang = $nama_barang;
+        $model->lokasi = $lokasi;
+        $model->harga_beli = 0;
+        $model->harga_jual = 0;
+        $model->stok = 0;
+        $model->aktif = 1;
+
+        $return['return'] = 0;
+
+        if($model->save()){
+            $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();
+
+            $update->urutan = $update->urutan + 1;
+            $update->save(false);
+
+            $return['return'] = 1;
+            $return['msg'] = 'sukses';
+            $return['kdbarang'] = $model->kd_barang;
+            $return['namabarang'] = $model->nama_barang;
+        }else{
+            $arrData = array();
+            foreach($model->getErrors() as $key=>$val){
+                $arrData[] = $val[0];
+            }
+
+            $return['msg'] = implode(', ',$arrData);
+        }
+
+        echo Json::encode($return);
     }
 
     /**

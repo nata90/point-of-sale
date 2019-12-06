@@ -93,6 +93,36 @@ $this->registerJs(<<<JS
 
         });
     });
+
+    $(document).on("click", "#add-barang", function () {
+        var url = $(this).attr('url');
+        var kd_barang = $('#filebarang-kd_barang').val();
+        var nama_barang = $('#filebarang-nama_barang').val();
+        var lokasi = $('#filebarang-lokasi').val();
+        
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: 'json',
+            data: {
+                'kd_barang':kd_barang,
+                'nama_barang':nama_barang,
+                'lokasi':lokasi 
+            },
+            success: function(v){
+                if(v.return == 0){
+                    alert(v.msg);
+                }else{
+                    $("#modal").modal("hide");
+                    $('#headerpembelian-nama_barang').val(v.namabarang);
+                    $('#headerpembelian-kd_barang').val(v.kdbarang);
+                }
+                
+            },
+
+        });
+    });
+    
 JS
 );
 ?>

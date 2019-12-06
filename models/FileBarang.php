@@ -32,7 +32,8 @@ class FileBarang extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['kd_barang', 'nama_barang', 'harga_beli', 'harga_jual',], 'required'],
+            [['kd_barang', 'nama_barang', 'harga_beli', 'harga_jual',], 'required', 'message' => '{attribute} wajib diisi'],
+            [['kd_barang'], 'unique', 'message' => '{attribute} sudah dipakai'],
             [['harga_beli', 'harga_jual', 'aktif', 'stok'], 'integer'],
             [['kd_barang'], 'string', 'max' => 30],
             [['nama_barang'], 'string', 'max' => 200],
