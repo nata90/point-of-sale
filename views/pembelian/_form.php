@@ -122,6 +122,23 @@ $this->registerJs(<<<JS
 
         });
     });
+
+    $(document).on("click", "#simpan-beli", function () {
+        var tgl = $('#headerpembelian-tgl_pembelian').val();
+        var url = $(this).attr('url');
+        
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: 'json',
+            data: {
+                'tgl':tgl,
+            },
+            success: function(v){
+                
+            },
+        });
+    });
     
 JS
 );
@@ -145,7 +162,8 @@ JS
             <?= $form->field($model, 'nama_barang',['template'=>'<label class=" control-label">{label}</label><div class="col-sm-9" style="padding-left:0px;">{input}</div><button type="button" class="btn btn-success pull-right" id="dialog-barang" url="'.Url::to(['pembelian/loadformbarang']).'">+ Barang</button>'])->widget(\yii\jui\AutoComplete::classname(), [
                 'options' => ['class' => 'form-control'],
                 'clientOptions' => [
-                    'source' => $data,
+                    //'source' => $data,
+                    'source' =>Url::to(['pembelian/autocompletebarang']),
                     'minLength'=>'2', 
                     'autoFill'=>true,
                     'select' => new JsExpression("function( event, ui ) {

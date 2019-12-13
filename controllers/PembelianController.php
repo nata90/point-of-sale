@@ -28,10 +28,10 @@ class PembelianController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','create','listpembelian','deleteitem','loadformbarang'],
+                'only' => ['index','create','listpembelian','deleteitem','loadformbarang', 'simpanpembelian','autocompletebarang'],
                 'rules' => [
                     [
-                        'actions' => ['index','create','listpembelian','deleteitem','loadformbarang'],
+                        'actions' => ['index','create','listpembelian','deleteitem','loadformbarang','simpanpembelian','autocompletebarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -244,6 +244,39 @@ class PembelianController extends Controller
         }
 
         echo Json::encode($return);
+    }
+
+    public function actionSimpanpembelian(){
+        $arr_data = $session['datapembelian'];
+
+        $model = new HeaderPembelian;
+        $model->tgl_pembelian = date('Y-m-d H:i:s', strtotime($_POST['tgl']));
+        $model->keterangan = '-';
+        $model->total_pembelian = 0;
+        if($model->save()){
+            foreach($arr_data as $val){
+                $detail = new DetailPembelian;
+                $detail->id_pembelian = $model->id_pembelian;
+                $detail->kd_barang = $val['kodebarang'];
+                $detail->satuan = '-';
+                $detail->jumlah = $val['jumlah'];
+                $detail->harga_beli = $val['hargabeli'];
+                $detail->harga_jual = $val['hargajual'];
+                $detail->save();
+            }
+        }
+
+    }
+
+    public function actionAutocompletebarang($term){
+        $data = FileBarang::find()
+        ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
+        ->where(['like', 'nama_barang', $term])
+        ->andWhere(['aktif'=>1])
+        ->asArray()
+        ->all();
+ 
+        echo Json::encode($data);
     }
 
     /**

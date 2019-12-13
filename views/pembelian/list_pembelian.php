@@ -1,6 +1,7 @@
 <?php 
 use app\components\Utility;
 use yii\helpers\Url;
+use yii\helpers\Html;
 ?>
 <table class="table table-striped">
     <tbody>
@@ -27,3 +28,4 @@ use yii\helpers\Url;
         } ?>
     </tbody>
 </table>
+<?= Html::button(Yii::t('app', 'Simpan'), ['class' => 'btn btn-info pull-right', 'id' => 'simpan-beli', 'url'=>Url::to(['pembelian/simpanpembelian'])]) ?>
