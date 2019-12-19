@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\HeaderPembelian;
+use app\models\DetailPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
 use app\models\KodeGenerate;
@@ -14,6 +15,7 @@ use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use yii\web\Session;
 use yii\helpers\Json;
+use yii\helpers\Url;
 
 /**
  * PembelianController implements the CRUD actions for HeaderPembelian model.
@@ -247,24 +249,40 @@ class PembelianController extends Controller
     }
 
     public function actionSimpanpembelian(){
+        $session = new Session;
+        $session->open();
+
         $arr_data = $session['datapembelian'];
 
-        $model = new HeaderPembelian;
-        $model->tgl_pembelian = date('Y-m-d H:i:s', strtotime($_POST['tgl']));
-        $model->keterangan = '-';
-        $model->total_pembelian = 0;
-        if($model->save()){
-            foreach($arr_data as $val){
-                $detail = new DetailPembelian;
-                $detail->id_pembelian = $model->id_pembelian;
-                $detail->kd_barang = $val['kodebarang'];
-                $detail->satuan = '-';
-                $detail->jumlah = $val['jumlah'];
-                $detail->harga_beli = $val['hargabeli'];
-                $detail->harga_jual = $val['hargajual'];
-                $detail->save();
+        if(isset($arr_data) && !empty($arr_data)){
+            $model = new HeaderPembelian;
+            $model->tgl_pembelian = date('Y-m-d', strtotime($_POST['tgl']));
+            $model->keterangan = '-';
+            $model->total_pembelian = 0;
+            $return = array();
+            if($model->save()){
+                
+               foreach($arr_data as $val){
+                    $detail = new DetailPembelian;
+                    $detail->id_pembelian = $model->id_pembelian;
+                    $detail->kd_barang = $val['kodebarang'];
+                    $detail->satuan = '-';
+                    $detail->jumlah = $val['jumlah'];
+                    $detail->harga_beli = $val['hargabeli'];
+                    $detail->harga_jual = $val['hargajual'];
+                    $detail->save();
+                } 
+                $return['error'] = 0;
+                $return['redirect'] = Url::to(['transaksi/kelolapembelian']);
             }
+        }else{
+            $return['error'] = 1;
+            $return['msg'] = "<p style='color:red;'><strong>ITEM PEMBELIAN TIDAK BOLEH KOSONG</strong></p>";
         }
+
+        
+
+        echo Json::encode($return);
 
     }
 

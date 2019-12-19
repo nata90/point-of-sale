@@ -6,6 +6,7 @@ use Yii;
 use app\models\DtTransaksi;
 use app\models\DtTransaksiSearch;
 use app\models\HdTransaksiSearch;
+use app\models\HeaderPembelianSearch;
 use app\models\HdTransaksi;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -31,10 +32,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan'],
+                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -241,6 +242,18 @@ class TransaksiController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
         return $this->render('kelola_penjualan', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+        ]);
+    }
+
+    public function actionKelolapembelian(){
+        $searchModel = new HeaderPembelianSearch();
+        $searchModel->tgl_pembelian = date('Y-m-d');
+
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        return $this->render('kelola_pembelian', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);

@@ -131,11 +131,24 @@ $this->registerJs(<<<JS
             type: 'post',
             url: url,
             dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
             data: {
                 'tgl':tgl,
             },
             success: function(v){
+                if(v.error == 0){
+                    location.replace(v.redirect);
+                }else{
+                    show_modal("<strong style='color:red;'>ERROR</strong>",v.msg);
+                }
                 
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
             },
         });
     });

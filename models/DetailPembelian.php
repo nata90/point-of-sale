@@ -35,7 +35,7 @@ class DetailPembelian extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['id_pembelian', 'kd_barang', 'tgl_delete'], 'required'],
+            [['kd_barang','jumlah','harga_beli', 'harga_jual'], 'required'],
             [['id_pembelian', 'harga_beli', 'harga_jual', 'status_delete'], 'integer'],
             [['jumlah'], 'number'],
             [['tgl_delete'], 'safe'],
@@ -69,5 +69,13 @@ class DetailPembelian extends \yii\db\ActiveRecord
     public function getPembelian()
     {
         return $this->hasOne(HeaderPembelian::className(), ['id_pembelian' => 'id_pembelian']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getBarang()
+    {
+        return $this->hasOne(FileBarang::className(), ['kd_barang' => 'kd_barang']);
     }
 }
