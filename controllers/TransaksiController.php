@@ -8,6 +8,7 @@ use app\models\DtTransaksiSearch;
 use app\models\HdTransaksiSearch;
 use app\models\HeaderPembelianSearch;
 use app\models\HdTransaksi;
+use app\models\HeaderPembelian;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -32,10 +33,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian'],
+                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -257,6 +258,16 @@ class TransaksiController extends Controller
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
         ]);
+    }
+
+    public function actionDeletepembelian($id){
+        $model = HeaderPembelian::findOne($id);
+
+        $model->status_delete = 1;
+        $model->tgl_delete = date('Y-m-d H:i:s');
+        $model->save(false);
+
+        return $this->redirect(['kelolapembelian']);
     }
 
     /**

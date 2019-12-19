@@ -369,11 +369,13 @@ class SiteController extends Controller
     }
 
     public function actionDashboard(){
-        $popular = HdTransaksi::getProdukTerlaris();
+        /*$popular = HdTransaksi::getProdukTerlaris();
 
         return $this->render('dashboard',[
             'popular'=>$popular
-        ]);
+        ]);*/
+
+        return $this->render('dashboard');
     }
 
     public function actionGrafikpenjualan(){
@@ -381,7 +383,7 @@ class SiteController extends Controller
         $arr_date = array();
         $arr_data = array();
 
-        for($i=7;$i>=0;$i--){
+        for($i=10;$i>=0;$i--){
             $date = mktime(0, 0, 0, date('m'), date('d')-$i, date('Y'));
             $arr_date[] = date('d/m/Y', $date);
             $arr_data[] = HdTransaksi::getTotalTransaksi(date('Y-m-d', $date));

@@ -60,9 +60,9 @@ class HeaderPembelianSearch extends HeaderPembelian
         // grid filtering conditions
         $query->andFilterWhere([
             'id_pembelian' => $this->id_pembelian,
-            'tgl_pembelian' => $this->tgl_pembelian,
+            'DATE(tgl_pembelian)' => date('Y-m-d', strtotime($this->tgl_pembelian)),
             'total_pembelian' => $this->total_pembelian,
-            'status_delete' => $this->status_delete,
+            'status_delete' => 0,
             'tgl_delete' => $this->tgl_delete,
         ]);
 

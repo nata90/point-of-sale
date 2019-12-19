@@ -35,6 +35,7 @@
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
                     ['label' => 'Pembelian', 'icon' => 'money', 'url' => ['pembelian/create']],
                     ['label' => 'Kelola Penjualan', 'icon' => 'clone', 'url' => ['transaksi/kelolapenjualan']],
+                    ['label' => 'Kelola Pembelian', 'icon' => 'server', 'url' => ['transaksi/kelolapembelian']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/

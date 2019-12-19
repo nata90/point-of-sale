@@ -77,20 +77,20 @@ class HeaderPembelian extends \yii\db\ActiveRecord
             $return = '
                     <table class="table table-striped table-bordered">
                         <tr>
-                            <td><strong>No</strong></td>
-                            <td><strong>Nama Barang</strong></td>
-                            <td><strong>Jumlah</strong></td>
-                            <td><strong>Harga Beli</strong></td>
-                            <td><strong>Harga Jual</strong></td>
+                            <td>No</td>
+                            <td>Nama Barang</td>
+                            <td>Jumlah</td>
+                            <td>Harga Beli</td>
+                            <td>Harga Jual</td>
                         </tr>';
             $no = 1;
             foreach($model as $val){
                 $return .= '<tr>
-                    <td><strong>'.$no.'</strong></td>
-                    <td><strong>'.$val->barang->nama_barang.'</strong></td>
-                    <td><strong>'.round($val->jumlah,2).'</strong></td>
-                    <td><strong>'.Utility::rupiah($val->harga_beli).'</strong></td>
-                    <td><strong>'.Utility::rupiah($val->harga_jual).'</strong></td>
+                    <td>'.$no.'</td>
+                    <td>'.$val->barang->nama_barang.'</td>
+                    <td>'.round($val->jumlah,2).'</td>
+                    <td>'.Utility::rupiah($val->harga_beli).'</td>
+                    <td>'.Utility::rupiah($val->harga_jual).'</td>
                 </tr>';
                     $no++;
             }

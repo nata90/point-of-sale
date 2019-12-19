@@ -26,7 +26,10 @@ $this->registerJs(<<<JS
 					                'rgba(153, 102, 255, 0.2)',
 					                'rgba(255, 159, 64, 0.2)',
 					                'rgba(72, 176, 69, 0.2)',
-					                'rgba(176, 69, 137, 0.2)'
+					                'rgba(176, 69, 137, 0.2)',
+					                'rgba(64, 132, 191, 0.2)',
+					                'rgba(169, 129, 213, 0.2)',
+					                'rgba(129, 213, 132, 0.2)'
 					            ],
 					            borderColor: [
 					                'rgba(255, 99, 132, 1)',
@@ -36,7 +39,10 @@ $this->registerJs(<<<JS
 					                'rgba(153, 102, 255, 1)',
 					                'rgba(255, 159, 64, 1)',
 					                'rgba(72, 176, 69, 1)',
-					                'rgba(176, 69, 137, 1)'
+					                'rgba(176, 69, 137, 1)',
+					                'rgba(64, 132, 191, 1)',
+					                'rgba(169, 129, 213, 1)',
+					                'rgba(129, 213, 132, 1)'
 					            ],
 					            borderWidth: 1
 					        }]
@@ -70,7 +76,7 @@ JS
 ?>
 	<div class="row">
 		 <!-- BAR CHART -->
-	    <div class="col-md-8">
+	    <div class="col-md-12">
           <div class="box box-danger">
             <div class="box-header with-border">
               <h3 class="box-title">GRAFIK DATA PENJUALAN</h3>
@@ -88,7 +94,7 @@ JS
             </div>
           </div>
 	    </div>
-	    <div class="col-md-4">
+	    <?php /*<div class="col-md-4">
 	    	<div class="box box-danger">
 	    		<div class="box-header with-border">
 		    		<h3 class="box-title">10 TERLARIS BULAN INI</h3>
@@ -104,7 +110,7 @@ JS
 	    			</ul>
 	    		</div>
 	    	</div>
-	    </div>
+	    </div>*/ ?>
 	    
 	</div>
 

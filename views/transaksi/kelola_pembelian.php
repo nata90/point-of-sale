@@ -7,17 +7,18 @@ use app\components\Utility;
 use app\models\HdTransaksi;
 use app\models\HeaderPembelianSearch;
 use app\models\HeaderPembelian;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
-$this->title = Yii::t('app', 'Kelola Penjualan');
+$this->title = Yii::t('app', 'Kelola Pembelian');
 //$this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="row">
     <div class="col-md-12">
         <div class="box box-danger box-solid">
             <div class="box-header with-border">
-                <h3 class="box-title">Kelola Penjualan</h3>
+                <h3 class="box-title">Kelola Pembelian</h3>
             </div>
             <div class="box-body">
 
@@ -27,10 +28,11 @@ $this->title = Yii::t('app', 'Kelola Penjualan');
                     'enablePushState'=>false,
                     'clientOptions'=>['method'=>'GET']
                 ]); ?>
+                <?php echo $this->render('_search_pembelian', ['model' => $searchModel]); ?>
 
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
-                    'filterModel' => false,
+                    //'filterModel' => false,
                     'columns' => [
                         ['class' => 'yii\grid\SerialColumn'],
 
@@ -51,7 +53,16 @@ $this->title = Yii::t('app', 'Kelola Penjualan');
                         ],
                                              
 
-                        ['class' => 'yii\grid\ActionColumn','template'=>'{delete}'],
+                        [
+                            'class' => 'yii\grid\ActionColumn',
+                            'template'=>'{delete}',
+                            'urlCreator' => function( $action, $model, $key, $index ){
+                                if ($action == "delete") {
+                                    return Url::to(['deletepembelian', 'id' => $key]);
+                                }
+
+                            }
+                        ],
                     ],
                 ]); ?>
 
