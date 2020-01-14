@@ -122,9 +122,14 @@ class TransaksiController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $model = HdTransaksi::findOne($id);
+        $model->status_hapus = 1;
+        $model->tgl_hapus = date('Y-m-d H:i:s');
 
-        return $this->redirect(['index']);
+        if($model->save()){
+            return $this->redirect(['kelolapenjualan']);
+        }
+
     }
 
     public function actionExcelrekap(){
