@@ -49,10 +49,12 @@ class FilebarangController extends Controller
         ]);*/
         $searchModel = new FileBarangSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider2 = $searchModel->searchStokKosong(Yii::$app->request->queryParams);
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'dataProvider2'=>$dataProvider2
         ]);
     }
 
