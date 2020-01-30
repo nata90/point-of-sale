@@ -19,9 +19,16 @@ $config = [
         'cache' => [
             'class' => 'yii\caching\FileCache',
         ],
+        'session' => [
+            'timeout' => 3600,
+        ],
         'user' => [
+            //'class'=>'yii\web\User',
             'identityClass' => 'app\models\AppUser',
-            'enableAutoLogin' => true,
+            //'loginUrl'=>['site/login'],
+            //'enableAutoLogin' => false,
+            'enableSession' => true,
+            'authTimeout'=>3600,   
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',
