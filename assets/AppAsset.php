@@ -23,10 +23,14 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/ionicons.min.css',
         'css/googlefont.css',
+        'css/daterangepicker.css',
     ];
     public $js = [
         'js/Chart.js',
         'js/custom.js',
+        'js/moment.min.js',
+        'js/daterangepicker.js',
+        
     ];
     public $depends = [
         'yii\web\YiiAsset',

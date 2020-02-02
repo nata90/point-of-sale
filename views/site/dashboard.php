@@ -71,10 +71,35 @@ $this->registerJs(<<<JS
 			}
 		});
 	});
+
+	//Date range picker
+    $('#reservation').daterangepicker({
+    	"startDate": "07/01/2015",
+    	"endDate": "07/15/2015"
+    }
+    )
 JS
 );
 ?>
-	<div class="row">
+
+	<div class="row">	
+		<div class="col-md-12 hide">
+			<div class="box box-danger">
+	            <div class="box-header with-border">
+	            	<div class="box-body">
+	            		<div class="form-group col-xs-4">
+			              	<label>Tanggal :</label>
+			              	<div class="input-group">
+				                  <div class="input-group-addon">
+				                    <i class="fa fa-calendar"></i>
+				                  </div>
+				                  <input type="text" class="form-control pull-right" id="reservation">
+				            </div>
+			              </div>
+	            	</div>
+	            </div>
+	        </div>
+		</div>	
 		 <!-- BAR CHART -->
 	    <div class="col-md-12">
           <div class="box box-danger">
@@ -85,12 +110,13 @@ JS
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
                 </button>
                 <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                
               </div>
-            </div>
-            <div class="box-body">
-              <div class="chart">
-                <canvas id="barChart" style="height:230px"></canvas>
-              </div>
+            	<div class="box-body">
+            		<div class="chart">
+		                <canvas id="barChart" style="height:230px"></canvas>
+		            </div>
+                </div>
             </div>
           </div>
 	    </div>
