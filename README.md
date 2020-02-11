@@ -6,7 +6,7 @@
     <br>
 </p>
 
-<strong>Aplikasi penjualan berbasis Yii Framework.</strong>
+Aplikasi penjualan berbasis Yii Framework.
 
 
 
