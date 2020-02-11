@@ -10,10 +10,13 @@ Aplikasi penjualan berbasis Yii Framework.
 
 
 
-REQUIREMENTS
+FITUR
 ------------
 
-The minimum requirement by this project template that your Web server supports PHP 5.4.0.
+- Kelola Stok
+- Penjualan & pembelian barang
+- Rekap laporan penjualan
+- Dashboard grafik penjualan perhari
 
 
 
