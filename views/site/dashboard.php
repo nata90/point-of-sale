@@ -83,19 +83,25 @@ JS
 ?>
 
 	<div class="row">	
-		<div class="col-md-12 hide">
+		<div class="col-md-12">
 			<div class="box box-danger">
 	            <div class="box-header with-border">
 	            	<div class="box-body">
+	            		<div class="col-xs-1"><label>TANGGAL</label></div>
 	            		<div class="form-group col-xs-4">
-			              	<label>Tanggal :</label>
+			              	
 			              	<div class="input-group">
 				                  <div class="input-group-addon">
 				                    <i class="fa fa-calendar"></i>
 				                  </div>
 				                  <input type="text" class="form-control pull-right" id="reservation">
+
 				            </div>
-			              </div>
+
+			             </div>
+			             <div class="col-xs-1">
+			             	 <button class="btn btn-block btn-success btn-sm">Cari</button>
+			             </div>
 	            	</div>
 	            </div>
 	        </div>

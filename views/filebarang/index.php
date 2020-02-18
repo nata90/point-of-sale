@@ -75,7 +75,7 @@ $this->title = Yii::t('app', 'Barang');
 
                         <?php Pjax::end(); ?>
                     </div>
-                    <div class="tab-pane active" id="tab_2">
+                    <div class="tab-pane" id="tab_2">
                         <?php Pjax::begin([
                             'id'=>'grid-barang-habis',
                             'timeout'=>false,
