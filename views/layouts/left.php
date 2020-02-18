@@ -46,6 +46,7 @@
                         'url' => '#',
                         'items' => [
                             ['label' => 'Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
+                            ['label' => 'Supplier', 'icon' => 'folder', 'url' => ['supplier/index'],],
                         ],
                     ],
                     [
