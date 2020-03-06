@@ -7,6 +7,7 @@ use app\models\HeaderPembelian;
 use app\models\DetailPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
+use app\models\Supplier;
 use app\models\KodeGenerate;
 use app\components\Utility;
 use yii\web\Controller;
@@ -33,7 +34,7 @@ class PembelianController extends Controller
                 'only' => ['index','create','listpembelian','deleteitem','loadformbarang', 'simpanpembelian','autocompletebarang'],
                 'rules' => [
                     [
-                        'actions' => ['index','create','listpembelian','deleteitem','loadformbarang','simpanpembelian','autocompletebarang'],
+                        'actions' => ['index','create','listpembelian','deleteitem','loadformbarang','simpanpembelian','autocompletebarang','autocompletesupplier'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -255,10 +256,17 @@ class PembelianController extends Controller
         $arr_data = $session['datapembelian'];
 
         if(isset($arr_data) && !empty($arr_data)){
+            if($_POST['supplier'] == ''){
+                $id_supplier = 1;
+            }else{
+                $id_supplier = $_POST['supplier'];
+            }
+
             $model = new HeaderPembelian;
             $model->tgl_pembelian = date('Y-m-d', strtotime($_POST['tgl']));
             $model->keterangan = '-';
             $model->total_pembelian = 0;
+            $model->id_supplier = $id_supplier;
             $return = array();
             if($model->save()){
                 
@@ -291,6 +299,16 @@ class PembelianController extends Controller
         ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
         ->where(['like', 'nama_barang', $term])
         ->andWhere(['aktif'=>1])
+        ->asArray()
+        ->all();
+ 
+        echo Json::encode($data);
+    }
+
+    public function actionAutocompletesupplier($term){
+        $data = Supplier::find()
+        ->select(['nama_supplier as value', 'nama_supplier as  label', 'id as id'])
+        ->where(['like', 'nama_supplier', $term])
         ->asArray()
         ->all();
  

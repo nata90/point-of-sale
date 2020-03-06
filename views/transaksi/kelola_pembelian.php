@@ -43,7 +43,14 @@ $this->title = Yii::t('app', 'Kelola Pembelian');
                                 return date('d-m-Y', strtotime($model->tgl_pembelian));
                             },
                         ],
-                        'keterangan',
+                        //'keterangan',
+                        [
+                            'label'=>'Supplier',
+                            'format'=>'raw',
+                            'value'=>function($model){
+                                return $model->supplier->nama_supplier;
+                            },
+                        ],
                         [
                             'label'=>'Item Pembelian',
                             'format'=>'raw',

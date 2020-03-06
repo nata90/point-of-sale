@@ -25,6 +25,7 @@ class HeaderPembelian extends \yii\db\ActiveRecord
     public $jumlah;
     public $harga_beli;
     public $harga_jual;
+    public $nama_supplier;
     /**
      * {@inheritdoc}
      */
@@ -40,7 +41,7 @@ class HeaderPembelian extends \yii\db\ActiveRecord
     {
         return [
             [['tgl_pembelian'], 'required'],
-            [['tgl_pembelian', 'tgl_delete'], 'safe'],
+            [['tgl_pembelian', 'tgl_delete', 'id_supplier','nama_supplier'], 'safe'],
             [['keterangan'], 'string'],
             [['total_pembelian'], 'number'],
             [['status_delete'], 'integer'],
@@ -59,6 +60,7 @@ class HeaderPembelian extends \yii\db\ActiveRecord
             'total_pembelian' => Yii::t('app', 'Total Pembelian'),
             'status_delete' => Yii::t('app', 'Status Delete'),
             'tgl_delete' => Yii::t('app', 'Tgl Delete'),
+            'id_supplier' => Yii::t('app', 'Supplier'),
         ];
     }
 
@@ -100,5 +102,13 @@ class HeaderPembelian extends \yii\db\ActiveRecord
         }
 
         return $return;
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getSupplier()
+    {
+        return $this->hasOne(Supplier::className(), ['id' => 'id_supplier']);
     }
 }

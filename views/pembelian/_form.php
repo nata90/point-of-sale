@@ -125,6 +125,7 @@ $this->registerJs(<<<JS
 
     $(document).on("click", "#simpan-beli", function () {
         var tgl = $('#headerpembelian-tgl_pembelian').val();
+        var supplier = $('#headerpembelian-id_supplier').val();
         var url = $(this).attr('url');
         
         $.ajax({
@@ -137,6 +138,7 @@ $this->registerJs(<<<JS
             },
             data: {
                 'tgl':tgl,
+                'supplier':supplier
             },
             success: function(v){
                 if(v.error == 0){
@@ -170,9 +172,24 @@ JS
                     'options'=>['class'=>'form-control'],
                 ]) ?>
 
+            <?= $form->field($model, 'id_supplier')->hiddenInput()->label(false) ?>
+
+            <?= $form->field($model, 'nama_supplier')->widget(\yii\jui\AutoComplete::classname(), [
+                'options' => ['class' => 'form-control'],
+                'clientOptions' => [
+                    //'source' => $data,
+                    'source' =>Url::to(['pembelian/autocompletesupplier']),
+                    'minLength'=>'2', 
+                    'autoFill'=>true,
+                    'select' => new JsExpression("function( event, ui ) {
+                        $('#headerpembelian-id_supplier').val(ui.item.id);
+                     }")
+                ],
+            ]) ?>
+
             <?= $form->field($model, 'kd_barang')->hiddenInput()->label(false) ?>
 
-            <?= $form->field($model, 'nama_barang',['template'=>'<label class=" control-label">{label}</label><div class="col-sm-9" style="padding-left:0px;">{input}</div><button type="button" class="btn btn-success pull-right" id="dialog-barang" url="'.Url::to(['pembelian/loadformbarang']).'">+ Barang</button>'])->widget(\yii\jui\AutoComplete::classname(), [
+            <?= $form->field($model, 'nama_barang',['template'=>'<label class=" control-label">{label}</label><div class="col-sm-9" style="padding-left:0px;">{input}</div><button type="button" class="btn btn-success pull-right" id="dialog-barang" url="'.Url::to(['pembelian/loadformbarang']).'">+ Item</button>'])->widget(\yii\jui\AutoComplete::classname(), [
                 'options' => ['class' => 'form-control'],
                 'clientOptions' => [
                     //'source' => $data,
