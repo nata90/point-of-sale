@@ -22,12 +22,18 @@ use yii\helpers\Url;
     <div class="box-body">
         <div class="col-lg-2">
             <div class="input-group">
-                <?= $form->field($model, 'tgl_pembelian')->widget(\yii\jui\DatePicker::class,[
+                <?= $form->field($model, 'start_date')->widget(\yii\jui\DatePicker::class,[
                     'options'=>['class'=>'form-control'],
                 ]) ?>
             </div>
         </div> 
-                   
+        <div class="col-lg-2">
+            <div class="input-group">
+                <?= $form->field($model, 'end_date')->widget(\yii\jui\DatePicker::class,[
+                    'options'=>['class'=>'form-control'],
+                ]) ?>
+            </div>
+        </div>          
     </div>
     <div class="box-footer">
         <div class="col-lg-6">

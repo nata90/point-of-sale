@@ -255,7 +255,8 @@ class TransaksiController extends Controller
 
     public function actionKelolapembelian(){
         $searchModel = new HeaderPembelianSearch();
-        $searchModel->tgl_pembelian = date('Y-m-d');
+        $searchModel->start_date = date('Y-m-d');
+        $searchModel->end_date = date('Y-m-d');
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
 
