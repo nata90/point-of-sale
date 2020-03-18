@@ -143,6 +143,7 @@ class PembelianController extends Controller
         $jumlah = $_POST['jumlah'];
         $harga_beli = (int)$_POST['harga_beli'];
         $harga_jual = (int)$_POST['harga_jual'];
+        $tgl_ed = $_POST['tgl_ed'];
 
         $session = new Session;
         $session->open();
@@ -155,7 +156,8 @@ class PembelianController extends Controller
                 'namabarang'=>$nm_barang,
                 'jumlah'=>$jumlah,
                 'hargabeli'=>$harga_beli,
-                'hargajual'=>$harga_jual
+                'hargajual'=>$harga_jual,
+                'tgled'=>$tgl_ed
             );
 
            $session['datapembelian'] = $array_data;
@@ -167,7 +169,8 @@ class PembelianController extends Controller
                 'namabarang'=>$nm_barang,
                 'jumlah'=>$jumlah,
                 'hargabeli'=>$harga_beli,
-                'hargajual'=>$harga_jual
+                'hargajual'=>$harga_jual,
+                'tgled'=>$tgl_ed
             );
             array_push($array_data,$new_data);
             $session['datapembelian'] = $array_data;
@@ -250,6 +253,9 @@ class PembelianController extends Controller
     }
 
     public function actionSimpanpembelian(){
+        /*echo $_POST['no_faktur'];
+        exit();*/
+
         $session = new Session;
         $session->open();
 
@@ -267,6 +273,7 @@ class PembelianController extends Controller
             $model->keterangan = '-';
             $model->total_pembelian = 0;
             $model->id_supplier = $id_supplier;
+            $model->no_faktur = $_POST['no_faktur'];
             $return = array();
             if($model->save()){
                 

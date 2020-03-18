@@ -90,6 +90,7 @@ class HeaderPembelianSearch extends HeaderPembelian
 
         $query->andFilterWhere(['like', 'keterangan', $this->keterangan]);
         $query->andFilterWhere(['between', 'tgl_pembelian', date('Y-m-d', strtotime($this->start_date)).' 00:00:00', date('Y-m-d', strtotime($this->end_date)).' 00:00:00']);
+        $query->orderBy(['id_pembelian'=>SORT_DESC]);
 
         return $dataProvider;
     }

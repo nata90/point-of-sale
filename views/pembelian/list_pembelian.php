@@ -8,6 +8,7 @@ use yii\helpers\Html;
         <tr>
             <th>Kode Barang</th>
             <th>Nama Barang</th>
+            <th>Tgl ED</th>
             <th>Jumlah</th>
             <th>Harga Beli</th>
             <th>Harga Jual</th>
@@ -19,6 +20,7 @@ use yii\helpers\Html;
             <tr>
                 <td><?php echo $val['kodebarang'];?></td>
                 <td><?php echo $val['namabarang'];?></td>
+                <td><?php echo date('d-m-Y', strtotime($val['tgled']));?></td>
                 <td><?php echo $val['jumlah'];?></td>
                 <td style="text-align:right;"><?php echo Utility::rupiah((int)$val['hargabeli']);?></td>
                 <td style="text-align:right;"><?php echo Utility::rupiah((int)$val['hargajual']);?></td>

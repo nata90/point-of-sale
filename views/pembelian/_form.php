@@ -27,6 +27,7 @@ $this->registerJs(<<<JS
         var jumlah = $('#headerpembelian-jumlah').val();
         var harga_beli = $('#headerpembelian-harga_beli').val();
         var harga_jual = $('#headerpembelian-harga_jual').val();
+        var tgl_ed = $('#headerpembelian-tgl_ed').val();
 
         var rem_harga_beli = harga_beli.replace("Rp. ","");
         var rem_dot_harga_beli = rem_harga_beli.split(".").join("");
@@ -46,7 +47,8 @@ $this->registerJs(<<<JS
                 'nm_barang':nm_barang,
                 'jumlah':jumlah,
                 'harga_beli':rem_dot_harga_beli,
-                'harga_jual':rem_dot_harga_jual
+                'harga_jual':rem_dot_harga_jual,
+                'tgl_ed':tgl_ed
             },
             success: function(v){
                 $('#table-list').html(v.table);
@@ -126,6 +128,7 @@ $this->registerJs(<<<JS
     $(document).on("click", "#simpan-beli", function () {
         var tgl = $('#headerpembelian-tgl_pembelian').val();
         var supplier = $('#headerpembelian-id_supplier').val();
+        var no_faktur = $('#headerpembelian-no_faktur').val();
         var url = $(this).attr('url');
         
         $.ajax({
@@ -138,7 +141,8 @@ $this->registerJs(<<<JS
             },
             data: {
                 'tgl':tgl,
-                'supplier':supplier
+                'supplier':supplier,
+                'no_faktur':no_faktur
             },
             success: function(v){
                 if(v.error == 0){
@@ -172,6 +176,8 @@ JS
                     'options'=>['class'=>'form-control'],
                 ]) ?>
 
+            <?= $form->field($model, 'no_faktur')->textInput() ?>
+
             <?= $form->field($model, 'id_supplier')->hiddenInput()->label(false) ?>
 
             <?= $form->field($model, 'nama_supplier')->widget(\yii\jui\AutoComplete::classname(), [
@@ -201,6 +207,10 @@ JS
                      }")
                 ],
             ]) ?>
+
+            <?= $form->field($model, 'tgl_ed')->widget(\yii\jui\DatePicker::class,[
+                    'options'=>['class'=>'form-control'],
+                ]) ?>
            
 
             <?= $form->field($model, 'jumlah')->textInput() ?>
@@ -232,11 +242,13 @@ JS
                     <tr>
                         <th>Kode Barang</th>
                         <th>Nama Barang</th>
+                        <th>Tgl ED</th>
                         <th>Jumlah</th>
                         <th>Harga Beli</th>
                         <th>Harga Jual</th>
                     </tr>
                     <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>
