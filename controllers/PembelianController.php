@@ -7,6 +7,7 @@ use app\models\HeaderPembelian;
 use app\models\DetailPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
+use app\models\FileStokBarang;
 use app\models\Supplier;
 use app\models\KodeGenerate;
 use app\components\Utility;
@@ -286,6 +287,21 @@ class PembelianController extends Controller
                     $detail->harga_beli = $val['hargabeli'];
                     $detail->harga_jual = $val['hargajual'];
                     $detail->save();
+
+                    $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->andWhere(['tgl_ed'=>date('Y-m-d', strtotime($val['tgled']))])->one();
+
+                    if($stok_barang == null){
+                        $stok_barang = new FileStokBarang;
+                        $jum_stok = $val['jumlah'];
+                    }else{
+                        $jum_stok = $stok_barang->stok_akhir + $val['jumlah'];
+                    }
+
+                    $stok_barang->kd_barang = $val['kodebarang'];
+                    $stok_barang->tgl_ed = date('Y-m-d', strtotime($val['tgled']));
+                    $stok_barang->stok_akhir = $jum_stok;
+                    $stok_barang->nomor_batch = '-';
+                    $stok_barang->save();
                 } 
                 $return['error'] = 0;
                 $return['redirect'] = Url::to(['transaksi/kelolapembelian']);

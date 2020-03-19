@@ -2508,3 +2508,2712 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1584503284.954
     'REQUEST_TIME' => 1584503284
 ]
+2020-03-19 10:28:54 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2020-03-19 10:28:54 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pmt7im2c10jk8qqc8kdlc4v29f'
+    '_csrf' => 'd0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584674934
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pmt7im2c10jk8qqc8kdlc4v29f; _csrf=d0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33172'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584588534.561
+    'REQUEST_TIME' => 1584588534
+]
+2020-03-19 10:29:00 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:164
+2020-03-19 10:29:00 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pmt7im2c10jk8qqc8kdlc4v29f'
+    '_csrf' => 'd0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584674940
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 50000
+            'total' => 250000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => '3TYM1x1m9XxJGoyGnUjbcnqsuB0spisY1ym9iU8kBHKCcF2AVCmSMjFSu9zTEeweFsX7R0XfSWiSa-f4NQlgSw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pmt7im2c10jk8qqc8kdlc4v29f; _csrf=d0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=5'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=5'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584588540.289
+    'REQUEST_TIME' => 1584588540
+]
+2020-03-19 10:29:04 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:296
+2020-03-19 10:29:04 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '250000'
+    'totalbayar' => '300000'
+    'cashback' => '50000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pmt7im2c10jk8qqc8kdlc4v29f'
+    '_csrf' => 'd0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584674944
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 50000
+            'total' => 250000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '52'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '3TYM1x1m9XxJGoyGnUjbcnqsuB0spisY1ym9iU8kBHKCcF2AVCmSMjFSu9zTEeweFsX7R0XfSWiSa-f4NQlgSw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pmt7im2c10jk8qqc8kdlc4v29f; _csrf=d0e3e6038692fb7e45412c43ff98ec18fcdba8129cf6031feb3e01b0fdddd502a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_FQWIOgNxH7ZNY7lliCZiybpEBZqz-d9%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33176'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584588544.257
+    'REQUEST_TIME' => 1584588544
+]
+2020-03-19 13:32:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-03-19 13:32:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584685938
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36060'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584599538.129
+    'REQUEST_TIME' => 1584599538
+]
+2020-03-19 13:32:44 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-03-19 13:32:44 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584685964
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584599564.554
+    'REQUEST_TIME' => 1584599564
+]
+2020-03-19 13:33:52 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-03-19 13:33:52 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584686032
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36876'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584599632.687
+    'REQUEST_TIME' => 1584599632
+]
+2020-03-19 13:34:12 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:81
+2020-03-19 13:34:12 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584686052
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584599652.824
+    'REQUEST_TIME' => 1584599652
+]
+2020-03-19 13:50:49 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][error][ParseError] ParseError: syntax error, unexpected '}' in /var/www/html/pos/controllers/PembelianController.php:295
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('pembelian')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('create')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/creat...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-03-19 13:50:49 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687049
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45136'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584600649.72
+    'REQUEST_TIME' => 1584600649
+]
+2020-03-19 13:51:03 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:81
+2020-03-19 13:51:03 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687063
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45246'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584600663.035
+    'REQUEST_TIME' => 1584600663
+]
+2020-03-19 13:54:13 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:81
+2020-03-19 13:54:13 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687253
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46772'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584600853.334
+    'REQUEST_TIME' => 1584600853
+]
+2020-03-19 13:57:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:148
+2020-03-19 13:57:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '5'
+    'harga_beli' => '20000'
+    'harga_jual' => '25000'
+    'tgl_ed' => 'Sep 30, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687438
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '5'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Sep 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '125'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'SpoYa-bfejqRMLlmqpXXpAhYMtX2fG3v-rmVc9jnCqAI03c5roU1buAC7A2a3frVV2tbksIpH6KU1vIss6tE4g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601038.408
+    'REQUEST_TIME' => 1584601038
+]
+2020-03-19 13:57:22 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:259
+2020-03-19 13:57:22 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][error][Error] Error: Class 'app\controllers\FileStokBarang' not found in /var/www/html/pos/controllers/PembelianController.php:290
+Stack trace:
+#0 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2020-03-19 13:57:22 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'XYZ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687442
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '5'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Sep 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'SpoYa-bfejqRMLlmqpXXpAhYMtX2fG3v-rmVc9jnCqAI03c5roU1buAC7A2a3frVV2tbksIpH6KU1vIss6tE4g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48272'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601042.621
+    'REQUEST_TIME' => 1584601042
+]
+2020-03-19 13:57:35 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:259
+2020-03-19 13:57:35 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][error][Error] Error: Class 'app\controllers\FileStokBarang' not found in /var/www/html/pos/controllers/PembelianController.php:290
+Stack trace:
+#0 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2020-03-19 13:57:35 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'XYZ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687455
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '5'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Sep 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'SpoYa-bfejqRMLlmqpXXpAhYMtX2fG3v-rmVc9jnCqAI03c5roU1buAC7A2a3frVV2tbksIpH6KU1vIss6tE4g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48410'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601055.534
+    'REQUEST_TIME' => 1584601055
+]
+2020-03-19 13:58:01 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 13:58:01 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687481
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48620'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601081.776
+    'REQUEST_TIME' => 1584601081
+]
+2020-03-19 13:58:32 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 13:58:32 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '20'
+    'harga_beli' => '10000'
+    'harga_jual' => '20000'
+    'tgl_ed' => 'Dec 31, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687512
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9IDkQDbe0NP0cUTut3m4a41wHpjfNjacLwiMvkKaCyK2yYsSfoSfh4VDEYWHMZUa0kN33-tjRNFBZ-vhKdZFYA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48872'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601112.917
+    'REQUEST_TIME' => 1584601112
+]
+2020-03-19 13:58:36 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 13:58:36 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(296): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('A0001', 'Dec 31, 2020', 20, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(296): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1
+)
+
+2020-03-19 13:58:36 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'XYZ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687516
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9IDkQDbe0NP0cUTut3m4a41wHpjfNjacLwiMvkKaCyK2yYsSfoSfh4VDEYWHMZUa0kN33-tjRNFBZ-vhKdZFYA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48872'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601116.928
+    'REQUEST_TIME' => 1584601116
+]
+2020-03-19 13:58:42 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 13:58:42 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1290
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1290): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(296): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('A0001', 'Dec 31, 2020', 20, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1295): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1091): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(296): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: 'Dec 31, 2020' for column 'tgl_ed' at row 1
+)
+
+2020-03-19 13:58:42 [::1][3][0kj1cdpntnmhm4ra6v37k07fuf][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'XYZ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687522
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9IDkQDbe0NP0cUTut3m4a41wHpjfNjacLwiMvkKaCyK2yYsSfoSfh4VDEYWHMZUa0kN33-tjRNFBZ-vhKdZFYA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48954'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601122.905
+    'REQUEST_TIME' => 1584601122
+]
+2020-03-19 13:59:25 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 13:59:25 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'XYZ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584687565
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => '9IDkQDbe0NP0cUTut3m4a41wHpjfNjacLwiMvkKaCyK2yYsSfoSfh4VDEYWHMZUa0kN33-tjRNFBZ-vhKdZFYA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '49292'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601165.61
+    'REQUEST_TIME' => 1584601165
+]
+2020-03-19 14:09:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:09:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688162
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54096'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601762.544
+    'REQUEST_TIME' => 1584601762
+]
+2020-03-19 14:09:49 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:09:49 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688189
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54318'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601789.613
+    'REQUEST_TIME' => 1584601789
+]
+2020-03-19 14:10:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 14:10:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '10'
+    'harga_beli' => '10000'
+    'harga_jual' => '20000'
+    'tgl_ed' => 'Nov 30, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688219
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '10'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'eqL4cLx-uu1dSG2t8eQgO0BnqG0i-2k9bbFxacG55ww465ci9CT1uSx6OMbBrA1KH1TBKhauG3AD3hY2qvWpTg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54556'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601819.294
+    'REQUEST_TIME' => 1584601819
+]
+2020-03-19 14:10:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 14:10:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'TUF'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688222
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '10'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'eqL4cLx-uu1dSG2t8eQgO0BnqG0i-2k9bbFxacG55ww465ci9CT1uSx6OMbBrA1KH1TBKhauG3AD3hY2qvWpTg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54556'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601822.184
+    'REQUEST_TIME' => 1584601822
+]
+2020-03-19 14:10:48 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:10:48 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688248
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54794'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601848.636
+    'REQUEST_TIME' => 1584601848
+]
+2020-03-19 14:11:16 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 14:11:16 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '4'
+    'harga_beli' => '10000'
+    'harga_jual' => '20000'
+    'tgl_ed' => 'Nov 30, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688276
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '4'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '125'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'QyTCZ2Rd136xPPb4c66PlrxowzaUKqTaSWP53KdM8eEBba01LAeYKsAOo5ND5qLn41uqcaB_1pcnDJ6DzAC_ow=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55024'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601876.222
+    'REQUEST_TIME' => 1584601876
+]
+2020-03-19 14:11:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 14:11:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'RUF'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688282
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '4'
+            'hargabeli' => 10000
+            'hargajual' => 20000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'QyTCZ2Rd136xPPb4c66PlrxowzaUKqTaSWP53KdM8eEBba01LAeYKsAOo5ND5qLn41uqcaB_1pcnDJ6DzAC_ow=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55074'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601882.475
+    'REQUEST_TIME' => 1584601882
+]
+2020-03-19 14:12:04 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:12:04 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688324
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55400'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601924.197
+    'REQUEST_TIME' => 1584601924
+]
+2020-03-19 14:12:30 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 14:12:30 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '10'
+    'harga_beli' => '10000'
+    'harga_jual' => '12000'
+    'tgl_ed' => 'Dec 31, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688350
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '10'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'tQ0xDN9GpiAKVxKr9b4lOLRIycQhHpeUF2cMP1PJgHn3RF5elxzpdHtlR8DF9ghJ63uggxVL5dl5CGtgOIXOOw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55630'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601950.599
+    'REQUEST_TIME' => 1584601950
+]
+2020-03-19 14:12:38 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 14:12:38 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'HYU'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688358
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '10'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'tQ0xDN9GpiAKVxKr9b4lOLRIycQhHpeUF2cMP1PJgHn3RF5elxzpdHtlR8DF9ghJ63uggxVL5dl5CGtgOIXOOw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55696'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601958.654
+    'REQUEST_TIME' => 1584601958
+]
+2020-03-19 14:12:51 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:12:51 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688371
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55806'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584601971.785
+    'REQUEST_TIME' => 1584601971
+]
+2020-03-19 14:13:24 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 14:13:24 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '20'
+    'harga_beli' => '10000'
+    'harga_jual' => '12000'
+    'tgl_ed' => 'Dec 31, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688404
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'mPuaLVOeZoZ3T-IdSnx9ZGqVtKlPFEMhi42OWVUKaE3asvV_G8Qp0gZ9t3Z6NFAVNabd7ntBMWzl4ukGPkYmDw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '56078'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602004.672
+    'REQUEST_TIME' => 1584602004
+]
+2020-03-19 14:13:53 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-03-19 14:13:53 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'kd_bar' => 'A0001'
+    'nm_barang' => 'PARACETAMOL 500 MG'
+    'jumlah' => '20'
+    'harga_beli' => '10000'
+    'harga_jual' => '12000'
+    'tgl_ed' => 'Nov 30, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688433
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+        1 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '126'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'mPuaLVOeZoZ3T-IdSnx9ZGqVtKlPFEMhi42OWVUKaE3asvV_G8Qp0gZ9t3Z6NFAVNabd7ntBMWzl4ukGPkYmDw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '56312'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602033.52
+    'REQUEST_TIME' => 1584602033
+]
+2020-03-19 14:14:11 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-03-19 14:14:11 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Mar 19, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'KUI'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688451
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+        1 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'mPuaLVOeZoZ3T-IdSnx9ZGqVtKlPFEMhi42OWVUKaE3asvV_G8Qp0gZ9t3Z6NFAVNabd7ntBMWzl4ukGPkYmDw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '56450'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602051.081
+    'REQUEST_TIME' => 1584602051
+]
+2020-03-19 14:14:56 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:72
+2020-03-19 14:14:56 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688496
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+        1 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '56820'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602096.14
+    'REQUEST_TIME' => 1584602096
+]
+2020-03-19 14:15:03 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:164
+2020-03-19 14:15:03 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0001'
+    'qty' => '1'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688503
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Dec 31, 2020'
+        ]
+        1 => [
+            'tgl' => 'Mar 19, 2020'
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'jumlah' => '20'
+            'hargabeli' => 10000
+            'hargajual' => 12000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '1'
+            'harga' => 12000
+            'total' => 12000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => 'WwbAvP7rITzJ01urnYUQIHxdj_Iu8t1MF6KXB-3dKzgZT6_utrFuaLjhDsCtzT1RI27mtRqnrwF5zfBYhpFleg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '56822'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0001&qty=1'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0001&qty=1'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602103.472
+    'REQUEST_TIME' => 1584602103
+]
+2020-03-19 14:15:51 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-03-19 14:15:51 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0kj1cdpntnmhm4ra6v37k07fuf'
+    '_csrf' => '0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1584688551
+    'start-date' => '2020-03-19'
+    'end-date' => '2020-03-19'
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '1'
+            'harga' => 12000
+            'total' => 12000
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.87 Chrome/80.0.3987.87 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0kj1cdpntnmhm4ra6v37k07fuf; _csrf=0e6c06b88b2de5bc05d7a4000e8f4bce855c744f46ca5af184a794e9a6ad7bb3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22BIoRHZOTq2Uk0H-q_3iG4UrMnog_kLNB%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '57268'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1584602150.999
+    'REQUEST_TIME' => 1584602150
+]

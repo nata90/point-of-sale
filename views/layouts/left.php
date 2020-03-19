@@ -44,6 +44,7 @@
                         'label' => 'Master',
                         'icon' => 'book',
                         'url' => '#',
+                        'options'=>['class'=>'treeview active'],
                         'items' => [
                             ['label' => 'Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
                             ['label' => 'Supplier', 'icon' => 'folder', 'url' => ['supplier/index'],],
@@ -53,6 +54,7 @@
                         'label' => 'User',
                         'icon' => 'book',
                         'url' => '#',
+                        'options'=>['class'=>'treeview active'],
                         'items' => [
                             ['label' => 'Kelola User', 'icon' => 'folder', 'url' => ['user/index'],],
                             //['label' => 'Kelola User Group', 'icon' => 'folder', 'url' => ['usergroup/index'],],
