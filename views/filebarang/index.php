@@ -4,6 +4,7 @@ use yii\helpers\Html;
 use yii\grid\GridView;
 use yii\widgets\Pjax;
 use app\components\Utility;
+use app\models\FileStokBarang;
 /* @var $this yii\web\View */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
@@ -22,6 +23,8 @@ $this->title = Yii::t('app', 'Barang');
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Semua</a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Stok Habis</a></li>
+                        <li><a href="#tab_3" data-toggle="tab" aria-expanded="true">Barang ED</a></li>
+                        <li><a href="#tab_4" data-toggle="tab" aria-expanded="true">Menjelang ED</a></li>
                     </ul>
                 </div>
                 <div class="tab-content">
@@ -44,10 +47,52 @@ $this->title = Yii::t('app', 'Barang');
                                 ['class' => 'yii\grid\SerialColumn'],
 
                                 //'id',
-                                'kd_barang',
+                                //'kd_barang',
+                                [
+                                    'attribute'=>'kd_barang',
+                                    'format'=>'raw',
+                                    'contentOptions' => ['style' => 'width:10%; white-space: normal'],
+                                    'value'=>function($model){
+                                        return $model->kd_barang;
+                                    }
+                                ],
                                 'nama_barang',
-                                'lokasi',
-                                'stok',
+                                //'lokasi',
+                                [
+                                    'attribute'=>'lokasi',
+                                    'format'=>'raw',
+                                    'contentOptions' => ['style' => 'width:10%; white-space: normal'],
+                                    'value'=>function($model){
+                                        return $model->lokasi;
+                                    }
+                                ],
+                                //'stok',
+                                [
+                                    'label'=>'Stok Detail',
+                                    'format'=>'raw',
+                                    'contentOptions' => ['style' => 'width:25%; white-space: normal'],
+                                    'value'=>function($model){
+                                        $data = FileStokBarang::detailStok($model->kd_barang);
+
+                                        $return = '<ul style="text-align:left;">';
+                                        if($data != null){
+                                            foreach($data as $row){
+                                                $return .= '<li><strong>ED : '.date('d-m-Y',strtotime($row["tgl_ed"])).', STOK : '.round($row["stok_akhir"],0).'</strong></li>';
+                                            }
+                                        }
+                                        
+                                        $return .= '</ul>';
+
+                                        return $return;
+                                    }
+                                ],
+                                [
+                                    'label'=>'Stok Total',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return $model->stok;
+                                    }
+                                ],
                                 [
                                     'label'=>'Harga Beli',
                                     'format'=>'raw',
@@ -116,6 +161,92 @@ $this->title = Yii::t('app', 'Barang');
                                     'template'=>'{update}&nbsp{delete}',
                                     //'buttons'  =>
                                 ],
+                            ],
+                        ]); ?>
+
+                        <?php Pjax::end(); ?>
+                    </div>
+                    <div class="tab-pane" id="tab_3">
+                        <?php Pjax::begin([
+                            'id'=>'grid-barang-ed',
+                            'timeout'=>false,
+                            'enablePushState'=>false,
+                            'clientOptions'=>['method'=>'GET']
+                        ]); ?>
+
+                        <?= GridView::widget([
+                            'dataProvider' => $dataProvider3,
+                            'filterModel' => $searchModel,
+                            'columns' => [
+                                ['class' => 'yii\grid\SerialColumn'],
+
+                                //'id',
+                                //'kd_barang',
+                                [
+                                    'attribute'=>'kd_barang',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return $model->kd_barang;
+                                    }
+                                ],
+                                [
+                                    'attribute'=>'nama_barang',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return $model->barang->nama_barang;
+                                    }
+                                ],
+                                [
+                                    'label'=>'Expired Date',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return date('d-m-Y', strtotime($model->tgl_ed));
+                                    }
+                                ],
+                                
+                            ],
+                        ]); ?>
+
+                        <?php Pjax::end(); ?>
+                    </div>
+                    <div class="tab-pane" id="tab_4">
+                        <?php Pjax::begin([
+                            'id'=>'grid-barang-before-ed',
+                            'timeout'=>false,
+                            'enablePushState'=>false,
+                            'clientOptions'=>['method'=>'GET']
+                        ]); ?>
+
+                        <?= GridView::widget([
+                            'dataProvider' => $dataProvider4,
+                            'filterModel' => $searchModel,
+                            'columns' => [
+                                ['class' => 'yii\grid\SerialColumn'],
+
+                                //'id',
+                                //'kd_barang',
+                                [
+                                    'attribute'=>'kd_barang',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return $model->kd_barang;
+                                    }
+                                ],
+                                [
+                                    'attribute'=>'nama_barang',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return $model->barang->nama_barang;
+                                    }
+                                ],
+                                [
+                                    'label'=>'Expired Date',
+                                    'format'=>'raw',
+                                    'value'=>function($model){
+                                        return date('d-m-Y', strtotime($model->tgl_ed));
+                                    }
+                                ],
+                                
                             ],
                         ]); ?>
 
