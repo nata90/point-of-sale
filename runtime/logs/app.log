@@ -13474,3 +13474,277 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1585723309.205
     'REQUEST_TIME' => 1585723309
 ]
+2020-04-01 13:44:24 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:73
+2020-04-01 13:44:24 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'jggvuejm1ccb72vrtgrkrb3kqc'
+    '_csrf' => '5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1585809864
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.149 Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jggvuejm1ccb72vrtgrkrb3kqc; _csrf=5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48750'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1585723464.981
+    'REQUEST_TIME' => 1585723464
+]
+2020-04-01 13:44:31 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:178
+2020-04-01 13:44:31 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0001'
+    'qty' => '5'
+    'idstok' => '3'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'jggvuejm1ccb72vrtgrkrb3kqc'
+    '_csrf' => '5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1585809871
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '5'
+            'harga' => 12000
+            'total' => 60000
+            'idstok' => '3'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_CSRF_TOKEN' => 'TicpFfxFDkyvTmTEEPcnsyLkBsQeqyb5h3vEBv0ZZcI5FmRRkhZKAsQYF5B3uxH9bo8-_HDpYIjlPel-jy89sA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.149 Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jggvuejm1ccb72vrtgrkrb3kqc; _csrf=5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48754'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0001&qty=5&idstok=3'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0001&qty=5&idstok=3'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1585723471.232
+    'REQUEST_TIME' => 1585723471
+]
+2020-04-01 13:44:35 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:312
+2020-04-01 13:44:35 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '60000'
+    'totalbayar' => '100000'
+    'cashback' => '40000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'jggvuejm1ccb72vrtgrkrb3kqc'
+    '_csrf' => '5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1585809875
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0001'
+            'namabarang' => 'PARACETAMOL 500 MG'
+            'qty' => '5'
+            'harga' => 12000
+            'total' => 60000
+            'idstok' => '3'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '51'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_X_CSRF_TOKEN' => 'TicpFfxFDkyvTmTEEPcnsyLkBsQeqyb5h3vEBv0ZZcI5FmRRkhZKAsQYF5B3uxH9bo8-_HDpYIjlPel-jy89sA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.149 Chrome/80.0.3987.149 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jggvuejm1ccb72vrtgrkrb3kqc; _csrf=5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48754'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1585723475.45
+    'REQUEST_TIME' => 1585723475
+]
+2020-04-01 13:44:38 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:73
+2020-04-01 13:44:38 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'jggvuejm1ccb72vrtgrkrb3kqc'
+    '_csrf' => '5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1585809878
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/80.0.3987.149 Chrome/80.0.3987.149 Safari/537.36'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=113'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=jggvuejm1ccb72vrtgrkrb3kqc; _csrf=5c6201cc9db478b636c628c29bbbe1b518bf147d0302eaf63ec062c3fbf7d379a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22w1MDnSDNkVsTgL6NLk88nBFqbF-xr6Xr%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.18 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48754'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1585723478.731
+    'REQUEST_TIME' => 1585723478
+]

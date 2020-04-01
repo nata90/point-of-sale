@@ -63,7 +63,7 @@ class HdTransaksiSearch extends HdTransaksi
             'status_bayar' => $this->status_bayar,
             'total' => $this->total,
             'jumlah_bayar' => $this->jumlah_bayar,
-            'status_hapus' => $this->status_hapus,
+            'status_hapus' => 0,
             'tgl_hapus' => $this->tgl_hapus,
         ]);
 
