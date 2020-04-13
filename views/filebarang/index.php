@@ -24,7 +24,7 @@ $this->title = Yii::t('app', 'Barang');
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Semua</a></li>
                         <li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Stok Habis</a></li>
                         <li><a href="#tab_3" data-toggle="tab" aria-expanded="true">Barang ED</a></li>
-                        <li><a href="#tab_4" data-toggle="tab" aria-expanded="true">Menjelang ED</a></li>
+                        <li><a href="#tab_4" data-toggle="tab" aria-expanded="true">Hampir ED</a></li>
                     </ul>
                 </div>
                 <div class="tab-content">

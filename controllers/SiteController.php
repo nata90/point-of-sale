@@ -392,7 +392,16 @@ class SiteController extends Controller
             'popular'=>$popular
         ]);*/
 
-        return $this->render('dashboard');
+        $ten_days_ago = mktime(0, 0, 0, date('m'), date('d')-10, date('Y'));
+        $days_ago = date('m/d/Y',$ten_days_ago);
+        $days_now = date('m/d/Y');
+
+       /* echo $days_ago.'-'.$days_now;
+        exit();*/
+        return $this->render('dashboard',[
+            'days_ago'=>$days_ago,
+            'days_now'=>$days_now
+        ]);
     }
 
     public function actionGrafikpenjualan(){
