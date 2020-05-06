@@ -32,7 +32,7 @@ class SiteController extends Controller
                 'only' => ['logout','index','dashboard'],
                 'rules' => [
                     [
-                        'actions' => ['logout','index','dashboard'],
+                        'actions' => ['logout','index','dashboard','searchgrafik'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -416,6 +416,30 @@ class SiteController extends Controller
         }
         $return['label'] = $arr_date;
         $return['data'] = $arr_data;
+
+        echo Json::encode($return);
+    }
+
+    public function actionSearchgrafik(){
+        $date_range = $_GET['daterange'];
+        $explode = explode('-', $date_range);
+        $date_start = date('Y-m-d', strtotime(trim($explode[0])));
+        $date_end = date('Y-m-d', strtotime(trim($explode[1])));
+
+        $new_date_1 = new \DateTime($date_start);
+        $new_date_2 = new \DateTime($date_end);
+        $difference = $new_date_1->diff($new_date_2);
+
+        for($i=0;$i<=$difference->days;$i++){
+            $date = mktime(0, 0, 0, date('m', strtotime($date_start)), date('d', strtotime($date_start))+$i, date('Y', strtotime($date_start)));
+            $arr_date[] = date('d/m/Y', $date);
+            $arr_data[] = HdTransaksi::getTotalTransaksi(date('Y-m-d', $date));
+            $arr_rgba[] = 'rgba('.rand(0, 255).', '.rand(0, 255).', '.rand(0, 255).', 1)';
+        }
+
+        $return['label'] = $arr_date;
+        $return['data'] = $arr_data;
+        $return['rgba'] = $arr_rgba;
 
         echo Json::encode($return);
     }

@@ -3,9 +3,10 @@ use yii\helpers\Url;
 $this->registerJs('var url = "' . Url::to(['/site/grafikpenjualan']) . '";');
 $this->registerJs('var daysago = "' . $days_ago . '";');
 $this->registerJs('var daysnow = "' . $days_now . '";');
+$this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";');
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
-	$( document ).ready(function() {
+	
 		$.ajax({
 			type: 'get',
 			url: url,
@@ -72,7 +73,7 @@ $this->registerJs(<<<JS
 				})
 			}
 		});
-	});
+	
 
 	//Date range picker
     $('#reservation').daterangepicker({
@@ -82,7 +83,51 @@ $this->registerJs(<<<JS
 
     $(document).on("click", "#search-grafik", function () {
     	var daterange = $('#reservation').val();
+    	$('canvas#barChart').html('');
 
+    	$.ajax({
+			type: 'get',
+			url: url_search,
+			data: {'daterange':daterange},
+			dataType: 'json',
+			success: function(v){
+				$(function () {
+					var ctx = document.getElementById('barChart').getContext('2d');
+					var myChart = new Chart(ctx, {
+					    type: 'bar',
+					    data: {
+					        labels: v.label,
+					        datasets: [{
+					            label: 'GRAFIK DATA PENJUALAN (Rupiah)',
+					            data: v.data,
+					            backgroundColor: v.rgba,
+					            borderColor: v.rgba,
+					            borderWidth: 1
+					        }]
+					    },
+					    options: {
+					        scales: {
+					            yAxes: [{
+					                ticks: {
+					                    beginAtZero: true,
+					                    callback: function (value) {
+				                            return numeral(value).format('0,0')
+				                        }
+					                }
+					            }]
+					        },
+					        tooltips: {
+					            callbacks: {
+					                label: function(tooltipItem, data) {
+					                     return numeral(tooltipItem.yLabel).format('0,0');
+					                }
+					            }
+					        }
+					    }
+					});
+				})
+			}
+		});
     });
 JS
 );
