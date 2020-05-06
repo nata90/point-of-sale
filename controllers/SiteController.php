@@ -434,7 +434,7 @@ class SiteController extends Controller
             $date = mktime(0, 0, 0, date('m', strtotime($date_start)), date('d', strtotime($date_start))+$i, date('Y', strtotime($date_start)));
             $arr_date[] = date('d/m/Y', $date);
             $arr_data[] = HdTransaksi::getTotalTransaksi(date('Y-m-d', $date));
-            $arr_rgba[] = 'rgba('.rand(0, 255).', '.rand(0, 255).', '.rand(0, 255).', 1)';
+            $arr_rgba[] = 'rgba('.rand(0, 255).', '.rand(0, 255).', '.rand(0, 255).', 0.5)';
         }
 
         $return['label'] = $arr_date;

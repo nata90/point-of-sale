@@ -6,7 +6,7 @@ $this->registerJs('var daysnow = "' . $days_now . '";');
 $this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";');
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
-	
+	setTimeout(function(){
 		$.ajax({
 			type: 'get',
 			url: url,
@@ -73,7 +73,7 @@ $this->registerJs(<<<JS
 				})
 			}
 		});
-	
+	}, 1500);
 
 	//Date range picker
     $('#reservation').daterangepicker({
@@ -83,7 +83,8 @@ $this->registerJs(<<<JS
 
     $(document).on("click", "#search-grafik", function () {
     	var daterange = $('#reservation').val();
-    	$('canvas#barChart').html('');
+    	$('#barChart').remove();
+    	$('.chart').append('<canvas id="barChart" style="height:230px"><canvas>')
 
     	$.ajax({
 			type: 'get',
