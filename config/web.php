@@ -28,7 +28,7 @@ $config = [
             //'loginUrl'=>['site/login'],
             //'enableAutoLogin' => false,
             'enableSession' => true,
-            'authTimeout'=>3600,   
+            'authTimeout'=>3600*24,   
         ],
         'errorHandler' => [
             'errorAction' => 'site/error',

@@ -1,9 +1,12 @@
 <?php
 use yii\helpers\Url;
 $this->registerJs('var url = "' . Url::to(['/site/grafikpenjualan']) . '";');
+$this->registerJs('var daysago = "' . $days_ago . '";');
+$this->registerJs('var daysnow = "' . $days_now . '";');
+$this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";');
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
-	$( document ).ready(function() {
+	setTimeout(function(){
 		$.ajax({
 			type: 'get',
 			url: url,
@@ -16,7 +19,7 @@ $this->registerJs(<<<JS
 					    data: {
 					        labels: v.label,
 					        datasets: [{
-					            label: 'DATA PENJUALAN (Rupiah)',
+					            label: 'GRAFIK DATA PENJUALAN (Rupiah)',
 					            data: v.data,
 					            backgroundColor: [
 					                'rgba(255, 99, 132, 0.2)',
@@ -70,47 +73,73 @@ $this->registerJs(<<<JS
 				})
 			}
 		});
-	});
+	}, 1500);
 
 	//Date range picker
     $('#reservation').daterangepicker({
-    	"startDate": "07/01/2015",
-    	"endDate": "07/15/2015"
-    }
-    )
+    	"startDate": daysago,
+    	"endDate": daysnow
+    })
+
+    $(document).on("click", "#search-grafik", function () {
+    	var daterange = $('#reservation').val();
+    	$('#barChart').remove();
+    	$('.chart').append('<canvas id="barChart" style="height:230px"><canvas>')
+
+    	$.ajax({
+			type: 'get',
+			url: url_search,
+			data: {'daterange':daterange},
+			dataType: 'json',
+			success: function(v){
+				$(function () {
+					var ctx = document.getElementById('barChart').getContext('2d');
+					var myChart = new Chart(ctx, {
+					    type: 'bar',
+					    data: {
+					        labels: v.label,
+					        datasets: [{
+					            label: 'GRAFIK DATA PENJUALAN (Rupiah)',
+					            data: v.data,
+					            backgroundColor: v.rgba,
+					            borderColor: v.rgba,
+					            borderWidth: 1
+					        }]
+					    },
+					    options: {
+					        scales: {
+					            yAxes: [{
+					                ticks: {
+					                    beginAtZero: true,
+					                    callback: function (value) {
+				                            return numeral(value).format('0,0')
+				                        }
+					                }
+					            }]
+					        },
+					        tooltips: {
+					            callbacks: {
+					                label: function(tooltipItem, data) {
+					                     return numeral(tooltipItem.yLabel).format('0,0');
+					                }
+					            }
+					        }
+					    }
+					});
+				})
+			}
+		});
+    });
 JS
 );
 ?>
 
 	<div class="row">	
-		<div class="col-md-12">
-			<div class="box box-danger">
-	            <div class="box-header with-border">
-	            	<div class="box-body">
-	            		<div class="col-xs-1"><label>TANGGAL</label></div>
-	            		<div class="form-group col-xs-4">
-			              	
-			              	<div class="input-group">
-				                  <div class="input-group-addon">
-				                    <i class="fa fa-calendar"></i>
-				                  </div>
-				                  <input type="text" class="form-control pull-right" id="reservation">
-
-				            </div>
-
-			             </div>
-			             <div class="col-xs-1">
-			             	 <button class="btn btn-block btn-success btn-sm">Cari</button>
-			             </div>
-	            	</div>
-	            </div>
-	        </div>
-		</div>	
+			
 		 <!-- BAR CHART -->
 	    <div class="col-md-12">
           <div class="box box-danger">
             <div class="box-header with-border">
-              <h3 class="box-title">GRAFIK DATA PENJUALAN</h3>
 
               <div class="box-tools pull-right">
                 <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
@@ -119,6 +148,20 @@ JS
                 
               </div>
             	<div class="box-body">
+	            		<div class="form-group col-xs-4">
+			              	
+			              	<div class="input-group">
+				                  <div class="input-group-addon">
+				                    <i class="fa fa-calendar"></i>
+				                  </div>
+				                  <input type="text" class="form-control pull-right" id="reservation" >
+
+				            </div>
+
+			             </div>
+			             <div class="col-xs-1">
+			             	 <button class="btn btn-block btn-success btn-sm" id="search-grafik">Cari</button>
+			             </div>
             		<div class="chart">
 		                <canvas id="barChart" style="height:230px"></canvas>
 		            </div>

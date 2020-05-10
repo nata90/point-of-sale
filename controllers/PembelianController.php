@@ -7,6 +7,7 @@ use app\models\HeaderPembelian;
 use app\models\DetailPembelian;
 use app\models\HeaderPembelianSearch;
 use app\models\FileBarang;
+use app\models\FileStokBarang;
 use app\models\Supplier;
 use app\models\KodeGenerate;
 use app\components\Utility;
@@ -143,6 +144,7 @@ class PembelianController extends Controller
         $jumlah = $_POST['jumlah'];
         $harga_beli = (int)$_POST['harga_beli'];
         $harga_jual = (int)$_POST['harga_jual'];
+        $tgl_ed = $_POST['tgl_ed'];
 
         $session = new Session;
         $session->open();
@@ -155,7 +157,8 @@ class PembelianController extends Controller
                 'namabarang'=>$nm_barang,
                 'jumlah'=>$jumlah,
                 'hargabeli'=>$harga_beli,
-                'hargajual'=>$harga_jual
+                'hargajual'=>$harga_jual,
+                'tgled'=>$tgl_ed
             );
 
            $session['datapembelian'] = $array_data;
@@ -167,7 +170,8 @@ class PembelianController extends Controller
                 'namabarang'=>$nm_barang,
                 'jumlah'=>$jumlah,
                 'hargabeli'=>$harga_beli,
-                'hargajual'=>$harga_jual
+                'hargajual'=>$harga_jual,
+                'tgled'=>$tgl_ed
             );
             array_push($array_data,$new_data);
             $session['datapembelian'] = $array_data;
@@ -250,6 +254,9 @@ class PembelianController extends Controller
     }
 
     public function actionSimpanpembelian(){
+        /*echo $_POST['no_faktur'];
+        exit();*/
+
         $session = new Session;
         $session->open();
 
@@ -267,6 +274,7 @@ class PembelianController extends Controller
             $model->keterangan = '-';
             $model->total_pembelian = 0;
             $model->id_supplier = $id_supplier;
+            $model->no_faktur = $_POST['no_faktur'];
             $return = array();
             if($model->save()){
                 
@@ -279,6 +287,21 @@ class PembelianController extends Controller
                     $detail->harga_beli = $val['hargabeli'];
                     $detail->harga_jual = $val['hargajual'];
                     $detail->save();
+
+                    $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->andWhere(['tgl_ed'=>date('Y-m-d', strtotime($val['tgled']))])->one();
+
+                    if($stok_barang == null){
+                        $stok_barang = new FileStokBarang;
+                        $jum_stok = $val['jumlah'];
+                    }else{
+                        $jum_stok = $stok_barang->stok_akhir + $val['jumlah'];
+                    }
+
+                    $stok_barang->kd_barang = $val['kodebarang'];
+                    $stok_barang->tgl_ed = date('Y-m-d', strtotime($val['tgled']));
+                    $stok_barang->stok_akhir = $jum_stok;
+                    $stok_barang->nomor_batch = '-';
+                    $stok_barang->save();
                 } 
                 $return['error'] = 0;
                 $return['redirect'] = Url::to(['transaksi/kelolapembelian']);

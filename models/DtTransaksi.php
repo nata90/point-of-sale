@@ -35,7 +35,7 @@ class DtTransaksi extends \yii\db\ActiveRecord
         return [
             [['no_transaksi', 'kd_barang'], 'required'],
             [['harga_satuan', 'qty', 'total_harga', 'status_hapus'], 'integer'],
-            [['tgl_hapus'], 'safe'],
+            [['tgl_hapus','id_stok_barang'], 'safe'],
             [['no_transaksi'], 'string', 'max' => 64],
             [['kd_barang'], 'string', 'max' => 30],
         ];
@@ -55,6 +55,7 @@ class DtTransaksi extends \yii\db\ActiveRecord
             'total_harga' => 'Total Harga',
             'status_hapus' => 'Status Hapus',
             'tgl_hapus' => 'Tgl Hapus',
+            'id_stok_barang' => 'Id Stok Barang',
         ];
     }
 

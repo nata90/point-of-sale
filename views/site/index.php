@@ -16,6 +16,7 @@ $this->registerJs(<<<JS
 		var url = $(this).attr('url');
 		var kodebarang = $('#field-kode-barang').val();
 		var qty = $('#qty-barang').val();
+		var idstok = $('#field-id-stokbarang').val();
 
 		if(kodebarang == ''){
 			show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>NAMA BARANG TIDAK BOLEH KOSONG</strong></p>");
@@ -26,7 +27,7 @@ $this->registerJs(<<<JS
 				type: 'get',
 				url: url,
 				dataType: 'json',
-				data: {'kodebarang':kodebarang, 'qty':qty},
+				data: {'kodebarang':kodebarang, 'qty':qty, 'idstok':idstok},
 				success: function(v){
 					$('#data-transaksi').html(v.data);
 					$('#filebarang-nama_barang').val('');
@@ -155,6 +156,7 @@ JS
 
 									<?php 
 									echo Html::hiddenInput('kode_barang', '', ['id'=>'field-kode-barang']);
+									echo Html::hiddenInput('id_stok', '', ['id'=>'field-id-stokbarang']);
 									echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
 									echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
 									echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
@@ -167,7 +169,8 @@ JS
 									        'minLength'=>'2', 
 											'autoFill'=>true,
 											'select' => new JsExpression("function( event, ui ) {
-										        $('#field-kode-barang').val(ui.item.id);
+										        $('#field-kode-barang').val(ui.item.kd_barang);
+										        $('#field-id-stokbarang').val(ui.item.id);
 										     }")
 									    ],
 									]); ?>

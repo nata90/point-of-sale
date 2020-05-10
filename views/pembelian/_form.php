@@ -27,6 +27,7 @@ $this->registerJs(<<<JS
         var jumlah = $('#headerpembelian-jumlah').val();
         var harga_beli = $('#headerpembelian-harga_beli').val();
         var harga_jual = $('#headerpembelian-harga_jual').val();
+        var tgl_ed = $('#headerpembelian-tgl_ed').val();
 
         var rem_harga_beli = harga_beli.replace("Rp. ","");
         var rem_dot_harga_beli = rem_harga_beli.split(".").join("");
@@ -46,7 +47,8 @@ $this->registerJs(<<<JS
                 'nm_barang':nm_barang,
                 'jumlah':jumlah,
                 'harga_beli':rem_dot_harga_beli,
-                'harga_jual':rem_dot_harga_jual
+                'harga_jual':rem_dot_harga_jual,
+                'tgl_ed':tgl_ed
             },
             success: function(v){
                 $('#table-list').html(v.table);
@@ -126,6 +128,7 @@ $this->registerJs(<<<JS
     $(document).on("click", "#simpan-beli", function () {
         var tgl = $('#headerpembelian-tgl_pembelian').val();
         var supplier = $('#headerpembelian-id_supplier').val();
+        var no_faktur = $('#headerpembelian-no_faktur').val();
         var url = $(this).attr('url');
         
         $.ajax({
@@ -138,7 +141,8 @@ $this->registerJs(<<<JS
             },
             data: {
                 'tgl':tgl,
-                'supplier':supplier
+                'supplier':supplier,
+                'no_faktur':no_faktur
             },
             success: function(v){
                 if(v.error == 0){
@@ -159,7 +163,7 @@ JS
 );
 ?>
 
-<div class="col-md-4">
+<div class="col-md-12">
     <div class="box box-danger">
         <div class="box-header with-border">
             <h3 class="box-title">
@@ -168,46 +172,70 @@ JS
         </div>
         <?php $form = ActiveForm::begin(); ?>
         <div class="box-body">
-            <?= $form->field($model, 'tgl_pembelian')->widget(\yii\jui\DatePicker::class,[
-                    'options'=>['class'=>'form-control'],
-                ]) ?>
-
-            <?= $form->field($model, 'id_supplier')->hiddenInput()->label(false) ?>
-
-            <?= $form->field($model, 'nama_supplier')->widget(\yii\jui\AutoComplete::classname(), [
-                'options' => ['class' => 'form-control'],
-                'clientOptions' => [
-                    //'source' => $data,
-                    'source' =>Url::to(['pembelian/autocompletesupplier']),
-                    'minLength'=>'2', 
-                    'autoFill'=>true,
-                    'select' => new JsExpression("function( event, ui ) {
-                        $('#headerpembelian-id_supplier').val(ui.item.id);
-                     }")
-                ],
-            ]) ?>
-
-            <?= $form->field($model, 'kd_barang')->hiddenInput()->label(false) ?>
-
-            <?= $form->field($model, 'nama_barang',['template'=>'<label class=" control-label">{label}</label><div class="col-sm-9" style="padding-left:0px;">{input}</div><button type="button" class="btn btn-success pull-right" id="dialog-barang" url="'.Url::to(['pembelian/loadformbarang']).'">+ Item</button>'])->widget(\yii\jui\AutoComplete::classname(), [
-                'options' => ['class' => 'form-control'],
-                'clientOptions' => [
-                    //'source' => $data,
-                    'source' =>Url::to(['pembelian/autocompletebarang']),
-                    'minLength'=>'2', 
-                    'autoFill'=>true,
-                    'select' => new JsExpression("function( event, ui ) {
-                        $('#headerpembelian-kd_barang').val(ui.item.id);
-                     }")
-                ],
-            ]) ?>
-           
-
-            <?= $form->field($model, 'jumlah')->textInput() ?>
-
-            <?= $form->field($model, 'harga_beli')->textInput() ?>
-
-            <?= $form->field($model, 'harga_jual')->textInput() ?>
+            <div class="row">
+                <div class="col-md-2">
+                    <?= $form->field($model, 'tgl_pembelian')->widget(\yii\jui\DatePicker::class,[
+                        'options'=>['class'=>'form-control'],
+                    ]) ?>
+                </div>
+                <div class="col-md-4">
+                    <?= $form->field($model, 'no_faktur')->textInput() ?>
+                </div>
+                <div class="col-md-6">
+                    
+                    <?= $form->field($model, 'nama_supplier')->widget(\yii\jui\AutoComplete::classname(), [
+                        'options' => ['class' => 'form-control'],
+                        'clientOptions' => [
+                            //'source' => $data,
+                            'source' =>Url::to(['pembelian/autocompletesupplier']),
+                            'minLength'=>'2', 
+                            'autoFill'=>true,
+                            'select' => new JsExpression("function( event, ui ) {
+                                $('#headerpembelian-id_supplier').val(ui.item.id);
+                             }")
+                        ],
+                    ]) ?>
+                    <?= $form->field($model, 'id_supplier')->hiddenInput()->label(false) ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-5">
+                   
+                    <?= $form->field($model, 'nama_barang')->widget(\yii\jui\AutoComplete::classname(), [
+                        'options' => ['class' => 'form-control'],
+                        'clientOptions' => [
+                            //'source' => $data,
+                            'source' =>Url::to(['pembelian/autocompletebarang']),
+                            'minLength'=>'2', 
+                            'autoFill'=>true,
+                            'select' => new JsExpression("function( event, ui ) {
+                                $('#headerpembelian-kd_barang').val(ui.item.id);
+                             }")
+                        ],
+                    ]) ?>
+                    
+                    <?= $form->field($model, 'kd_barang')->hiddenInput()->label(false) ?>
+                </div>
+                <div class="col-md-1">
+                    <button type="button" class="btn btn-success" style="margin-top:25px;" id="dialog-barang" url="<?php echo Url::to(['pembelian/loadformbarang'])?>">+ Barang</button>
+                </div>
+                <div class="col-md-2">
+                    <?= $form->field($model, 'tgl_ed')->widget(\yii\jui\DatePicker::class,[
+                        'options'=>['class'=>'form-control'],
+                    ]) ?>
+                </div>
+                <div class="col-md-2">
+                    <?= $form->field($model, 'jumlah')->textInput() ?>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                    <?= $form->field($model, 'harga_beli')->textInput() ?>
+                </div>
+                <div class="col-md-2">
+                      <?= $form->field($model, 'harga_jual')->textInput() ?>
+                </div>
+            </div>
 
         </div>
 
@@ -219,7 +247,7 @@ JS
     </div>
 
 </div>
-<div class="col-md-8">
+<div class="col-md-12">
     <div class="box box-danger">
         <div class="box-header with-border">
             <h3 class="box-title">
@@ -232,11 +260,13 @@ JS
                     <tr>
                         <th>Kode Barang</th>
                         <th>Nama Barang</th>
+                        <th>Tgl ED</th>
                         <th>Jumlah</th>
                         <th>Harga Beli</th>
                         <th>Harga Jual</th>
                     </tr>
                     <tr>
+                        <td></td>
                         <td></td>
                         <td></td>
                         <td></td>

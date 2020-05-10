@@ -10,6 +10,7 @@ use yii\filters\VerbFilter;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\FileBarang;
+use app\models\FileStokBarang;
 use app\models\HdTransaksi;
 use app\models\DtTransaksi;
 use app\components\Utility;
@@ -31,7 +32,7 @@ class SiteController extends Controller
                 'only' => ['logout','index','dashboard'],
                 'rules' => [
                     [
-                        'actions' => ['logout','index','dashboard'],
+                        'actions' => ['logout','index','dashboard','searchgrafik'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -75,11 +76,23 @@ class SiteController extends Controller
 
         $model = new FileBarang();
 
-        $data = FileBarang::find()
+        /*$data = FileBarang::find()
         ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
         ->where(['aktif'=>1])
         ->asArray()
+        ->all();*/
+
+        $data = FileStokBarang::find()
+        ->select(['file_barang.nama_barang as value', 'CONCAT(file_barang.nama_barang, " - ED : ", DATE_FORMAT(file_stok_barang.tgl_ed, "%d-%m-%Y")) as label','file_stok_barang.id as id','file_stok_barang.kd_barang as kd_barang'])
+        ->join('LEFT JOIN', 'file_barang', 'file_stok_barang.kd_barang = file_barang.kd_barang')
+        ->where(['file_barang.aktif'=>1])
+        ->asArray()
         ->all();
+
+       /*echo '<pre>';
+        print_r($data);
+        echo '</pre>';
+        exit();*/
 
         return $this->render('index', [
             'model' => $model,
@@ -153,6 +166,7 @@ class SiteController extends Controller
     public function actionProsestransaksi(){
         $kd_barang = $_GET['kodebarang'];
         $qty = $_GET['qty'];
+        $id_stok = $_GET['idstok'];
 
         $subtotal = 0;
         $diskon = 0;
@@ -171,7 +185,8 @@ class SiteController extends Controller
                 'namabarang'=>$file_barang->nama_barang,
                 'qty'=>$qty,
                 'harga'=>$file_barang->harga_jual,
-                'total'=>$total
+                'total'=>$total,
+                'idstok'=>$id_stok
             );
 
            $session['datatransaksi'] = $array_data;
@@ -182,7 +197,8 @@ class SiteController extends Controller
                 'namabarang'=>$file_barang->nama_barang,
                 'qty'=>$qty,
                 'harga'=>$file_barang->harga_jual,
-                'total'=>$total
+                'total'=>$total,
+                'idstok'=>$id_stok
             );
             array_push($array_data,$new_data);
             $session['datatransaksi'] = $array_data;
@@ -313,6 +329,7 @@ class SiteController extends Controller
                     $detail->harga_satuan = $value['harga'];
                     $detail->qty = $value['qty'];
                     $detail->total_harga = $value['harga'] * $value['qty'];
+                    $detail->id_stok_barang = $value['idstok'];
                     $detail->save();
                 }
             }
@@ -375,7 +392,16 @@ class SiteController extends Controller
             'popular'=>$popular
         ]);*/
 
-        return $this->render('dashboard');
+        $ten_days_ago = mktime(0, 0, 0, date('m'), date('d')-10, date('Y'));
+        $days_ago = date('m/d/Y',$ten_days_ago);
+        $days_now = date('m/d/Y');
+
+       /* echo $days_ago.'-'.$days_now;
+        exit();*/
+        return $this->render('dashboard',[
+            'days_ago'=>$days_ago,
+            'days_now'=>$days_now
+        ]);
     }
 
     public function actionGrafikpenjualan(){
@@ -390,6 +416,30 @@ class SiteController extends Controller
         }
         $return['label'] = $arr_date;
         $return['data'] = $arr_data;
+
+        echo Json::encode($return);
+    }
+
+    public function actionSearchgrafik(){
+        $date_range = $_GET['daterange'];
+        $explode = explode('-', $date_range);
+        $date_start = date('Y-m-d', strtotime(trim($explode[0])));
+        $date_end = date('Y-m-d', strtotime(trim($explode[1])));
+
+        $new_date_1 = new \DateTime($date_start);
+        $new_date_2 = new \DateTime($date_end);
+        $difference = $new_date_1->diff($new_date_2);
+
+        for($i=0;$i<=$difference->days;$i++){
+            $date = mktime(0, 0, 0, date('m', strtotime($date_start)), date('d', strtotime($date_start))+$i, date('Y', strtotime($date_start)));
+            $arr_date[] = date('d/m/Y', $date);
+            $arr_data[] = HdTransaksi::getTotalTransaksi(date('Y-m-d', $date));
+            $arr_rgba[] = 'rgba('.rand(0, 255).', '.rand(0, 255).', '.rand(0, 255).', 0.5)';
+        }
+
+        $return['label'] = $arr_date;
+        $return['data'] = $arr_data;
+        $return['rgba'] = $arr_rgba;
 
         echo Json::encode($return);
     }
