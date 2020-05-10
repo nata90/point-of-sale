@@ -92,6 +92,7 @@ $this->registerJs(<<<JS
 			data: {'daterange':daterange},
 			dataType: 'json',
 			success: function(v){
+				$('#best-selling').html(v.html);
 				$(function () {
 					var ctx = document.getElementById('barChart').getContext('2d');
 					var myChart = new Chart(ctx, {
@@ -164,6 +165,47 @@ JS
 			             </div>
             		<div class="chart">
 		                <canvas id="barChart" style="height:230px"></canvas>
+		            </div>
+		            <div class="row" style="padding-top:20px;">
+		            	<div id="best-selling" class="col-md-4">
+		            		<p class="text-left" style="font-size:16px;"><strong>10 BARANG TERLARIS</strong></p>
+			            	<ul class="todo-list ui-sortable">
+			    				<?php if($popular != null){ 
+			    						foreach($popular as $row){
+			    				?>
+			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $row['nama_barang'];?></span><span class="label label-success"><?php echo $row['total'];?> ITEM</span></li>
+			    			    <?php }
+			    				}else{ ?>
+			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
+			    				<?php } ?>
+			    			</ul>
+			            </div>
+			            <div id="almost-ed" class="col-md-4">
+		            		<p class="text-left" style="font-size:16px;"><strong>HAMPIR ED</strong></p>
+			            	<ul class="todo-list ui-sortable">
+			    				<?php if($model_almost_ed != null){ 
+			    						foreach($model_almost_ed as $val){
+			    				?>
+			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $val->barang->nama_barang;?> # <?php echo date('d-m-Y', strtotime($val->tgl_ed))?> # <?php echo $val->barang->lokasi;?></span></li>
+			    			    <?php }
+			    				}else{ ?>
+			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
+			    				<?php } ?>
+			    			</ul>
+			            </div>
+			            <div id="zero-stok" class="col-md-4">
+		            		<p class="text-left" style="font-size:16px;"><strong>Stok Kosong</strong></p>
+			            	<ul class="todo-list ui-sortable">
+			    				<?php if($model_zero_stok != null){ 
+			    						foreach($model_zero_stok as $val){
+			    				?>
+			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $val->nama_barang;?> # <?php echo $val->lokasi;?></span></li>
+			    			    <?php }
+			    				}else{ ?>
+			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
+			    				<?php } ?>
+			    			</ul>
+			            </div>
 		            </div>
                 </div>
             </div>

@@ -1689,3 +1689,552 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1589077312.593
     'REQUEST_TIME' => 1589077312
 ]
+2020-05-10 10:18:38 [::1][3][rgppundegkcdiq35q8etds1suv][error][ParseError] ParseError: syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /var/www/html/pos/controllers/SiteController.php:398
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('dashboard')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/dashboard', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-05-10 10:18:38 [::1][3][rgppundegkcdiq35q8etds1suv][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167118
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'jumlah' => '20'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42576'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589080718.555
+    'REQUEST_TIME' => 1589080718
+]
+2020-05-10 10:19:15 [::1][3][rgppundegkcdiq35q8etds1suv][error][Error] Error: Class 'app\controllers\FileBarangSearch' not found in /var/www/html/pos/controllers/SiteController.php:398
+Stack trace:
+#0 [internal function]: app\controllers\SiteController->actionDashboard()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('dashboard', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/dashboard', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#6 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#7 {main}
+2020-05-10 10:19:15 [::1][3][rgppundegkcdiq35q8etds1suv][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167155
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'jumlah' => '20'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42584'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589080755.223
+    'REQUEST_TIME' => 1589080755
+]
+2020-05-10 10:20:25 [::1][3][rgppundegkcdiq35q8etds1suv][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\data\ActiveDataProvider::getData() in /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(402): yii\base\Component->__call('getData', Array)
+#1 [internal function]: app\controllers\SiteController->actionDashboard()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('dashboard', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/dashboard', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-05-10 10:20:25 [::1][3][rgppundegkcdiq35q8etds1suv][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167225
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'jumlah' => '20'
+            'hargabeli' => 20000
+            'hargajual' => 25000
+            'tgled' => 'Nov 30, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42608'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589080825.676
+    'REQUEST_TIME' => 1589080825
+]
+2020-05-10 10:25:08 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-05-10 10:25:08 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167508
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42682'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589081108.741
+    'REQUEST_TIME' => 1589081108
+]
+2020-05-10 10:25:38 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:149
+2020-05-10 10:25:38 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'May 10, 2020'
+    'kd_bar' => 'BRG000004'
+    'nm_barang' => 'Ibuprofen 400 mg'
+    'jumlah' => '5'
+    'harga_beli' => '10000'
+    'harga_jual' => '15000'
+    'tgl_ed' => 'May 20, 2020'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167538
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'jumlah' => '5'
+            'hargabeli' => 10000
+            'hargajual' => 15000
+            'tgled' => 'May 20, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '127'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'zmcWYKtNJ5h8U6YfhqrbZrOSp3G5PYO1R-WWccfneSe-KVQv5ilw9BAFl0bw-Jwh3_XSRM1T288ylNRHnq89EA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589081138.004
+    'REQUEST_TIME' => 1589081138
+]
+2020-05-10 10:25:39 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:260
+2020-05-10 10:25:39 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'May 10, 2020'
+    'supplier' => '2'
+    'no_faktur' => '5446574'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589167539
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'jumlah' => '5'
+            'hargabeli' => 10000
+            'hargajual' => 15000
+            'tgled' => 'May 20, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '47'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'zmcWYKtNJ5h8U6YfhqrbZrOSp3G5PYO1R-WWccfneSe-KVQv5ilw9BAFl0bw-Jwh3_XSRM1T288ylNRHnq89EA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589081139.854
+    'REQUEST_TIME' => 1589081139
+]
+2020-05-10 10:41:34 [::1][3][rgppundegkcdiq35q8etds1suv][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\FileBarang::barang in /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('barang')
+#1 /var/www/html/pos/views/site/dashboard.php(201): yii\db\BaseActiveRecord->__get('barang')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(348): require('/var/www/html/p...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->render('dashboard', Array, Object(app\controllers\SiteController))
+#6 /var/www/html/pos/controllers/SiteController.php(411): yii\base\Controller->render('dashboard', Array)
+#7 [internal function]: app\controllers\SiteController->actionDashboard()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('dashboard', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/dashboard', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+2020-05-10 10:41:33 [::1][3][rgppundegkcdiq35q8etds1suv][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rgppundegkcdiq35q8etds1suv'
+    '_csrf' => '2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1589168494
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'May 10, 2020'
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'jumlah' => '5'
+            'hargabeli' => 10000
+            'hargajual' => 15000
+            'tgled' => 'May 20, 2020'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.129 Chrome/81.0.4044.129 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rgppundegkcdiq35q8etds1suv; _csrf=2db0edf7f0c3c80ea9bc99f6b66abdc0d0acccfca13684fe29e203e4ec43248ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22pNBOMdWllV1YvRGGlgu5tnXzuqB6YHD7%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '42900'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589082093.975
+    'REQUEST_TIME' => 1589082093
+]

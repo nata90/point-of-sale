@@ -13,6 +13,7 @@ use app\models\FileBarang;
 use app\models\FileStokBarang;
 use app\models\HdTransaksi;
 use app\models\DtTransaksi;
+use app\models\FileBarangSearch;
 use app\components\Utility;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -386,21 +387,28 @@ class SiteController extends Controller
     }
 
     public function actionDashboard(){
-        /*$popular = HdTransaksi::getProdukTerlaris();
-
-        return $this->render('dashboard',[
-            'popular'=>$popular
-        ]);*/
 
         $ten_days_ago = mktime(0, 0, 0, date('m'), date('d')-10, date('Y'));
         $days_ago = date('m/d/Y',$ten_days_ago);
         $days_now = date('m/d/Y');
 
-       /* echo $days_ago.'-'.$days_now;
-        exit();*/
+        $convert_days_ago = date('Y-m-d', strtotime($days_ago));
+        $convert_days_now = date('Y-m-d', strtotime($days_now));
+        
+        $popular = HdTransaksi::getProdukTerlaris($convert_days_ago, $convert_days_now);
+        $searchModel = new FileBarangSearch();
+        $almost_ed = $searchModel->searchBeforeED(Yii::$app->request->queryParams);
+        $zero_stok = $searchModel->searchStokKosong(Yii::$app->request->queryParams);
+
+        $model_almost_ed = $almost_ed->getModels();
+        $model_zero_stok = $zero_stok->getModels();
+
         return $this->render('dashboard',[
             'days_ago'=>$days_ago,
-            'days_now'=>$days_now
+            'days_now'=>$days_now,
+            'popular'=>$popular,
+            'model_almost_ed'=>$model_almost_ed,
+            'model_zero_stok'=>$model_zero_stok
         ]);
     }
 
@@ -436,6 +444,11 @@ class SiteController extends Controller
             $arr_data[] = HdTransaksi::getTotalTransaksi(date('Y-m-d', $date));
             $arr_rgba[] = 'rgba('.rand(0, 255).', '.rand(0, 255).', '.rand(0, 255).', 0.5)';
         }
+
+        $popular = HdTransaksi::getProdukTerlaris($date_start, $date_end);
+        $return['html'] = $this->renderPartial('produk_terlaris', [
+            'popular' => $popular,
+        ]);
 
         $return['label'] = $arr_date;
         $return['data'] = $arr_data;
