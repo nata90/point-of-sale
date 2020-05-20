@@ -457,5 +457,15 @@ class SiteController extends Controller
         echo Json::encode($return);
     }
 
+    public function actionNotifikasi()
+    {
+       $temp = \app\models\History::find()
+                   ->orderBy(['id' => SORT_DESC])
+                   ->all();
+       foreach ($temp as $value) {
+          echo "<p>New Notifikasi</p>";
+       }
+    }
+
     
 }

@@ -6,7 +6,6 @@ use yii\bootstrap\Modal;
 /* @var $content string */
 
 ?>
-
 <header class="main-header">
 
     <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">POS System</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>

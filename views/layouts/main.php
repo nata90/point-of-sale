@@ -33,68 +33,69 @@ if (Yii::$app->controller->action->id === 'login') {
     <?php $this->beginPage() ?>
     <!DOCTYPE html>
     <html lang="<?= Yii::$app->language ?>">
-    <head>
-        <meta charset="<?= Yii::$app->charset ?>"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <?= Html::csrfMetaTags() ?>
-        <title><?= Html::encode($this->title) ?></title>
-        <?php $this->head() ?>
-        <script type="text/javascript">
-            /* Fungsi formatRupiah */
-            function formatRupiah(angka, prefix){
-                var number_string = angka.replace(/[^,\d]/g, '').toString(),
-                split           = number_string.split(','),
-                sisa            = split[0].length % 3,
-                rupiah          = split[0].substr(0, sisa),
-                ribuan          = split[0].substr(sisa).match(/\d{3}/gi);
-     
-                // tambahkan titik jika yang di input sudah menjadi angka ribuan
-                if(ribuan){
-                    separator = sisa ? '.' : '';
-                    rupiah += separator + ribuan.join('.');
+        <head>
+            <meta charset="<?= Yii::$app->charset ?>"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <?= Html::csrfMetaTags() ?>
+            <title><?= Html::encode($this->title) ?></title>
+            <?php $this->head() ?>
+            <script type="text/javascript">
+                /* Fungsi formatRupiah */
+                function formatRupiah(angka, prefix){
+                    var number_string = angka.replace(/[^,\d]/g, '').toString(),
+                    split           = number_string.split(','),
+                    sisa            = split[0].length % 3,
+                    rupiah          = split[0].substr(0, sisa),
+                    ribuan          = split[0].substr(sisa).match(/\d{3}/gi);
+         
+                    // tambahkan titik jika yang di input sudah menjadi angka ribuan
+                    if(ribuan){
+                        separator = sisa ? '.' : '';
+                        rupiah += separator + ribuan.join('.');
+                    }
+         
+                    rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
+                    return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
                 }
-     
-                rupiah = split[1] != undefined ? rupiah + ',' + split[1] : rupiah;
-                return prefix == undefined ? rupiah : (rupiah ? 'Rp. ' + rupiah : '');
-            }
-        </script>
+                
+            </script>
 
-        <!-- ChartJS -->
-    </head>
-    <body class="hold-transition skin-red sidebar-mini">
-    <?php $this->beginBody() ?>
+            <!-- ChartJS -->
+        </head>
+        <body class="hold-transition skin-red sidebar-mini">
+        <?php $this->beginBody() ?>
 
-    <?php 
-        Modal::begin([
-                'header'=>'<span id="header-info"></span>',
-                'id'=>'modal',
-                'size'=>'modal-md',
-            ]);
-        echo "<div id='modalContent'></div>";
-        Modal::end();
-    ?>
-    <div class="wrapper">
-
-        <?= $this->render(
-            'header.php',
-            ['directoryAsset' => $directoryAsset]
-        ) ?>
-
-        <?= $this->render(
-            'left.php',
-            ['directoryAsset' => $directoryAsset]
-        )
+        <?php 
+            Modal::begin([
+                    'header'=>'<span id="header-info"></span>',
+                    'id'=>'modal',
+                    'size'=>'modal-md',
+                ]);
+            echo "<div id='modalContent'></div>";
+            Modal::end();
         ?>
+        <div class="wrapper">
 
-        <?= $this->render(
-            'content.php',
-            ['content' => $content, 'directoryAsset' => $directoryAsset]
-        ) ?>
+            <?= $this->render(
+                'header.php',
+                ['directoryAsset' => $directoryAsset]
+            ) ?>
 
-    </div>
+            <?= $this->render(
+                'left.php',
+                ['directoryAsset' => $directoryAsset]
+            )
+            ?>
 
-    <?php $this->endBody() ?>
-    </body>
+            <?= $this->render(
+                'content.php',
+                ['content' => $content, 'directoryAsset' => $directoryAsset]
+            ) ?>
+
+        </div>
+
+        <?php $this->endBody() ?>
+        </body>
     </html>
     <?php $this->endPage() ?>
 <?php } ?>

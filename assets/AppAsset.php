@@ -24,13 +24,16 @@ class AppAsset extends AssetBundle
         'css/ionicons.min.css',
         'css/googlefont.css',
         'css/daterangepicker.css',
+        'css/jquery.toast.css',
     ];
     public $js = [
         'js/Chart.js',
         'js/custom.js',
         'js/moment.min.js',
         'js/daterangepicker.js',
-        
+        'js/jquery.toast.js',
+        'js/socket.io.js',
+        'js/notif.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

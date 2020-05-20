@@ -6,6 +6,12 @@ $this->registerJs('var daysnow = "' . $days_now . '";');
 $this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";');
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
+	var nama = 'INFO';
+    var msg = 'Selamat Datang';
+
+    var socket = io.connect( 'http://localhost:3000');
+    socket.emit('notif',{name: nama, message: msg});
+            
 	setTimeout(function(){
 		$.ajax({
 			type: 'get',
@@ -73,6 +79,16 @@ $this->registerJs(<<<JS
 				})
 			}
 		});
+
+
+		/*$.toast({
+		    heading: 'Warning',
+		    text: 'And these were just the basic demos! Scroll down to check further details on how to customize the output.',
+		    showHideTransition: 'slide',
+		    icon: 'error',
+		    stack: 4,
+		    position: 'top-right',
+		});*/
 	}, 1500);
 
 	//Date range picker

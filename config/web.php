@@ -11,6 +11,9 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'controllerMap' => [
+        'node-socket' => '\YiiNodeSocket\NodeSocketCommand',
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
@@ -50,6 +53,14 @@ $config = [
             ],
         ],
         'db' => $db,
+        'nodeSocket' => [
+            'class' => '\YiiNodeSocket\NodeSocket',
+            'host' => 'localhost',
+            'allowedServerAddresses' => [
+                "localhost",
+                "127.0.0.1"
+            ],
+        ],
         /*'view' => [
              'theme' => [
                  'pathMap' => [

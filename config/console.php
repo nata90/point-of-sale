@@ -13,6 +13,9 @@ $config = [
         '@npm'   => '@vendor/npm-asset',
         '@tests' => '@app/tests',
     ],
+    'controllerMap' => [
+        'node-socket' => '\YiiNodeSocket\NodeSocketCommand',
+    ],
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -26,8 +29,18 @@ $config = [
             ],
         ],
         'db' => $db,
+        'nodeSocket' => [
+            'class' => '\YiiNodeSocket\NodeSocket',
+            'host' => 'localhost',
+            'allowedServerAddresses' => [
+                "localhost",
+                "127.0.0.1"
+            ],
+        ],
     ],
     'params' => $params,
+    
+    
     /*
     'controllerMap' => [
         'fixture' => [ // Fixture generation command line.
