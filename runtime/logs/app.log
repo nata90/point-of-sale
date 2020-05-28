@@ -5171,3 +5171,3284 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1589949937.247
     'REQUEST_TIME' => 1589949937
 ]
+2020-05-20 12:06:55 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-20 12:06:55 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0tnrfmjjdmau8uuc0l9jut77q4'
+    '_csrf' => 'f49c4c67d50fe923880888678da642c3750d888c87e7bcd9ba6fdeae90099211a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"1VDBeXZekQoqB9EM8T_KUpeluSIAZjKf\";}'
+    'io' => 'A9alZ3Y2uFE_BS1FAAAU'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590037615
+    'start-date' => '2020-05-20'
+    'end-date' => '2020-05-20'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=0tnrfmjjdmau8uuc0l9jut77q4; _csrf=f49c4c67d50fe923880888678da642c3750d888c87e7bcd9ba6fdeae90099211a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%221VDBeXZekQoqB9EM8T_KUpeluSIAZjKf%22%3B%7D; io=A9alZ3Y2uFE_BS1FAAAU'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36222'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1589951215.592
+    'REQUEST_TIME' => 1589951215
+]
+2020-05-22 08:49:58 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-22 08:49:58 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'neapm2l028s3os0g6jv0csih1v'
+    '_csrf' => 'ecd22f62ccd84acf1ce1fa74f7398cefa81781e5e7986285b2f9f49bbffe58f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Kn1f76k9Cp6KyftMiaTVXPEBtiTLhn-3\";}'
+    'io' => 'TCmalQXneaEV8PRsAAAB'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590198598
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=neapm2l028s3os0g6jv0csih1v; _csrf=ecd22f62ccd84acf1ce1fa74f7398cefa81781e5e7986285b2f9f49bbffe58f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Kn1f76k9Cp6KyftMiaTVXPEBtiTLhn-3%22%3B%7D; io=TCmalQXneaEV8PRsAAAB'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55474'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590112197.991
+    'REQUEST_TIME' => 1590112197
+]
+2020-05-22 08:50:02 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-22 08:50:02 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'neapm2l028s3os0g6jv0csih1v'
+    '_csrf' => 'ecd22f62ccd84acf1ce1fa74f7398cefa81781e5e7986285b2f9f49bbffe58f3a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Kn1f76k9Cp6KyftMiaTVXPEBtiTLhn-3\";}'
+    'io' => 'Br9CEy5C7UQNQxjtAAAE'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590198602
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=neapm2l028s3os0g6jv0csih1v; _csrf=ecd22f62ccd84acf1ce1fa74f7398cefa81781e5e7986285b2f9f49bbffe58f3a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Kn1f76k9Cp6KyftMiaTVXPEBtiTLhn-3%22%3B%7D; io=Br9CEy5C7UQNQxjtAAAE'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55474'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590112202.681
+    'REQUEST_TIME' => 1590112202
+]
+2020-05-26 10:28:34 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 10:28:34 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1pq1d1dchvp1b4c4kvea2q8jhp'
+    '_csrf' => 'f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tqQ4etxwiGZPxrzIIkGOTwDjVERINc21\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590550114
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=1pq1d1dchvp1b4c4kvea2q8jhp; _csrf=f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tqQ4etxwiGZPxrzIIkGOTwDjVERINc21%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590463714.056
+    'REQUEST_TIME' => 1590463714
+]
+2020-05-26 10:28:41 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:181
+2020-05-26 10:28:41 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '4'
+    'idstok' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1pq1d1dchvp1b4c4kvea2q8jhp'
+    '_csrf' => 'f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tqQ4etxwiGZPxrzIIkGOTwDjVERINc21\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590550121
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '5'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Wa9w-jTTjya6sMAVV6RGnJmjxMBRcowGL0H29zLjg-Qt3iHOUaf3UdP3mkUv1jzV0MiDjwUFyGx5BKS-fICx1Q=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=1pq1d1dchvp1b4c4kvea2q8jhp; _csrf=f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tqQ4etxwiGZPxrzIIkGOTwDjVERINc21%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=4&idstok=5'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=4&idstok=5'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590463721.849
+    'REQUEST_TIME' => 1590463721
+]
+2020-05-26 10:28:45 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:315
+2020-05-26 10:28:45 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '60000'
+    'totalbayar' => '100000'
+    'cashback' => '40000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '1pq1d1dchvp1b4c4kvea2q8jhp'
+    '_csrf' => 'f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"tqQ4etxwiGZPxrzIIkGOTwDjVERINc21\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590550125
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '5'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '51'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Wa9w-jTTjya6sMAVV6RGnJmjxMBRcowGL0H29zLjg-Qt3iHOUaf3UdP3mkUv1jzV0MiDjwUFyGx5BKS-fICx1Q=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=1pq1d1dchvp1b4c4kvea2q8jhp; _csrf=f8522b6cfd5908270c7780b31b3151cb1247ea4c4aaef07f4f55ef6d2a4132d2a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22tqQ4etxwiGZPxrzIIkGOTwDjVERINc21%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '43690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590463725.979
+    'REQUEST_TIME' => 1590463725
+]
+2020-05-26 12:47:11 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 12:47:11 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558431
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46460'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472031.089
+    'REQUEST_TIME' => 1590472031
+]
+2020-05-26 12:47:23 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:181
+2020-05-26 12:47:23 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000003'
+    'qty' => '2'
+    'idstok' => '10'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558443
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '2'
+            'harga' => 25000
+            'total' => 50000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MadIuLRSf2-ZXEIPUgGy6KfIZNQ7JDm1xjt6Q07naFtBwguI4mNOLvo1LlZhc8u50aYjnQ1McPf_cgp0HrIlDw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46482'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000003&qty=2&idstok=10'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000003&qty=2&idstok=10'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472043.65
+    'REQUEST_TIME' => 1590472043
+]
+2020-05-26 12:47:27 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:315
+2020-05-26 12:47:27 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '50000'
+    'totalbayar' => '50000'
+    'cashback' => '0'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558447
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '2'
+            'harga' => 25000
+            'total' => 50000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '46'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'MadIuLRSf2-ZXEIPUgGy6KfIZNQ7JDm1xjt6Q07naFtBwguI4mNOLvo1LlZhc8u50aYjnQ1McPf_cgp0HrIlDw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46482'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472047.03
+    'REQUEST_TIME' => 1590472047
+]
+2020-05-26 12:47:29 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 12:47:29 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558449
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=124'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46482'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472049.193
+    'REQUEST_TIME' => 1590472049
+]
+2020-05-26 12:47:35 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:181
+2020-05-26 12:47:35 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000004'
+    'qty' => '3'
+    'idstok' => '12'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558455
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+            'idstok' => '12'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'eijO5hZ5zqrLvpcztKfBcy3xnSOYVn4XcHv0VB513VoKTY3WQEj_66jX-2qH1bgiW5_aaq4-N1VJMoRjTiCQDg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=3&idstok=12'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=3&idstok=12'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472055.488
+    'REQUEST_TIME' => 1590472055
+]
+2020-05-26 12:47:39 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:315
+2020-05-26 12:47:39 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '45000'
+    'totalbayar' => '50000'
+    'cashback' => '5000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'fjmS8SlNkjitLi2gAAAB'
+    'PHPSESSID' => '65p9ug6m5hg80vfs3errs08t3v'
+    '_csrf' => '86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558459
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '3'
+            'harga' => 15000
+            'total' => 45000
+            'idstok' => '12'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '49'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'eijO5hZ5zqrLvpcztKfBcy3xnSOYVn4XcHv0VB513VoKTY3WQEj_66jX-2qH1bgiW5_aaq4-N1VJMoRjTiCQDg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=fjmS8SlNkjitLi2gAAAB; PHPSESSID=65p9ug6m5hg80vfs3errs08t3v; _csrf=86e4ad41b6c350a597ee7bf3e545fe5f2767df9f2a16470628d5b5727c93e5e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22peC0V11AcilY3ryQvnGI6hIB9Ip7PUMT%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472059.786
+    'REQUEST_TIME' => 1590472059
+]
+2020-05-26 12:49:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 12:49:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '2m349ujl770jtljvrjcv08j304'
+    '_csrf' => '4c1585533ec71e816b16d46c1944fd53bd014ec91cc86d9786317f0e9926a26ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QrsSRTCpTEl3NO-8IBuXA1600U5uFIde\";}'
+    'io' => '48AQWrmAaI9g_T_pAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590558558
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2m349ujl770jtljvrjcv08j304; _csrf=4c1585533ec71e816b16d46c1944fd53bd014ec91cc86d9786317f0e9926a26ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QrsSRTCpTEl3NO-8IBuXA1600U5uFIde%22%3B%7D; io=48AQWrmAaI9g_T_pAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46696'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472158.572
+    'REQUEST_TIME' => 1590472158
+]
+2020-05-26 12:58:02 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 12:58:02 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '2m349ujl770jtljvrjcv08j304'
+    '_csrf' => '4c1585533ec71e816b16d46c1944fd53bd014ec91cc86d9786317f0e9926a26ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"QrsSRTCpTEl3NO-8IBuXA1600U5uFIde\";}'
+    'io' => 'PHzPb2tn0mM6msARAAAF'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590559082
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2m349ujl770jtljvrjcv08j304; _csrf=4c1585533ec71e816b16d46c1944fd53bd014ec91cc86d9786317f0e9926a26ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22QrsSRTCpTEl3NO-8IBuXA1600U5uFIde%22%3B%7D; io=PHzPb2tn0mM6msARAAAF'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47812'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590472682.445
+    'REQUEST_TIME' => 1590472682
+]
+2020-05-26 13:04:17 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 13:04:17 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => '-g6__bW-e4CC6un6AAAK'
+    'PHPSESSID' => 'd3oiqgd459fp3lnn0fg0v4mv4t'
+    '_csrf' => '50f39a105ffbca8ac8fdf4bc2194897def169a8fd267fda4077b7940178a0311a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AIs4sd8hZJtYFXPU9AxE2rTHTKdOYGeM\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590559457
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=-g6__bW-e4CC6un6AAAK; PHPSESSID=d3oiqgd459fp3lnn0fg0v4mv4t; _csrf=50f39a105ffbca8ac8fdf4bc2194897def169a8fd267fda4077b7940178a0311a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AIs4sd8hZJtYFXPU9AxE2rTHTKdOYGeM%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48140'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590473057.025
+    'REQUEST_TIME' => 1590473057
+]
+2020-05-26 13:06:10 [::1][-][tv8b6mif8ku2r7mvtct9i5tqjl][error][ParseError] ParseError: syntax error, unexpected 'if' (T_IF), expecting ',' or ';' in /var/www/html/pos/controllers/SiteController.php:116
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\\controllers...')
+#1 [internal function]: spl_autoload_call('app\\controllers...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(637): class_exists('app\\controllers...')
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(596): yii\base\Module->createControllerByID('site')
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(522): yii\base\Module->createController('login')
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/login', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-05-26 13:06:10 [::1][-][tv8b6mif8ku2r7mvtct9i5tqjl][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => '-g6__bW-e4CC6un6AAAK'
+    '_csrf' => '50f39a105ffbca8ac8fdf4bc2194897def169a8fd267fda4077b7940178a0311a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AIs4sd8hZJtYFXPU9AxE2rTHTKdOYGeM\";}'
+    'PHPSESSID' => 'tv8b6mif8ku2r7mvtct9i5tqjl'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=-g6__bW-e4CC6un6AAAK; _csrf=50f39a105ffbca8ac8fdf4bc2194897def169a8fd267fda4077b7940178a0311a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AIs4sd8hZJtYFXPU9AxE2rTHTKdOYGeM%22%3B%7D; PHPSESSID=tv8b6mif8ku2r7mvtct9i5tqjl'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48264'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590473170.804
+    'REQUEST_TIME' => 1590473170
+]
+2020-05-26 13:35:56 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 13:35:56 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '3d5l4mefat8ifa0dtf3edv8le6'
+    '_csrf' => 'f1927cbaa0886dc50f27d8c90d1049b0e42db6ce8fc5fd671c230ba0b8feff16a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"fNYoLEzn2o9pu5uWUwQY43H1uSlF6F4Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590561356
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=3d5l4mefat8ifa0dtf3edv8le6; _csrf=f1927cbaa0886dc50f27d8c90d1049b0e42db6ce8fc5fd671c230ba0b8feff16a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22fNYoLEzn2o9pu5uWUwQY43H1uSlF6F4Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45178'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590474956.784
+    'REQUEST_TIME' => 1590474956
+]
+2020-05-26 13:38:59 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 13:38:59 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '57jpd3g51c1ipide77pq39irnn'
+    '_csrf' => '95461c9fac93c426860fec6911214a58563a816246cc22bbff1907de0ff8d231a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xWVj1SZ_JkHe7ytVoPzQHvlz54cu8aKb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590561539
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=57jpd3g51c1ipide77pq39irnn; _csrf=95461c9fac93c426860fec6911214a58563a816246cc22bbff1907de0ff8d231a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xWVj1SZ_JkHe7ytVoPzQHvlz54cu8aKb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52656'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590475139.704
+    'REQUEST_TIME' => 1590475139
+]
+2020-05-26 15:32:43 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-26 15:32:43 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '57jpd3g51c1ipide77pq39irnn'
+    '_csrf' => '95461c9fac93c426860fec6911214a58563a816246cc22bbff1907de0ff8d231a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xWVj1SZ_JkHe7ytVoPzQHvlz54cu8aKb\";}'
+    'io' => 'a7naKl2N-I3gcyQZAAAB'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590568363
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=57jpd3g51c1ipide77pq39irnn; _csrf=95461c9fac93c426860fec6911214a58563a816246cc22bbff1907de0ff8d231a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xWVj1SZ_JkHe7ytVoPzQHvlz54cu8aKb%22%3B%7D; io=a7naKl2N-I3gcyQZAAAB'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34120'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590481963.294
+    'REQUEST_TIME' => 1590481963
+]
+2020-05-27 13:16:02 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 13:16:02 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '2b9a2f8uu7p6ggth2ahulij1qu'
+    '_csrf' => '0f78b73fda18583946424442706c58144359ec4fe473d6de355bf395b52da01ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Najkg8KsGbIR-9zROhiCI2X8vUe532MY\";}'
+]
+
+$_SESSION = [
+    '0b990350410da8826ff87fb1790ccc13__id' => '697'
+    '0b990350410da8826ff87fb1790ccc13__name' => 'ristiw'
+    '0b990350410da8826ff87fb1790ccc13username' => 'ristiw'
+    '0b990350410da8826ff87fb1790ccc13idgroup' => '39'
+    '0b990350410da8826ff87fb1790ccc13__states' => [
+        'username' => true
+        'idgroup' => true
+    ]
+    'ip' => '::1'
+    'mac' => null
+    'index-penyakit' => 'O:11:\"CDbCriteria\":17:{s:6:\"select\";s:1:\"*\";s:8:\"distinct\";b:0;s:9:\"condition\";s:19:\" id_diagnosa IN (0)\";s:6:\"params\";a:0:{}s:5:\"limit\";i:-1;s:6:\"offset\";i:-1;s:5:\"order\";s:0:\"\";s:5:\"group\";s:0:\"\";s:4:\"join\";s:93:\" LEFT JOIN headerpelayananbangsal hpb ON t.NomorRM=hpb.NomorRM AND t.Kunjungan=hpb.Kunjungan \";s:6:\"having\";s:0:\"\";s:4:\"with\";N;s:5:\"alias\";N;s:8:\"together\";N;s:5:\"index\";N;s:6:\"scopes\";N;s:14:\"\0CComponent\0_e\";N;s:14:\"\0CComponent\0_m\";N;}'
+    'jnslaporan' => null
+    'fromdate' => null
+    'todate' => null
+    'bulan' => null
+    'tahun' => null
+    'tahun2' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590646562
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=2b9a2f8uu7p6ggth2ahulij1qu; _csrf=0f78b73fda18583946424442706c58144359ec4fe473d6de355bf395b52da01ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Najkg8KsGbIR-9zROhiCI2X8vUe532MY%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '34834'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590560162.556
+    'REQUEST_TIME' => 1590560162
+]
+2020-05-27 13:40:47 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 13:40:46 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '4i92l3nkemvpdmio4934rse94b'
+    '_csrf' => '1b9b272f7ccf664dd978fbf034b76a50771afd058c96870e7a9f867d7b8faf64a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"npegUvDCqj0_2KWyIS8geefjGHpo5oEr\";}'
+    'io' => 'gWgN_0QZl688DV11AAAB'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590648047
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=4i92l3nkemvpdmio4934rse94b; _csrf=1b9b272f7ccf664dd978fbf034b76a50771afd058c96870e7a9f867d7b8faf64a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22npegUvDCqj0_2KWyIS8geefjGHpo5oEr%22%3B%7D; io=gWgN_0QZl688DV11AAAB'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47488'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590561646.992
+    'REQUEST_TIME' => 1590561646
+]
+2020-05-27 13:54:16 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 13:54:16 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'p1ktl1ulh7spplom1apb6dia9a'
+    '_csrf' => '41883aebf5d38d56bb4d6a9a3d7dd126d5f00741b3508be74771dcd5c6d5fe05a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Zy1TC5LL07sb8UwgJNGSm8vzhjHmJmQs\";}'
+    'io' => 'yKoXy2Ow-ZQBOLMfAAAB'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590648856
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=p1ktl1ulh7spplom1apb6dia9a; _csrf=41883aebf5d38d56bb4d6a9a3d7dd126d5f00741b3508be74771dcd5c6d5fe05a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Zy1TC5LL07sb8UwgJNGSm8vzhjHmJmQs%22%3B%7D; io=yKoXy2Ow-ZQBOLMfAAAB'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '38194'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590562456.139
+    'REQUEST_TIME' => 1590562456
+]
+2020-05-27 14:02:24 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-05-27 14:02:24 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'j78jdodarkedmibk75fn0j84cm'
+    '_csrf' => '30a838ba7e11800c0e6a7550a938e15efe686c52327a353ee510b154636c3442a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgR0EZ9fYzwRir3dZpMvZ5md2BjaCJhb\";}'
+    'io' => 'z6OwTiGasrlNYJs5AAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590649344
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=j78jdodarkedmibk75fn0j84cm; _csrf=30a838ba7e11800c0e6a7550a938e15efe686c52327a353ee510b154636c3442a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgR0EZ9fYzwRir3dZpMvZ5md2BjaCJhb%22%3B%7D; io=z6OwTiGasrlNYJs5AAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47244'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590562944.587
+    'REQUEST_TIME' => 1590562944
+]
+2020-05-27 14:02:37 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 14:02:37 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'j78jdodarkedmibk75fn0j84cm'
+    '_csrf' => '30a838ba7e11800c0e6a7550a938e15efe686c52327a353ee510b154636c3442a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgR0EZ9fYzwRir3dZpMvZ5md2BjaCJhb\";}'
+    'io' => '9KCVhplLYBQ2G3I0AAAG'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590649357
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=j78jdodarkedmibk75fn0j84cm; _csrf=30a838ba7e11800c0e6a7550a938e15efe686c52327a353ee510b154636c3442a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgR0EZ9fYzwRir3dZpMvZ5md2BjaCJhb%22%3B%7D; io=9KCVhplLYBQ2G3I0AAAG'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47262'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590562957.465
+    'REQUEST_TIME' => 1590562957
+]
+2020-05-27 14:12:41 [192.168.20.15][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:126
+2020-05-27 14:12:41 [192.168.20.15][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:40 [192.168.20.15][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47050'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563560.898
+    'REQUEST_TIME' => 1590563560
+]
+2020-05-27 14:12:47 [192.168.20.15][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:46 [192.168.20.15][3][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'InHfFYZ6-cyeWQfzJe3CwzZTmce2L1pO60O5MADWwmRWHq9b5yW1tasVb6NxjvGhdyWp8dIZLh-eO8lcTKzwOw=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '0'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'b2c99c8ee423ab1a7f1bf3690fdc82384dc78bbfbfee1ab0aa3dd5331dbafa63a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"topNa_Ly5LhPTc3bAv06d6tQuxplLz2_\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590649967
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '200'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://192.168.20.15'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => '_csrf=b2c99c8ee423ab1a7f1bf3690fdc82384dc78bbfbfee1ab0aa3dd5331dbafa63a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22topNa_Ly5LhPTc3bAv06d6tQuxplLz2_%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47062'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563566.927
+    'REQUEST_TIME' => 1590563566
+]
+2020-05-27 14:12:47 [192.168.20.15][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:414
+2020-05-27 14:12:47 [192.168.20.15][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:47 [192.168.20.15][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lp31norqj6rrar8qrkid1m7vg7'
+    '_csrf' => 'a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590649967
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=lp31norqj6rrar8qrkid1m7vg7; _csrf=a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47062'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563567.124
+    'REQUEST_TIME' => 1590563567
+]
+2020-05-27 14:12:49 [192.168.20.15][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:49 [192.168.20.15][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lp31norqj6rrar8qrkid1m7vg7'
+    '_csrf' => 'a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590649969
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'EQF4HHITqTHDB0zSTDtHfT8ifOX-ZdBfvx8mqpQ4kDVIZjpDFnyQc5N_HLoVCRIqZk8TiokBviXsK3_l1lDzAQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=lp31norqj6rrar8qrkid1m7vg7; _csrf=a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47068'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563569.408
+    'REQUEST_TIME' => 1590563569
+]
+2020-05-27 14:12:54 [192.168.20.15][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:54 [192.168.20.15][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'lp31norqj6rrar8qrkid1m7vg7'
+    '_csrf' => 'a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=lp31norqj6rrar8qrkid1m7vg7; _csrf=a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47086'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563574.522
+    'REQUEST_TIME' => 1590563574
+]
+2020-05-27 14:12:54 [192.168.20.15][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:126
+2020-05-27 14:12:54 [192.168.20.15][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.15
+2020-05-27 14:12:54 [192.168.20.15][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4\";}'
+    'PHPSESSID' => 'h6n1lkbf7sjm335hqqk0qfuh27'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/81.0.4044.138 Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => '_csrf=a83eac0f14e96119561a0d38b3d1b480625d739027ae07f13da0aa5557eef3e6a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YgB_do9BPxPhY2UWYmoowdnzS4YOBhc4%22%3B%7D; PHPSESSID=h6n1lkbf7sjm335hqqk0qfuh27'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.15'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '47086'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563574.544
+    'REQUEST_TIME' => 1590563574
+]
+2020-05-27 14:13:39 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:126
+2020-05-27 14:13:39 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:39 [192.168.20.25][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54640'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563619.144
+    'REQUEST_TIME' => 1590563619
+]
+2020-05-27 14:13:47 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:47 [192.168.20.25][3][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'Uea0VhJLS5aLxcbbaTrgO_mVKgLRq7306tD5LT4fA78c1OIJQQgfpuKsqrI2StljmMJaZvza9bKckZ1UWEZN8Q=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '60ac2950540a5d2a067f45324265257a5fc64059d5fed05fe5cf0547c67455eca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"M2V_SCT0iili_p9XaWpd-qHFvAdyfYNN\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650027
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://192.168.20.15'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=60ac2950540a5d2a067f45324265257a5fc64059d5fed05fe5cf0547c67455eca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22M2V_SCT0iili_p9XaWpd-qHFvAdyfYNN%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54639'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563627.537
+    'REQUEST_TIME' => 1590563627
+]
+2020-05-27 14:13:47 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:414
+2020-05-27 14:13:47 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:47 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650027
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54639'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563627.556
+    'REQUEST_TIME' => 1590563627
+]
+2020-05-27 14:13:49 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:49 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650029
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'AcxA7_zNC9JL4wT9LkQervbm4Q0v05njoIOYWg9WPmtYuCeflLdilH_QTaxYBknjspekYGW6046T29QLfw9NPg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54642'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563629.221
+    'REQUEST_TIME' => 1590563629
+]
+2020-05-27 14:13:52 [192.168.20.25][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 14:13:52 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:100
+2020-05-27 14:13:52 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:52 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650032
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54642'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563632.3
+    'REQUEST_TIME' => 1590563632
+]
+2020-05-27 14:13:54 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:414
+2020-05-27 14:13:54 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:54 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650034
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54639'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563634.145
+    'REQUEST_TIME' => 1590563634
+]
+2020-05-27 14:13:55 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:13:55 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650035
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'aWdJlAzQ__FoAsik9FqZT-kMzBODfBd0JwguHGTXrbMwEy7kZKqWt1wxgfWCGM4CrX2JfskVXRkUUGJNFI7e5g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54639'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563635.717
+    'REQUEST_TIME' => 1590563635
+]
+2020-05-27 14:14:01 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:14:01 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ul7goe58udfk24o6ue8r9lkn4r'
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=ul7goe58udfk24o6ue8r9lkn4r; _csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54687'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563641.036
+    'REQUEST_TIME' => 1590563641
+]
+2020-05-27 14:14:01 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:126
+2020-05-27 14:14:01 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:14:01 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"YtgphziF43IQvBWMDqEmJiJm3XLQpYsU\";}'
+    'PHPSESSID' => 'tdcd34lqg9a6plq3hpflaf0v5f'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=9fe67d21a1332bd496b99659ee2709e876cff479c8376db3133d53fee4f86433a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22YtgphziF43IQvBWMDqEmJiJm3XLQpYsU%22%3B%7D; PHPSESSID=tdcd34lqg9a6plq3hpflaf0v5f'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54687'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563641.052
+    'REQUEST_TIME' => 1590563641
+]
+2020-05-27 14:16:55 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:123
+2020-05-27 14:16:55 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:16:55 [192.168.20.25][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563815.741
+    'REQUEST_TIME' => 1590563815
+]
+2020-05-27 14:17:01 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:00 [192.168.20.25][3][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'FJRxm2RSF-M4ZXG_x-Mr_BfqJ13njCXFNc4zWb6C51lTpznwASBI024WRsWOlXTJZbNQHKzeHI5cjQdvz-e3Ew=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+        'rememberMe' => '1'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '6ee5e548fed66d419633ee4f749a5bfc5e288a761f9a07fd266711192617e71da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"G3Hker_0Vs7zIv_5rYwAKR9KiC46qePJ\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650221
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '228'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://192.168.20.15'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=6ee5e548fed66d419633ee4f749a5bfc5e288a761f9a07fd266711192617e71da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22G3Hker_0Vs7zIv_5rYwAKR9KiC46qePJ%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563820.952
+    'REQUEST_TIME' => 1590563820
+]
+2020-05-27 14:17:01 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:411
+2020-05-27 14:17:01 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:01 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650221
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563821.025
+    'REQUEST_TIME' => 1590563821
+]
+2020-05-27 14:17:02 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:02 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'Fc5v6PTDaxDWBDv9AAAQ'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650222
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'D8vdxLgi-DlJNQRhTJ3maWu5j42B0y2YzhGPXwwPWf1L_Kyn0G23dz0HVAQmrssaJev8uLGJfuCWWds4fTwImg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=Fc5v6PTDaxDWBDv9AAAQ'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563822.699
+    'REQUEST_TIME' => 1590563822
+]
+2020-05-27 14:17:04 [192.168.20.25][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:74
+2020-05-27 14:17:04 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:100
+2020-05-27 14:17:04 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:04 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'Fc5v6PTDaxDWBDv9AAAQ'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650224
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=Fc5v6PTDaxDWBDv9AAAQ'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563824.764
+    'REQUEST_TIME' => 1590563824
+]
+2020-05-27 14:17:05 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:411
+2020-05-27 14:17:05 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:05 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'Fc5v6PTDaxDWBDv9AAAQ'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650225
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=Fc5v6PTDaxDWBDv9AAAQ'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563825.792
+    'REQUEST_TIME' => 1590563825
+]
+2020-05-27 14:17:07 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:07 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => '5ZixQ_b-5TK7Sr57AAAR'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650227
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'h0jtgOsLsEp1OFzUM7wdRO2ad_sXL0Q1xwrJDfj9HFrDf5zjg0T_BAEKDLFZjzA3o8gEzid1F02fQp1qic5NPQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=5ZixQ_b-5TK7Sr57AAAR'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563827.452
+    'REQUEST_TIME' => 1590563827
+]
+2020-05-27 14:17:08 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/TransaksiController.php:252
+2020-05-27 14:17:08 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:08 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'transaksi/kelolapenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => '5ZixQ_b-5TK7Sr57AAAR'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650228
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=5ZixQ_b-5TK7Sr57AAAR'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Fkelolapenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fkelolapenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563828.787
+    'REQUEST_TIME' => 1590563828
+]
+2020-05-27 14:17:10 [192.168.20.25][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:82
+2020-05-27 14:17:10 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/PembelianController.php:102
+2020-05-27 14:17:10 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:10 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => '5ZixQ_b-5TK7Sr57AAAR'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650230
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=transaksi%2Fkelolapenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=5ZixQ_b-5TK7Sr57AAAR'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563830.264
+    'REQUEST_TIME' => 1590563830
+]
+2020-05-27 14:17:11 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:411
+2020-05-27 14:17:11 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:11 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => '5ZixQ_b-5TK7Sr57AAAR'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650231
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=5ZixQ_b-5TK7Sr57AAAR'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563831.395
+    'REQUEST_TIME' => 1590563831
+]
+2020-05-27 14:17:12 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:12 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'V-ucM9JMap6dU1BPAAAS'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650232
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Va14JaBkDE_bvgy6WqqECY_ZaEO7a_OijsHL6bXvG2YRmglGyCtDAa-MXN8wmal6wYsbdosxoNrWiZ-OxNxKAQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=V-ucM9JMap6dU1BPAAAS'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563832.963
+    'REQUEST_TIME' => 1590563832
+]
+2020-05-27 14:17:13 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:411
+2020-05-27 14:17:13 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:13 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'V-ucM9JMap6dU1BPAAAS'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650233
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=V-ucM9JMap6dU1BPAAAS'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563833.334
+    'REQUEST_TIME' => 1590563833
+]
+2020-05-27 14:17:14 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:14 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'BkxLK98QzYibjPnAAAAT'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1590650234
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'qYgC3ghnayJwZqngtivdZXhQLzq3_hNKCpzlSB7SVfTtv3O9YCgkbARU-YXcGPAWNgJcD4ekQDJS1LEvb-EEkw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=BkxLK98QzYibjPnAAAAT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563834.908
+    'REQUEST_TIME' => 1590563834
+]
+2020-05-27 14:17:15 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:15 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'akn0f1abdjcd40vuemjvo06j54'
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'BkxLK98QzYibjPnAAAAT'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=akn0f1abdjcd40vuemjvo06j54; _csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=BkxLK98QzYibjPnAAAAT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563835.431
+    'REQUEST_TIME' => 1590563835
+]
+2020-05-27 14:17:15 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:123
+2020-05-27 14:17:15 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-05-27 14:17:15 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg\";}'
+    'io' => 'BkxLK98QzYibjPnAAAAT'
+    'PHPSESSID' => 'e57i6f69cv3u4bilrl1vq3i1tn'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.138 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=ce5dc46abc2a91a99bad2714c1fccac3ce08f3d99bccf61420a0bbb5241e2405a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22D7qchOONt2Pej3-sNRs50ZSxXHTgq3Qg%22%3B%7D; io=BkxLK98QzYibjPnAAAAT; PHPSESSID=e57i6f69cv3u4bilrl1vq3i1tn'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54701'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1590563835.443
+    'REQUEST_TIME' => 1590563835
+]

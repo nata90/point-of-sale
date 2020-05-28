@@ -109,6 +109,7 @@ class SiteController extends Controller
      */
     public function actionLogin()
     {
+
         if (!Yii::$app->user->isGuest) {
             return $this->goHome();
         }
@@ -118,7 +119,6 @@ class SiteController extends Controller
             return $this->redirect(['dashboard']);
         }
 
-        //$model->password = '';
         return $this->render('login', [
             'model' => $model,
         ]);

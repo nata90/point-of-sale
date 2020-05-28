@@ -1,0 +1,8 @@
+-install apache, mysql, php 7.2
+-optimize php.ini dan mysql
+-setting session login php.ini
+ *session.gc_maxlifetime default 1440
+-install nodejs dengan nvm
+-install pm2 untuk autorestart node js 
+  * pm2 start /var/www/html/pos/nodejs/
+  * setting sebagai service start up "sudo env PATH=$PATH:/usr/local/bin pm2 startup -u safeuser"
