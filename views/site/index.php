@@ -124,6 +124,11 @@ $this->registerJs(<<<JS
 						'cashback':cashback
 					},
 					success: function(v){
+						var head = 'Penjualan : '+v.nopenjualan;
+					    var msg = v.items;
+
+					    var socket = io.connect( 'http://localhost:3000');
+					    socket.emit('notif',{name: head, message: msg});
 						location.replace(v.redirect);
 					},
 					'complete':function(json)

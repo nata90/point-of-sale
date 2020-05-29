@@ -261,6 +261,7 @@ class PembelianController extends Controller
         $session->open();
 
         $arr_data = $session['datapembelian'];
+        $arr_item = array();
 
         if(isset($arr_data) && !empty($arr_data)){
             if($_POST['supplier'] == ''){
@@ -279,6 +280,9 @@ class PembelianController extends Controller
             if($model->save()){
                 
                foreach($arr_data as $val){
+                    $nama_barang = FileBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
+                    $arr_item[] = $nama_barang->nama_barang.' : '.$val['jumlah'].' item';
+
                     $detail = new DetailPembelian;
                     $detail->id_pembelian = $model->id_pembelian;
                     $detail->kd_barang = $val['kodebarang'];
@@ -304,6 +308,8 @@ class PembelianController extends Controller
                     $stok_barang->save();
                 } 
                 $return['error'] = 0;
+                $return['nopembelian'] = $model->no_faktur;
+                $return['items'] = $arr_item;
                 $return['redirect'] = Url::to(['transaksi/kelolapembelian']);
             }
         }else{

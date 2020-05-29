@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://192.168.20.15:3000');
     socket.on('notif', function (data) {
         $.toast({
 		    heading: data.name,

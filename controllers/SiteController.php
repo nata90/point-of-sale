@@ -314,6 +314,7 @@ class SiteController extends Controller
         $session->open();
 
         $return = array();
+        $arr_item = array();
 
         $model = new HdTransaksi;
         $model->no_transaksi = Utility::getNoTransaksi(1);
@@ -324,6 +325,8 @@ class SiteController extends Controller
         if($model->save()){
             if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
                 foreach($session['datatransaksi'] as $key=>$value){
+                    $nama_barang = FileBarang::find()->where(['kd_barang'=>$value['kodebarang']])->one();
+                    $arr_item[] = $nama_barang->nama_barang.' : '.$value['qty'].' item';
                     $detail = new DtTransaksi;
                     $detail->no_transaksi = $model->no_transaksi;
                     $detail->kd_barang = $value['kodebarang'];
@@ -336,6 +339,8 @@ class SiteController extends Controller
             }
 
             $return['success'] = 1;
+            $return['nopenjualan'] = $model->no_transaksi;
+            $return['items'] = $arr_item;
             $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
         }
 

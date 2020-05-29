@@ -7,9 +7,9 @@ $this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";')
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
 	var nama = 'INFO';
-    var msg = 'Selamat Datang';
+    var msg = 'Selamat datang di aplikasi Apotek';
 
-    var socket = io.connect( 'http://localhost:3000');
+    var socket = io.connect('http://localhost:3000');
     socket.emit('notif',{name: nama, message: msg});
             
 	setTimeout(function(){

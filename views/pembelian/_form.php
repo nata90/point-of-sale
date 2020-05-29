@@ -146,6 +146,12 @@ $this->registerJs(<<<JS
             },
             success: function(v){
                 if(v.error == 0){
+                    var head = 'Pembelian : '+v.nopembelian;
+                    var msg = v.items;
+
+                    var socket = io.connect( 'http://localhost:3000');
+                    socket.emit('notif',{name: head, message: msg});
+
                     location.replace(v.redirect);
                 }else{
                     show_modal("<strong style='color:red;'>ERROR</strong>",v.msg);
