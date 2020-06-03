@@ -10,6 +10,7 @@ use app\models\FileBarang;
 use app\models\FileStokBarang;
 use app\models\Supplier;
 use app\models\KodeGenerate;
+use app\models\SettingApp;
 use app\components\Utility;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
@@ -93,13 +94,16 @@ class PembelianController extends Controller
         ->asArray()
         ->all();
 
+        $setting = SettingApp::find()->one();
+
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['view', 'id' => $model->id_pembelian]);
         }
 
         return $this->render('create', [
             'model' => $model,
-            'data'=>$data
+            'data'=>$data,
+            'setting'=>$setting
         ]);
     }
 

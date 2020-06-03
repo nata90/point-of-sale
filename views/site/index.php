@@ -9,6 +9,7 @@ use yii\helpers\Url;
 
 
 $this->title = 'POINT OF SALE';
+$this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs(<<<JS
 	$('#filebarang-nama_barang').focus();
 
@@ -127,7 +128,7 @@ $this->registerJs(<<<JS
 						var head = 'Penjualan : '+v.nopenjualan;
 					    var msg = v.items;
 
-					    var socket = io.connect( 'http://localhost:3000');
+					    var socket = io.connect( 'http://'+ip_addr+':3000');
 					    socket.emit('notif',{name: head, message: msg});
 						location.replace(v.redirect);
 					},

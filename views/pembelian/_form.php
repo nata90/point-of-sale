@@ -9,6 +9,7 @@ use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $model app\models\HeaderPembelian */
 /* @var $form yii\widgets\ActiveForm */
+$this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs(<<<JS
     var harga_beli = document.getElementById('headerpembelian-harga_beli');
     harga_beli.addEventListener('keyup', function(e){
@@ -149,7 +150,7 @@ $this->registerJs(<<<JS
                     var head = 'Pembelian : '+v.nopembelian;
                     var msg = v.items;
 
-                    var socket = io.connect( 'http://localhost:3000');
+                    var socket = io.connect( 'http://'+ip_addr+':3000');
                     socket.emit('notif',{name: head, message: msg});
 
                     location.replace(v.redirect);

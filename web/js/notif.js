@@ -1,5 +1,5 @@
 $( document ).ready(function() {
-    var socket = io.connect('http://192.168.20.15:3000');
+    var socket = io.connect('http://127.0.0.1:3000');
     socket.on('notif', function (data) {
         $.toast({
 		    heading: data.name,
@@ -8,7 +8,7 @@ $( document ).ready(function() {
 		    icon: 'info',
 		    stack: 4,
 		    position: 'top-right',
-		    hideAfter: 5000   // in milli seconds
+		    hideAfter: 10000   // in milli seconds
 		});
     });
 });

@@ -4,12 +4,13 @@ $this->registerJs('var url = "' . Url::to(['/site/grafikpenjualan']) . '";');
 $this->registerJs('var daysago = "' . $days_ago . '";');
 $this->registerJs('var daysnow = "' . $days_now . '";');
 $this->registerJs('var url_search = "' . Url::to(['/site/searchgrafik']) . '";');
+$this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJsFile(Yii::$app->request->BaseUrl . '/js/numeral.min.js');
 $this->registerJs(<<<JS
 	var nama = 'INFO';
-    var msg = 'Selamat datang di aplikasi Apotek';
+    var msg = 'Selamat datang';
 
-    var socket = io.connect('http://localhost:3000');
+    var socket = io.connect('http://'+ip_addr+':3000');
     socket.emit('notif',{name: nama, message: msg});
             
 	setTimeout(function(){

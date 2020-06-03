@@ -58,4 +58,29 @@ class Utility extends Model
 
         return $kode_barang;
     }
+
+    function getUserIP(){
+        $client  = @$_SERVER['HTTP_CLIENT_IP'];
+        $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
+        $remote  = $_SERVER['REMOTE_ADDR'];
+
+        if(filter_var($client, FILTER_VALIDATE_IP))
+        {
+            $ip = $client;
+        }
+        elseif(filter_var($forward, FILTER_VALIDATE_IP))
+        {
+            $ip = $forward;
+        }
+        else
+        {
+            $ip = $remote;
+        }
+
+        if($ip == '::1'){
+            $ip = '127.0.0.1';
+        }
+
+        return $ip;
+    }
 }

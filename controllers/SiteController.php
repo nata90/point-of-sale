@@ -14,6 +14,7 @@ use app\models\FileStokBarang;
 use app\models\HdTransaksi;
 use app\models\DtTransaksi;
 use app\models\FileBarangSearch;
+use app\models\SettingApp;
 use app\components\Utility;
 use yii\helpers\Json;
 use yii\helpers\Url;
@@ -90,6 +91,8 @@ class SiteController extends Controller
         ->asArray()
         ->all();
 
+        $setting = SettingApp::find()->one();
+
        /*echo '<pre>';
         print_r($data);
         echo '</pre>';
@@ -97,7 +100,8 @@ class SiteController extends Controller
 
         return $this->render('index', [
             'model' => $model,
-            'data'=>$data
+            'data'=>$data,
+            'setting'=>$setting
         ]);
         
     }
@@ -407,13 +411,15 @@ class SiteController extends Controller
 
         $model_almost_ed = $almost_ed->getModels();
         $model_zero_stok = $zero_stok->getModels();
+        $setting = SettingApp::find()->one();
 
         return $this->render('dashboard',[
             'days_ago'=>$days_ago,
             'days_now'=>$days_now,
             'popular'=>$popular,
             'model_almost_ed'=>$model_almost_ed,
-            'model_zero_stok'=>$model_zero_stok
+            'model_zero_stok'=>$model_zero_stok,
+            'setting'=>$setting
         ]);
     }
 

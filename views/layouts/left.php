@@ -60,6 +60,7 @@
                             //['label' => 'Kelola User Group', 'icon' => 'folder', 'url' => ['usergroup/index'],],
                         ],
                     ],
+                    ['label' => 'Setting', 'icon' => 'wrench', 'url' => ['setting/index']],
                     ['label' => 'Logout', 'url' => ['site/logout'], 'visible' => !Yii::$app->user->isGuest],
                 ],
             ]
