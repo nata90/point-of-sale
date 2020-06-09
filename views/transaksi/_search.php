@@ -40,7 +40,8 @@ use yii\helpers\Url;
             <div class="input-group">
                 <?= Html::submitButton(Yii::t('app', 'Cari'), ['class' => 'btn btn-primary']) ?>&nbsp;
                 <button type="button" id="xls-rekap" class="btn btn-success" url="<?php echo Url::to(['transaksi/excelrekap']);?>">Download(.xls)</button>&nbsp;
-                <button type="button" id="xls-rekap" class="btn btn-danger" url="<?php echo Url::to(['transaksi/reportpenjualan']);?>">Download(.PDF)</button>
+                <button type="button" id="xls-rekap" class="btn btn-danger" url="<?php echo Url::to(['transaksi/reportpenjualan']);?>">Download(.PDF)</button>&nbsp;
+                <button type="button" id="send-email" class="btn btn-warning" url="<?php echo Url::to(['transaksi/sendpenjualan']);?>">Send Email</button>
             </div>
         </div>
     </div>

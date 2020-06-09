@@ -75,7 +75,7 @@ JS
 	                
 	            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-	            <?= $form->field($model, 'ip_address')->textInput(['maxlength' => true, 'value'=>Utility::getUserIP()]) ?>
+	            <?= $form->field($model, 'ip_address')->textInput(['maxlength' => true]) ?>
 
 
 	                <div class="box-footer">

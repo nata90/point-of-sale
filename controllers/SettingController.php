@@ -4,6 +4,7 @@ namespace app\controllers;
 
 use Yii;
 use app\models\SettingApp;
+use app\components\Utility;
 use yii\helpers\Url;
 
 class SettingController extends \yii\web\Controller
@@ -12,8 +13,10 @@ class SettingController extends \yii\web\Controller
     {
     	$model = SettingApp::find()->one();
 
-    	if($model == null)
+    	if($model == null){
     		$model = new SettingApp();
+            $model->ip_address = Utility::getUserIP();
+        }
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             return $this->redirect(['index']);
@@ -29,12 +32,16 @@ class SettingController extends \yii\web\Controller
         $email = $_POST['email'];
         $ip_addr = $_POST['ip_addr'];
 
-        $model = SettingApp::find()->one();
+        $model = SettingApp::findOne(1);
 
         if($model == null)
             $model = new SettingApp();
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
+        $model->app_name = $nama_app;
+        $model->email = $email;
+        $model->ip_address = $ip_addr;
+
+        if($model->save()) {
             echo 'sukses';
         }
 

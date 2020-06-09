@@ -37,6 +37,18 @@ $config = [
                 "127.0.0.1"
             ],
         ],
+        'mailer' => [
+            'class' => 'yii\swiftmailer\Mailer',
+            'useFileTransport' => false,
+            'transport' => [
+                'class' => 'Swift_SmtpTransport',
+                'encryption' => 'tls',
+                'host' => 'smtp.gmail.com',
+                'port' => '587',
+                'username' => 'rahanata9@gmail.com',
+                'password' => 'h0wd0y0uturnth1s0n',
+            ], 
+        ],
     ],
     'params' => $params,
     

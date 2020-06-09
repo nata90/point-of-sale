@@ -19600,3 +19600,4063 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1591153690.415
     'REQUEST_TIME' => 1591153690
 ]
+2020-06-03 11:14:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-03 11:14:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244059
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=setting%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58944'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157659.164
+    'REQUEST_TIME' => 1591157659
+]
+2020-06-03 11:14:49 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:136
+2020-06-03 11:14:49 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:143
+2020-06-03 11:14:49 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/excelrekap'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244089
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58958'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Fexcelrekap'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fexcelrekap'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157689.898
+    'REQUEST_TIME' => 1591157689
+]
+2020-06-03 11:15:23 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:15:23 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:15:24 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:15:23 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244123
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58966'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157723.571
+    'REQUEST_TIME' => 1591157723
+]
+2020-06-03 11:17:36 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:17:36 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:17:36 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:17:35 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244256
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59022'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157855.662
+    'REQUEST_TIME' => 1591157855
+]
+2020-06-03 11:17:42 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:17:42 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:17:42 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:17:42 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244262
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59026'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157862.373
+    'REQUEST_TIME' => 1591157862
+]
+2020-06-03 11:19:11 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:19:11 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:19:11 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:19:10 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244350
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59062'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591157950.797
+    'REQUEST_TIME' => 1591157950
+]
+2020-06-03 11:22:19 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:22:19 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:22:19 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:22:18 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244539
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59076'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158138.816
+    'REQUEST_TIME' => 1591158138
+]
+2020-06-03 11:22:31 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:22:31 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:22:32 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:22:27 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244551
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59082'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158147.09
+    'REQUEST_TIME' => 1591158147
+]
+2020-06-03 11:22:54 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:22:54 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:22:55 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:22:54 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244574
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59098'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158174.757
+    'REQUEST_TIME' => 1591158174
+]
+2020-06-03 11:22:57 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:22:57 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:22:57 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:22:57 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244577
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59100'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158177.868
+    'REQUEST_TIME' => 1591158177
+]
+2020-06-03 11:24:49 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:24:49 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:24:49 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:24:49 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244689
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59136'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158289.771
+    'REQUEST_TIME' => 1591158289
+]
+2020-06-03 11:24:51 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:24:51 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:24:52 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][Error] Error: Call to undefined function Mpdf\mb_regex_encoding() in /var/www/html/pos/vendor/mpdf/mpdf/src/Mpdf.php:1116
+Stack trace:
+#0 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(296): Mpdf\Mpdf->__construct(Array)
+#1 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(272): kartik\mpdf\Pdf->setApi()
+#2 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(377): kartik\mpdf\Pdf->getApi()
+#3 /var/www/html/pos/vendor/kartik-v/yii2-mpdf/src/Pdf.php(261): kartik\mpdf\Pdf->output('<p><strong>LAPO...', '', 'I')
+#4 /var/www/html/pos/controllers/TransaksiController.php(241): kartik\mpdf\Pdf->render()
+#5 [internal function]: app\controllers\TransaksiController->actionReportpenjualan()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('reportpenjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/repor...', Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#11 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#12 {main}
+2020-06-03 11:24:51 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244691
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59138'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158291.964
+    'REQUEST_TIME' => 1591158291
+]
+2020-06-03 11:25:00 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:00 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:00 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][yii\base\ErrorException:32] yii\base\ErrorException: Module 'mbstring' already loaded in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-06-03 11:24:59 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244700
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59144'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158299.908
+    'REQUEST_TIME' => 1591158299
+]
+2020-06-03 11:25:03 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:03 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:04 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][yii\base\ErrorException:32] yii\base\ErrorException: Module 'mbstring' already loaded in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-06-03 11:25:03 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244703
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59146'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158303.863
+    'REQUEST_TIME' => 1591158303
+]
+2020-06-03 11:25:07 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:07 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:07 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][yii\base\ErrorException:32] yii\base\ErrorException: Module 'mbstring' already loaded in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-06-03 11:25:07 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244707
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59148'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158307.435
+    'REQUEST_TIME' => 1591158307
+]
+2020-06-03 11:25:10 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:10 [::1][3][o9mus4qkuqdnainpfmm4spcpos][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:10 [::1][3][o9mus4qkuqdnainpfmm4spcpos][error][yii\base\ErrorException:32] yii\base\ErrorException: Module 'mbstring' already loaded in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-06-03 11:25:09 [::1][3][o9mus4qkuqdnainpfmm4spcpos][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244710
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59150'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158309.996
+    'REQUEST_TIME' => 1591158309
+]
+2020-06-03 11:25:15 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:15 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:15 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244715
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59152'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158315.045
+    'REQUEST_TIME' => 1591158315
+]
+2020-06-03 11:25:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-03 11:25:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244722
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=setting%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59154'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158322.444
+    'REQUEST_TIME' => 1591158322
+]
+2020-06-03 11:25:24 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 11:25:24 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 11:25:24 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244724
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'HTTP_IF_MODIFIED_SINCE' => 'Wed, 03 Jun 2020 04:25:15 GMT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59154'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158324.076
+    'REQUEST_TIME' => 1591158324
+]
+2020-06-03 11:25:31 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-03 11:25:31 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591244731
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '5'
+            'harga' => 35000
+            'total' => 175000
+            'idstok' => '6'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 3, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '10'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => 'Jun 10, 2020'
+        ]
+    ]
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59154'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591158331.251
+    'REQUEST_TIME' => 1591158331
+]
+2020-06-03 13:35:43 [::1][-][-][error][yii\base\ErrorException:32] yii\base\ErrorException: Module 'mbstring' already loaded in Unknown:0
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleFatalError()
+#1 {main}
+2020-06-03 13:35:43 [::1][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o9mus4qkuqdnainpfmm4spcpos'
+    '_csrf' => 'dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j\";}'
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o9mus4qkuqdnainpfmm4spcpos; _csrf=dc3f3c4e8cb39d71b693033d4d443c6937048191bab89a2b41e3592702548971a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22Sb70XSXKnls3bGdhZWDiY2kTGXeF0K0j%22%3B%7D; io=oluUSJdYyI0mnUPyAAAD'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33084'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591166143.007
+    'REQUEST_TIME' => 1591166143
+]
+2020-06-03 13:36:44 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-03 13:36:44 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+    'PHPSESSID' => '4k2slg7akn32cg5a14hdg9tg6q'
+    '_csrf' => '4834185bb0576ecbe70e81e4347bd06e4990c1e2ce05d740b495abfc20514517a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rThkvA5y88ZE_N2SNZ3l8QKjvTeoAl5O\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 3
+    '__expire' => 1591252604
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=oluUSJdYyI0mnUPyAAAD; PHPSESSID=4k2slg7akn32cg5a14hdg9tg6q; _csrf=4834185bb0576ecbe70e81e4347bd06e4990c1e2ce05d740b495abfc20514517a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rThkvA5y88ZE_N2SNZ3l8QKjvTeoAl5O%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33108'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591166204.004
+    'REQUEST_TIME' => 1591166204
+]
+2020-06-03 13:37:00 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-03 13:37:00 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-03 13:37:00 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'io' => 'oluUSJdYyI0mnUPyAAAD'
+    'PHPSESSID' => '4k2slg7akn32cg5a14hdg9tg6q'
+    '_csrf' => '4834185bb0576ecbe70e81e4347bd06e4990c1e2ce05d740b495abfc20514517a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"rThkvA5y88ZE_N2SNZ3l8QKjvTeoAl5O\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 3
+    '__expire' => 1591252620
+    'start-date' => '2020-06-03'
+    'end-date' => '2020-06-03'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'io=oluUSJdYyI0mnUPyAAAD; PHPSESSID=4k2slg7akn32cg5a14hdg9tg6q; _csrf=4834185bb0576ecbe70e81e4347bd06e4990c1e2ce05d740b495abfc20514517a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22rThkvA5y88ZE_N2SNZ3l8QKjvTeoAl5O%22%3B%7D'
+    'HTTP_IF_MODIFIED_SINCE' => 'Wed, 03 Jun 2020 04:25:24 GMT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33118'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591166220.339
+    'REQUEST_TIME' => 1591166220
+]
+2020-06-04 08:03:55 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-04 08:03:55 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591319035
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59990'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591232635.071
+    'REQUEST_TIME' => 1591232635
+]
+2020-06-04 08:04:02 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-04 08:04:02 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000007'
+    'qty' => '10'
+    'idstok' => '13'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591319042
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '10'
+            'harga' => 300000
+            'total' => 3000000
+            'idstok' => '13'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'M-41sICfMEZppupOGBL_za78y0QSc4kY2fa9iZJEJLRruV_d9OkdLD2RhTwqZ8uA3J-RKEQ23l2DuviwoQJ81g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60000'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000007&qty=10&idstok=13'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000007&qty=10&idstok=13'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591232642.582
+    'REQUEST_TIME' => 1591232642
+]
+2020-06-04 08:04:05 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:263
+2020-06-04 08:04:05 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/deleteitem'
+    'rel' => '0'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591319045
+    'datatransaksi' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'M-41sICfMEZppupOGBL_za78y0QSc4kY2fa9iZJEJLRruV_d9OkdLD2RhTwqZ8uA3J-RKEQ23l2DuviwoQJ81g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60000'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdeleteitem&rel=0'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdeleteitem&rel=0'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591232645.832
+    'REQUEST_TIME' => 1591232645
+]
+2020-06-04 08:04:14 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-04 08:04:14 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000007'
+    'qty' => '2'
+    'idstok' => '13'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591319054
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'M-41sICfMEZppupOGBL_za78y0QSc4kY2fa9iZJEJLRruV_d9OkdLD2RhTwqZ8uA3J-RKEQ23l2DuviwoQJ81g=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60002'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000007&qty=2&idstok=13'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000007&qty=2&idstok=13'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591232654.548
+    'REQUEST_TIME' => 1591232654
+]
+2020-06-04 08:04:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-06-04 08:04:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '600000'
+    'totalbayar' => '600000'
+    'cashback' => '0'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591319059
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '48'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'M-41sICfMEZppupOGBL_za78y0QSc4kY2fa9iZJEJLRruV_d9OkdLD2RhTwqZ8uA3J-RKEQ23l2DuviwoQJ81g=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60002'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591232659.18
+    'REQUEST_TIME' => 1591232659
+]
+2020-06-04 08:36:23 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-04 08:36:23 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591320983
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+    'start-date' => '2020-06-04'
+    'end-date' => '2020-06-04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60196'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591234583.178
+    'REQUEST_TIME' => 1591234583
+]
+2020-06-04 08:36:25 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-04 08:36:25 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-04 08:36:25 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591320985
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+    'start-date' => '2020-06-04'
+    'end-date' => '2020-06-04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'HTTP_IF_MODIFIED_SINCE' => 'Wed, 03 Jun 2020 06:37:00 GMT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60196'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591234585.01
+    'REQUEST_TIME' => 1591234585
+]
+2020-06-04 08:39:07 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-04 08:39:07 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591321147
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+    'start-date' => '2020-06-04'
+    'end-date' => '2020-06-04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60242'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591234747.483
+    'REQUEST_TIME' => 1591234747
+]
+2020-06-04 08:39:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-04 08:39:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 't4vk6g8fa75tntroeqfqvhtck2'
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591321158
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+    'start-date' => '2020-06-04'
+    'end-date' => '2020-06-04'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=t4vk6g8fa75tntroeqfqvhtck2; _csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60252'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591234758.374
+    'REQUEST_TIME' => 1591234758
+]
+2020-06-04 09:05:14 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-04 09:05:14 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => 'f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb\";}'
+    'PHPSESSID' => 'ubu8ibegk3ubc5qccl51s3fo9c'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591322714
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'qty' => '2'
+            'harga' => 300000
+            'total' => 600000
+            'idstok' => '13'
+        ]
+    ]
+    'start-date' => '2020-06-04'
+    'end-date' => '2020-06-04'
+    'ip' => '::1'
+    'mac' => null
+    '0b990350410da8826ff87fb1790ccc13__id' => '697'
+    '0b990350410da8826ff87fb1790ccc13__name' => 'ristiw'
+    '0b990350410da8826ff87fb1790ccc13username' => 'ristiw'
+    '0b990350410da8826ff87fb1790ccc13idgroup' => '39'
+    '0b990350410da8826ff87fb1790ccc13__states' => [
+        'username' => true
+        'idgroup' => true
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.61 Chrome/83.0.4103.61 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => '_csrf=f8e19bd52ce9ec95ed0153dce68b30c834b411907d3ab1ec39de212b8a1d695ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XWjmtv-jT7or2u4MrcZlVEWEZLE93FXb%22%3B%7D; PHPSESSID=ubu8ibegk3ubc5qccl51s3fo9c'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60666'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591236314.552
+    'REQUEST_TIME' => 1591236314
+]
+2020-06-09 13:07:37 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-09 13:07:36 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769257
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58866'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591682856.961
+    'REQUEST_TIME' => 1591682856
+]
+2020-06-09 13:07:47 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-09 13:07:47 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000004'
+    'qty' => '4'
+    'idstok' => '7'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769267
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '7'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'HwOXi_vjp9LqABUM1CnjX78aXd3BPJu4Fl2U2K79OgNsM9jYzZbWmrNKJEHifKAz0Fxoj5JT9ug7BfyR_LQDeQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58862'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=4&idstok=7'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=4&idstok=7'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591682867.636
+    'REQUEST_TIME' => 1591682867
+]
+2020-06-09 13:07:52 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-06-09 13:07:52 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '60000'
+    'totalbayar' => '100000'
+    'cashback' => '40000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769272
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '7'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '51'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'HwOXi_vjp9LqABUM1CnjX78aXd3BPJu4Fl2U2K79OgNsM9jYzZbWmrNKJEHifKAz0Fxoj5JT9ug7BfyR_LQDeQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58862'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591682872.177
+    'REQUEST_TIME' => 1591682872
+]
+2020-06-09 13:12:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:12:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769542
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '7'
+        ]
+    ]
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58946'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591683142.792
+    'REQUEST_TIME' => 1591683142
+]
+2020-06-09 13:12:25 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:198
+2020-06-09 13:12:25 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:205
+2020-06-09 13:12:25 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/reportpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769545
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '7'
+        ]
+    ]
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'HTTP_IF_MODIFIED_SINCE' => 'Thu, 04 Jun 2020 01:36:25 GMT'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58954'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Freportpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Freportpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591683145.689
+    'REQUEST_TIME' => 1591683145
+]
+2020-06-09 13:12:31 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/TransaksiController.php:136
+2020-06-09 13:12:31 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:143
+2020-06-09 13:12:31 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/excelrekap'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '7ne85e4l78hv55mechkgfg4fpb'
+    '_csrf' => 'a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z\";}'
+]
+
+$_SESSION = [
+    'b336bf39b777223d3433d5e0acff96c0__id' => '5'
+    'b336bf39b777223d3433d5e0acff96c0__name' => 'komitemutu'
+    'b336bf39b777223d3433d5e0acff96c0level' => '1'
+    'b336bf39b777223d3433d5e0acff96c0idsatker' => '2'
+    'b336bf39b777223d3433d5e0acff96c0idUnit' => '11'
+    'b336bf39b777223d3433d5e0acff96c0__states' => [
+        'level' => true
+        'idsatker' => true
+        'idUnit' => true
+    ]
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769551
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '4'
+            'harga' => 15000
+            'total' => 60000
+            'idstok' => '7'
+        ]
+    ]
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=7ne85e4l78hv55mechkgfg4fpb; _csrf=a6d3d3bb418ef45e56c4e6041aa64988dbf0fe44c8014de2940acf3ca43c3d4ca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22s0OS6uqHYJ1M6UCloF5RSomP-XhIRI9z%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58964'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Fexcelrekap'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fexcelrekap'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591683151.357
+    'REQUEST_TIME' => 1591683151
+]
+2020-06-09 13:15:35 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:15:35 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591769735
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58994'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591683335.657
+    'REQUEST_TIME' => 1591683335
+]
+2020-06-09 13:24:30 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:24:30 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770270
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59016'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591683870.539
+    'REQUEST_TIME' => 1591683870
+]
+2020-06-09 13:27:39 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:27:39 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770459
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59092'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684059.221
+    'REQUEST_TIME' => 1591684059
+]
+2020-06-09 13:27:44 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/pos/mail/testtting.php in /var/www/html/pos/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(yii\swiftmailer\Mailer))
+#1 /var/www/html/pos/vendor/yiisoft/yii2/mail/BaseMailer.php(302): yii\base\View->render('testtting', Array, Object(yii\swiftmailer\Mailer))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/mail/BaseMailer.php(194): yii\mail\BaseMailer->render('testtting', Array, 'layouts/html')
+#3 /var/www/html/pos/controllers/TransaksiController.php(280): yii\mail\BaseMailer->compose('testtting')
+#4 [internal function]: app\controllers\TransaksiController->actionSendpenjualan()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('sendpenjualan', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/sendp...', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2020-06-09 13:27:44 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][info][application] $_GET = [
+    'r' => 'transaksi/sendpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770464
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '-d2aylG4wMAB1IZrO4ig2f6ZBLeVm23pfmnXl2uFNqOpm66YGdOOl1Xi_jQD4eO3y_FB9d7QN4YkOqfBIahvjg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59102'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=transaksi%2Fsendpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fsendpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684064.733
+    'REQUEST_TIME' => 1591684064
+]
+2020-06-09 13:30:01 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:30:01 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770601
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59410'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684201.738
+    'REQUEST_TIME' => 1591684201
+]
+2020-06-09 13:30:07 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\swiftmailer\Mailer::setFrom() in /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php:300
+Stack trace:
+#0 /var/www/html/pos/controllers/TransaksiController.php(281): yii\base\Component->__call('setFrom', Array)
+#1 [internal function]: app\controllers\TransaksiController->actionSendpenjualan()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('sendpenjualan', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/sendp...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-06-09 13:30:07 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][info][application] $_GET = [
+    'r' => 'transaksi/sendpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770607
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Ks6CQDqDf2qi2g-X5RGlkyc0OlwCg6LW-AJ8PhEYBv16iLYScugxPfbsd8jdeOb9Elx_HknI-LmiUQxoWzVf0A=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '59422'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=transaksi%2Fsendpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fsendpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684207.557
+    'REQUEST_TIME' => 1591684207
+]
+2020-06-09 13:31:56 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:31:56 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770716
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60334'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684316.06
+    'REQUEST_TIME' => 1591684316
+]
+2020-06-09 13:31:59 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][error][yii\base\ViewNotFoundException] yii\base\ViewNotFoundException: The view file does not exist: /var/www/html/pos/mail/contact/html.php in /var/www/html/pos/vendor/yiisoft/yii2/base/View.php:233
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(yii\swiftmailer\Mailer))
+#1 /var/www/html/pos/vendor/yiisoft/yii2/mail/BaseMailer.php(302): yii\base\View->render('contact/html', Array, Object(yii\swiftmailer\Mailer))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/mail/BaseMailer.php(194): yii\mail\BaseMailer->render('contact/html', Array, 'layouts/html')
+#3 /var/www/html/pos/controllers/TransaksiController.php(280): yii\mail\BaseMailer->compose('contact/html')
+#4 [internal function]: app\controllers\TransaksiController->actionSendpenjualan()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('sendpenjualan', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('transaksi/sendp...', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2020-06-09 13:31:59 [::1][3][83shfv41l9ih7h5vrq2ue6m6c8][info][application] $_GET = [
+    'r' => 'transaksi/sendpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770719
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '0'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'P-1LoFmbIMamBygPMaZOrEV8Ty2V6SS9zsWNRU_W2URvq3_yEfBukfIxUFAJzw3CcBQKb96iftKUlv0TBfuAaQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60334'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=transaksi%2Fsendpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Fsendpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684319.197
+    'REQUEST_TIME' => 1591684319
+]
+2020-06-09 13:32:36 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:32:36 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770756
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60664'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684356.555
+    'REQUEST_TIME' => 1591684356
+]
+2020-06-09 13:33:58 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:33:58 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591770838
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '33120'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684438.062
+    'REQUEST_TIME' => 1591684438
+]
+2020-06-09 13:41:27 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:57
+2020-06-09 13:41:27 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83shfv41l9ih7h5vrq2ue6m6c8'
+    '_csrf' => '66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1591771287
+    'start-date' => '2020-06-09'
+    'end-date' => '2020-06-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.97 Chrome/83.0.4103.97 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83shfv41l9ih7h5vrq2ue6m6c8; _csrf=66469dd321b59c1b42f0182ed7ac5df98655de9ba8e26d93c64867599c799479a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22PF4RHkNWT6x_8iCn5hEBKKZoZSpVJ-Y-%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36690'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1591684887.097
+    'REQUEST_TIME' => 1591684887
+]

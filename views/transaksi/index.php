@@ -16,8 +16,20 @@ $this->registerJs(<<<JS
         var url = $(this).attr('url');
 
         window.open(url);
-
     });
+
+    $(document).on("click", "#send-email", function () {
+        var url = $(this).attr('url');
+        
+        $.ajax({
+            type: 'post',
+            url: url,
+            dataType: 'json',
+            success: function(v){
+            }
+        });
+    });
+    
 JS
 );
 ?>

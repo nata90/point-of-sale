@@ -276,6 +276,16 @@ class TransaksiController extends Controller
         return $this->redirect(['kelolapembelian']);
     }
 
+    public function actionSendpenjualan(){
+        Yii::$app->mailer->compose()
+            ->setFrom('from@domain.com')
+            ->setTo('rahanata9@gmail.com')
+            ->setSubject('Message subject')
+            ->setTextBody('Plain text content')
+            ->setHtmlBody('<b>HTML content</b>')
+            ->send();
+    }
+
     /**
      * Finds the DtTransaksi model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
