@@ -5,12 +5,14 @@ use yii\grid\GridView;
 use yii\widgets\Pjax;
 use app\components\Utility;
 use app\models\DtTransaksiSearch;
+use app\models\SettingApp;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\DtTransaksiSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
 
 $this->title = Yii::t('app', 'Rekap Penjualan');
 //$this->params['breadcrumbs'][] = $this->title;
+$this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs(<<<JS
     $(document).on("click", "#xls-rekap", function () {
         var url = $(this).attr('url');
@@ -25,8 +27,21 @@ $this->registerJs(<<<JS
             type: 'post',
             url: url,
             dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
             success: function(v){
-            }
+                var head = 'INFO';
+                var msg = 'Laporan penjualan telah dikirim ke email '+v.email;
+
+                var socket = io.connect( 'http://'+ip_addr+':3000');
+                socket.emit('notif',{name: head, message: msg});
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+            },
         });
     });
     

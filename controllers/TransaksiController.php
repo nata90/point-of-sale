@@ -9,6 +9,7 @@ use app\models\HdTransaksiSearch;
 use app\models\HeaderPembelianSearch;
 use app\models\HdTransaksi;
 use app\models\HeaderPembelian;
+use app\models\SettingApp;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -19,6 +20,7 @@ use yii\data\ActiveDataProvider;
 use app\components\Utility;
 use yii\web\Session;
 use kartik\mpdf\Pdf;
+use yii\helpers\Json;
 
 /**
  * TransaksiController implements the CRUD actions for DtTransaksi model.
@@ -55,10 +57,12 @@ class TransaksiController extends Controller
         $searchModel->start_date = date('Y-m-d');
         $searchModel->end_date = date('Y-m-d');
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $setting = SettingApp::find()->one();
 
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
+            'setting'=>$setting
         ]);
     }
 
@@ -277,13 +281,87 @@ class TransaksiController extends Controller
     }
 
     public function actionSendpenjualan(){
+        $session = new Session;
+        $session->open();
+
+        $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = $session['start-date'];
+        $searchModel->end_date = $session['end-date'];
+
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+
+        $exporter = new Spreadsheet([
+            'dataProvider' => $dataProvider,
+            'columns' => [
+                'kd_barang',
+                [
+                    'label'=>'Tanggal Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return date('d-m-Y', strtotime($model->header->tgl_bayar));
+                    },
+                ],
+                [
+                    'attribute'=>'nama_barang',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->barang->nama_barang;
+                    },
+                ],
+                [
+                    'attribute'=>'harga_satuan',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->harga_satuan;
+                    },
+                ],
+                'qty',
+                [
+                    'label'=>'Total',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->harga_satuan * $model->qty;
+                    },
+                ],
+            ],
+        ]);
+
+        $exporter->title = 'Laporan Rekap Penjualan';
+
+        $exporter->headerColumnUnions = 
+        [
+            [
+                'header' => 'LAPORAN PENJUALAN '.date('d/m/Y', strtotime($searchModel->start_date)).' - '.date('d/m/Y', strtotime($searchModel->end_date)),
+                'offset' => 0,
+                'length' => 6,
+            ]
+        ];
+
+        $name_file = 'penjualan#'.date('d-m-Y', strtotime($session['start-date'])).'#'.date('d-m-Y', strtotime($session['end-date'])).'.xls';
+        $exporter->save($name_file);
+
+        //chmod($name_file, 0755);
+
+        $setting = SettingApp::find()->one();
+        $rows = array();
+
+        $html = $this->renderPartial('email_template', [
+            'setting' => $setting
+        ],true,false);
+
         Yii::$app->mailer->compose()
             ->setFrom('from@domain.com')
-            ->setTo('rahanata9@gmail.com')
+            ->setTo($setting->email)
             ->setSubject('Message subject')
             ->setTextBody('Plain text content')
-            ->setHtmlBody('<b>HTML content</b>')
+            ->setHtmlBody($html)
+            ->attach($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file)
             ->send();
+
+        unlink($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file);
+        $rows['email'] = $setting->email;
+
+        echo Json::encode($rows);
     }
 
     /**
