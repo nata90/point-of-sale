@@ -170,7 +170,7 @@
 <div style="line-height: 1.2; font-size: 12px; color: #555555; font-family: Open Sans, Helvetica Neue, Helvetica, Arial, sans-serif; mso-line-height-alt: 14px;">
 <p style="font-size: 18px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 22px; margin: 0;"><span style="font-size: 18px;"><strong>Laporan Penjualan</strong></span></p>
 <p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;"> </p>
-<p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;"><span style="font-size: 14px;">Berikut ini kami sampaikan laporan penjualan tanggal <strong>2 Juni 2020</strong>. Total penjualan adalah <strong>Rp.2.500.000</strong>. Detail penjualan terlampir</span></p>
+<p style="font-size: 14px; line-height: 1.2; word-break: break-word; mso-line-height-alt: 17px; margin: 0;"><span style="font-size: 14px;">Berikut ini kami sampaikan laporan penjualan tanggal <strong><?php echo $date_rate;?></strong>. Total penjualan adalah <strong><?php echo $format_rp;?></strong>. Detail penjualan terlampir</span></p>
 </div>
 </div>
 <!--[if mso]></td></tr></table><![endif]-->

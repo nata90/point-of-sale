@@ -289,6 +289,24 @@ class TransaksiController extends Controller
         $searchModel->end_date = $session['end-date'];
 
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $data = $dataProvider->getModels();
+
+        $total = 0;
+        if($data != null){
+            foreach($data as $val){
+                $total = $total + $val->total_harga;
+            }
+        }
+        
+        $format_rp = Utility::rupiah($total);
+
+        if($session['start-date'] == $session['end-date']){
+            $date_rate = date('d-m-Y', strtotime($session['start-date']));
+        }else{
+            $date_rate = date('d-m-Y', strtotime($session['start-date'])).' sampai dengan '.date('d-m-Y', strtotime($session['end-date']));
+        }
+        
+
 
         $exporter = new Spreadsheet([
             'dataProvider' => $dataProvider,
@@ -346,7 +364,10 @@ class TransaksiController extends Controller
         $rows = array();
 
         $html = $this->renderPartial('email_template', [
-            'setting' => $setting
+            'setting' => $setting,
+            'total'=>$total,
+            'format_rp'=>$format_rp,
+            'date_rate'=>$date_rate
         ],true,false);
 
         Yii::$app->mailer->compose()
