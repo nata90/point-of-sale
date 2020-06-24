@@ -478,5 +478,46 @@ class SiteController extends Controller
        }
     }
 
-    
+    public function actionPenjualan(){
+        return $this->render('penjualan');
+    }
+
+    public function actionAutocompletebarang(){
+        $query = $_GET['query'];
+
+        $model = FileStokBarang::find()
+        ->select(['file_barang.nama_barang as nama_barang','file_stok_barang.kd_barang as kd_barang'])
+        ->join('LEFT JOIN', 'file_barang', 'file_stok_barang.kd_barang = file_barang.kd_barang')
+        ->where(['file_barang.aktif'=>1])
+        ->andFilterWhere(['like', 'file_barang.nama_barang', $query])
+        ->asArray()
+        ->all();
+
+        $arr_data = array();
+
+        if($model != null){
+            foreach($model as $val){
+                $arr_data[] = $val['nama_barang'];
+            }
+        }
+
+        $return['data'] = $arr_data;
+
+        echo Json::encode($return);
+    }
+
+    public function actionLoaddatabarang(){
+        $value = $_GET['value'];
+
+        $model = FileBarang::find()->where(['nama_barang'=>$value, 'aktif'=>1])->one();
+
+        $return['kode'] = $model->kd_barang;
+        $return['harga'] = $model->harga_jual;
+        $return['ed'] = '05/10/2020';
+        $return['jumlah'] = 1;
+        $return['stok'] = '10';
+        $return['total'] = $model->harga_jual;
+
+        echo Json::encode($return);
+    }
 }

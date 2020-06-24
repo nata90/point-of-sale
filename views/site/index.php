@@ -8,7 +8,7 @@ use yii\web\JsExpression;
 use yii\helpers\Url;
 
 
-$this->title = 'POINT OF SALE';
+$this->title = 'PENJUALAN - POS';
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs(<<<JS
 	$('#filebarang-nama_barang').focus();

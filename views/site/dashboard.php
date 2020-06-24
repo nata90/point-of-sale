@@ -13,7 +13,7 @@ $this->registerJs(<<<JS
     var socket = io.connect('http://'+ip_addr+':3000');
     socket.emit('notif',{name: nama, message: msg});
             
-	setTimeout(function(){
+	
 		$.ajax({
 			type: 'get',
 			url: url,
@@ -82,15 +82,7 @@ $this->registerJs(<<<JS
 		});
 
 
-		/*$.toast({
-		    heading: 'Warning',
-		    text: 'And these were just the basic demos! Scroll down to check further details on how to customize the output.',
-		    showHideTransition: 'slide',
-		    icon: 'error',
-		    stack: 4,
-		    position: 'top-right',
-		});*/
-	}, 1500);
+	
 
 	//Date range picker
     $('#reservation').daterangepicker({

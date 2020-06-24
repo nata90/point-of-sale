@@ -25,6 +25,7 @@ class AppAsset extends AssetBundle
         'css/googlefont.css',
         'css/daterangepicker.css',
         'css/jquery.toast.css',
+        'css/handsontable.min.css',
     ];
     public $js = [
         'js/Chart.js',
@@ -34,6 +35,7 @@ class AppAsset extends AssetBundle
         'js/jquery.toast.js',
         'js/socket.io.js',
         'js/notif.js',
+        'js/handsontable.full.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
