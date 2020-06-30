@@ -111,4 +111,13 @@ return array (
       '@kartik/mpdf' => $vendorDir . '/kartik-v/yii2-mpdf/src',
     ),
   ),
+  'himiklab/yii2-handsontable-widget' => 
+  array (
+    'name' => 'himiklab/yii2-handsontable-widget',
+    'version' => '1.1.1.0',
+    'alias' => 
+    array (
+      '@himiklab/handsontable' => $vendorDir . '/himiklab/yii2-handsontable-widget',
+    ),
+  ),
 );

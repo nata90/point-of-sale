@@ -690,3 +690,4152 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1592979965.083
     'REQUEST_TIME' => 1592979965
 ]
+2020-06-29 13:33:40 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-29 13:33:40 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498820
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412420.346
+    'REQUEST_TIME' => 1593412420
+]
+2020-06-29 13:33:47 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-29 13:33:47 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '4'
+    'idstok' => '5'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498827
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '4'
+            'harga' => 35000
+            'total' => 140000
+            'idstok' => '5'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'ciTSpLs7YT65qptExnCh4OFm3POvoBXifmFs72k_S2MfUL_liVBMTvre4yiDFuLS11aKvN_sdLY6JRzXMA0eUA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54384'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=4&idstok=5'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=4&idstok=5'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412427.357
+    'REQUEST_TIME' => 1593412427
+]
+2020-06-29 13:33:52 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-06-29 13:33:52 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '140000'
+    'totalbayar' => '150000'
+    'cashback' => '10000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498832
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '4'
+            'harga' => 35000
+            'total' => 140000
+            'idstok' => '5'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '52'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'ciTSpLs7YT65qptExnCh4OFm3POvoBXifmFs72k_S2MfUL_liVBMTvre4yiDFuLS11aKvN_sdLY6JRzXMA0eUA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54416'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412432.475
+    'REQUEST_TIME' => 1593412432
+]
+2020-06-29 13:34:13 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-29 13:34:13 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498853
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412453.23
+    'REQUEST_TIME' => 1593412453
+]
+2020-06-29 13:34:17 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-29 13:34:17 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000004'
+    'qty' => '2'
+    'idstok' => '7'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498857
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '2'
+            'harga' => 15000
+            'total' => 30000
+            'idstok' => '7'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'nPxxCSa6XuYjWFQmi7u4-6AAUXp4cVc1cAWLf6tHPLjxiBxIFNFzlmAsLErO3fvJljAHNQg9NmE0QftH8nVpiw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=2&idstok=7'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000004&qty=2&idstok=7'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412457.843
+    'REQUEST_TIME' => 1593412457
+]
+2020-06-29 13:34:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-06-29 13:34:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '30000'
+    'totalbayar' => '50000'
+    'cashback' => '20000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498862
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000004'
+            'namabarang' => 'Ibuprofen 400 mg'
+            'qty' => '2'
+            'harga' => 15000
+            'total' => 30000
+            'idstok' => '7'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '50'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'nPxxCSa6XuYjWFQmi7u4-6AAUXp4cVc1cAWLf6tHPLjxiBxIFNFzlmAsLErO3fvJljAHNQg9NmE0QftH8nVpiw=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54436'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412462.568
+    'REQUEST_TIME' => 1593412462
+]
+2020-06-29 13:35:54 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-29 13:35:54 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593498954
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54468'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593412554.88
+    'REQUEST_TIME' => 1593412554
+]
+2020-06-29 13:58:13 [::1][3][rf4ouan83r7bq03tek4o0u8er9][error][ParseError] ParseError: syntax error, unexpected '{', expecting ']' in /var/www/html/pos/views/site/penjualan.php:155
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->render('penjualan', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/controllers/SiteController.php(482): yii\base\Controller->render('penjualan')
+#4 [internal function]: app\controllers\SiteController->actionPenjualan()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('penjualan', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/penjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2020-06-29 13:58:13 [::1][3][rf4ouan83r7bq03tek4o0u8er9][info][application] $_GET = [
+    'r' => 'site/penjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593500293
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55020'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593413893.284
+    'REQUEST_TIME' => 1593413893
+]
+2020-06-29 13:58:27 [::1][3][rf4ouan83r7bq03tek4o0u8er9][error][ParseError] ParseError: syntax error, unexpected ',' in /var/www/html/pos/views/site/penjualan.php:155
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->render('penjualan', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/controllers/SiteController.php(482): yii\base\Controller->render('penjualan')
+#4 [internal function]: app\controllers\SiteController->actionPenjualan()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('penjualan', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/penjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2020-06-29 13:58:27 [::1][3][rf4ouan83r7bq03tek4o0u8er9][info][application] $_GET = [
+    'r' => 'site/penjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593500307
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55026'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593413907.301
+    'REQUEST_TIME' => 1593413907
+]
+2020-06-29 14:02:39 [::1][3][rf4ouan83r7bq03tek4o0u8er9][error][ParseError] ParseError: syntax error, unexpected ',', expecting variable (T_VARIABLE) in /var/www/html/pos/views/site/penjualan.php:155
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(257): yii\base\View->renderPhpFile('/var/www/html/p...', Array)
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/var/www/html/p...', Array, Object(app\controllers\SiteController))
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(386): yii\base\View->render('penjualan', Array, Object(app\controllers\SiteController))
+#3 /var/www/html/pos/controllers/SiteController.php(482): yii\base\Controller->render('penjualan')
+#4 [internal function]: app\controllers\SiteController->actionPenjualan()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('penjualan', Array)
+#8 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/penjualan', Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#10 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#11 {main}
+2020-06-29 14:02:39 [::1][3][rf4ouan83r7bq03tek4o0u8er9][info][application] $_GET = [
+    'r' => 'site/penjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593500559
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'none'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55054'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593414159.464
+    'REQUEST_TIME' => 1593414159
+]
+2020-06-29 14:57:28 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-29 14:57:28 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593503848
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60814'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593417448.698
+    'REQUEST_TIME' => 1593417448
+]
+2020-06-29 15:33:40 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-29 15:33:39 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'rf4ouan83r7bq03tek4o0u8er9'
+    '_csrf' => '76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593506020
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=rf4ouan83r7bq03tek4o0u8er9; _csrf=76cf5b3323a24498ef8283e35da030c8feb32c5ee5707e7df091f94492997938a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22mtmA2k-pCtxlEfC260VOpLaTDDp8Y2U3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60860'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593419619.9
+    'REQUEST_TIME' => 1593419619
+]
+2020-06-30 08:39:34 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-06-30 08:39:34 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567574
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52180'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481174.186
+    'REQUEST_TIME' => 1593481174
+]
+2020-06-30 08:39:45 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-06-30 08:39:45 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'BRG000003'
+    'qty' => '4'
+    'idstok' => '10'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567585
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '2qLQTlDzniOXvgLLTWCcbbMIR4hAQ8qwoXP_UMb1bVyz6JYqZYWpbc3hTbMHU_0f6VB-wwp2-NaROMo9q6o4bA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52202'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=BRG000003&qty=4&idstok=10'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=BRG000003&qty=4&idstok=10'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481185.391
+    'REQUEST_TIME' => 1593481185
+]
+2020-06-30 08:39:50 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-06-30 08:39:50 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '72000'
+    'totalbayar' => '100000'
+    'cashback' => '28000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567590
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '51'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '2qLQTlDzniOXvgLLTWCcbbMIR4hAQ8qwoXP_UMb1bVyz6JYqZYWpbc3hTbMHU_0f6VB-wwp2-NaROMo9q6o4bA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481190.785
+    'REQUEST_TIME' => 1593481190
+]
+2020-06-30 08:39:55 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 08:39:55 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567595
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52204'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481195.134
+    'REQUEST_TIME' => 1593481195
+]
+2020-06-30 08:42:31 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 08:42:31 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567751
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52224'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481351.899
+    'REQUEST_TIME' => 1593481351
+]
+2020-06-30 08:42:57 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:153
+2020-06-30 08:42:57 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '200000'
+    'harga_jual' => '300000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567777
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => ''
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'rGM-F_ONZpVYKGJS4yN8VV9qUYCM-7VcgKM3bbuZbmjFKXhzxvtR2wJ3LSqpEB0nBTJoy8bOhzqw6AIA1sY7WA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52238'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481377.882
+    'REQUEST_TIME' => 1593481377
+]
+2020-06-30 08:43:06 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:264
+2020-06-30 08:43:07 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '0000-00-00', 4, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 08:43:06 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'OPQRS'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567786
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => ''
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '45'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'rGM-F_ONZpVYKGJS4yN8VV9qUYCM-7VcgKM3bbuZbmjFKXhzxvtR2wJ3LSqpEB0nBTJoy8bOhzqw6AIA1sY7WA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52242'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481386.865
+    'REQUEST_TIME' => 1593481386
+]
+2020-06-30 08:43:20 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:264
+2020-06-30 08:43:20 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '0000-00-00', 4, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 08:43:20 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'OPQRS'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567800
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 300000
+            'tgled' => ''
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '45'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'rGM-F_ONZpVYKGJS4yN8VV9qUYCM-7VcgKM3bbuZbmjFKXhzxvtR2wJ3LSqpEB0nBTJoy8bOhzqw6AIA1sY7WA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52258'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481400.647
+    'REQUEST_TIME' => 1593481400
+]
+2020-06-30 08:44:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 08:44:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567862
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '52780'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481462.513
+    'REQUEST_TIME' => 1593481462
+]
+2020-06-30 08:44:55 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:153
+2020-06-30 08:44:55 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '300000'
+    'harga_jual' => '350000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567895
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 300000
+            'hargajual' => 350000
+            'tgled' => ''
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'NLN-B6pDofe3gjsk2A2_ThH0sty7hI2VGCe5v7DOe21d-ThjnzWWue3ddFySPt48S6yLl_Gxv_MobIzS3ZEuXQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '53056'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481495.356
+    'REQUEST_TIME' => 1593481495
+]
+2020-06-30 08:44:58 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:264
+2020-06-30 08:44:58 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00 00:00:00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00 00:00:00' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '0000-00-00 00:00:00', 4, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(317): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00 00:00:00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 08:44:58 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'OPQRSTUVQ'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593567898
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 300000
+            'hargajual' => 350000
+            'tgled' => ''
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '49'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'NLN-B6pDofe3gjsk2A2_ThH0sty7hI2VGCe5v7DOe21d-ThjnzWWue3ddFySPt48S6yLl_Gxv_MobIzS3ZEuXQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '53056'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593481498.078
+    'REQUEST_TIME' => 1593481498
+]
+2020-06-30 08:56:07 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 08:56:07 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568567
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58422'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482167.823
+    'REQUEST_TIME' => 1593482167
+]
+2020-06-30 08:56:41 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 08:56:40 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '5'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568601
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '5'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'VmPiPX-ss1vlufyrPIXDQF_KFeJVXbzdTWYYLmVBg0g_KaRZStqEFb_ms9N2tqIyBZIsqR9ojrt9LS1DCB7WeA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58700'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482200.762
+    'REQUEST_TIME' => 1593482200
+]
+2020-06-30 08:56:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 08:56:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('UPDATE `file_st...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(332): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+The SQL being executed was: UPDATE `file_stok_barang` SET `tgl_ed`='0000-00-00', `stok_akhir`=7 WHERE `id`=13 in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `file_st...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('UPDATE `file_st...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(332): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 08:56:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'OIU'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568610
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '5'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'VmPiPX-ss1vlufyrPIXDQF_KFeJVXbzdTWYYLmVBg0g_KaRZStqEFb_ms9N2tqIyBZIsqR9ojrt9LS1DCB7WeA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '58782'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482210.892
+    'REQUEST_TIME' => 1593482210
+]
+2020-06-30 08:59:40 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 08:59:40 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568780
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60138'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482380.522
+    'REQUEST_TIME' => 1593482380
+]
+2020-06-30 09:00:05 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:00:05 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568805
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Ia-MCf8IX9DTjtx8fhwiYclybYHjfybChL6yDwx9b1pI5cptyn5ononRkwQ0L0MTkypUyqlKFKS09YdiYSI6ag=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60198'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482405.233
+    'REQUEST_TIME' => 1593482405
+]
+2020-06-30 09:02:24 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:02:24 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('UPDATE `file_st...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(332): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+The SQL being executed was: UPDATE `file_stok_barang` SET `tgl_ed`='0000-00-00', `stok_akhir`=6 WHERE `id`=13 in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'UPDATE `file_st...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('UPDATE `file_st...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(332): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(810): yii\db\ActiveRecord::updateAll(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(676): yii\db\BaseActiveRecord->updateInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(681): yii\db\ActiveRecord->update(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 09:02:24 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'ergege'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593568944
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '46'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Ia-MCf8IX9DTjtx8fhwiYclybYHjfybChL6yDwx9b1pI5cptyn5ononRkwQ0L0MTkypUyqlKFKS09YdiYSI6ag=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60208'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482544.037
+    'REQUEST_TIME' => 1593482544
+]
+2020-06-30 09:03:41 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:03:41 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569021
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60852'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482621.48
+    'REQUEST_TIME' => 1593482621
+]
+2020-06-30 09:04:01 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:04:01 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569041
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'xUtG-hUAeeIa9sthAq8cvvHDZJYqi6TmlBNX2g0BS9msAQCeIHZOrECphBlInH3Mq5td3WC-loCkWGK3YF4e6Q=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60886'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482641.262
+    'REQUEST_TIME' => 1593482641
+]
+2020-06-30 09:04:07 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:04:07 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '0000-00-00', 4, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '0000-00-00' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 09:04:07 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'UID'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569047
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '43'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'xUtG-hUAeeIa9sthAq8cvvHDZJYqi6TmlBNX2g0BS9msAQCeIHZOrECphBlInH3Mq5td3WC-loCkWGK3YF4e6Q=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '60886'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593482647.19
+    'REQUEST_TIME' => 1593482647
+]
+2020-06-30 09:10:43 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:10:43 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569443
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=164'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '35796'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483043.427
+    'REQUEST_TIME' => 1593483043
+]
+2020-06-30 09:11:09 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:11:09 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569469
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'fcPw180xOyno3HTkVMWIL8ET8dMXVvTVTFowLaErUCEUibaz-EcMZ7KDO5we9uldm0vImF1jxrN8EQVAzHQFEQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36016'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483069.727
+    'REQUEST_TIME' => 1593483069
+]
+2020-06-30 09:11:13 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:11:13 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'ERTF'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593569473
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '44'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'fcPw180xOyno3HTkVMWIL8ET8dMXVvTVTFowLaErUCEUibaz-EcMZ7KDO5we9uldm0vImF1jxrN8EQVAzHQFEQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36016'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483073.776
+    'REQUEST_TIME' => 1593483073
+]
+2020-06-30 09:24:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:24:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570259
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36220'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483859.399
+    'REQUEST_TIME' => 1593483859
+]
+2020-06-30 09:24:41 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:24:41 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '5'
+    'harga_beli' => '200000'
+    'harga_jual' => '350000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570281
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '5'
+            'hargabeli' => 200000
+            'hargajual' => 350000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '0BPDJlnoXviR-fPYG-AHSBcBh-QJXPEsUYucMfNFgEa5WYVCbJ5ptsumvKBR02Y6TVm-r0Npw0phwKlcnhrVdg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36230'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483881.089
+    'REQUEST_TIME' => 1593483881
+]
+2020-06-30 09:24:43 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:24:43 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '-0001-11-30', 5, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 09:24:43 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'RUYT'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570283
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '5'
+            'hargabeli' => 200000
+            'hargajual' => 350000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '44'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '0BPDJlnoXviR-fPYG-AHSBcBh-QJXPEsUYucMfNFgEa5WYVCbJ5ptsumvKBR02Y6TVm-r0Npw0phwKlcnhrVdg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36230'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483883.399
+    'REQUEST_TIME' => 1593483883
+]
+2020-06-30 09:24:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:24:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][error][yii\db\Exception] PDOException: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1 in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1293
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1293): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+
+Next yii\db\Exception: SQLSTATE[22007]: Invalid datetime format: 1292 Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1
+The SQL being executed was: INSERT INTO `file_stok_barang` (`kd_barang`, `tgl_ed`, `stok_akhir`, `nomor_batch`) VALUES ('BRG000007', '-0001-11-30', 5, '-') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:674
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1298): yii\db\Schema->convertException(Object(PDOException), 'INSERT INTO `fi...')
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1093): yii\db\Command->internalExecute('INSERT INTO `fi...')
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php(432): yii\db\Command->execute()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(600): yii\db\Schema->insert('file_stok_baran...', Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRecord.php(566): yii\db\ActiveRecord->insertInternal(NULL)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(678): yii\db\ActiveRecord->insert(true, NULL)
+#6 /var/www/html/pos/controllers/PembelianController.php(328): yii\db\BaseActiveRecord->save()
+#7 [internal function]: app\controllers\PembelianController->actionSimpanpembelian()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('simpanpembelian', Array)
+#11 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('pembelian/simpa...', Array)
+#12 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 22007
+    [1] => 1292
+    [2] => Incorrect date value: '-0001-11-30' for column 'tgl_ed' at row 1
+)
+
+2020-06-30 09:24:50 [::1][3][pv3p21qjbb3caqjpdhp5rmh74s][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'RUYT'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570290
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '5'
+            'hargabeli' => 200000
+            'hargajual' => 350000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '44'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '0BPDJlnoXviR-fPYG-AHSBcBh-QJXPEsUYucMfNFgEa5WYVCbJ5ptsumvKBR02Y6TVm-r0Npw0phwKlcnhrVdg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36240'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483890.638
+    'REQUEST_TIME' => 1593483890
+]
+2020-06-30 09:25:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:25:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570319
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36498'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483919.861
+    'REQUEST_TIME' => 1593483919
+]
+2020-06-30 09:26:17 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:26:16 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '4'
+    'harga_beli' => '200000'
+    'harga_jual' => '350000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570377
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 350000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'R2zAwTk4WU62qtKutsIsvvLsgyHmShWZSUxZsaPekvQuJoalDE5uAOz1ndb88U3MqLS6aqx_J_95B2zczoHHxA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36964'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483976.873
+    'REQUEST_TIME' => 1593483976
+]
+2020-06-30 09:26:21 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:26:21 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'rtgrtgr'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'pv3p21qjbb3caqjpdhp5rmh74s'
+    '_csrf' => '1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1593570381
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'BRG000003'
+            'namabarang' => 'BUSCHOPAN'
+            'qty' => '4'
+            'harga' => 18000
+            'total' => 72000
+            'idstok' => '10'
+        ]
+    ]
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '4'
+            'hargabeli' => 200000
+            'hargajual' => 350000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '47'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'R2zAwTk4WU62qtKutsIsvvLsgyHmShWZSUxZsaPekvQuJoalDE5uAOz1ndb88U3MqLS6aqx_J_95B2zczoHHxA=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=pv3p21qjbb3caqjpdhp5rmh74s; _csrf=1fe6e4bdfeaffc01741bfb51973e58e0d3a447fa8059c59223f5499bdfb01ca0a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22iJFd5v7NZ_OxJ3arZX9KJ52f0K5mm_U0%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '36964'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593483981.051
+    'REQUEST_TIME' => 1593483981
+]
+2020-06-30 09:32:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:32:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570738
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37174'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484338.418
+    'REQUEST_TIME' => 1593484338
+]
+2020-06-30 09:32:37 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:32:37 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '3'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570757
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '3'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd9SfKRKxO-3TOYJ-LRGORHhP_iy9Fhtz2-U7eeI6DLwT5vYad_Jh2YZ4wUZsU7YpSQKhG40naUK-l3kbmkJP1w=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37194'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484357.365
+    'REQUEST_TIME' => 1593484357
+]
+2020-06-30 09:32:44 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:32:43 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'ERTY'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570764
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '3'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '44'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'd9SfKRKxO-3TOYJ-LRGORHhP_iy9Fhtz2-U7eeI6DLwT5vYad_Jh2YZ4wUZsU7YpSQKhG40naUK-l3kbmkJP1w=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37194'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484363.964
+    'REQUEST_TIME' => 1593484363
+]
+2020-06-30 09:33:19 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-06-30 09:33:19 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570799
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37528'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484399.911
+    'REQUEST_TIME' => 1593484399
+]
+2020-06-30 09:33:42 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:159
+2020-06-30 09:33:42 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/listpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'kd_bar' => 'BRG000007'
+    'nm_barang' => 'Sepatu Brodo'
+    'jumlah' => '8'
+    'harga_beli' => '200000'
+    'harga_jual' => '250000'
+    'tgl_ed' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570822
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '8'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '111'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'wmxjtv3wP8oottFaqYs4TNdVEnptjV2OkZRh_dXnCW2mXgqFmLNl_n33kmLoyQAh5hhNTV28L7_05iOfrZ9KBg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Flistpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Flistpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484422.584
+    'REQUEST_TIME' => 1593484422
+]
+2020-06-30 09:33:46 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:270
+2020-06-30 09:33:46 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/simpanpembelian'
+]
+
+$_POST = [
+    'tgl' => 'Jun 30, 2020'
+    'supplier' => '2'
+    'no_faktur' => 'rtytryr'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '34jr8li20munbm9nhh0g7vf6rv'
+    '_csrf' => 'f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk\";}'
+]
+
+$_SESSION = [
+    'ip' => '::1'
+    'mac' => null
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    '__id' => 3
+    '__expire' => 1593570826
+    'datapembelian' => [
+        0 => [
+            'tgl' => 'Jun 30, 2020'
+            'kodebarang' => 'BRG000007'
+            'namabarang' => 'Sepatu Brodo'
+            'jumlah' => '8'
+            'hargabeli' => 200000
+            'hargajual' => 250000
+            'tgled' => '-'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '47'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'wmxjtv3wP8oottFaqYs4TNdVEnptjV2OkZRh_dXnCW2mXgqFmLNl_n33kmLoyQAh5hhNTV28L7_05iOfrZ9KBg=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.106 Chrome/83.0.4103.106 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=34jr8li20munbm9nhh0g7vf6rv; _csrf=f182fb6eddebd639bb96bc4841481717a1d5d04c033ba0af93ed61e04a585a0da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22d2i3eCZ4UAC8AB8m1M_701r1erBbxxCk%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37554'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=pembelian%2Fsimpanpembelian'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fsimpanpembelian'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1593484426.682
+    'REQUEST_TIME' => 1593484426
+]

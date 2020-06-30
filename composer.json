@@ -22,7 +22,8 @@
         "yiisoft/yii2-jui": "^2.0",
         "edwinhaq/yii2-simple-loading": "*",
         "yii2tech/spreadsheet": "^1.0",
-        "kartik-v/yii2-mpdf": "dev-master"
+        "kartik-v/yii2-mpdf": "dev-master",
+        "himiklab/yii2-handsontable-widget": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",

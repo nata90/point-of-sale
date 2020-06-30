@@ -139,6 +139,7 @@ class FileBarangSearch extends FileBarang
         $query->andFilterWhere(['like', 'kd_barang', $this->kd_barang])
         ->andFilterWhere(['like', 'file_barang.nama_barang', $this->nama_barang])
         ->andFilterWhere(['<', 'tgl_ed', date('Y-m-d')])
+        ->andFilterWhere(['!=', 'tgl_ed', '1970-01-01'])
         ->andFilterWhere(['>', 'stok_akhir', 0]);
 
         return $dataProvider;

@@ -110,6 +110,10 @@ class ComposerStaticInitd69fa755d572392ea13d883c0dc9d081
         array (
             'kartik\\mpdf\\' => 12,
         ),
+        'h' => 
+        array (
+            'himiklab\\handsontable\\' => 22,
+        ),
         'e' => 
         array (
             'edwinhaq\\simpleloading\\' => 23,
@@ -248,6 +252,10 @@ class ComposerStaticInitd69fa755d572392ea13d883c0dc9d081
         'kartik\\mpdf\\' => 
         array (
             0 => __DIR__ . '/..' . '/kartik-v/yii2-mpdf/src',
+        ),
+        'himiklab\\handsontable\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/himiklab/yii2-handsontable-widget',
         ),
         'edwinhaq\\simpleloading\\' => 
         array (

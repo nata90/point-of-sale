@@ -20,10 +20,14 @@ use yii\helpers\Html;
             <tr>
                 <td><?php echo $val['kodebarang'];?></td>
                 <td><?php echo $val['namabarang'];?></td>
-                <td><?php echo date('d-m-Y', strtotime($val['tgled']));?></td>
+                <?php if($val['tgled'] != '-'){?>
+                    <td><?php echo date('d-m-Y', strtotime($val['tgled']));?></td>
+                <?php }else{ ?>
+                    <td>-</td>
+                <?php } ?>
                 <td><?php echo $val['jumlah'];?></td>
-                <td style="text-align:right;"><?php echo Utility::rupiah((int)$val['hargabeli']);?></td>
-                <td style="text-align:right;"><?php echo Utility::rupiah((int)$val['hargajual']);?></td>
+                <td style="text-align:center;"><?php echo Utility::rupiah((int)$val['hargabeli']);?></td>
+                <td style="text-align:center;"><?php echo Utility::rupiah((int)$val['hargajual']);?></td>
                 <td style="text-align:center;"><a rel="<?php echo $key; ?>" url="<?php echo Url::to(['pembelian/deleteitem']); ?>" class="delete-item-pem" href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
             </tr>
         <?php }

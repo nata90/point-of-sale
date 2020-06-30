@@ -148,7 +148,13 @@ class PembelianController extends Controller
         $jumlah = $_POST['jumlah'];
         $harga_beli = (int)$_POST['harga_beli'];
         $harga_jual = (int)$_POST['harga_jual'];
-        $tgl_ed = $_POST['tgl_ed'];
+
+        if(isset($_POST['tgl_ed']) && $_POST['tgl_ed'] != ''){
+           $tgl_ed = $_POST['tgl_ed']; 
+       }else{
+            $tgl_ed = '-';
+       }
+        
 
         $session = new Session;
         $session->open();
@@ -296,7 +302,12 @@ class PembelianController extends Controller
                     $detail->harga_jual = $val['hargajual'];
                     $detail->save();
 
-                    $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->andWhere(['tgl_ed'=>date('Y-m-d', strtotime($val['tgled']))])->one();
+                    if($val['tgled'] != '-'){
+                        $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->andWhere(['tgl_ed'=>date('Y-m-d', strtotime($val['tgled']))])->one();
+                    }else{
+                        $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
+                    }
+                    
 
                     if($stok_barang == null){
                         $stok_barang = new FileStokBarang;
@@ -306,7 +317,10 @@ class PembelianController extends Controller
                     }
 
                     $stok_barang->kd_barang = $val['kodebarang'];
+                   
                     $stok_barang->tgl_ed = date('Y-m-d', strtotime($val['tgled']));
+                   
+                    
                     $stok_barang->stok_akhir = $jum_stok;
                     $stok_barang->nomor_batch = '-';
                     $stok_barang->save();

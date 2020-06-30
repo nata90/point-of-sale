@@ -12,12 +12,6 @@ $this->title = 'PENJUALAN - POS';
 $this->registerJs('var url = "' . Url::to(['site/autocompletebarang']) . '";');
 $this->registerJs('var new_url = "' . Url::to(['site/loaddatabarang']) . '";');
 $this->registerJs(<<<JS
-	
-	/*var data = [
-		{kd_barang : 'A0001', nama_barang : 'PARACETAMOL 500 MG', harga : 10000, jumlah : 3, total : 30000},
-		{kd_barang : 'A0002', nama_barang : 'DEXAMETHAZONE', harga : 20000, jumlah : 3, total : 60000},
-		{kd_barang : 'BRG000003', nama_barang : 'BUSCHOPAN', harga : 15000, jumlah : 2, total : 30000},
-	];*/
 	var data = [];
 
 	var container = document.getElementById('data-trans');
@@ -99,6 +93,7 @@ $this->registerJs(<<<JS
 	  	var rows = explode[0];
 	  	var name_column = explode[1];
 	  	var that = this;
+	  	
 
 	  	if(name_column == 'nama_barang'){
 	  		$.ajax({
@@ -120,6 +115,13 @@ $this->registerJs(<<<JS
 	        });
 	  		
 	  	}
+
+	  	if(name_column == 'jumlah'){
+	  		var harga = that.getDataAtCell(rows,2);
+
+	  		var new_total = parseInt(value) * parseInt(harga);
+	  		that.setDataAtCell(rows, 6, new_total);
+	  	}
 	  }
 	});
     
@@ -138,7 +140,7 @@ JS
 			<div class="box-body">
 				
 				<div id="data-trans">
-					
+
 				</div>
 			</div>
 		</div>

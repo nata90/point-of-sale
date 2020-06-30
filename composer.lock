@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "322cdc371947a275cf16e5645cb871de",
+    "content-hash": "1b960dbf36037a7e698170fde6766d43",
     "packages": [
         {
             "name": "almasaeed2010/adminlte",
@@ -54,7 +54,7 @@
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -72,11 +72,27 @@
             ]
         },
         {
+            "name": "bower-asset/handsontable",
+            "version": "7.4.2",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:handsontable/handsontable.git",
+                "reference": "88d78a5be5e37ad703c11914c86690d2436d3024"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/handsontable/handsontable/zipball/88d78a5be5e37ad703c11914c86690d2436d3024",
+                "reference": "88d78a5be5e37ad703c11914c86690d2436d3024",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
             "name": "bower-asset/inputmask",
             "version": "3.3.11",
             "source": {
                 "type": "git",
-                "url": "git@github.com:RobinHerbots/Inputmask.git",
+                "url": "https://github.com/RobinHerbots/Inputmask.git",
                 "reference": "5e670ad62f50c738388d4dcec78d2888505ad77b"
             },
             "dist": {
@@ -591,6 +607,49 @@
                 "icon"
             ],
             "time": "2016-10-24T15:52:54+00:00"
+        },
+        {
+            "name": "himiklab/yii2-handsontable-widget",
+            "version": "1.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/himiklab/yii2-handsontable-widget.git",
+                "reference": "c50003b249880186d010445059b5fed416224531"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/himiklab/yii2-handsontable-widget/zipball/c50003b249880186d010445059b5fed416224531",
+                "reference": "c50003b249880186d010445059b5fed416224531",
+                "shasum": ""
+            },
+            "require": {
+                "bower-asset/handsontable": "*",
+                "yiisoft/yii2": "*"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "himiklab\\handsontable\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "HimikLab",
+                    "homepage": "https://github.com/himiklab/"
+                }
+            ],
+            "description": "A minimalist Excel-like grid widget for Yii2",
+            "keywords": [
+                "grid",
+                "handsontable",
+                "widget",
+                "yii2"
+            ],
+            "time": "2018-10-18T08:52:20+00:00"
         },
         {
             "name": "kartik-v/yii2-mpdf",
