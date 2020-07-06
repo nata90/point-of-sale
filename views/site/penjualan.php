@@ -24,6 +24,7 @@ $this->registerJs(<<<JS
 	    'HARGA',
 	    'TGL ED',
 	    'JUMLAH',
+	    'DISKON',
 	    'STOK AKHIR',
 	    'TOTAL',
 	  ],
@@ -61,12 +62,19 @@ $this->registerJs(<<<JS
 	  	},
 	  	{
 	  		data : 'tgl_ed',
-	  		type : 'date'
+	  		type : 'dropdown'
 	  	},
 	  	
 	  	{
 	  		data : 'jumlah',
 	  		type : 'numeric'
+	  	},
+	  	{
+	  		data : 'diskon',
+	  		type : 'numeric',
+	  		numericFormat : {
+	  			pattern: '0,00',
+	  		}
 	  	},
 	  	{
 	  		data : 'stok_akhir',
@@ -79,12 +87,23 @@ $this->registerJs(<<<JS
 	  			pattern: '0,00',
 	  		}
 	  	},
+	  	
 	  ],
 	  filters: false,
 	  dropdownMenu: false,
-	  minSpareRows: 1,
-      colWidths: [250, 150, 120, 120, 100, 120, 120],
+	  minSpareRows: 15,
+	  maxRows: 15,
+      colWidths: [180, 130, 120, 120, 80, 120, 120, 120],
 	  licenseKey: 'non-commercial-and-evaluation',
+	  formulas: true,
+	 columnSummary: [{
+	  	  sourceColumn:7,
+	      destinationRow: 0,
+	      destinationColumn: 7,
+	      reversedRowCoords: true,
+	      type: 'sum',
+	      forceNumeric: true
+	  }],
 	  afterChange : function( changes, source ) {
 	  	var string = String(changes);
 	  	var explode = string.split(",");
@@ -108,8 +127,9 @@ $this->registerJs(<<<JS
 	            that.setDataAtCell(rows, 2, v.harga);
 	            that.setDataAtCell(rows, 3, v.ed);
 	            that.setDataAtCell(rows, 4, v.jumlah);
-	            that.setDataAtCell(rows, 5, v.stok);
-	            that.setDataAtCell(rows, 6, v.total);
+	            that.setDataAtCell(rows, 5, v.diskon);
+	            that.setDataAtCell(rows, 6, v.stok);
+	            that.setDataAtCell(rows, 7, v.total);
 
 	          }
 	        });
@@ -120,8 +140,18 @@ $this->registerJs(<<<JS
 	  		var harga = that.getDataAtCell(rows,2);
 
 	  		var new_total = parseInt(value) * parseInt(harga);
-	  		that.setDataAtCell(rows, 6, new_total);
+	  		that.setDataAtCell(rows, 7, new_total);
+	  		that.setDataAtCell(rows, 5, 0);
 	  	}
+
+	  	if(name_column == 'diskon'){
+	  		var harga = that.getDataAtCell(rows,2);
+	  		var qty = that.getDataAtCell(rows,4);
+
+	  		var new_total_2 = (parseInt(harga) * parseInt(qty)) - parseInt(value);
+	  		that.setDataAtCell(rows, 7, new_total_2);
+	  	}
+
 	  }
 	});
     

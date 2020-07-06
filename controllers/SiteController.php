@@ -516,6 +516,7 @@ class SiteController extends Controller
         $return['ed'] = '05/10/2020';
         $return['jumlah'] = 1;
         $return['stok'] = '10';
+        $return['diskon'] = '0';
         $return['total'] = $model->harga_jual;
 
         echo Json::encode($return);

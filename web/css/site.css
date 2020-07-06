@@ -113,3 +113,10 @@ a.desc:after {
 .nav > li > form > button.logout:focus {
     outline: none;
 }
+
+/* Specific cell (B2) */
+.ht_master tr:nth-child(15) > td:nth-child(9) {
+  background-color: #F08080;
+  color: black;
+  font-weight: bold;
+}
