@@ -6409,3 +6409,2140 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1593999337.381
     'REQUEST_TIME' => 1593999337
 ]
+2020-07-06 13:29:45 [::1][-][ahvhi329k2c5qv3b621rda74lj][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php:190
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2020-07-06 13:29:45 [::1][-][ahvhi329k2c5qv3b621rda74lj][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'BRljPwE5kYED05cotBBZ66lMu538RdARuzTUc26NunpOQVpzc3fT9VyB8EvtZimnm3Tz9oQRiCLoBJ8KH8v8Eg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'ahvhi329k2c5qv3b621rda74lj'
+    '_csrf' => 'c22f5b2e2712a14604a2b419f98179e1f5f99ed43d9f551b6d1a88e06dec9c6fa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"RC5PaIAApe-O0ISb0hmfrHrZ06k6mb4E\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '172'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=ahvhi329k2c5qv3b621rda74lj; _csrf=c22f5b2e2712a14604a2b419f98179e1f5f99ed43d9f551b6d1a88e06dec9c6fa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22RC5PaIAApe-O0ISb0hmfrHrZ06k6mb4E%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37904'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594016985.27
+    'REQUEST_TIME' => 1594016985
+]
+2020-07-06 13:30:02 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-06 13:30:02 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'nu1m7uo9qv7h6a6qi0ph0cml51'
+    '_csrf' => '28dd6f3ae5f9852f5fa8b8dc37d6e44d8182074a668af2831a67ce35587b8a8da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hXjqjNzm6kgGICb33OefsnyASCK36Rnc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594103402
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=nu1m7uo9qv7h6a6qi0ph0cml51; _csrf=28dd6f3ae5f9852f5fa8b8dc37d6e44d8182074a668af2831a67ce35587b8a8da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hXjqjNzm6kgGICb33OefsnyASCK36Rnc%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37916'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594017002.466
+    'REQUEST_TIME' => 1594017002
+]
+2020-07-06 13:30:03 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-07-06 13:30:03 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'nu1m7uo9qv7h6a6qi0ph0cml51'
+    '_csrf' => '28dd6f3ae5f9852f5fa8b8dc37d6e44d8182074a668af2831a67ce35587b8a8da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"hXjqjNzm6kgGICb33OefsnyASCK36Rnc\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594103403
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=nu1m7uo9qv7h6a6qi0ph0cml51; _csrf=28dd6f3ae5f9852f5fa8b8dc37d6e44d8182074a668af2831a67ce35587b8a8da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22hXjqjNzm6kgGICb33OefsnyASCK36Rnc%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '37916'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594017003.741
+    'REQUEST_TIME' => 1594017003
+]
+2020-07-08 13:17:01 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-07-08 13:17:01 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vh4n9t75g2i9fm9u22atohhqaf'
+    '_csrf' => 'd2d255d5d8a11c5aef1cd6c9e85c4e72f9994d644aea38b762eb3eec6ca0d497a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_-P4Vg8qCgkAvXVAWHIaVbNP3gxLoGF3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594275421
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=vh4n9t75g2i9fm9u22atohhqaf; _csrf=d2d255d5d8a11c5aef1cd6c9e85c4e72f9994d644aea38b762eb3eec6ca0d497a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_-P4Vg8qCgkAvXVAWHIaVbNP3gxLoGF3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54986'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594189021.83
+    'REQUEST_TIME' => 1594189021
+]
+2020-07-08 13:17:05 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-08 13:17:05 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'vh4n9t75g2i9fm9u22atohhqaf'
+    '_csrf' => 'd2d255d5d8a11c5aef1cd6c9e85c4e72f9994d644aea38b762eb3eec6ca0d497a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"_-P4Vg8qCgkAvXVAWHIaVbNP3gxLoGF3\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594275425
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=pembelian%2Fcreate'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=vh4n9t75g2i9fm9u22atohhqaf; _csrf=d2d255d5d8a11c5aef1cd6c9e85c4e72f9994d644aea38b762eb3eec6ca0d497a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22_-P4Vg8qCgkAvXVAWHIaVbNP3gxLoGF3%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54986'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594189025.437
+    'REQUEST_TIME' => 1594189025
+]
+2020-07-08 14:11:37 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:127
+2020-07-08 14:11:37 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:37 [192.168.20.25][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0117fbuv46a469h39309jhqq2b'
+    '_csrf' => '5e3ff8aa5121657917192f58e389dfdab8f6aaecd7af817ed697d0d39ac73967a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ioPQoLCieLpU-UznX1pX4tATpJ5k-8jz\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=0117fbuv46a469h39309jhqq2b; _csrf=5e3ff8aa5121657917192f58e389dfdab8f6aaecd7af817ed697d0d39ac73967a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ioPQoLCieLpU-UznX1pX4tATpJ5k-8jz%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54315'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192297.473
+    'REQUEST_TIME' => 1594192297
+]
+2020-07-08 14:11:42 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:42 [192.168.20.25][3][-][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => 'W1WV8cVDKyGpOInBu598CHQLt5VM-hrL5VTumPoSwPVtJ9il9CxDaOcI7rDI7TdfGErmwh-rU5GfLKvMq3Wwgg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '0117fbuv46a469h39309jhqq2b'
+    '_csrf' => 'ec5123e0c1211355c6690117a09153c0bd6f8027c53f7fb0c354ad79e376d1caa:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"6rMT1ohIN0gqsrKWlAQWSQIZzxETQgpw\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594278702
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '172'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://192.168.20.15'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=0117fbuv46a469h39309jhqq2b; _csrf=ec5123e0c1211355c6690117a09153c0bd6f8027c53f7fb0c354ad79e376d1caa%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%226rMT1ohIN0gqsrKWlAQWSQIZzxETQgpw%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192302.208
+    'REQUEST_TIME' => 1594192302
+]
+2020-07-08 14:11:42 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:422
+2020-07-08 14:11:42 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:42 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/dashboard'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'eukhuc88opl1q0vbbe41s3kk5h'
+    '_csrf' => '0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594278702
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=eukhuc88opl1q0vbbe41s3kk5h; _csrf=0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fdashboard'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fdashboard'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192302.227
+    'REQUEST_TIME' => 1594192302
+]
+2020-07-08 14:11:42 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:42 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/grafikpenjualan'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'eukhuc88opl1q0vbbe41s3kk5h'
+    '_csrf' => '0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594278702
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'IUTz-6k5bhkBJrSS9GN2qozSKrP81roovrg72-Zrb2JtBb6KylsPYF502v6GEkXMw5VS0Li_yWzL7g-dpARYUg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=eukhuc88opl1q0vbbe41s3kk5h; _csrf=0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54320'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fgrafikpenjualan'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fgrafikpenjualan'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192302.505
+    'REQUEST_TIME' => 1594192302
+]
+2020-07-08 14:11:44 [192.168.20.25][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-08 14:11:44 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main.php:97
+    in /var/www/html/pos/controllers/SiteController.php:104
+2020-07-08 14:11:44 [192.168.20.25][3][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:44 [192.168.20.25][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'eukhuc88opl1q0vbbe41s3kk5h'
+    '_csrf' => '0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594278704
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=eukhuc88opl1q0vbbe41s3kk5h; _csrf=0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54319'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192304.804
+    'REQUEST_TIME' => 1594192304
+]
+2020-07-08 14:11:47 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:47 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/logout'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'eukhuc88opl1q0vbbe41s3kk5h'
+    '_csrf' => '0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70\";}'
+]
+
+$_SESSION = []
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => 'PHPSESSID=eukhuc88opl1q0vbbe41s3kk5h; _csrf=0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54319'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogout'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogout'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192307.524
+    'REQUEST_TIME' => 1594192307
+]
+2020-07-08 14:11:47 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+    in /var/www/html/pos/views/layouts/main-login.php:26
+    in /var/www/html/pos/views/layouts/main.php:17
+    in /var/www/html/pos/controllers/SiteController.php:127
+2020-07-08 14:11:47 [192.168.20.25][-][-][warning][yii\debug\Module::checkAccess] Access to debugger is denied due to IP address restriction. The requesting IP address is 192.168.20.25
+2020-07-08 14:11:47 [192.168.20.25][-][-][info][application] $_GET = [
+    'r' => 'site/login'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_csrf' => '0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70\";}'
+    'PHPSESSID' => 'ha0ill7b6cjdkcva9kbc6cb3fh'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '192.168.20.15'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_REFERER' => 'http://192.168.20.15/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9'
+    'HTTP_COOKIE' => '_csrf=0f0888eea26b177f00fefc916f5ab1627e2d5be0301ea77928a4a70379b5dbf8a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22LAMqcbay_Rnlrq3fOGxcDisDuV4FBo70%22%3B%7D; PHPSESSID=ha0ill7b6cjdkcva9kbc6cb3fh'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at 192.168.20.15 Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => '192.168.20.15'
+    'SERVER_ADDR' => '192.168.20.15'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '192.168.20.25'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54319'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Flogin'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Flogin'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594192307.543
+    'REQUEST_TIME' => 1594192307
+]
+2020-07-09 10:50:29 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-07-09 10:50:29 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => 'dc18a9c0b9946fa2fd7ef3ab1da1b0b458f4dbe2be0fc98fa6d67187118b0fc9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"kTyCi5TzGtRKW1TT_sGG7XxFndeEjbnl\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353029
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=dc18a9c0b9946fa2fd7ef3ab1da1b0b458f4dbe2be0fc98fa6d67187118b0fc9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22kTyCi5TzGtRKW1TT_sGG7XxFndeEjbnl%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54652'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266629.362
+    'REQUEST_TIME' => 1594266629
+]
+2020-07-09 10:54:18 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/models/DtTransaksiSearch.php:61
+    in /var/www/html/pos/controllers/TransaksiController.php:59
+2020-07-09 10:54:18 [::1][3][-][info][application] $_GET = [
+    'r' => 'transaksi/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353258
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=transaksi%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=transaksi%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266858.921
+    'REQUEST_TIME' => 1594266858
+]
+2020-07-09 10:54:20 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-09 10:54:20 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353260
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266860.681
+    'REQUEST_TIME' => 1594266860
+]
+2020-07-09 10:54:22 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-07-09 10:54:22 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353262
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266862.675
+    'REQUEST_TIME' => 1594266862
+]
+2020-07-09 10:54:27 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-09 10:54:27 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353267
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266867.46
+    'REQUEST_TIME' => 1594266867
+]
+2020-07-09 10:54:32 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-07-09 10:54:32 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '3'
+    'idstok' => '6'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353272
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'FRNT0ind3h3wCteRdhaEqRjb3GzGVVYBliN3Lq3H6ExtUgP_RbGPLYhDvvpBbsHgeYmYIf8XYUjTZB9ImqXaHQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54708'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=3&idstok=6'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=3&idstok=6'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266872.169
+    'REQUEST_TIME' => 1594266872
+]
+2020-07-09 10:54:37 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-07-09 10:54:37 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '105000'
+    'totalbayar' => '105000'
+    'cashback' => '0'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353277
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '48'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'FRNT0ind3h3wCteRdhaEqRjb3GzGVVYBliN3Lq3H6ExtUgP_RbGPLYhDvvpBbsHgeYmYIf8XYUjTZB9ImqXaHQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54736'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266877.624
+    'REQUEST_TIME' => 1594266877
+]
+2020-07-09 10:54:39 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-09 10:54:39 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594353279
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fresumetransaksi&id=169'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=7a2c08f3ea089e193c378480ee2ed5b1ac0697fb7edc1bbfbea40502d1f51acca%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xAP-llQ0xIik7xEIaRDM9B7IEGhf7b2Q%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '54736'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594266879.96
+    'REQUEST_TIME' => 1594266879
+]
+2020-07-09 11:31:50 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2020-07-09 11:31:50 [::1][3][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'utdi53duv0cff2dfrc3od9euar'
+    '_csrf' => '04b8d3085f9422a83c48aa03b738b9f65edd9893db4ccc41ae8f22d6f0c403b9a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"VOYnN3idHfqtxiBP3wLVJ9ap0WWiKRXS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594355510
+    'start-date' => '2020-07-09'
+    'end-date' => '2020-07-09'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=utdi53duv0cff2dfrc3od9euar; _csrf=04b8d3085f9422a83c48aa03b738b9f65edd9893db4ccc41ae8f22d6f0c403b9a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22VOYnN3idHfqtxiBP3wLVJ9ap0WWiKRXS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '55560'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594269110.962
+    'REQUEST_TIME' => 1594269110
+]
+2020-07-09 15:54:12 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-09 15:54:12 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '4jgiq9c66lcoaoue0cq1cn1dh4'
+    '_csrf' => 'a66df36ebb54bb597c3cb44bf22a802838ebbaaf6cf091d55e3a7298c11f016ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"xMLKW846VaFD_BeQy6QFq1JSTEHqGnhR\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__expire' => 1594371252
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=4jgiq9c66lcoaoue0cq1cn1dh4; _csrf=a66df36ebb54bb597c3cb44bf22a802838ebbaaf6cf091d55e3a7298c11f016ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22xMLKW846VaFD_BeQy6QFq1JSTEHqGnhR%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '49878'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594284852.111
+    'REQUEST_TIME' => 1594284852
+]
+2020-07-12 08:39:23 [::1][-][83ukqt51s5953mqau8ir47j1j6][error][yii\web\HttpException:400] yii\web\BadRequestHttpException: Unable to verify your data submission. in /var/www/html/pos/vendor/yiisoft/yii2/web/Controller.php:190
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(155): yii\web\Controller->beforeAction(Object(yii\base\InlineAction))
+#1 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('login', Array)
+#2 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#4 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#5 {main}
+2020-07-12 08:39:23 [::1][-][83ukqt51s5953mqau8ir47j1j6][info][application] $_GET = []
+
+$_POST = [
+    '_csrf' => '9OW3u12-V02gYtscTgBERCXyTAIpJK005PnZfj5roMfAgoH8BckadeEntk0FV3cTVL49RmYSmg29sZIPeSjCrg=='
+    'LoginForm' => [
+        'username' => 'admin'
+        'password' => 'admin'
+    ]
+    'login-button' => ''
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => '83ukqt51s5953mqau8ir47j1j6'
+    '_csrf' => '115fe102ce4e1811f7bc59aa79e625a82e36a2497c201e226c66e25ebdc9ff01a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"XFqKQiL8eNSJwVjL3uJu2finStN1EpQ5\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '172'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=83ukqt51s5953mqau8ir47j1j6; _csrf=115fe102ce4e1811f7bc59aa79e625a82e36a2497c201e226c66e25ebdc9ff01a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22XFqKQiL8eNSJwVjL3uJu2finStN1EpQ5%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45862'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/pos/web/'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594517963.037
+    'REQUEST_TIME' => 1594517963
+]
+2020-07-12 08:39:43 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2020-07-12 08:39:43 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594604383
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45880'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594517983.272
+    'REQUEST_TIME' => 1594517983
+]
+2020-07-12 08:39:50 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:183
+2020-07-12 08:39:50 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/prosestransaksi'
+    'kodebarang' => 'A0003'
+    'qty' => '3'
+    'idstok' => '6'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594604390
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'DuNBmTrACKcBBK4O0F2TFAtWlsAxv5v0zi1Z9_DHVG5tgAjdAppSkGdLyUOYMupFRjTwp3jP05avHiybtag2PQ=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45894'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Fprosestransaksi&kodebarang=A0003&qty=3&idstok=6'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fprosestransaksi&kodebarang=A0003&qty=3&idstok=6'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594517990.641
+    'REQUEST_TIME' => 1594517990
+]
+2020-07-12 08:39:56 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:317
+2020-07-12 08:39:56 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/simpantransaksi'
+]
+
+$_POST = [
+    'totaltagihan' => '105000'
+    'totalbayar' => '200000'
+    'cashback' => '95000'
+]
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594604396
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'CONTENT_LENGTH' => '52'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'DuNBmTrACKcBBK4O0F2TFAtWlsAxv5v0zi1Z9_DHVG5tgAjdAppSkGdLyUOYMupFRjTwp3jP05avHiybtag2PQ=='
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'CONTENT_TYPE' => 'application/x-www-form-urlencoded; charset=UTF-8'
+    'HTTP_ORIGIN' => 'http://localhost'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Findex'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '45900'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'POST'
+    'QUERY_STRING' => 'r=site%2Fsimpantransaksi'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Fsimpantransaksi'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594517996.268
+    'REQUEST_TIME' => 1594517996
+]
+2020-07-12 09:07:05 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /var/www/html/pos/controllers/SiteController.php:516
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(516): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/var/www/html/p...', 516, Array)
+#1 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-07-12 09:07:05 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'DEXAMETHAZONE'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606025
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'kbycR4LcOEqby0lomaOC8LhBz1jI81QhOf5wklCsbvDy39UDuoZiff2ELiXRzPuh9SOpP4GDHENYzQX-FcMMow=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46380'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594519625.875
+    'REQUEST_TIME' => 1594519625
+]
+2020-07-12 09:07:18 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /var/www/html/pos/controllers/SiteController.php:516
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(516): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/var/www/html/p...', 516, Array)
+#1 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-07-12 09:07:18 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'DEXAMETHAZONE'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606038
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'OScaZn2z5PZIwSpolMzESVVGSQzKFp50ZSMPd5wAiq9aRFMiRem-wS6OTSXco70YGCQva4Nm1hYEEHob2W_o_A=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46382'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594519638.498
+    'REQUEST_TIME' => 1594519638
+]
+2020-07-12 09:08:02 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\UnknownPropertyException] yii\base\UnknownPropertyException: Getting unknown property: app\models\FileBarang::getStok in /var/www/html/pos/vendor/yiisoft/yii2/base/Component.php:154
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(298): yii\base\Component->__get('getStok')
+#1 /var/www/html/pos/controllers/SiteController.php(516): yii\db\BaseActiveRecord->__get('getStok')
+#2 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-07-12 09:08:02 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'DEXAMETHAZONE'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606082
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'Eovzte8MRBQvXGNVhZqqpYEbffyGcBCkXaVlT9M-iv1x6Lrx11YeI0kTBBjN9dP0zHkbm88AWMY8lhAjllHorg=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46756'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594519681.999
+    'REQUEST_TIME' => 1594519681
+]
+2020-07-12 09:08:22 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /var/www/html/pos/controllers/SiteController.php:516
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(516): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/var/www/html/p...', 516, Array)
+#1 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-07-12 09:08:22 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'DEXAMETHAZONE'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606102
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '07FlwN8V78-QwKsdGa1gFw1sUU1SIHguvnhy_wvfK6qw0iyE50-1-PaPzFBRwhlGQA43KhtQMEzfSweTTrBJ-Q=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '46926'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594519702.074
+    'REQUEST_TIME' => 1594519702
+]
+2020-07-12 09:12:29 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\ErrorException:2] yii\base\ErrorException: Invalid argument supplied for foreach() in /var/www/html/pos/controllers/SiteController.php:516
+Stack trace:
+#0 /var/www/html/pos/controllers/SiteController.php(516): yii\base\ErrorHandler->handleError(2, 'Invalid argumen...', '/var/www/html/p...', 516, Array)
+#1 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#7 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#8 {main}
+2020-07-12 09:12:29 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'BUSCHOPAN'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606349
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => '-_0dxA-S7DVmsqks1o1pOTQujzh15usmOUyTmyrKH2uYnlSAN8i2AgD9zmGe4hBoeUzpXzyWo0RYf-b3b6V9OA=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '48930'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=BUSCHOPAN'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=BUSCHOPAN'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594519949.125
+    'REQUEST_TIME' => 1594519949
+]
+2020-07-12 09:13:27 [::1][3][o586p283oalo9qg8tvgh2v7k5h][error][yii\base\InvalidArgumentException] yii\base\InvalidArgumentException: Relation names are case sensitive. app\models\FileBarang has a relation named "detailStok" instead of "detailstok". in /var/www/html/pos/vendor/yiisoft/yii2/db/ActiveRelationTrait.php:182
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/BaseActiveRecord.php(301): yii\db\ActiveQuery->findFor('detailstok', Object(app\models\FileBarang))
+#1 /var/www/html/pos/controllers/SiteController.php(516): yii\db\BaseActiveRecord->__get('detailstok')
+#2 [internal function]: app\controllers\SiteController->actionLoaddatabarang()
+#3 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('loaddatabarang', Array)
+#6 /var/www/html/pos/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('site/loaddataba...', Array)
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#8 /var/www/html/pos/web/index.php(12): yii\base\Application->run()
+#9 {main}
+2020-07-12 09:13:27 [::1][3][o586p283oalo9qg8tvgh2v7k5h][info][application] $_GET = [
+    'r' => 'site/loaddatabarang'
+    'value' => 'DEXAMETHAZONE'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    'PHPSESSID' => 'o586p283oalo9qg8tvgh2v7k5h'
+    '_csrf' => '023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    '__id' => 3
+    '__expire' => 1594606407
+    'datatransaksi' => [
+        0 => [
+            'kodebarang' => 'A0003'
+            'namabarang' => 'DEXAMETHAZONE'
+            'qty' => '3'
+            'harga' => 35000
+            'total' => 105000
+            'idstok' => '6'
+        ]
+    ]
+]
+
+$_SERVER = [
+    'HTTP_HOST' => 'localhost'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'application/json, text/javascript, */*; q=0.01'
+    'HTTP_X_CSRF_TOKEN' => 'DYTkaE5VeQiIs7o2f66O5cIWn48y4KSBOiJgvreDgDRu560sdg8jP-783Xs3wfe0j3T56HuQ7ONbERXS8uziZw=='
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) snap Chromium/83.0.4103.116 Chrome/83.0.4103.116 Safari/537.36'
+    'HTTP_X_REQUESTED_WITH' => 'XMLHttpRequest'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_SEC_FETCH_MODE' => 'cors'
+    'HTTP_SEC_FETCH_DEST' => 'empty'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fpenjualan'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_COOKIE' => 'PHPSESSID=o586p283oalo9qg8tvgh2v7k5h; _csrf=023ea150c8175bf6a9f0545a28506050d3fec6f25edac4a33fa03260c6d899a7a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22ccID8ZZ7fOgMHoyQMbfgIpHba3ulEobS%22%3B%7D'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.29 (Ubuntu) Server at localhost Port 80</address>
+'
+    'SERVER_SOFTWARE' => 'Apache/2.4.29 (Ubuntu)'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '::1'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'SERVER_ADMIN' => 'webmaster@localhost'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'REMOTE_PORT' => '49430'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Floaddatabarang&value=DEXAMETHAZONE'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1594520007.898
+    'REQUEST_TIME' => 1594520007
+]

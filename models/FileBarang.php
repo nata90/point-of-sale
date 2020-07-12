@@ -58,4 +58,12 @@ class FileBarang extends \yii\db\ActiveRecord
         ];
     }
 
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getDetailStok()
+    {
+        return $this->hasMany(FileStokBarang::className(), ['kd_barang' => 'kd_barang'])->where(['>','tgl_ed',date('Y-m-d')])->orderBy(['tgl_ed' => SORT_ASC]);
+    }
+
 }

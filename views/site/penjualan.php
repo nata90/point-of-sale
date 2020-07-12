@@ -91,14 +91,14 @@ $this->registerJs(<<<JS
 	  ],
 	  filters: false,
 	  dropdownMenu: false,
-	  minSpareRows: 15,
-	  maxRows: 15,
+	  minSpareRows: 16,
+	  maxRows: 16,
       colWidths: [180, 130, 120, 120, 80, 120, 120, 120],
 	  licenseKey: 'non-commercial-and-evaluation',
 	  formulas: true,
 	 columnSummary: [{
 	  	  sourceColumn:7,
-	      destinationRow: 0,
+	      destinationRow: 1,
 	      destinationColumn: 7,
 	      reversedRowCoords: true,
 	      type: 'sum',
@@ -125,7 +125,10 @@ $this->registerJs(<<<JS
 	          success: function (v) {
 	            that.setDataAtCell(rows, 1, v.kode);
 	            that.setDataAtCell(rows, 2, v.harga);
-	            that.setDataAtCell(rows, 3, v.ed);
+	            that.setDataAtCell(rows, 3, v.defed);
+	            cellPropertiesOption = that.getCellMeta(rows, 3);
+	            cellPropertiesOption.source = v.ed;
+
 	            that.setDataAtCell(rows, 4, v.jumlah);
 	            that.setDataAtCell(rows, 5, v.diskon);
 	            that.setDataAtCell(rows, 6, v.stok);

@@ -38,7 +38,7 @@ use yii\helpers\Url;
     <div class="box-footer">
         <div class="col-lg-6">
             <div class="input-group">
-                <?= Html::submitButton(Yii::t('app', 'Cari'), ['class' => 'btn btn-primary']) ?>&nbsp;
+                <?= Html::submitButton(Yii::t('app', 'Cari'), ['class' => 'btn btn-info']) ?>&nbsp;
             </div>
         </div>
     </div>

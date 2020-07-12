@@ -511,11 +511,21 @@ class SiteController extends Controller
 
         $model = FileBarang::find()->where(['nama_barang'=>$value, 'aktif'=>1])->one();
 
+        $arr_ed = array();
+        $arr_stok = array();
+        if($model != null){
+            foreach($model->detailStok as $val){
+                $arr_ed[] = date('d-m-Y', strtotime($val->tgl_ed));
+                $arr_stok[] = $val->stok_akhir;
+            }
+        }
+
         $return['kode'] = $model->kd_barang;
         $return['harga'] = $model->harga_jual;
-        $return['ed'] = '05/10/2020';
+        $return['ed'] = $arr_ed;
+        $return['defed'] = $arr_ed[0];
         $return['jumlah'] = 1;
-        $return['stok'] = '10';
+        $return['stok'] = $arr_stok[0];
         $return['diskon'] = '0';
         $return['total'] = $model->harga_jual;
 
