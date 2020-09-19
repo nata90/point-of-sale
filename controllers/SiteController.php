@@ -85,7 +85,7 @@ class SiteController extends Controller
         ->all();*/
 
         $data = FileStokBarang::find()
-        ->select(['file_barang.nama_barang as value', 'CONCAT(file_barang.nama_barang, " - ED : ", DATE_FORMAT(file_stok_barang.tgl_ed, "%d-%m-%Y")) as label','file_stok_barang.id as id','file_stok_barang.kd_barang as kd_barang'])
+        ->select(['file_barang.nama_barang as value', 'IF(file_stok_barang.tgl_ed = "1970-01-01",CONCAT(file_barang.nama_barang, " - ED : #"), CONCAT(file_barang.nama_barang, " - ED : ", DATE_FORMAT(file_stok_barang.tgl_ed, "%d-%m-%Y"))) as label','file_stok_barang.id as id','file_stok_barang.kd_barang as kd_barang'])
         ->join('LEFT JOIN', 'file_barang', 'file_stok_barang.kd_barang = file_barang.kd_barang')
         ->where(['file_barang.aktif'=>1])
         ->asArray()
