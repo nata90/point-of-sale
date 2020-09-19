@@ -288,7 +288,6 @@ class PembelianController extends Controller
             $model->no_faktur = $_POST['no_faktur'];
             $return = array();
             if($model->save()){
-                
                foreach($arr_data as $val){
                     $nama_barang = FileBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
                     $arr_item[] = $nama_barang->nama_barang.' : '.$val['jumlah'].' item';
@@ -318,8 +317,8 @@ class PembelianController extends Controller
 
                     $stok_barang->kd_barang = $val['kodebarang'];
                    
+                    
                     $stok_barang->tgl_ed = date('Y-m-d', strtotime($val['tgled']));
-                   
                     
                     $stok_barang->stok_akhir = $jum_stok;
                     $stok_barang->nomor_batch = '-';

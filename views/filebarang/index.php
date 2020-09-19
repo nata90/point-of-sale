@@ -77,7 +77,13 @@ $this->title = Yii::t('app', 'Barang');
                                         $return = '<ul style="text-align:left;">';
                                         if($data != null){
                                             foreach($data as $row){
-                                                $return .= '<li><strong>ED : '.date('d-m-Y',strtotime($row["tgl_ed"])).', STOK : '.round($row["stok_akhir"],0).'</strong></li>';
+                                                if($row["tgl_ed"] == '1970-01-01'){
+                                                    $tgl_ed = '-';
+                                                }else{
+                                                    $tgl_ed = date('d-m-Y',strtotime($row["tgl_ed"]));
+                                                }
+
+                                                $return .= '<li><strong>ED : '.$tgl_ed.', STOK : '.round($row["stok_akhir"],0).'</strong></li>';
                                             }
                                         }
                                         
