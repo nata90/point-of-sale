@@ -16656,3 +16656,728 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1655706000.9384
     'REQUEST_TIME' => 1655706000
 ]
+2022-07-18 13:05:38 [::1][3][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2022-07-18 13:05:38 [::1][3][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.524907453.1656379449'
+    'sinergis' => 'g3jrgtrmpoo4uml4iltbn95vt8'
+    'PHPSESSID' => 'c0us9t88kubl5khr5sop5u8cns'
+    '_csrf' => 'ec4e93b554023f1c32e9d2a8a52afb0258c6c3c644249a2330efc0106b788c4ea:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"F-SklXeeiFhAf78ZOD56AX_3PykPL0kI\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__id' => 3
+    '__authKey' => 'f7700fd6671892bb24883dd2745933e9'
+    '__expire' => 1658210738
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '54336'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'SERVER_ADMIN' => 'webmaster@local.site'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'HTTP_COOKIE' => '_ga=GA1.1.524907453.1656379449; sinergis=g3jrgtrmpoo4uml4iltbn95vt8; PHPSESSID=c0us9t88kubl5khr5sop5u8cns; _csrf=ec4e93b554023f1c32e9d2a8a52afb0258c6c3c644249a2330efc0106b788c4ea%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22F-SklXeeiFhAf78ZOD56AX_3PykPL0kI%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'proxy-nokeepalive' => '1'
+    'SCRIPT_URI' => 'http://localhost/pos/web/index.php'
+    'SCRIPT_URL' => '/pos/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1658124338.985
+    'REQUEST_TIME' => 1658124338
+]
+2022-07-18 07:55:54 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_pos_2.setting_app' doesn't exist in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_064935_create_user.php(46): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_064935_create_user->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'db_pos_2.setting_app' doesn't exist
+The SQL being executed was: INSERT INTO `setting_app` (`username`, `password`, `authkey`, `accesstoken`, `name`, `id_group`, `aktif`) VALUES ('admin', '342acf8a1d482e65876ac159bc540a92', 'f7700fd6671892bb24883dd2745933e9', '-', 'Administrator', '1', '1') in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_064935_create_user.php(46): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_064935_create_user->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => 42S02
+    [1] => 1146
+    [2] => Table 'db_pos_2.setting_app' doesn't exist
+)
+
+2022-07-18 07:55:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'COLORTERM' => 'truecolor'
+    'DISPLAY' => ':1'
+    'HOME' => '/root'
+    'LANG' => 'en_US.UTF-8'
+    'LC_ADDRESS' => 'id_ID.UTF-8'
+    'LC_IDENTIFICATION' => 'id_ID.UTF-8'
+    'LC_MEASUREMENT' => 'id_ID.UTF-8'
+    'LC_MONETARY' => 'id_ID.UTF-8'
+    'LC_NAME' => 'id_ID.UTF-8'
+    'LC_NUMERIC' => 'id_ID.UTF-8'
+    'LC_PAPER' => 'id_ID.UTF-8'
+    'LC_TELEPHONE' => 'id_ID.UTF-8'
+    'LC_TIME' => 'id_ID.UTF-8'
+    'LOGNAME' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/root'
+    'OMF_CONFIG' => '/root/.config/omf'
+    'OMF_PATH' => '/root/.local/share/omf'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/var/www/html/pos'
+    'SHELL' => '/usr/bin/fish'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/su'
+    'SUDO_GID' => '1000'
+    'SUDO_UID' => '1000'
+    'SUDO_USER' => 'nata'
+    'TERM' => 'xterm-256color'
+    'USER' => 'root'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1658130952.6369
+    'REQUEST_TIME' => 1658130952
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-07-18 07:58:17 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'created_at' doesn't have a default value in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_064935_create_user.php(46): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_064935_create_user->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'created_at' doesn't have a default value
+The SQL being executed was: INSERT INTO `user` (`username`, `password`, `authkey`, `accesstoken`, `name`, `id_group`, `aktif`) VALUES ('admin', '342acf8a1d482e65876ac159bc540a92', 'f7700fd6671892bb24883dd2745933e9', '-', 'Administrator', 1, 1) in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_064935_create_user.php(46): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_064935_create_user->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'created_at' doesn't have a default value
+)
+
+2022-07-18 07:58:15 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'COLORTERM' => 'truecolor'
+    'DISPLAY' => ':1'
+    'HOME' => '/root'
+    'LANG' => 'en_US.UTF-8'
+    'LC_ADDRESS' => 'id_ID.UTF-8'
+    'LC_IDENTIFICATION' => 'id_ID.UTF-8'
+    'LC_MEASUREMENT' => 'id_ID.UTF-8'
+    'LC_MONETARY' => 'id_ID.UTF-8'
+    'LC_NAME' => 'id_ID.UTF-8'
+    'LC_NUMERIC' => 'id_ID.UTF-8'
+    'LC_PAPER' => 'id_ID.UTF-8'
+    'LC_TELEPHONE' => 'id_ID.UTF-8'
+    'LC_TIME' => 'id_ID.UTF-8'
+    'LOGNAME' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/root'
+    'OMF_CONFIG' => '/root/.config/omf'
+    'OMF_PATH' => '/root/.local/share/omf'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/var/www/html/pos'
+    'SHELL' => '/usr/bin/fish'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/su'
+    'SUDO_GID' => '1000'
+    'SUDO_UID' => '1000'
+    'SUDO_USER' => 'nata'
+    'TERM' => 'xterm-256color'
+    'USER' => 'root'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1658131095.078
+    'REQUEST_TIME' => 1658131095
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-07-18 07:59:25 [-][-][-][error][ParseError] ParseError: syntax error, unexpected ''aktif'' (T_CONSTANT_ENCAPSED_STRING), expecting ']' in /var/www/html/pos/migrations/m190730_070942_create_usergroup.php:42
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/MigrateController.php(197): yii\console\controllers\BaseMigrateController->includeMigrationFile()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(757): yii\console\controllers\MigrateController->createMigration()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#3 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#6 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#11 /var/www/html/pos/yii(20): yii\base\Application->run()
+#12 {main}
+2022-07-18 07:59:23 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'COLORTERM' => 'truecolor'
+    'DISPLAY' => ':1'
+    'HOME' => '/root'
+    'LANG' => 'en_US.UTF-8'
+    'LC_ADDRESS' => 'id_ID.UTF-8'
+    'LC_IDENTIFICATION' => 'id_ID.UTF-8'
+    'LC_MEASUREMENT' => 'id_ID.UTF-8'
+    'LC_MONETARY' => 'id_ID.UTF-8'
+    'LC_NAME' => 'id_ID.UTF-8'
+    'LC_NUMERIC' => 'id_ID.UTF-8'
+    'LC_PAPER' => 'id_ID.UTF-8'
+    'LC_TELEPHONE' => 'id_ID.UTF-8'
+    'LC_TIME' => 'id_ID.UTF-8'
+    'LOGNAME' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/root'
+    'OMF_CONFIG' => '/root/.config/omf'
+    'OMF_PATH' => '/root/.local/share/omf'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/var/www/html/pos'
+    'SHELL' => '/usr/bin/fish'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/su'
+    'SUDO_GID' => '1000'
+    'SUDO_UID' => '1000'
+    'SUDO_USER' => 'nata'
+    'TERM' => 'xterm-256color'
+    'USER' => 'root'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1658131163.5751
+    'REQUEST_TIME' => 1658131163
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-07-18 08:00:06 [-][-][-][error][yii\db\Exception] PDOException: SQLSTATE[HY000]: General error: 1364 Field 'created_at' doesn't have a default value in /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php:1302
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1302): PDOStatement->execute()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_070942_create_usergroup.php(41): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_070942_create_usergroup->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+
+Next yii\db\Exception: SQLSTATE[HY000]: General error: 1364 Field 'created_at' doesn't have a default value
+The SQL being executed was: INSERT INTO `user_group` (`group_name`, `aktif`) VALUES ('admin', 1) in /var/www/html/pos/vendor/yiisoft/yii2/db/Schema.php:676
+Stack trace:
+#0 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1307): yii\db\Schema->convertException()
+#1 /var/www/html/pos/vendor/yiisoft/yii2/db/Command.php(1102): yii\db\Command->internalExecute()
+#2 /var/www/html/pos/vendor/yiisoft/yii2/db/Migration.php(232): yii\db\Command->execute()
+#3 /var/www/html/pos/migrations/m190730_070942_create_usergroup.php(41): yii\db\Migration->insert()
+#4 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(758): m190730_070942_create_usergroup->up()
+#5 /var/www/html/pos/vendor/yiisoft/yii2/console/controllers/BaseMigrateController.php(216): yii\console\controllers\BaseMigrateController->migrateUp()
+#6 [internal function]: yii\console\controllers\BaseMigrateController->actionUp()
+#7 /var/www/html/pos/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array()
+#8 /var/www/html/pos/vendor/yiisoft/yii2/base/Controller.php(178): yii\base\InlineAction->runWithParams()
+#9 /var/www/html/pos/vendor/yiisoft/yii2/console/Controller.php(182): yii\base\Controller->runAction()
+#10 /var/www/html/pos/vendor/yiisoft/yii2/base/Module.php(552): yii\console\Controller->runAction()
+#11 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(180): yii\base\Module->runAction()
+#12 /var/www/html/pos/vendor/yiisoft/yii2/console/Application.php(147): yii\console\Application->runAction()
+#13 /var/www/html/pos/vendor/yiisoft/yii2/base/Application.php(384): yii\console\Application->handleRequest()
+#14 /var/www/html/pos/yii(20): yii\base\Application->run()
+#15 {main}
+Additional Information:
+Array
+(
+    [0] => HY000
+    [1] => 1364
+    [2] => Field 'created_at' doesn't have a default value
+)
+
+2022-07-18 08:00:04 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = []
+
+$_SERVER = [
+    'COLORTERM' => 'truecolor'
+    'DISPLAY' => ':1'
+    'HOME' => '/root'
+    'LANG' => 'en_US.UTF-8'
+    'LC_ADDRESS' => 'id_ID.UTF-8'
+    'LC_IDENTIFICATION' => 'id_ID.UTF-8'
+    'LC_MEASUREMENT' => 'id_ID.UTF-8'
+    'LC_MONETARY' => 'id_ID.UTF-8'
+    'LC_NAME' => 'id_ID.UTF-8'
+    'LC_NUMERIC' => 'id_ID.UTF-8'
+    'LC_PAPER' => 'id_ID.UTF-8'
+    'LC_TELEPHONE' => 'id_ID.UTF-8'
+    'LC_TIME' => 'id_ID.UTF-8'
+    'LOGNAME' => 'root'
+    'LS_COLORS' => 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'
+    'MAIL' => '/var/mail/root'
+    'OMF_CONFIG' => '/root/.config/omf'
+    'OMF_PATH' => '/root/.local/share/omf'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'
+    'PWD' => '/var/www/html/pos'
+    'SHELL' => '/usr/bin/fish'
+    'SHLVL' => '1'
+    'SUDO_COMMAND' => '/bin/su'
+    'SUDO_GID' => '1000'
+    'SUDO_UID' => '1000'
+    'SUDO_USER' => 'nata'
+    'TERM' => 'xterm-256color'
+    'USER' => 'root'
+    'XAUTHORITY' => '/run/user/1000/gdm/Xauthority'
+    'XDG_DATA_DIRS' => '/usr/local/share:/usr/share:/var/lib/snapd/desktop'
+    'PHP_SELF' => 'yii'
+    'SCRIPT_NAME' => 'yii'
+    'SCRIPT_FILENAME' => 'yii'
+    'PATH_TRANSLATED' => 'yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1658131204.8221
+    'REQUEST_TIME' => 1658131204
+    'argv' => [
+        0 => 'yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]
+2022-07-18 15:01:35 [::1][1][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2022-07-18 15:01:35 [::1][1][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.524907453.1656379449'
+    'sinergis' => 'g3jrgtrmpoo4uml4iltbn95vt8'
+    'PHPSESSID' => '6jj6lo76nlgnhbmg3tqfn28rf2'
+    '_csrf' => 'dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 1
+    '__authKey' => 'f7700fd6671892bb24883dd2745933e9'
+    '__expire' => 1658217695
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52676'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'SERVER_ADMIN' => 'webmaster@local.site'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'HTTP_COOKIE' => '_ga=GA1.1.524907453.1656379449; sinergis=g3jrgtrmpoo4uml4iltbn95vt8; PHPSESSID=6jj6lo76nlgnhbmg3tqfn28rf2; _csrf=dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'proxy-nokeepalive' => '1'
+    'SCRIPT_URI' => 'http://localhost/pos/web/index.php'
+    'SCRIPT_URL' => '/pos/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1658131295.4797
+    'REQUEST_TIME' => 1658131295
+]
+2022-07-18 15:02:59 [::1][1][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2022-07-18 15:02:59 [::1][1][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.524907453.1656379449'
+    'sinergis' => 'g3jrgtrmpoo4uml4iltbn95vt8'
+    'PHPSESSID' => '6jj6lo76nlgnhbmg3tqfn28rf2'
+    '_csrf' => 'dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 1
+    '__authKey' => 'f7700fd6671892bb24883dd2745933e9'
+    '__expire' => 1658217779
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '34714'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'SERVER_ADMIN' => 'webmaster@local.site'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'HTTP_COOKIE' => '_ga=GA1.1.524907453.1656379449; sinergis=g3jrgtrmpoo4uml4iltbn95vt8; PHPSESSID=6jj6lo76nlgnhbmg3tqfn28rf2; _csrf=dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=filebarang%2Findex'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'proxy-nokeepalive' => '1'
+    'SCRIPT_URI' => 'http://localhost/pos/web/index.php'
+    'SCRIPT_URL' => '/pos/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1658131379.7224
+    'REQUEST_TIME' => 1658131379
+]
+2022-07-18 15:03:34 [::1][1][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/SiteController.php:75
+2022-07-18 15:03:34 [::1][1][-][info][application] $_GET = [
+    'r' => 'site/index'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.524907453.1656379449'
+    'sinergis' => 'g3jrgtrmpoo4uml4iltbn95vt8'
+    'PHPSESSID' => '6jj6lo76nlgnhbmg3tqfn28rf2'
+    '_csrf' => 'dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 1
+    '__authKey' => 'f7700fd6671892bb24883dd2745933e9'
+    '__expire' => 1658217814
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'REQUEST_URI' => '/pos/web/index.php?r=site%2Findex'
+    'QUERY_STRING' => 'r=site%2Findex'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '36598'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'SERVER_ADMIN' => 'webmaster@local.site'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'HTTP_COOKIE' => '_ga=GA1.1.524907453.1656379449; sinergis=g3jrgtrmpoo4uml4iltbn95vt8; PHPSESSID=6jj6lo76nlgnhbmg3tqfn28rf2; _csrf=dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=site%2Fdashboard'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'proxy-nokeepalive' => '1'
+    'SCRIPT_URI' => 'http://localhost/pos/web/index.php'
+    'SCRIPT_URL' => '/pos/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1658131414.7994
+    'REQUEST_TIME' => 1658131414
+]
+2022-07-18 15:04:34 [::1][1][-][warning][yii\web\Session::init] Session is already started
+    in /var/www/html/pos/controllers/PembelianController.php:83
+2022-07-18 15:04:34 [::1][1][-][info][application] $_GET = [
+    'r' => 'pembelian/create'
+]
+
+$_POST = []
+
+$_FILES = []
+
+$_COOKIE = [
+    '_ga' => 'GA1.1.524907453.1656379449'
+    'sinergis' => 'g3jrgtrmpoo4uml4iltbn95vt8'
+    'PHPSESSID' => '6jj6lo76nlgnhbmg3tqfn28rf2'
+    '_csrf' => 'dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq\";}'
+]
+
+$_SESSION = [
+    '__flash' => []
+    '__returnUrl' => 'http://localhost/pos/web/index.php?r=site%2Flogout'
+    '__id' => 1
+    '__authKey' => 'f7700fd6671892bb24883dd2745933e9'
+    '__expire' => 1658217874
+]
+
+$_SERVER = [
+    'USER' => 'www-data'
+    'HOME' => '/var/www'
+    'SCRIPT_NAME' => '/pos/web/index.php'
+    'REQUEST_URI' => '/pos/web/index.php?r=pembelian%2Fcreate'
+    'QUERY_STRING' => 'r=pembelian%2Fcreate'
+    'REQUEST_METHOD' => 'GET'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'REMOTE_PORT' => '52090'
+    'SCRIPT_FILENAME' => '/var/www/html/pos/web/index.php'
+    'SERVER_ADMIN' => 'webmaster@local.site'
+    'CONTEXT_DOCUMENT_ROOT' => '/var/www/html'
+    'CONTEXT_PREFIX' => ''
+    'REQUEST_SCHEME' => 'http'
+    'DOCUMENT_ROOT' => '/var/www/html'
+    'REMOTE_ADDR' => '::1'
+    'SERVER_PORT' => '80'
+    'SERVER_ADDR' => '::1'
+    'SERVER_NAME' => 'localhost'
+    'SERVER_SOFTWARE' => 'Apache/2.4.41 (Ubuntu)'
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.41 (Ubuntu) Server at localhost Port 80</address>
+'
+    'PATH' => '/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/snap/bin'
+    'HTTP_COOKIE' => '_ga=GA1.1.524907453.1656379449; sinergis=g3jrgtrmpoo4uml4iltbn95vt8; PHPSESSID=6jj6lo76nlgnhbmg3tqfn28rf2; _csrf=dd02bcfcb5834425728ccf7720678ee5f1b9eec4b33bcda1c7b35ef67c3a1888a%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22wFvlDRMeVueQhy-AbUVMT4EocSlcc0hq%22%3B%7D'
+    'HTTP_ACCEPT_LANGUAGE' => 'en-US,en;q=0.9,id;q=0.8'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br'
+    'HTTP_REFERER' => 'http://localhost/pos/web/index.php?r=transaksi%2Fkelolapembelian'
+    'HTTP_SEC_FETCH_DEST' => 'document'
+    'HTTP_SEC_FETCH_USER' => '?1'
+    'HTTP_SEC_FETCH_MODE' => 'navigate'
+    'HTTP_SEC_FETCH_SITE' => 'same-origin'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_SEC_CH_UA_PLATFORM' => '\"Linux\"'
+    'HTTP_SEC_CH_UA_MOBILE' => '?0'
+    'HTTP_SEC_CH_UA' => '\".Not/A)Brand\";v=\"99\", \"Google Chrome\";v=\"103\", \"Chromium\";v=\"103\"'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_HOST' => 'localhost'
+    'proxy-nokeepalive' => '1'
+    'SCRIPT_URI' => 'http://localhost/pos/web/index.php'
+    'SCRIPT_URL' => '/pos/web/index.php'
+    'FCGI_ROLE' => 'RESPONDER'
+    'PHP_SELF' => '/pos/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1658131474.8881
+    'REQUEST_TIME' => 1658131474
+]

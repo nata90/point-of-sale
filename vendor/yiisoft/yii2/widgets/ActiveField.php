@@ -306,7 +306,7 @@ class ActiveField extends Component
      *   See also [[\yii\helpers\Html::tag()]].
      *
      * If you set a custom `id` for the error element, you may need to adjust the [[$selectors]] accordingly.
-     * @see $errorOptions
+     * @see errorOptions
      * @return $this the field object itself.
      */
     public function error($options = [])
@@ -551,7 +551,7 @@ class ActiveField extends Component
 
         $this->addAriaAttributes($options);
         $this->adjustLabelFor($options);
-        
+
         if ($enclosedByLabel) {
             $this->parts['{input}'] = Html::activeRadio($this->model, $this->attribute, $options);
             $this->parts['{label}'] = '';
@@ -603,7 +603,7 @@ class ActiveField extends Component
 
         $this->addAriaAttributes($options);
         $this->adjustLabelFor($options);
-        
+
         if ($enclosedByLabel) {
             $this->parts['{input}'] = Html::activeCheckbox($this->model, $this->attribute, $options);
             $this->parts['{label}'] = '';
@@ -756,7 +756,7 @@ class ActiveField extends Component
      * the following code, assuming that `$form` is your [[ActiveForm]] instance:
      *
      * ```php
-     * $form->field($model, 'date')->widget(\yii\widgets\MaskedInput::className(), [
+     * $form->field($model, 'date')->widget(\yii\widgets\MaskedInput::class, [
      *     'mask' => '99/99/9999',
      * ]);
      * ```
@@ -925,11 +925,14 @@ class ActiveField extends Component
      */
     protected function addAriaAttributes(&$options)
     {
+        // Get proper attribute name when attribute name is tabular.
+        $attributeName = Html::getAttributeName($this->attribute);
+
         if ($this->addAriaAttributes) {
-            if (!isset($options['aria-required']) && $this->model->isAttributeRequired($this->attribute)) {
+            if (!isset($options['aria-required']) && $this->model->isAttributeRequired($attributeName)) {
                 $options['aria-required'] = 'true';
             }
-            if (!isset($options['aria-invalid']) && $this->model->hasErrors($this->attribute)) {
+            if (!isset($options['aria-invalid']) && $this->model->hasErrors($attributeName)) {
                 $options['aria-invalid'] = 'true';
             }
         }

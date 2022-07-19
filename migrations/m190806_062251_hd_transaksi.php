@@ -31,7 +31,7 @@ class m190806_062251_hd_transaksi extends Migration
     {
         $this->createTable('hd_transaksi', [
           'id' => 'pk',
-          'no_transaksi' => $this->string(64)->notNull(),
+          'no_transaksi' => $this->string(60)->notNull(),
           'tgl_bayar' => $this->datetime()->notNull(),
           'status_bayar' => $this->tinyInteger(1)->defaultValue(0),
           'total' => $this->integer(),

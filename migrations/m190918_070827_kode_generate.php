@@ -34,6 +34,12 @@ class m190918_070827_kode_generate extends Migration
           'nama_alias' => $this->string(10)->notNull(),
           'urutan' => $this->integer(11)->defaultValue(0),
         ]);
+
+        $this->insert('kode_generate', [
+            'nama_transaksi' => 'kode barang',
+            'nama_alias' => 'BRG',
+            'urutan'=> '1'
+        ]);
     }
 
     public function down()

@@ -37,6 +37,12 @@ class m190730_070942_create_usergroup extends Migration
           'updated_at' => $this->datetime(),
         ]);
 
+        $this->insert('user_group', [
+            'group_name' => 'admin',
+            'aktif' => 1,
+            'created_at' => date('Y-m-d H:i:s')
+          ]);
+
     }
 
     public function down()

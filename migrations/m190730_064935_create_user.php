@@ -29,28 +29,29 @@ class m190730_064935_create_user extends Migration
     // Use up()/down() to run migration code without a transaction.
     public function up()
     {
-        /*$this->createTable('user', [
-          'id' => $this->primaryKey(),
-          'username' => $this->string(64)->notNull(),
-          'password' => $this->integer()->notNull()->defaultValue(10),
-          'description' => $this->text(),
-          'rule_name' => $this->string(64),
-          'data' => $this->text(),
-          'created_at' => $this->datetime()->notNull(),
-          'updated_at' => $this->datetime(),
-        ]);*/
-
         $this->createTable('user', [
           'id' => 'pk',
           'username' => $this->string(64)->notNull(),
           'password' => $this->string(100)->notNull(),
+          'authkey' => $this->string(100)->notNull(),
+          'accesstoken' => $this->string(100)->notNull(),
           'name' => $this->string(100),
-          'id_group' =>$this->integer(11),
+          'id_group' =>$this->integer(),
           'aktif' => $this->tinyInteger(1)->defaultValue(0),
           'created_at' => $this->datetime()->notNull(),
           'updated_at' => $this->datetime(),
         ]);
 
+        $this->insert('user', [
+          'username' => 'admin',
+          'password' => '342acf8a1d482e65876ac159bc540a92',
+          'authkey'=> 'f7700fd6671892bb24883dd2745933e9',
+          'accesstoken'=> '-',
+          'name'=> 'Administrator',
+          'id_group'=> '1',
+          'aktif'=> '1',
+          'created_at'=>date('Y-m-d H:i:s'),
+        ]);
     }
 
     public function down()

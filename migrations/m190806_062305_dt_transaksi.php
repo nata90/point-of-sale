@@ -36,6 +36,7 @@ class m190806_062305_dt_transaksi extends Migration
           'harga_satuan' => $this->integer(11),
           'qty' => $this->integer(10),
           'total_harga' => $this->integer(11),
+          'id_stok_barang' => $this->integer(),
           'status_hapus' => $this->tinyInteger(1)->defaultValue(0),
           'tgl_hapus' => $this->datetime()->notNull(),
         ]);
