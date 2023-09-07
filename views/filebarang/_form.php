@@ -16,7 +16,7 @@ use yii\widgets\ActiveForm;
 
             <?= $form->field($model, 'nama_barang')->textInput(['maxlength' => true]) ?>
 
-            <?= $form->field($model, 'lokasi')->textInput(['maxlength' => true]) ?>
+            <?= $form->field($model, 'lokasi')->textInput(['maxlength' => true, 'value'=>'-']) ?>
 
             <?= $form->field($model, 'harga_beli')->textInput() ?>
 

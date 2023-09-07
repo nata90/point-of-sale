@@ -120,4 +120,13 @@ return array (
       '@yii/swiftmailer' => $vendorDir . '/yiisoft/yii2-swiftmailer/src',
     ),
   ),
+  'aryelds/yii2-sweet-alert' => 
+  array (
+    'name' => 'aryelds/yii2-sweet-alert',
+    'version' => 'dev-master',
+    'alias' => 
+    array (
+      '@aryelds/sweetalert' => $vendorDir . '/aryelds/yii2-sweet-alert',
+    ),
+  ),
 );

@@ -73,6 +73,13 @@ JS
 
                         //'id',
                         //'no_transaksi',
+                        [
+                            'label'=>'No Transaksi',
+                            'format'=>'raw',
+                            'value'=>function($model){
+                                return $model->no_transaksi;
+                            },
+                        ],
                         'kd_barang',
                         [
                             'label'=>'Tanggal Transaksi',

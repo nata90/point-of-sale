@@ -36,6 +36,7 @@ class AppAsset extends AssetBundle
         'js/socket.io.js',
         'js/notif.js',
         'js/handsontable.full.min.js',
+        'js/sweetalert.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',

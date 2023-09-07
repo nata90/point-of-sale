@@ -142,6 +142,8 @@ class PembelianController extends Controller
     }
 
     public function actionListpembelian(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $tgl = $_POST['tgl'];
         $kd_bar = $_POST['kd_bar'];
         $nm_barang = $_POST['nm_barang'];
@@ -191,10 +193,12 @@ class PembelianController extends Controller
             'arr_data' => $session['datapembelian'],
         ],true,false);
 
-        echo Json::encode($data);
+        return $data;
     }
 
      public function actionDeleteitem(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $key = $_GET['key'];
 
         $session = new Session;
@@ -209,10 +213,12 @@ class PembelianController extends Controller
             'arr_data' => $session['datapembelian'],
         ],true,false);
 
-        echo Json::encode($data);
+        return $data;
      }
 
     public function actionLoadformbarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $model = new FileBarang();
         $kode_barang = Utility::generateKodeBarang();
         $model->kd_barang = $kode_barang;
@@ -222,10 +228,12 @@ class PembelianController extends Controller
             'model' => $model,
         ],true,false);
 
-        echo Json::encode($data);
+        return $data;
     }
 
     public function actionSimpanbarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $kd_barang = $_POST['kd_barang'];
         $nama_barang = $_POST['nama_barang'];
         $lokasi = $_POST['lokasi'];
@@ -260,12 +268,11 @@ class PembelianController extends Controller
             $return['msg'] = implode(', ',$arrData);
         }
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionSimpanpembelian(){
-        /*echo $_POST['no_faktur'];
-        exit();*/
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
         $session = new Session;
         $session->open();
@@ -336,11 +343,13 @@ class PembelianController extends Controller
 
         
 
-        echo Json::encode($return);
+        return $return;
 
     }
 
     public function actionAutocompletebarang($term){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $data = FileBarang::find()
         ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
         ->where(['like', 'nama_barang', $term])
@@ -348,17 +357,19 @@ class PembelianController extends Controller
         ->asArray()
         ->all();
  
-        echo Json::encode($data);
+        return $data;
     }
 
     public function actionAutocompletesupplier($term){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $data = Supplier::find()
         ->select(['nama_supplier as value', 'nama_supplier as  label', 'id as id'])
         ->where(['like', 'nama_supplier', $term])
         ->asArray()
         ->all();
  
-        echo Json::encode($data);
+        return $data;
     }
 
     /**

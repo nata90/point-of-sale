@@ -33,24 +33,26 @@
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
                     ['label' => 'Dashboard', 'icon' => 'bar-chart', 'url' => ['site/dashboard']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
-                    ['label' => 'Pembelian', 'icon' => 'money', 'url' => ['pembelian/create']],
+                    //['label' => 'Pembelian', 'icon' => 'money', 'url' => ['pembelian/create']],
                     ['label' => 'Kelola Penjualan', 'icon' => 'clone', 'url' => ['transaksi/kelolapenjualan']],
-                    ['label' => 'Kelola Pembelian', 'icon' => 'server', 'url' => ['transaksi/kelolapembelian']],
+                    //['label' => 'Kelola Pembelian', 'icon' => 'server', 'url' => ['transaksi/kelolapembelian']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
+                    ['label' => 'Master Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
+                    ['label' => 'User', 'icon' => 'folder', 'url' => ['user/index'],],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/
                     
-                    [
+                    /* [
                         'label' => 'Master',
                         'icon' => 'book',
                         'url' => '#',
                         'options'=>['class'=>'treeview active'],
                         'items' => [
                             ['label' => 'Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
-                            ['label' => 'Supplier', 'icon' => 'folder', 'url' => ['supplier/index'],],
+                            ['label' => 'Supplier', 'icon' => 'folder', 'url' => ['supplier/index'],], 
                         ],
-                    ],
-                    [
+                    ], */
+                    /* [
                         'label' => 'User',
                         'icon' => 'book',
                         'url' => '#',
@@ -59,7 +61,7 @@
                             ['label' => 'Kelola User', 'icon' => 'folder', 'url' => ['user/index'],],
                             //['label' => 'Kelola User Group', 'icon' => 'folder', 'url' => ['usergroup/index'],],
                         ],
-                    ],
+                    ], */
                     ['label' => 'Setting', 'icon' => 'wrench', 'url' => ['setting/index']],
                     ['label' => 'Logout', 'url' => ['site/logout'], 'visible' => !Yii::$app->user->isGuest],
                 ],

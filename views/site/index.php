@@ -8,41 +8,90 @@ use yii\web\JsExpression;
 use yii\helpers\Url;
 
 
+
 $this->title = 'PENJUALAN - POS';
+$style = <<< CSS
+
+.ui-menu-item .ui-menu-item-wrapper.ui-state-active {
+    background: #ADD8E6 !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+} 
+CSS;
+$this->registerCss($style);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
+$this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";');
 $this->registerJs(<<<JS
-	$('#filebarang-nama_barang').focus();
+	$('#field-kode-barang').focus();
 
 	$(document).on("click", "#process-transaction", function () {
 		var url = $(this).attr('url');
 		var kodebarang = $('#field-kode-barang').val();
+		var namabarang = $('#filebarang-nama_barang').val();
 		var qty = $('#qty-barang').val();
-		var idstok = $('#field-id-stokbarang').val();
+		/*var idstok = $('#field-id-stokbarang').val();*/
 
 		if(kodebarang == ''){
-			show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>NAMA BARANG TIDAK BOLEH KOSONG</strong></p>");
+			swal("Kode Barang Tidak Boleh Kosong!",{
+				title:"Perbaiki Kesalahan Berikut!",
+				buttons: {
+					cancel: false,
+					confirm: true,
+				},
+			});
+		}else if(namabarang == ''){
+			swal("Nama Barang Tidak Boleh Kosong!",{
+				title:"Perbaiki Kesalahan Berikut!",
+				buttons: {
+					cancel: false,
+					confirm: true,
+				},
+			});
 		}else if(qty == ''){
-			show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>QTY BARANG TIDAK BOLEH KOSONG</strong></p>");
+			swal("Jumlah Tidak Boleh Kosong!",{
+				title:"Perbaiki Kesalahan Berikut!",
+				buttons: {
+					cancel: false,
+					confirm: true,
+				},
+			});
 		}else{
 			$.ajax({
 				type: 'get',
 				url: url,
 				dataType: 'json',
-				data: {'kodebarang':kodebarang, 'qty':qty, 'idstok':idstok},
+				data: {
+					'kodebarang':kodebarang, 
+					'qty':qty, 
+					'namabarang':namabarang
+					/*'idstok':idstok*/
+				},
 				success: function(v){
-					$('#data-transaksi').html(v.data);
-					$('#filebarang-nama_barang').val('');
-					$('#field-kode-barang').val('');
-					$('#qty-barang').val('');
-					$('#filebarang-nama_barang').focus();
-					$('#subtotal').html(v.subtotal);
-					$('#total').html(v.total);
-					$('#diskon').html(v.diskon);
-					$('#field-total-tagihan').val(v.hidtotal);
-					$('#jumlah-bayar').val('');
-					$('#cashback').html('<b>Rp.0,00</b>');
-					$('#field-total-bayar').val('');
-					$('#field-total-cashback').val('');
+					if(v.datafound == 0){
+						swal(v.msg,{
+							title:"Perbaiki Kesalahan Berikut!",
+							buttons: {
+								cancel: false,
+								confirm: true,
+							},
+						});
+					}else{
+						$('#data-transaksi').html(v.data);
+						$('#filebarang-nama_barang').val('');
+						$('#field-kode-barang').val('');
+						$('#qty-barang').val('');
+						$('#filebarang-nama_barang').focus();
+						$('#subtotal').html(v.subtotal);
+						$('#total').html(v.total);
+						$('#diskon').html(v.diskon);
+						$('#field-total-tagihan').val(v.hidtotal);
+						$('#jumlah-bayar').val('');
+						$('#cashback').html('<b>Rp.0,00</b>');
+						$('#field-total-bayar').val('');
+						$('#field-total-cashback').val('');
+						$('#field-kode-barang').focus();
+					}
+					
 				}
 			});
 		}
@@ -106,10 +155,22 @@ $this->registerJs(<<<JS
     	var url = $(this).attr('url');
 
     	if(totalbayar == 0){
-    		show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>JUMLAH BAYAR WAJIB DI ISI !</strong></p>");
+			swal("Jumlah Bayar Wajib Di Isi",{
+				title:"Perbaiki Kesalahan Berikut!",
+				buttons: {
+					cancel: false,
+					confirm: true,
+				},
+			});
 		}else{
 			if(cashback < 0){
-	    		show_modal("<strong style='color:red;'>ERROR</strong>","<p style='color:red;'><strong>JUMLAH BAYAR KURANG DARI TOTAL TAGIHAN</strong></p>");
+	    		swal("Jumlah Bayar Kurang dari Total",{
+					title:"Perbaiki Kesalahan Berikut!",
+					buttons: {
+						cancel: false,
+						confirm: true,
+					},
+				});
 	    	}else{
 	    		$.ajax({
 					type: 'post',
@@ -141,6 +202,40 @@ $this->registerJs(<<<JS
 		}
     	
     });
+
+	$(document).on("focusout", "#field-kode-barang", function () {
+    	var kode_barang = $(this).val();
+
+		if(kode_barang != ''){
+			$.ajax({
+				type: 'get',
+				url: url_get_nama,
+				dataType: 'json',
+				'beforeSend':function(json)
+				{ 
+					SimpleLoading.start('gears'); 
+				},
+				data: {'kode_barang':kode_barang},
+				success: function(v){
+					if(v.itemfound == 1){
+						$('#filebarang-nama_barang').val(v.nama_barang);
+						$('#qty-barang').focus();
+					}else{
+						swal("barang Tidak Ditemukan",{
+							title:"Perbaiki Kesalahan Berikut!",
+							buttons: {
+								cancel: false,
+								confirm: true,
+							},
+						});
+					}
+					SimpleLoading.stop();
+				},
+				
+			});
+		}
+    	
+    });
     
     
 JS
@@ -151,46 +246,46 @@ JS
 
 	<div class="row">
 
-		<div class="col-md-8">
+		<div class="col-md-12">
 			<div class="box box-danger">
 				
 				<div class="box-body">
 					<div class="row">
-		                <div class="col-xs-7">
-		                	<div class="input-group">
-		                		<span class="input-group-addon"><i class="fa fa-search"></i></span>
+							<div class="col-xs-3">
+								<input type="text" class="form-control input-sm" placeholder="KODE BARANG" id="field-kode-barang">
+							</div>
+							<div class="col-xs-5">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-tasks"></i></span>
 
-									<?php 
-									echo Html::hiddenInput('kode_barang', '', ['id'=>'field-kode-barang']);
-									echo Html::hiddenInput('id_stok', '', ['id'=>'field-id-stokbarang']);
-									echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
-									echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
-									echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
-									echo AutoComplete::widget([
-									    'model' => $model,
-									    'attribute' => 'nama_barang',
-									    'options' => ['class' => 'form-control input-sm'],
-									    'clientOptions' => [
-									        'source' => $data,
-									        'minLength'=>'2', 
-											'autoFill'=>true,
-											'select' => new JsExpression("function( event, ui ) {
-										        $('#field-kode-barang').val(ui.item.kd_barang);
-										        $('#field-id-stokbarang').val(ui.item.id);
-										     }")
-									    ],
-									]); ?>
-		                	</div>
-		                 	
-		                </div>
-		                <div class="col-xs-2">
-		                	<input type="text" class="form-control input-sm" placeholder="QTY" id="qty-barang">
-		                </div>
-		                <div class="col-xs-2">
-		                	<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
-		                </div>	
-						
-						
+										<?php 
+										
+										/*echo Html::hiddenInput('id_stok', '', ['id'=>'field-id-stokbarang']);*/
+										echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
+										echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
+										echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
+										echo AutoComplete::widget([
+											'model' => $model,
+											'attribute' => 'nama_barang',
+											'options' => ['class' => 'form-control input-sm','placeholder'=>'NAMA BARANG',],
+											'clientOptions' => [
+												'source' => $data,
+												'minLength'=>'2', 
+												'autoFill'=>true,
+												'select' => new JsExpression("function( event, ui ) {
+													$('#field-kode-barang').val(ui.item.id);
+												}")
+											],
+										]); ?>
+								</div>
+								
+							</div>
+							<div class="col-xs-2">
+								<input type="number" class="form-control input-sm" placeholder="JUMLAH" id="qty-barang">
+							</div>
+							<div class="col-xs-2">
+								<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
+							</div>
 					</div>
 					
 				</div>

@@ -22,9 +22,9 @@ $this->title = Yii::t('app', 'Barang');
                 <div class="nav-tabs-custom">
                     <ul class="nav nav-tabs">
                         <li class="active"><a href="#tab_1" data-toggle="tab" aria-expanded="false">Semua</a></li>
-                        <li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Stok Habis</a></li>
+                        <?php /* <li><a href="#tab_2" data-toggle="tab" aria-expanded="true">Stok Habis</a></li>
                         <li><a href="#tab_3" data-toggle="tab" aria-expanded="true">Barang ED</a></li>
-                        <li><a href="#tab_4" data-toggle="tab" aria-expanded="true">Hampir ED</a></li>
+                        <li><a href="#tab_4" data-toggle="tab" aria-expanded="true">Hampir ED</a></li> */ ?>
                     </ul>
                 </div>
                 <div class="tab-content">
@@ -118,7 +118,8 @@ $this->title = Yii::t('app', 'Barang');
 
                                 [
                                     'class' => 'yii\grid\ActionColumn',
-                                    'template'=>'{update}&nbsp{delete}',
+                                    //'template'=>'{update}&nbsp;&nbsp;&nbsp;{delete}',
+                                    'template'=>'{update}',
                                     //'buttons'  =>
                                 ],
                             ],

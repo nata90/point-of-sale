@@ -101,4 +101,23 @@ class HdTransaksi extends \yii\db\ActiveRecord
 
        return implode(', ', $arr_data);
     }
+
+    public static function cetakNota($no_transaksi){
+        $detail = DtTransaksi::find()->where(['no_transaksi'=>$no_transaksi])->all();
+
+
+        $template = 'cetak_nota'; 
+        ob_start();
+        include(\Yii::$app->basePath.'/web/template_dotmatrix/'.$template.'.php');
+        $content = ob_get_clean();
+        
+        fwrite($handle, $Data);
+        fclose($handle);
+
+        $smd = 'lp '.$file;
+        $output =  shell_exec($smd);
+
+        unlink($file); 
+        return $output;
+    }
 }

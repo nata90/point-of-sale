@@ -37,7 +37,7 @@ class m190806_062251_hd_transaksi extends Migration
           'total' => $this->integer(),
           'jumlah_bayar' => $this->integer(),
           'status_hapus' => $this->tinyInteger(1)->defaultValue(0),
-          'tgl_hapus' => $this->datetime()->notNull(),
+          'tgl_hapus' => $this->datetime(),
         ]);
     }
 

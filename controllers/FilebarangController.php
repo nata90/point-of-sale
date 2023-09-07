@@ -86,6 +86,7 @@ class FilebarangController extends Controller
 
         $kode_barang = Utility::generateKodeBarang();
         $model->kd_barang = $kode_barang;
+        $model->aktif = true;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();

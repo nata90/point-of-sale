@@ -182,61 +182,21 @@ JS
 			    				<?php if($popular != null){ 
 			    						foreach($popular as $row){
 			    				?>
-			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $row['nama_barang'];?></span><span class="label label-success"><?php echo $row['total'];?> ITEM</span></li>
+			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"> <?php echo $row['kd_barang'];?> - <?php echo $row['nama_barang'];?></span><span class="label label-success"><?php echo $row['total'];?> ITEM</span></li>
 			    			    <?php }
 			    				}else{ ?>
 			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
 			    				<?php } ?>
 			    			</ul>
 			            </div>
-			            <div id="almost-ed" class="col-md-4">
-		            		<p class="text-left" style="font-size:16px;"><strong>HAMPIR ED</strong></p>
-			            	<ul class="todo-list ui-sortable">
-			    				<?php if($model_almost_ed != null){ 
-			    						foreach($model_almost_ed as $val){
-			    				?>
-			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $val->barang->nama_barang;?> # <?php echo date('d-m-Y', strtotime($val->tgl_ed))?> # <?php echo $val->barang->lokasi;?></span></li>
-			    			    <?php }
-			    				}else{ ?>
-			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
-			    				<?php } ?>
-			    			</ul>
-			            </div>
-			            <div id="zero-stok" class="col-md-4">
-		            		<p class="text-left" style="font-size:16px;"><strong>Stok Kosong</strong></p>
-			            	<ul class="todo-list ui-sortable">
-			    				<?php if($model_zero_stok != null){ 
-			    						foreach($model_zero_stok as $val){
-			    				?>
-			    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $val->nama_barang;?> # <?php echo $val->lokasi;?></span></li>
-			    			    <?php }
-			    				}else{ ?>
-			    					<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"></span></li>
-			    				<?php } ?>
-			    			</ul>
-			            </div>
+			            
+			            
 		            </div>
                 </div>
             </div>
           </div>
 	    </div>
-	    <?php /*<div class="col-md-4">
-	    	<div class="box box-danger">
-	    		<div class="box-header with-border">
-		    		<h3 class="box-title">10 TERLARIS BULAN INI</h3>
-		    	</div>
-	    		<div class="box-body">
-	    			<ul class="todo-list ui-sortable">
-	    				<?php if($popular != null){ 
-	    						foreach($popular as $row){
-	    				?>
-	    			    			<li><span class="handle ui-sortable-handle"><i class="fa fa-ellipsis-v"></i><i class="fa fa-ellipsis-v"></i></span><span class="text"><?php echo $row['nama_barang'];?></span><span class="label label-success"><?php echo $row['total'];?> ITEM</span></li>
-	    			    <?php }
-	    				} ?>
-	    			</ul>
-	    		</div>
-	    	</div>
-	    </div>*/ ?>
+	    
 	    
 	</div>
 

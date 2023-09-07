@@ -149,6 +149,13 @@ class TransaksiController extends Controller
         $exporter = new Spreadsheet([
             'dataProvider' => $dataProvider,
             'columns' => [
+                [
+                    'label'=>'No Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->no_transaksi;
+                    },
+                ],
                 'kd_barang',
                 [
                     'label'=>'Tanggal Transaksi',
@@ -281,6 +288,8 @@ class TransaksiController extends Controller
     }
 
     public function actionSendpenjualan(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $session = new Session;
         $session->open();
 
@@ -311,6 +320,13 @@ class TransaksiController extends Controller
         $exporter = new Spreadsheet([
             'dataProvider' => $dataProvider,
             'columns' => [
+                [
+                    'label'=>'No Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return $model->no_transaksi;
+                    },
+                ],
                 'kd_barang',
                 [
                     'label'=>'Tanggal Transaksi',
@@ -382,7 +398,7 @@ class TransaksiController extends Controller
         unlink($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file);
         $rows['email'] = $setting->email;
 
-        echo Json::encode($rows);
+        return $rows;
     }
 
     /**

@@ -5,6 +5,7 @@
 		<table border="1" style="font-size:12px;border-collapse:collapse;border: 1px solid black;">
 			<tr>
 				<td width="30" align="center">NO</td>
+				<td width="100" align="center">No Transaksi</td>
 				<td width="100" align="center">Kode Barang</td>
 				<td width="120" align="center">Tanggal Transaksi</td>
 				<td width="200" align="center">Nama Barang</td>
@@ -18,6 +19,7 @@
 		foreach($model as $val){ ?>
 			<tr>
 				<td><?php echo $no;?></td>
+				<td><?php echo $val->no_transaksi;?></td>
 				<td><?php echo $val->kd_barang;?></td>
 				<td><?php echo date('d-m-Y', strtotime($val->header->tgl_bayar));?></td>
 				<td><?php echo $val->barang->nama_barang;?></td>
@@ -29,6 +31,7 @@
 		$all_total = $all_total + ($val->harga_satuan * $val->qty);
 		} ?>
 			<tr>
+				<td></td>
 				<td></td>
 				<td></td>
 				<td></td>

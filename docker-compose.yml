@@ -2,14 +2,18 @@ version: '2'
 services:
   posapp:
     build: .
+    restart: always
     ports:
       - '8000:80'
-    depends on:
+    depends_on:
       - 'databasepos'
+    #command: "./wait.sh --wait \"databasepos:3306\" --command \"php yii migrate\""
   databasepos:
     image: mysql
     command: --default-authentication-plugin=mysql_native_password
     restart: always
+    volumes:
+      - /usr/local/mysql:/var/lib/mysql
     environment:
       MYSQL_DATABASE: db_pos
       MYSQL_USER: nata

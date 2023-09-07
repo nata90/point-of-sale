@@ -34,7 +34,7 @@ class SiteController extends Controller
                 'only' => ['logout','index','dashboard'],
                 'rules' => [
                     [
-                        'actions' => ['logout','index','dashboard','searchgrafik'],
+                        'actions' => ['logout','index','dashboard','searchgrafik','getnamabarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -78,25 +78,20 @@ class SiteController extends Controller
 
         $model = new FileBarang();
 
-        /*$data = FileBarang::find()
+        $data = FileBarang::find()
         ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
         ->where(['aktif'=>1])
         ->asArray()
-        ->all();*/
+        ->all();
 
-        $data = FileStokBarang::find()
+        /* $data = FileStokBarang::find()
         ->select(['file_barang.nama_barang as value', 'IF(file_stok_barang.tgl_ed = "1970-01-01",CONCAT(file_barang.nama_barang, " - ED : #"), CONCAT(file_barang.nama_barang, " - ED : ", DATE_FORMAT(file_stok_barang.tgl_ed, "%d-%m-%Y"))) as label','file_stok_barang.id as id','file_stok_barang.kd_barang as kd_barang'])
         ->join('LEFT JOIN', 'file_barang', 'file_stok_barang.kd_barang = file_barang.kd_barang')
         ->where(['file_barang.aktif'=>1])
         ->asArray()
-        ->all();
+        ->all(); */
 
         $setting = SettingApp::find()->one();
-
-       /*echo '<pre>';
-        print_r($data);
-        echo '</pre>';
-        exit();*/
 
         return $this->render('index', [
             'model' => $model,
@@ -121,7 +116,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->redirect(['dashboard']);
+            return $this->redirect(['index']);
         }
 
         return $this->render('login', [
@@ -170,15 +165,34 @@ class SiteController extends Controller
     }
 
     public function actionProsestransaksi(){
-        $kd_barang = $_GET['kodebarang'];
-        $qty = $_GET['qty'];
-        $id_stok = $_GET['idstok'];
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $kd_barang = Yii::$app->request->get('kodebarang');
+        $qty = Yii::$app->request->get('qty');
+        $nm_barang = Yii::$app->request->get('namabarang');
+        $arr_return = [];
+        $arr_return['datafound'] = 1;
+        //$id_stok = $_GET['idstok'];
 
         $subtotal = 0;
         $diskon = 0;
         $total = 0;
 
         $file_barang = FileBarang::find()->where(['kd_barang'=>$kd_barang])->one();
+        if($file_barang == null){
+            $arr_return['datafound'] = 0;
+            $arr_return['msg'] = 'Barang Tidak Ditemukan, Silahkan Cek Barang Anda !';
+
+            return $arr_return;
+        }
+
+        if(trim($file_barang->nama_barang) != trim($nm_barang)){
+            $arr_return['datafound'] = 0;
+            $arr_return['msg'] = 'kode Barang dan Nama Barang Tidak Cocok, Silahkan Cek Barang Anda !';
+
+            return $arr_return;
+        }
+
         $total = $file_barang->harga_jual * $qty;
 
         $session = new Session;
@@ -192,7 +206,7 @@ class SiteController extends Controller
                 'qty'=>$qty,
                 'harga'=>$file_barang->harga_jual,
                 'total'=>$total,
-                'idstok'=>$id_stok
+                //'idstok'=>$id_stok
             );
 
            $session['datatransaksi'] = $array_data;
@@ -204,7 +218,7 @@ class SiteController extends Controller
                 'qty'=>$qty,
                 'harga'=>$file_barang->harga_jual,
                 'total'=>$total,
-                'idstok'=>$id_stok
+                //'idstok'=>$id_stok
             );
             array_push($array_data,$new_data);
             $session['datatransaksi'] = $array_data;
@@ -248,12 +262,14 @@ class SiteController extends Controller
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
         $arr_return['hidtotal'] = $total;
 
-        echo Json::encode($arr_return);
+        return $arr_return;
 
     }
 
 
     public function actionDeleteitem(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $key = $_GET['rel'];
 
         $subtotal = 0;
@@ -306,11 +322,13 @@ class SiteController extends Controller
         $arr_return['hidtotal'] = $total;
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
 
-        echo Json::encode($arr_return);
+        return $arr_return;
     }
 
 
     public function actionSimpantransaksi(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $total_tagihan = $_POST['totaltagihan'];
         $total_bayar = $_POST['totalbayar'];
         $cashback = $_POST['cashback'];
@@ -338,10 +356,12 @@ class SiteController extends Controller
                     $detail->harga_satuan = $value['harga'];
                     $detail->qty = $value['qty'];
                     $detail->total_harga = $value['harga'] * $value['qty'];
-                    $detail->id_stok_barang = $value['idstok'];
+                    $detail->id_stok_barang = 0;
                     $detail->save();
                 }
             }
+
+            HdTransaksi::cetakNota($model->no_transaksi);
 
             $return['success'] = 1;
             $return['nopenjualan'] = $model->no_transaksi;
@@ -349,7 +369,7 @@ class SiteController extends Controller
             $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
         }
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionResumetransaksi($id){
@@ -362,6 +382,8 @@ class SiteController extends Controller
     }
 
     public function actionCanceltransaction($id){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $model = HdTransaksi::findOne($id);
         $model->status_hapus = 1;
         $model->tgl_hapus = date('Y-m-d H:i:s');
@@ -372,7 +394,7 @@ class SiteController extends Controller
             $return['redirect'] = Url::to(['site/index']);
         }
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionRekaptransaksi(){
@@ -386,6 +408,8 @@ class SiteController extends Controller
     }
 
     public function actionDetailtransaksi($id){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $model = HdTransaksi::findOne($id);
 
         $return['data'] = $this->renderPartial('detail_transaksi', [
@@ -393,7 +417,7 @@ class SiteController extends Controller
         ]);
         $return['header'] = 'NO TRANSAKSI : '.$model->no_transaksi;
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionDashboard(){
@@ -406,25 +430,19 @@ class SiteController extends Controller
         $convert_days_now = date('Y-m-d', strtotime($days_now));
         
         $popular = HdTransaksi::getProdukTerlaris($convert_days_ago, $convert_days_now);
-        $searchModel = new FileBarangSearch();
-        $almost_ed = $searchModel->searchBeforeED(Yii::$app->request->queryParams);
-        $zero_stok = $searchModel->searchStokKosong(Yii::$app->request->queryParams);
 
-        $model_almost_ed = $almost_ed->getModels();
-        $model_zero_stok = $zero_stok->getModels();
         $setting = SettingApp::find()->one();
 
         return $this->render('dashboard',[
             'days_ago'=>$days_ago,
             'days_now'=>$days_now,
             'popular'=>$popular,
-            'model_almost_ed'=>$model_almost_ed,
-            'model_zero_stok'=>$model_zero_stok,
             'setting'=>$setting
         ]);
     }
 
     public function actionGrafikpenjualan(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
         $arr_date = array();
         $arr_data = array();
@@ -437,10 +455,12 @@ class SiteController extends Controller
         $return['label'] = $arr_date;
         $return['data'] = $arr_data;
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionSearchgrafik(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $date_range = $_GET['daterange'];
         $explode = explode('-', $date_range);
         $date_start = date('Y-m-d', strtotime(trim($explode[0])));
@@ -466,7 +486,7 @@ class SiteController extends Controller
         $return['data'] = $arr_data;
         $return['rgba'] = $arr_rgba;
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionNotifikasi()
@@ -484,6 +504,8 @@ class SiteController extends Controller
     }
 
     public function actionAutocompletebarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $query = $_GET['query'];
 
         $model = FileStokBarang::find()
@@ -504,10 +526,12 @@ class SiteController extends Controller
 
         $return['data'] = $arr_data;
 
-        echo Json::encode($return);
+        return $return;
     }
 
     public function actionLoaddatabarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
         $value = $_GET['value'];
 
         $model = FileBarang::find()->where(['nama_barang'=>$value, 'aktif'=>1])->one();
@@ -530,6 +554,25 @@ class SiteController extends Controller
         $return['diskon'] = '0';
         $return['total'] = $model->harga_jual;
 
-        echo Json::encode($return);
+        return $return;
+    }
+
+    public function actionGetnamabarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $kode_barang = Yii::$app->request->get('kode_barang');
+
+        $barang = FileBarang::find()->where(['kd_barang'=>$kode_barang])->one();
+
+        $return = [];
+        $return['itemfound'] = 0;
+        if($barang){
+            $return['itemfound'] = 1;
+            $return['kd_barang'] = $barang->kd_barang;
+            $return['nama_barang'] = $barang->nama_barang;
+        }
+
+        return $return;
+
     }
 }

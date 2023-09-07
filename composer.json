@@ -23,7 +23,8 @@
         "edwinhaq/yii2-simple-loading": "*",
         "yii2tech/spreadsheet": "^1.0",
         "kartik-v/yii2-mpdf": "dev-master",
-        "himiklab/yii2-handsontable-widget": "*"
+        "himiklab/yii2-handsontable-widget": "*",
+        "aryelds/yii2-sweet-alert": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
