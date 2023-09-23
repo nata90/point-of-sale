@@ -41,6 +41,8 @@ $this->registerJs(<<<JS
     	
     }); 
 
+	$('#new-transaction').focus();
+
 JS
 );
 

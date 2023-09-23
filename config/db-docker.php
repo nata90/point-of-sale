@@ -2,9 +2,9 @@
 
 return [
     'class' => 'yii\db\Connection',
-    'dsn' => 'mysql:host=databasepos;dbname=db_pos',
-    'username' => 'nata',
-    'password' => 'nata',
+    'dsn' => 'mysql:host=databasepos;dbname=db_pos_2',
+    'username' => 'root',
+    'password' => 'nataroot',
     'charset' => 'utf8',
     
 

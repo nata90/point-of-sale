@@ -2,9 +2,10 @@
 SQLyog Ultimate v11.11 (64 bit)
 MySQL - 8.0.27 : Database - db_pos_2
 *********************************************************************
-*/
+*/
 
-/*!40101 SET NAMES utf8 */;
+
+/*!40101 SET NAMES utf8mb4 */;
 
 /*!40101 SET SQL_MODE=''*/;
 

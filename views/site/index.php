@@ -252,7 +252,7 @@ JS
 				<div class="box-body">
 					<div class="row">
 							<div class="col-xs-3">
-								<input type="text" class="form-control input-sm" placeholder="KODE BARANG" id="field-kode-barang">
+								<input type="text" class="form-control input-sm" placeholder="KODE BARANG" id="field-kode-barang" tabindex="1">
 							</div>
 							<div class="col-xs-5">
 								<div class="input-group">
@@ -267,7 +267,7 @@ JS
 										echo AutoComplete::widget([
 											'model' => $model,
 											'attribute' => 'nama_barang',
-											'options' => ['class' => 'form-control input-sm','placeholder'=>'NAMA BARANG',],
+											'options' => ['class' => 'form-control input-sm','placeholder'=>'NAMA BARANG','tabindex'=>2],
 											'clientOptions' => [
 												'source' => $data,
 												'minLength'=>'2', 
@@ -281,10 +281,10 @@ JS
 								
 							</div>
 							<div class="col-xs-2">
-								<input type="number" class="form-control input-sm" placeholder="JUMLAH" id="qty-barang">
+								<input type="number" class="form-control input-sm" placeholder="JUMLAH" id="qty-barang" tabindex="3">
 							</div>
 							<div class="col-xs-2">
-								<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm">ADD</button>
+								<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm" tabindex="4">ADD</button>
 							</div>
 					</div>
 					
@@ -330,9 +330,9 @@ JS
 					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8" ></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8" tabindex="5"></span></li>
 					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
-					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans">PROSES</button></li>
+					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans" tabindex="6">PROSES</button></li>
 					</ul>	
 				    
 				</div>
