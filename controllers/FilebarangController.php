@@ -84,8 +84,8 @@ class FilebarangController extends Controller
     {
         $model = new FileBarang();
 
-        $kode_barang = Utility::generateKodeBarang();
-        $model->kd_barang = $kode_barang;
+        //$kode_barang = Utility::generateKodeBarang();
+        //$model->kd_barang = $kode_barang;
         $model->aktif = true;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -135,6 +135,14 @@ class FilebarangController extends Controller
         $this->findModel($id)->delete();
 
         return $this->redirect(['index']);
+    }
+
+    public function actionGetkodebarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $kode = Utility::generateKodeBarang();
+
+        return ['kode'=>$kode];
     }
 
     /**

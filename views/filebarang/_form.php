@@ -12,7 +12,15 @@ use yii\widgets\ActiveForm;
     <div class="box box-danger">
         <?php $form = ActiveForm::begin(); ?>
         <div class="box-body">
-            <?= $form->field($model, 'kd_barang')->textInput(['maxlength' => true]) ?>
+            <div class="row">
+                <div class="col-md-8">
+                    <?= $form->field($model, 'kd_barang')->textInput(['maxlength' => true]) ?>
+                </div>
+                <div class="col-md-4">
+                    <?= Html::button(Yii::t('app', 'BUAT KODE'), ['class' => 'btn btn-success generate-code', 'style'=>'margin-top:25px;']) ?>
+                </div>
+            </div>
+            
 
             <?= $form->field($model, 'nama_barang')->textInput(['maxlength' => true]) ?>
 
