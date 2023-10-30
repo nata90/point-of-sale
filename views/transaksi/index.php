@@ -35,8 +35,8 @@ $this->registerJs(<<<JS
                 var head = 'INFO';
                 var msg = 'Laporan penjualan telah dikirim ke email '+v.email;
 
-                var socket = io.connect( 'http://'+ip_addr+':3000');
-                socket.emit('notif',{name: head, message: msg});
+                //var socket = io.connect( 'http://'+ip_addr+':3000');
+                //socket.emit('notif',{name: head, message: msg});
             },
             'complete':function(json)
             {

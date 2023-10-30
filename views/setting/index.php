@@ -36,8 +36,8 @@ $this->registerJs(<<<JS
                 var head = 'INFO';
                 var msg = 'Setting baru berhasil disimpan';
 
-                var socket = io.connect( 'http://127.0.0.1:3000');
-                socket.emit('notif',{name: head, message: msg});
+                //var socket = io.connect( 'http://127.0.0.1:3000');
+                //socket.emit('notif',{name: head, message: msg});
 
             },
             'complete':function(json)
