@@ -10,8 +10,8 @@ $this->registerJs(<<<JS
 	var nama = 'INFO';
     var msg = 'Selamat datang';
 
-    var socket = io.connect('http://'+ip_addr+':3000');
-    socket.emit('notif',{name: nama, message: msg});
+    //var socket = io.connect('http://'+ip_addr+':3000');
+    //socket.emit('notif',{name: nama, message: msg});
             
 	
 		$.ajax({

@@ -79,7 +79,7 @@ class SiteController extends Controller
         $model = new FileBarang();
 
         $data = FileBarang::find()
-        ->select(['nama_barang as value', 'nama_barang as  label','kd_barang as id'])
+        ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
         ->where(['aktif'=>1])
         ->asArray()
         ->all();
@@ -252,7 +252,7 @@ class SiteController extends Controller
         $arr_return['data'] = $table;
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
-        $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+        $arr_return['diskon'] = $diskon;
         $arr_return['hidtotal'] = $total;
 
         return $arr_return;

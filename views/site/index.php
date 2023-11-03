@@ -83,7 +83,6 @@ $this->registerJs(<<<JS
 						$('#filebarang-nama_barang').focus();
 						$('#subtotal').html(v.subtotal);
 						$('#total').html(v.total);
-						$('#diskon').html(v.diskon);
 						$('#field-total-tagihan').val(v.hidtotal);
 						$('#jumlah-bayar').val('');
 						$('#cashback').html('<b>Rp.0,00</b>');
@@ -330,7 +329,7 @@ JS
 					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="8" tabindex="5"></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="14" tabindex="5"></span></li>
 					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
 					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans" tabindex="6">PROSES</button></li>
 					</ul>	
