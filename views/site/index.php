@@ -268,7 +268,7 @@ JS
 											'attribute' => 'nama_barang',
 											'options' => ['class' => 'form-control input-sm','placeholder'=>'NAMA BARANG','tabindex'=>2],
 											'clientOptions' => [
-												'source' => $data,
+												'source'=> Url::to(['filebarang/autocompletebarang']),
 												'minLength'=>'2', 
 												'autoFill'=>true,
 												'select' => new JsExpression("function( event, ui ) {

@@ -29,7 +29,7 @@ class FilebarangController extends Controller
                 'only' => ['index','update','delete','create'],
                 'rules' => [
                     [
-                        'actions' => ['index','update','delete','create'],
+                        'actions' => ['index','update','delete','create','autocompletebarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -159,5 +159,18 @@ class FilebarangController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    public function actionAutocompletebarang($term){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $data = FileBarang::find()
+        ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
+        ->where(['like','nama_barang', $term])
+        ->andWhere(['aktif'=>1])
+        ->asArray()
+        ->all();
+
+        return $data;
     }
 }
