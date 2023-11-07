@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Pengeluaran;
 use Yii;
 use app\models\DtTransaksi;
 use app\models\DtTransaksiSearch;
@@ -38,7 +39,7 @@ class TransaksiController extends Controller
                 'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -415,5 +416,37 @@ class TransaksiController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    public function actionPengeluaran(){
+        $model = new Pengeluaran();
+
+        $pengeluaran_hari_ini = Pengeluaran::find()->where(['BETWEEN', 'tanggal', date('Y-m-d').' 00:00:00', date('Y-m-d').' 23:59:59'])->all();
+
+        return $this->render('pengeluaran', [
+            'model' => $model,
+            'pengeluaran_hari_ini'=>$pengeluaran_hari_ini
+        ]);
+    }
+
+    public function actionSimpanpengeluaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $deskripsi = Yii::$app->request->post('deskripsi');
+        $nilai = Yii::$app->request->post('nilai');
+
+        $return = [];
+        $model = new Pengeluaran();
+        $model->deskripsi = $deskripsi;
+        $model->nilai = $nilai;
+        $model->tanggal = date('Y-m-d H:i:s');
+        if($model->save()){
+            Yii::$app->session->setFlash('success', 'Pengeluaran '.$model->deskripsi.' Berhasil Disimpan');
+            $return['success'] = 1;
+        }else{
+            $return['success'] = 0;
+        }
+
+        return $return;
     }
 }
