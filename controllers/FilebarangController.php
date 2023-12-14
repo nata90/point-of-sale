@@ -44,9 +44,6 @@ class FilebarangController extends Controller
      */
     public function actionIndex()
     {
-        /*$dataProvider = new ActiveDataProvider([
-            'query' => FileBarang::find(),
-        ]);*/
         $searchModel = new FileBarangSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider2 = $searchModel->searchStokKosong(Yii::$app->request->queryParams);

@@ -176,7 +176,7 @@ JS
 		                <canvas id="barChart" style="height:230px"></canvas>
 		            </div>
 		            <div class="row" style="padding-top:20px;">
-		            	<div id="best-selling" class="col-md-4">
+		            	<div id="best-selling" class="col-md-6">
 		            		<p class="text-left" style="font-size:16px;"><strong>10 BARANG TERLARIS</strong></p>
 			            	<ul class="todo-list ui-sortable">
 			    				<?php if($popular != null){ 

@@ -49,9 +49,14 @@ use app\components\Utility;
         $Data .= $jarakFont;
 
         $Data .= $condensed4."\n";
-        $Data .= "Toko Taman Hati\n";
-        $Data .= "Kauman Pedan Klaten\n";
-        $Data .= "Nota Pembayaran\n";
+        $Data .= "------------------------------\n";
+        $Data .= "TOKO TAMAN HATI\n";
+        $Data .= "KAUMAN PEDAN KLATEN\n";
+        $Data .= "TELP : (0272) 898246\n";
+        $Data .= "------------------------------\n";
+        $Data .= "Faktur Penjualan\n";
+        $Data .= "No Faktur     : ".$no_transaksi."\n";
+        $Data .= "Tanggal       : ".date('d/m/Y')."\n";
         $Data .= "------------------------------\n";
 
         $Data .= $jarakFont0;
@@ -75,8 +80,10 @@ use app\components\Utility;
         
         $Data .= "------------------------------\n";
         $Data .= "Total           ".Utility::rupiah($all_total)."\n";
+        $Data .= "Disc                                          0\n";
         $Data .= "------------------------------\n";
-        $Data .= "Barang yang sudah dibeli tidak dapat dikembalikan\n";
+        $Data .= "BARANG YANG SUDAH DIBELI TIDAK DAPAT DITUKAR / DIKEMBALIKAN\n";
+        $Data .= "TERIMA KASIH ATAS KUNJUNGAN ANDA\n";
         $Data .= $condensed4."\n";
         $Data .= "\n";
         $Data .= "\n";

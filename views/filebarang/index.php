@@ -66,32 +66,7 @@ $this->title = Yii::t('app', 'Barang');
                                         return $model->lokasi;
                                     }
                                 ],
-                                //'stok',
-                                [
-                                    'label'=>'Stok Detail',
-                                    'format'=>'raw',
-                                    'contentOptions' => ['style' => 'width:25%; white-space: normal'],
-                                    'value'=>function($model){
-                                        $data = FileStokBarang::detailStok($model->kd_barang);
-
-                                        $return = '<ul style="text-align:left;">';
-                                        if($data != null){
-                                            foreach($data as $row){
-                                                if($row["tgl_ed"] == '1970-01-01'){
-                                                    $tgl_ed = '-';
-                                                }else{
-                                                    $tgl_ed = date('d-m-Y',strtotime($row["tgl_ed"]));
-                                                }
-
-                                                $return .= '<li><strong>ED : '.$tgl_ed.', STOK : '.round($row["stok_akhir"],0).'</strong></li>';
-                                            }
-                                        }
-                                        
-                                        $return .= '</ul>';
-
-                                        return $return;
-                                    }
-                                ],
+                                
                                 [
                                     'label'=>'Stok Total',
                                     'format'=>'raw',
