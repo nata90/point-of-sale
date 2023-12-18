@@ -53,17 +53,15 @@ use app\components\Utility;
         $Data .= "TOKO TAMAN HATI\n";
         $Data .= "KAUMAN PEDAN KLATEN\n";
         $Data .= "TELP : (0272) 898246\n";
-        $Data .= $condensed4."\n";
+        
         $Data .= "------------------------------\n";
+        $Data .= $alignCenter0;
         $Data .= "Faktur Penjualan\n";
         $Data .= "No Faktur     : ".$no_transaksi."\n";
         $Data .= "Tanggal       : ".date('d/m/Y')."\n";
         $Data .= "------------------------------\n";
-
+        $Data .= $condensed4."\n";
         $Data .= $jarakFont0;
-        
-        $Data .= $alignCenter0;
-        $Data .= $jarakFont;
 
         $all_total = 0;
         if($detail != null){
@@ -77,16 +75,18 @@ use app\components\Utility;
         }else{
                 $Data .= "Data Tidak ada\n";  
         }
+        $Data .= $jarakFont;
         
         
         $Data .= "------------------------------\n";
         $Data .= "Total           ".Utility::rupiah($all_total)."\n";
-        $Data .= "Disc             0\n";
         $Data .= "------------------------------\n";
+        $Data .= $alignCenter1;
         $Data .= "BARANG YANG SUDAH DIBELI\n";
         $Data .= "TIDAK DAPAT DITUKAR\n";
         $Data .= "TERIMA KASIH\n";
         $Data .= "ATAS KUNJUNGAN ANDA\n";
+        $Data .= $alignCenter0;
         $Data .= $condensed4."\n";
         $Data .= "\n";
         $Data .= "\n";
