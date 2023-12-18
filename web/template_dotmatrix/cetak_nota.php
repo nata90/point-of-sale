@@ -53,6 +53,7 @@ use app\components\Utility;
         $Data .= "TOKO TAMAN HATI\n";
         $Data .= "KAUMAN PEDAN KLATEN\n";
         $Data .= "TELP : (0272) 898246\n";
+        $Data .= $condensed4."\n";
         $Data .= "------------------------------\n";
         $Data .= "Faktur Penjualan\n";
         $Data .= "No Faktur     : ".$no_transaksi."\n";
@@ -60,7 +61,7 @@ use app\components\Utility;
         $Data .= "------------------------------\n";
 
         $Data .= $jarakFont0;
-        $Data .= $condensed4."\n";
+        
         $Data .= $alignCenter0;
         $Data .= $jarakFont;
 
@@ -80,10 +81,12 @@ use app\components\Utility;
         
         $Data .= "------------------------------\n";
         $Data .= "Total           ".Utility::rupiah($all_total)."\n";
-        $Data .= "Disc                                          0\n";
+        $Data .= "Disc             0\n";
         $Data .= "------------------------------\n";
-        $Data .= "BARANG YANG SUDAH DIBELI TIDAK DAPAT DITUKAR / DIKEMBALIKAN\n";
-        $Data .= "TERIMA KASIH ATAS KUNJUNGAN ANDA\n";
+        $Data .= "BARANG YANG SUDAH DIBELI\n";
+        $Data .= "TIDAK DAPAT DITUKAR\n";
+        $Data .= "TERIMA KASIH\n";
+        $Data .= "ATAS KUNJUNGAN ANDA\n";
         $Data .= $condensed4."\n";
         $Data .= "\n";
         $Data .= "\n";
