@@ -165,7 +165,6 @@ class SiteController extends Controller
         $nm_barang = Yii::$app->request->get('namabarang');
         $arr_return = [];
         $arr_return['datafound'] = 1;
-        //$id_stok = $_GET['idstok'];
 
         $subtotal = 0;
         $diskon = 0;
@@ -193,7 +192,7 @@ class SiteController extends Controller
 
         if(!isset($session['datatransaksi'])){
             $array_data = array();
-            $array_data[] = array(
+            $array_data[$kd_barang] = array(
                 'kodebarang'=>$kd_barang,
                 'namabarang'=>$file_barang->nama_barang,
                 'qty'=>$qty,
@@ -205,15 +204,20 @@ class SiteController extends Controller
            $session['datatransaksi'] = $array_data;
         }else{
             $array_data = $session['datatransaksi'];
-            $new_data = array(
-                'kodebarang'=>$kd_barang,
-                'namabarang'=>$file_barang->nama_barang,
-                'qty'=>$qty,
-                'harga'=>$file_barang->harga_jual,
-                'total'=>$total,
-                //'idstok'=>$id_stok
-            );
-            array_push($array_data,$new_data);
+            if(isset($array_data[$kd_barang])){
+                $array_data[$kd_barang]['qty'] = $array_data[$kd_barang]['qty'] + $qty;
+                $array_data[$kd_barang]['total'] = $array_data[$kd_barang]['qty']*$file_barang->harga_jual;
+            }else{
+                $array_data[$kd_barang] = [
+                    'kodebarang'=>$kd_barang,
+                    'namabarang'=>$file_barang->nama_barang,
+                    'qty'=>$qty,
+                    'harga'=>$file_barang->harga_jual,
+                    'total'=>$total,
+                    //'idstok'=>$id_stok
+                ];
+            }
+            
             $session['datatransaksi'] = $array_data;
         }
 

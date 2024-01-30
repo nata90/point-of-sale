@@ -21,6 +21,7 @@ CSS;
 $this->registerCss($style);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";');
+$this->registerJs('var url_proses_transaksi = "' .Url::to(['site/prosestransaksi']). '";');
 $this->registerJs(<<<JS
 	$('#field-kode-barang').focus();
 
@@ -202,7 +203,7 @@ $this->registerJs(<<<JS
     	
     });
 
-	$(document).on("focusout", "#field-kode-barang", function () {
+	/*$(document).on("focusout", "#field-kode-barang", function () {
     	var kode_barang = $(this).val();
 
 		if(kode_barang != ''){
@@ -234,7 +235,78 @@ $this->registerJs(<<<JS
 			});
 		}
     	
-    });
+    });*/
+
+
+	$(document).on("focusout", "#field-kode-barang", function () {
+		var kodebarang = $(this).val();
+		var qty = 1;
+
+		if(kodebarang != ''){
+			$.ajax({
+				type: 'get',
+				url: url_get_nama,
+				dataType: 'json',
+				'beforeSend':function(json)
+				{ 
+					SimpleLoading.start('gears'); 
+				},
+				data: {'kode_barang':kodebarang},
+				success: function(v){
+					if(v.itemfound == 1){
+						$.ajax({
+							type: 'get',
+							url: url_proses_transaksi,
+							dataType: 'json',
+							data: {
+								'kodebarang':kodebarang, 
+								'qty':1, 
+								'namabarang':v.nama_barang
+							},
+							success: function(v){
+								if(v.datafound == 0){
+									swal(v.msg,{
+										title:"Perbaiki Kesalahan Berikut!",
+										buttons: {
+											cancel: false,
+											confirm: true,
+										},
+									});
+								}else{
+									$('#data-transaksi').html(v.data);
+									$('#filebarang-nama_barang').val('');
+									$('#field-kode-barang').val('');
+									$('#qty-barang').val('');
+									$('#filebarang-nama_barang').focus();
+									$('#subtotal').html(v.subtotal);
+									$('#total').html(v.total);
+									$('#field-total-tagihan').val(v.hidtotal);
+									$('#jumlah-bayar').val('');
+									$('#cashback').html('<b>Rp.0,00</b>');
+									$('#field-total-bayar').val('');
+									$('#field-total-cashback').val('');
+									$('#field-kode-barang').focus();
+								}
+								
+							}
+						});
+					}else{
+						swal("barang Tidak Ditemukan",{
+							title:"Perbaiki Kesalahan Berikut!",
+							buttons: {
+								cancel: false,
+								confirm: true,
+							},
+						});
+					}
+					SimpleLoading.stop();
+				},
+				
+			});
+		}
+
+		
+	});
     
     
 JS
@@ -273,6 +345,7 @@ JS
 												'autoFill'=>true,
 												'select' => new JsExpression("function( event, ui ) {
 													$('#field-kode-barang').val(ui.item.id);
+													$('#qty-barang').focus();
 												}")
 											],
 										]); ?>
