@@ -12,6 +12,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\KodeGenerate;
 use yii\filters\AccessControl;
+use yii\web\Session;
 
 /**
  * FilebarangController implements the CRUD actions for FileBarang model.
@@ -29,7 +30,7 @@ class FilebarangController extends Controller
                 'only' => ['index','update','delete','create'],
                 'rules' => [
                     [
-                        'actions' => ['index','update','delete','create','autocompletebarang'],
+                        'actions' => ['index','update','delete','create','autocompletebarang','updateharga'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -169,5 +170,56 @@ class FilebarangController extends Controller
         ->all();
 
         return $data;
+    }
+
+    public function actionUpdateharga(){
+        $kdBarang = Yii::$app->request->get('id');
+
+        $model = FileBarang::find()->where(['kd_barang'=>$kdBarang])->one();
+
+        return $this->renderPartial('popup_update_harga',[
+            'model'=>$model
+        ]);
+    }
+
+    public function actionSimpanupdateharga(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $kodebarang = Yii::$app->request->get('kodebarang');
+        $harga = Yii::$app->request->get('harga');
+        $subtotal = 0;
+        $diskon = 0;
+        $total = 0;
+
+        $model = FileBarang::find()->where(['kd_barang'=>$kodebarang])->one();
+
+        if($model){
+            $model->harga_jual = $harga;
+            $model->save(false);
+        }
+
+        $session = new Session;
+        $session->open();
+        $arr_data = $session['datatransaksi'];
+
+        $arr_data[$kodebarang]['harga'] = $model->harga_jual;
+        $arr_data[$kodebarang]['total'] = $model->harga_jual*$arr_data[$kodebarang]['qty'];
+
+        $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+
+        $return['data'] = $this->renderPartial('/site/data_transaksi',[
+            'datatransaksi'=>$arr_data,
+            'subtotal'=>$subtotal,
+            'diskon'=>$diskon,
+            'total'=>$total
+        ]);
+
+
+        $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+        $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+        $return['hidtotal'] = $totalTransaksi['total'];
+        $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+
+        return $return;
     }
 }

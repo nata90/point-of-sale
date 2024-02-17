@@ -221,43 +221,18 @@ class SiteController extends Controller
             $session['datatransaksi'] = $array_data;
         }
 
-
-        $table = '<table class="table">
-                        <tbody>
-                            <tr class="table-title">
-                                <th>No</th>
-                                <th>Nama Barang</th>
-                                <th>Harga</th>
-                                <th>Qty</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                            </tr>
-                        </tbody>';
-        if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
-            $no = 1;
-            foreach($session['datatransaksi'] as $key=>$value){
-                $subtotal = $subtotal + $value['total'];
-                $total = $subtotal - $diskon;
-                $table .= '<tr>
-                    <td>'.$no.'</td>
-                    <td>'.$value['namabarang'].'</td>
-                    <td>'.Utility::rupiah($value['harga']).'</td>
-                    <td>'.$value['qty'].'</td>
-                    <td>'.Utility::rupiah($value['total']).'</td>
-                    <td style="text-align:center;"><a rel="'.$key.'" url="'.Url::to(['site/deleteitem']).'" class="delete-item" href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
-                </tr>';
-
-                $no++;
-            }
-        }
-
-        $table .= '</table>';
+        $totalTransaksi = Utility::getTotalTransaksiPenjualan($array_data,$diskon);
         
-        $arr_return['data'] = $table;
-        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
-        $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
+        $arr_return['data'] = $this->renderPartial('data_transaksi',[
+            'datatransaksi'=>$session['datatransaksi'],
+            'subtotal'=>$subtotal,
+            'diskon'=>$diskon,
+            'total'=>$total
+        ]);
+        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+        $arr_return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
         $arr_return['diskon'] = $diskon;
-        $arr_return['hidtotal'] = $total;
+        $arr_return['hidtotal'] = $totalTransaksi['total'];
 
         return $arr_return;
 
@@ -267,7 +242,7 @@ class SiteController extends Controller
     public function actionDeleteitem(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $key = $_GET['rel'];
+        $key = Yii::$app->request->get('rel');;
 
         $subtotal = 0;
         $diskon = 0;
@@ -282,41 +257,18 @@ class SiteController extends Controller
 
         $session['datatransaksi'] = $arr_data;
 
-        $table = '<table class="table">
-                        <tbody>
-                            <tr class="table-title">
-                                <th>No</th>
-                                <th>Nama Barang</th>
-                                <th>Harga</th>
-                                <th>Qty</th>
-                                <th>Subtotal</th>
-                                <th></th>
-                            </tr>
-                        </tbody>';
-        if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
-            $no = 1;
-            foreach($session['datatransaksi'] as $key=>$value){
-                $subtotal = $subtotal + $value['total'];
-                $total = $subtotal - $diskon;
-                $table .= '<tr>
-                    <td>'.$no.'</td>
-                    <td>'.$value['namabarang'].'</td>
-                    <td>'.Utility::rupiah($value['harga']).'</td>
-                    <td>'.$value['qty'].'</td>
-                    <td>'.Utility::rupiah($value['total']).'</td>
-                    <td style="text-align:center;"><a rel="'.$key.'" url="'.Url::to(['site/deleteitem']).'" class="delete-item" href="#" title="Delete"><i class="fa fa-trash"></i></a></td>
-                </tr>';
+        $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
 
-                $no++;
-            }
-        }
+        $arr_return['data'] = $this->renderPartial('data_transaksi',[
+            'datatransaksi'=>$arr_data,
+            'subtotal'=>$subtotal,
+            'diskon'=>$diskon,
+            'total'=>$total
+        ]);
 
-        $table .= '</table>';
-
-        $arr_return['data'] = $table;
-        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($subtotal).'</strong>';
-        $arr_return['total'] = '<strong>'.Utility::rupiah($total).'</strong>';
-        $arr_return['hidtotal'] = $total;
+        $arr_return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+        $arr_return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+        $arr_return['hidtotal'] = $totalTransaksi['total'];
         $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
 
         return $arr_return;

@@ -203,40 +203,6 @@ $this->registerJs(<<<JS
     	
     });
 
-	/*$(document).on("focusout", "#field-kode-barang", function () {
-    	var kode_barang = $(this).val();
-
-		if(kode_barang != ''){
-			$.ajax({
-				type: 'get',
-				url: url_get_nama,
-				dataType: 'json',
-				'beforeSend':function(json)
-				{ 
-					SimpleLoading.start('gears'); 
-				},
-				data: {'kode_barang':kode_barang},
-				success: function(v){
-					if(v.itemfound == 1){
-						$('#filebarang-nama_barang').val(v.nama_barang);
-						$('#qty-barang').focus();
-					}else{
-						swal("barang Tidak Ditemukan",{
-							title:"Perbaiki Kesalahan Berikut!",
-							buttons: {
-								cancel: false,
-								confirm: true,
-							},
-						});
-					}
-					SimpleLoading.stop();
-				},
-				
-			});
-		}
-    	
-    });*/
-
 
 	$(document).on("focusout", "#field-kode-barang", function () {
 		var kodebarang = $(this).val();
@@ -307,6 +273,62 @@ $this->registerJs(<<<JS
 
 		
 	});
+
+	$(document).on("click", ".modalBtn", function () {
+		var link = $(this).attr('url');
+
+		$('#modal').modal('show')
+			.find('#modalContent')
+			.load(link, function (responseTxt, statusTxt, xhr) {
+				if (statusTxt == "success") {
+					hideload();
+				}
+	
+				if (statusTxt == "error") {
+					hideload();
+					modalErr("Error: " + xhr.status + ": " + xhr.statusText);
+				}
+	
+			});
+		if (this.hasAttribute('headername')) {
+			$('#modal .modal-header #header-info').html('<h4>'+$(this).attr('headername')+'</h4>');
+		} else {
+			$('#modal .modal-header #header-info').html('Data');
+		}
+
+	});
+
+	$(document).on("click", "#update-button", function () {
+		let harga = $('#filebarang-harga_jual').val();
+		let kodebarang = $('#filebarang-kd_barang').val();
+		let url = $(this).attr('link');
+
+		$.ajax({
+			type: 'get',
+			url: url,
+			dataType: 'json',
+			data: {
+				'harga':harga,
+				'kodebarang':kodebarang
+			},
+			success: function(v){
+				$('#modal').modal('hide');
+				$('#data-transaksi').html(v.data);
+				$('#subtotal').html(v.subtotal);
+				$('#total').html(v.total);
+				$('#diskon').html(v.diskon);
+				$('#field-total-tagihan').val(v.hidtotal);
+
+				$('#jumlah-bayar').val('');
+				$('#cashback').html('<b>Rp.0,00</b>');
+				$('#field-total-bayar').val('');
+				$('#field-total-cashback').val('');
+			}
+		});
+
+	});
+
+	
     
     
 JS
@@ -370,14 +392,14 @@ JS
 			<div class="box box-danger">
 				
 				<div class="box-body" id="data-transaksi">
-					<table class="table">
+					<table class="table table-stripped">
 						<tbody>
 							<tr class="table-title">
-								<th>No</th>
-								<th>Nama Barang</th>
-								<th>Harga</th>
-								<th>Qty</th>
-								<th>Subtotal</th>
+								<th>NO</th>
+								<th>NAMA BARANG</th>
+								<th>HARGA</th>
+								<th>QTY</th>
+								<th>SUBTOTAL</th>
 								<th></th>
 							</tr>
 							

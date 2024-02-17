@@ -83,4 +83,18 @@ class Utility extends Model
 
         return $ip;
     }
+
+    public static function getTotalTransaksiPenjualan($arrDataTransaksi,$diskon){
+        $total = 0;
+        $subtotal = 0;
+        if($arrDataTransaksi){
+            foreach($arrDataTransaksi as $key=>$value){
+                $subtotal = $subtotal + $value['total'];
+                $total = $subtotal - $diskon;
+                
+            }
+        }
+
+        return ['total'=>$total,'subtotal'=>$subtotal];
+    }
 }
