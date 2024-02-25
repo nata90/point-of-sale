@@ -205,6 +205,8 @@ class FilebarangController extends Controller
         $arr_data[$kodebarang]['harga'] = $model->harga_jual;
         $arr_data[$kodebarang]['total'] = $model->harga_jual*$arr_data[$kodebarang]['qty'];
 
+        $session['datatransaksi'] = $arr_data;
+
         $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
 
         $return['data'] = $this->renderPartial('/site/data_transaksi',[
