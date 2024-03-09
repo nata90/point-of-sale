@@ -33,8 +33,8 @@ class AppAsset extends AssetBundle
         'js/moment.min.js',
         'js/daterangepicker.js',
         'js/jquery.toast.js',
-        'js/socket.io.js',
-        'js/notif.js',
+        //'js/socket.io.js',
+        //'js/notif.js',
         'js/handsontable.full.min.js',
         'js/sweetalert.min.js',
     ];
