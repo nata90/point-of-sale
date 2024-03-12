@@ -30,7 +30,7 @@ class FilebarangController extends Controller
                 'only' => ['index','update','delete','create'],
                 'rules' => [
                     [
-                        'actions' => ['index','update','delete','create','autocompletebarang','updateharga'],
+                        'actions' => ['index','update','delete','create','autocompletebarang','updateharga','createnewbarang','popupcreatebarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -223,5 +223,77 @@ class FilebarangController extends Controller
         $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
 
         return $return;
+    }
+
+    public function actionCreatenewbarang(){
+        $kodebarang = Yii::$app->request->get('kodebarang','');
+
+        $model = new FileBarang;
+
+        return $this->renderPartial('popup_create_barang',[
+            'kodebarang'=>$kodebarang,
+            'model'=>$model
+        ]);
+    }
+
+    public function actionPopupcreatebarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $kodebarang = Yii::$app->request->post('kodebarang');
+        $namabarang = Yii::$app->request->post('namabarang');
+        $hargajual = Yii::$app->request->post('hargajual');
+
+        try {
+            $return = [];
+            $model = new FileBarang();
+            $model->kd_barang = $kodebarang;
+            $model->nama_barang = $namabarang;
+            $model->harga_beli = 0;
+            $model->harga_jual = $hargajual;
+            $model->lokasi = '-';
+            $model->stok = 0;
+            $model->aktif = 1;
+            if($model->save()){
+                $return['success'] = 1;
+
+                $subtotal = 0;
+                $diskon = 0;
+                $total = 0;
+                $session = new Session;
+                $session->open();
+
+                $arr_data = $session['datatransaksi'];
+                $arr_data[$model->kd_barang] = [
+                    'kodebarang'=>$model->kd_barang,
+                    'namabarang'=>$model->nama_barang,
+                    'qty'=>1,
+                    'harga'=>$model->harga_jual,
+                    'total'=>$model->harga_jual
+                ];
+
+                $session['datatransaksi'] = $arr_data;
+
+                $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+
+                $return['data'] = $this->renderPartial('/site/data_transaksi',[
+                    'datatransaksi'=>$arr_data,
+                    'subtotal'=>$subtotal,
+                    'diskon'=>$diskon,
+                    'total'=>$total
+                ]);
+
+
+                $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+                $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+                $return['hidtotal'] = $totalTransaksi['total'];
+                $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+            }else{
+                $return['success'] = 0;
+            }
+
+            return $return;
+        } catch (\Exception $e) {
+            Yii::error($e->getMessage());
+        }
+        
     }
 }

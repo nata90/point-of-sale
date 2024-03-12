@@ -80,6 +80,9 @@ use app\components\Utility;
         
         $Data .= "------------------------------\n";
         $Data .= "Total           ".Utility::rupiah($all_total)."\n";
+        $Data .= "Jumlah Bayar    ".Utility::rupiah($header->jumlah_bayar)."\n";
+        $cashback = $header->jumlah_bayar - $all_total;
+        $Data .= "Kembali         ".Utility::rupiah($cashback)."\n";
         $Data .= "------------------------------\n";
         $Data .= $alignCenter1;
         $Data .= "BARANG YANG SUDAH DIBELI\n";

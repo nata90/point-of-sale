@@ -104,7 +104,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
 
     public static function cetakNota($no_transaksi){
         $detail = DtTransaksi::find()->where(['no_transaksi'=>$no_transaksi])->all();
-
+        $header = HdTransaksi::find()->where(['no_transaksi'=>$no_transaksi])->one();
 
         $template = 'cetak_nota'; 
         ob_start();

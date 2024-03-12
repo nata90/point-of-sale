@@ -22,6 +22,8 @@ $this->registerCss($style);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";');
 $this->registerJs('var url_proses_transaksi = "' .Url::to(['site/prosestransaksi']). '";');
+$this->registerJs('var url_create_item = "' .Url::to(['filebarang/createnewbarang']). '";');
+$this->registerJs('var url_generate_code = "' .Url::to(['filebarang/getkodebarang']). '";');
 $this->registerJs(<<<JS
 	$('#field-kode-barang').focus();
 
@@ -33,28 +35,19 @@ $this->registerJs(<<<JS
 		/*var idstok = $('#field-id-stokbarang').val();*/
 
 		if(kodebarang == ''){
-			swal("Kode Barang Tidak Boleh Kosong!",{
-				title:"Perbaiki Kesalahan Berikut!",
-				buttons: {
-					cancel: false,
-					confirm: true,
-				},
+			Swal.fire({
+				title: "Kode Barang Tidak Boleh Kosong!",
+				icon: "error"
 			});
 		}else if(namabarang == ''){
-			swal("Nama Barang Tidak Boleh Kosong!",{
-				title:"Perbaiki Kesalahan Berikut!",
-				buttons: {
-					cancel: false,
-					confirm: true,
-				},
+			Swal.fire({
+				title: "Nama Barang Tidak Boleh Kosong!",
+				icon: "error"
 			});
 		}else if(qty == ''){
-			swal("Jumlah Tidak Boleh Kosong!",{
-				title:"Perbaiki Kesalahan Berikut!",
-				buttons: {
-					cancel: false,
-					confirm: true,
-				},
+			Swal.fire({
+				title: "Jumlah Tidak Boleh Kosong!",
+				icon: "error"
 			});
 		}else{
 			$.ajax({
@@ -69,12 +62,10 @@ $this->registerJs(<<<JS
 				},
 				success: function(v){
 					if(v.datafound == 0){
-						swal(v.msg,{
-							title:"Perbaiki Kesalahan Berikut!",
-							buttons: {
-								cancel: false,
-								confirm: true,
-							},
+
+						Swal.fire({
+							title: v.ms,
+							icon: "error"
 						});
 					}else{
 						$('#data-transaksi').html(v.data);
@@ -155,22 +146,17 @@ $this->registerJs(<<<JS
     	var url = $(this).attr('url');
 
     	if(totalbayar == 0){
-			swal("Jumlah Bayar Wajib Di Isi",{
-				title:"Perbaiki Kesalahan Berikut!",
-				buttons: {
-					cancel: false,
-					confirm: true,
-				},
+			Swal.fire({
+				title: "Jumlah Bayar Wajib Di Isi",
+				icon: "error"
 			});
 		}else{
 			if(cashback < 0){
-	    		swal("Jumlah Bayar Kurang dari Total",{
-					title:"Perbaiki Kesalahan Berikut!",
-					buttons: {
-						cancel: false,
-						confirm: true,
-					},
+				Swal.fire({
+					title: "Jumlah Bayar Kurang dari Total",
+					icon: "error"
 				});
+				
 	    	}else{
 	    		$.ajax({
 					type: 'post',
@@ -188,9 +174,6 @@ $this->registerJs(<<<JS
 					success: function(v){
 						var head = 'Penjualan : '+v.nopenjualan;
 					    var msg = v.items;
-
-					    //var socket = io.connect( 'http://'+ip_addr+':3000');
-					    //socket.emit('notif',{name: head, message: msg});
 						location.replace(v.redirect);
 					},
 					'complete':function(json)
@@ -241,12 +224,9 @@ $this->registerJs(<<<JS
 								},
 								success: function(v){
 									if(v.datafound == 0){
-										swal(v.msg,{
-											title:"Perbaiki Kesalahan Berikut!",
-											buttons: {
-												cancel: false,
-												confirm: true,
-											},
+										Swal.fire({
+											title: v.msg,
+											icon: "error"
 										});
 									}else{
 										$('#data-transaksi').html(v.data);
@@ -267,12 +247,27 @@ $this->registerJs(<<<JS
 								}
 							});
 						}else{
-							swal("Barang Tidak Ditemukan",{
-								title:"Perbaiki Kesalahan Berikut!",
-								buttons: {
-									cancel: false,
-									confirm: true,
-								},
+							Swal.fire({
+								title: "Barang Tidak Ditemukan!",
+								showDenyButton: true,
+								showCancelButton: false,
+								confirmButtonText: '<i class="fa fa-thumbs-up"></i> BUAT BARANG BARU ',
+								denyButtonText: `TUTUP`,
+								icon: "error"
+							}).then((result) => {
+								if (result.isConfirmed) {
+									let urlcreate = url_create_item+'&kodebarang='+kodebarang;
+									$('#modal').modal('show')
+										.find('#modalContent')
+										.load(urlcreate, function (responseTxt, statusTxt, xhr) {
+											
+										});
+										$('#modal .modal-header #header-info').html('<h4>BUAT BARANG BARU</h4>');
+
+										$("#modal").on('shown.bs.modal', function () {
+											$("#popup-namabarang").focus();
+										});
+								} 
 							});
 							
 
@@ -309,6 +304,10 @@ $this->registerJs(<<<JS
 			$('#modal .modal-header #header-info').html('Data');
 		}
 
+		$("#modal").on('shown.bs.modal', function () {
+			$("#filebarang-harga_jual").focus();
+		});
+
 	});
 
 	$(document).on("click", "#update-button", function () {
@@ -320,6 +319,10 @@ $this->registerJs(<<<JS
 			type: 'get',
 			url: url,
 			dataType: 'json',
+			beforeSend:function(json)
+			{ 
+				SimpleLoading.start('gears'); 
+			},
 			data: {
 				'harga':harga,
 				'kodebarang':kodebarang
@@ -336,13 +339,91 @@ $this->registerJs(<<<JS
 				$('#cashback').html('<b>Rp.0,00</b>');
 				$('#field-total-bayar').val('');
 				$('#field-total-cashback').val('');
+				$('#field-kode-barang').focus();
+
+				SimpleLoading.stop();
 			}
 		});
 
 	});
 
+	$(document).on("click", "#create-item-button", function () {
+		let kodebarang = $('#filebarang-kd_barang').val();
+		let namabarang = $('#popup-namabarang').val();
+		let hargajual = $('#filebarang-harga_jual').val();
+		let url = $(this).attr('link');
+
+		$.ajax({
+			type: 'post',
+			url: url,
+			dataType: 'json',
+			beforeSend:function(json)
+			{ 
+				SimpleLoading.start('gears'); 
+			},
+			data: {
+				'kodebarang':kodebarang,
+				'namabarang':namabarang,
+				'hargajual':hargajual
+			},
+			success: function(v){
+				if(v.success == 1){
+					$('#modal').modal('hide');
+					$('#data-transaksi').html(v.data);
+					$('#subtotal').html(v.subtotal);
+					$('#total').html(v.total);
+					$('#diskon').html(v.diskon);
+					$('#field-total-tagihan').val(v.hidtotal);
+
+					$('#jumlah-bayar').val('');
+					$('#cashback').html('<b>Rp.0,00</b>');
+					$('#field-total-bayar').val('');
+					$('#field-total-cashback').val('');
+					$('#field-kode-barang').val('');
+					$('#field-kode-barang').focus();
+				}
+
+				SimpleLoading.stop();
+			}
+		});
+
+	});
 	
-    
+	
+    $(document).on("click", "#create-new-item", function () {
+		let urlcreate = url_create_item;
+		$('#modal').modal('show')
+		.find('#modalContent')
+		.load(urlcreate, function (responseTxt, statusTxt, xhr) {
+			
+		});
+		$('#modal .modal-header #header-info').html('<h4>BUAT BARANG BARU</h4>');
+
+		$("#modal").on('shown.bs.modal', function () {
+			$("#filebarang-kd_barang").focus();
+		});
+
+	});
+
+	$(document).on("click", ".generate-code", function () {
+        $.ajax({
+            type: 'post',
+            url: url_generate_code,
+            dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
+            success: function(v){
+                $('#filebarang-kd_barang').val(v.kode);
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+                $('#popup-namabarang').focus();
+            },
+        });
+    });
     
 JS
 );
@@ -357,10 +438,10 @@ JS
 				
 				<div class="box-body">
 					<div class="row">
-							<div class="col-xs-3">
+							<div class="col-xs-2">
 								<input type="text" class="form-control input-sm" placeholder="KODE BARANG" id="field-kode-barang" tabindex="1">
 							</div>
-							<div class="col-xs-5">
+							<div class="col-xs-4">
 								<div class="input-group">
 									<span class="input-group-addon"><i class="fa fa-tasks"></i></span>
 
@@ -392,6 +473,9 @@ JS
 							</div>
 							<div class="col-xs-2">
 								<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm" tabindex="4">ADD</button>
+							</div>
+							<div class="col-xs-2">
+								<button url="<?php echo Url::to(['site/prosestransaksi']);?>"type="button" class="btn btn-block btn-success btn-sm" tabindex="4" id="create-new-item">CREATE BARANG</button>
 							</div>
 					</div>
 					
