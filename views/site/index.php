@@ -187,7 +187,7 @@ $this->registerJs(<<<JS
     });
 
 
-	$(document).on("focusout", "#field-kode-barang", function () {
+	$(document).on("change", "#field-kode-barang", function () {
 		var kodebarang = $(this).val();
 		var qty = 1;
 		var ajaxTimeout = null;
@@ -197,11 +197,9 @@ $this->registerJs(<<<JS
 		if (ajaxTimeout) {
 			clearTimeout(ajaxTimeout);
 		}
-
 		
-
-		if(kodebarang != ''){
-			ajaxTimeout = setTimeout(function() {
+		ajaxTimeout = setTimeout(function() {
+			if(kodebarang != ''){
 				$.ajax({
 					type: 'get',
 					url: url_get_nama,
@@ -276,8 +274,9 @@ $this->registerJs(<<<JS
 					},
 					
 				});
-			}, 200);
-		}
+			}
+		}, 200);
+		
 
 		
 	});

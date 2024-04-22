@@ -39,7 +39,7 @@ class TransaksiController extends Controller
                 'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -448,5 +448,15 @@ class TransaksiController extends Controller
         }
 
         return $return;
+    }
+
+    public function actionCetaknota(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $id = Yii::$app->request->get('id');
+
+        HdTransaksi::cetakNota($id);
+
+        return ['success'=>1];
     }
 }

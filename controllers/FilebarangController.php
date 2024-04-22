@@ -253,6 +253,11 @@ class FilebarangController extends Controller
             $model->stok = 0;
             $model->aktif = 1;
             if($model->save()){
+                $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();
+
+                $update->urutan = $update->urutan + 1;
+                $update->save(false);
+
                 $return['success'] = 1;
 
                 $subtotal = 0;
