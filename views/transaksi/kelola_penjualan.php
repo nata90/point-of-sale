@@ -57,7 +57,7 @@ JS
                             'label'=>'',
                             'format'=>'raw',
                             'value'=>function($model){
-                                return '<button type="submit" class="btn btn-success btn-sm cetak-nota" link="'.Url::to(['transaksi/cetaknota', 'id'=>$model->id]).'">CETAK NOTA</button>';
+                                return '<button type="submit" class="btn btn-success btn-sm cetak-nota" link="'.Url::to(['transaksi/cetaknota', 'id'=>$model->no_transaksi]).'">CETAK NOTA</button>';
                             },
                             'contentOptions' => ['style' => 'text-align: center;'],
                         ],
