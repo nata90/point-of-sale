@@ -145,7 +145,7 @@ class TransaksiController extends Controller
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
 
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->searchReport(Yii::$app->request->queryParams);
 
         $exporter = new Spreadsheet([
             'dataProvider' => $dataProvider,
@@ -214,7 +214,7 @@ class TransaksiController extends Controller
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
 
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->searchReport(Yii::$app->request->queryParams);
         $model = $dataProvider->getModels();
 
         // get your HTML raw content without any layouts or scripts

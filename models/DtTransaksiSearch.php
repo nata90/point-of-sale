@@ -110,4 +110,47 @@ class DtTransaksiSearch extends DtTransaksi
 
         return $total;
     }
+
+    public function searchReport($params)
+    {
+        $query = DtTransaksi::find()->leftJoin('hd_transaksi','dt_transaksi.no_transaksi = hd_transaksi.no_transaksi');
+        $session = new Session;
+        $session->open();
+
+        // add conditions that should always apply here
+
+        $dataProvider = new ActiveDataProvider([
+            'query' => $query,
+            'sort' =>false,
+            'pagination' => false
+        ]);
+
+        $this->load($params);
+
+        if (!$this->validate()) {
+            // uncomment the following line if you do not want to return any records when validation fails
+            // $query->where('0=1');
+            return $dataProvider;
+        }
+
+        // grid filtering conditions
+        //$query->select(['kd_barang','qty','SUM(total_harga) AS total_harga']);
+        $query->andFilterWhere([
+            'id' => $this->id,
+            'harga_satuan' => $this->harga_satuan,
+            'qty' => $this->qty,
+            'total_harga' => $this->total_harga,
+            'dt_transaksi.status_hapus' => 0,
+            'tgl_hapus' => $this->tgl_hapus,
+        ]);
+
+        $query->andFilterWhere(['like', 'no_transaksi', $this->no_transaksi])->andFilterWhere(['like', 'kd_barang', $this->kd_barang]);
+
+        $session['start-date'] = date('Y-m-d', strtotime($this->start_date));
+        $session['end-date'] = date('Y-m-d', strtotime($this->end_date));
+        $query->andFilterWhere(['between', 'hd_transaksi.tgl_bayar', date('Y-m-d', strtotime($this->start_date))." 00:00:00", date('Y-m-d', strtotime($this->end_date))." 23:59:59"]);
+        
+
+        return $dataProvider;
+    }
 }

@@ -43,6 +43,23 @@ $this->registerJs(<<<JS
 
 	$('#new-transaction').focus();
 
+	$(document).on("click", "#print-transaction", function () {
+        var link = $(this).attr('url');
+        $.ajax({
+            type: 'get',
+            url: link,
+            dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+            },
+        });
+    });
+
 JS
 );
 
@@ -63,6 +80,7 @@ JS
 								<th>Nama Barang</th>
 								<th>Harga</th>
 								<th>Qty</th>
+								<th></th>
 								<th>Subtotal</th>								
 							</tr>
 							<?php 
@@ -76,6 +94,7 @@ JS
 					                    <td><?php echo $val->barang->nama_barang;?></td>
 					                    <td><?php echo Utility::rupiah($val->harga_satuan);?></td>
 					                    <td><?php echo $val->qty;?></td>
+										<td></td>
 					                    <td><?php echo Utility::rupiah($val->total_harga);?></td>			                    
 									</tr>
 							<?php 
@@ -93,6 +112,7 @@ JS
 			                    <td></td>
 			                    <td></td>
 			                    <td><strong>TOTAL</strong></td>
+								<td></td>
 			                    <td><strong><?php echo Utility::rupiah($model->total);?></strong></td>
 							</tr>
 							<tr>
@@ -101,6 +121,7 @@ JS
 			                    <td></td>
 			                    <td></td>
 			                    <td><strong>TOTAL BAYAR</strong></td>
+								<td></td>
 			                    <td><strong><?php echo Utility::rupiah($model->jumlah_bayar);?></strong></td>
 							</tr>
 							<tr>
@@ -109,6 +130,7 @@ JS
 			                    <td></td>
 			                    <td></td>
 			                    <td><strong>KEMBALI</strong></td>
+								<td></td>
 			                    <td><strong><?php echo Utility::rupiah(($model->jumlah_bayar-$model->total));?></strong></td>
 							</tr>
 							<tr>
@@ -117,6 +139,7 @@ JS
 			                    <td></td>
 			                    <td></td>
 			                    <td><button type="button" class="btn btn-block btn-success" id="new-transaction" url="<?php echo Url::to(['site/index']);?>">BARU</button></td>
+								<td><button id="print-transaction" type="button" class="btn btn-block btn-warning" url="<?php echo Url::to(['transaksi/cetaknota','id'=>$model->no_transaksi]);?>">PRINT</button></td>
 			                    <td><button id="cancel-transaction" type="button" class="btn btn-block btn-danger" url="<?php echo Url::to(['site/canceltransaction','id'=>$id]);?>">BATAL</button></td>
 							</tr>
 						</tfoot>
