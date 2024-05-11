@@ -36,10 +36,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
+                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','hitungtotalpenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -60,10 +60,15 @@ class TransaksiController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $setting = SettingApp::find()->one();
 
+        $rupiah_total = Utility::rupiah(HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d')));
+        $qty_total = HdTransaksi::getTotalItemJual(date('Y-m-d'),date('Y-m-d'));
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'setting'=>$setting
+            'setting'=>$setting,
+            'rupiah_total'=>$rupiah_total,
+            'qty_total'=>$qty_total
         ]);
     }
 
@@ -458,5 +463,22 @@ class TransaksiController extends Controller
         HdTransaksi::cetakNota($id);
 
         return ['success'=>1];
+    }
+
+    public function actionHitungtotalpenjualan(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $session = new Session;
+        $session->open();
+
+        $start_date = date('Y-m-d', strtotime($session['start-date']));
+        $end_date = date('Y-m-d', strtotime($session['end-date']));
+
+        $return = [];
+
+        $return['rupiahtotal'] = Utility::rupiah(HdTransaksi::getTotalRupiahJual($start_date,$end_date));
+        $return['qtytotal'] = HdTransaksi::getTotalItemJual($start_date,$end_date);
+
+        return $return;
     }
 }

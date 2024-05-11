@@ -6,6 +6,7 @@ use yii\widgets\Pjax;
 use app\components\Utility;
 use app\models\DtTransaksiSearch;
 use app\models\SettingApp;
+use yii\helpers\Url;
 /* @var $this yii\web\View */
 /* @var $searchModel app\models\DtTransaksiSearch */
 /* @var $dataProvider yii\data\ActiveDataProvider */
@@ -13,6 +14,7 @@ use app\models\SettingApp;
 $this->title = Yii::t('app', 'Rekap Penjualan');
 //$this->params['breadcrumbs'][] = $this->title;
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
+$this->registerJs('var url_total = "' . Url::to(['transaksi/hitungtotalpenjualan']) . '";');
 $this->registerJs(<<<JS
     $(document).on("click", "#xls-rekap", function () {
         var url = $(this).attr('url');
@@ -44,10 +46,74 @@ $this->registerJs(<<<JS
             },
         });
     });
+
+    $(document).on("pjax:beforeSend", function(){
+        SimpleLoading.start('gears');
+    });
+
+    $(document).on("pjax:complete", function(){
+        SimpleLoading.stop();
+        $.ajax({
+            type: 'post',
+            url: url_total,
+            dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
+            success: function(v){
+                $('.total-rupiah-jual').html(v.rupiahtotal);
+                $('.total-quantity-jual').html(v.qtytotal);
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+            },
+        });
+    });
     
 JS
 );
 ?>
+
+<?php Pjax::begin([
+    'id'=>'grid-penjualan',
+    'timeout'=>false,
+    'enablePushState'=>false,
+    'clientOptions'=>['method'=>'GET']
+]); ?>
+<div class="row">
+    <div class="col-md-12">
+        <div class="box box-danger box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Filter</h3>
+            </div>
+            <div class="box-body">
+                <?php echo $this->render('_search', ['model' => $searchModel]); ?>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="col-md-5 col-sm-6 col-xs-12" style="padding-left:0px;">
+    <div class="info-box">
+        <span class="info-box-icon bg-yellow"><i class="fa fa-money"></i></span>
+        <div class="info-box-content">
+            
+            <span class="info-box-text">TOTAL PENJUALAN</span>
+            <span class="info-box-number total-rupiah-jual"><?php echo $rupiah_total;?></span>
+        </div>
+        
+    </div>
+</div>
+<div class="col-md-5 col-sm-6 col-xs-12" style="padding-left:0px;">
+    <div class="info-box">
+        <span class="info-box-icon bg-green"><i class="fa fa-tags"></i></span>
+        <div class="info-box-content">
+            <span class="info-box-text">TOTAL ITEM TERJUAL</span>
+            <span class="info-box-number total-quantity-jual"><?php echo $qty_total;?></span>
+        </div>
+    </div>
+</div>
 <div class="row">
     <div class="col-md-12">
         <div class="box box-danger box-solid">
@@ -55,14 +121,6 @@ JS
                 <h3 class="box-title">Rekap Transaksi</h3>
             </div>
             <div class="box-body">
-
-                <?php Pjax::begin([
-                    'id'=>'grid-penjualan',
-                    'timeout'=>false,
-                    'enablePushState'=>false,
-                    'clientOptions'=>['method'=>'GET']
-                ]); ?>
-                <?php echo $this->render('_search', ['model' => $searchModel]); ?>
 
                 <?= GridView::widget([
                     'dataProvider' => $dataProvider,
@@ -109,7 +167,7 @@ JS
                             'value'=>function($model){
                                 return Utility::rupiah($model->harga_satuan * $model->qty);
                             },
-                            'footer' => '<strong>'.Utility::rupiah(DtTransaksiSearch::getTotal($dataProvider->models, 'harga_satuan','qty')).'</strong>',
+                            //'footer' => '<strong>'.Utility::rupiah(DtTransaksiSearch::getTotal($dataProvider->models, 'harga_satuan','qty')).'</strong>',
                         ],
                         //'total_harga',
                         //'status_hapus',
@@ -119,10 +177,11 @@ JS
                     ],
                 ]); ?>
 
-                <?php Pjax::end(); ?>
+                
             </div>
         </div>
         
 
     </div>
 </div>
+<?php Pjax::end(); ?>

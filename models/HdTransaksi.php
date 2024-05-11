@@ -120,4 +120,24 @@ class HdTransaksi extends \yii\db\ActiveRecord
         unlink($file); 
         return $output;
     }
+
+    public static function getTotalRupiahJual($start_date, $end_date){
+        $command = Yii::$app->db->createCommand('SELECT SUM(dt.total_harga) from dt_transaksi dt 
+        left join hd_transaksi ht on dt.no_transaksi = ht.no_transaksi 
+        WHERE dt.status_hapus = 0 AND ht.tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
+
+        $result= $command->queryScalar();
+
+        return $result;
+    }
+
+    public static function getTotalItemJual($start_date, $end_date){
+        $command = Yii::$app->db->createCommand('SELECT SUM(dt.qty) from dt_transaksi dt 
+        left join hd_transaksi ht on dt.no_transaksi = ht.no_transaksi 
+        WHERE dt.status_hapus = 0 AND ht.tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
+
+        $result= $command->queryScalar();
+
+        return $result;
+    }
 }

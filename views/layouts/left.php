@@ -38,7 +38,7 @@
                     //['label' => 'Kelola Pembelian', 'icon' => 'server', 'url' => ['transaksi/kelolapembelian']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
                     ['label' => 'Master Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
-                    ['label' => 'User', 'icon' => 'folder', 'url' => ['user/index'],],
+                    ['label' => 'User', 'icon' => 'user', 'url' => ['user/index'],],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/
                     
