@@ -39,7 +39,7 @@ class TransaksiController extends Controller
                 'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','hitungtotalpenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan','hitungpembayaran'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -480,5 +480,26 @@ class TransaksiController extends Controller
         $return['qtytotal'] = HdTransaksi::getTotalItemJual($start_date,$end_date);
 
         return $return;
+    }
+
+    public function actionHitungpembayaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $jumlah_bayar = Yii::$app->request->get('jumlah_bayar');
+        $total_bayar = Yii::$app->request->get('total_bayar');
+
+        if($jumlah_bayar == 'pas'){
+            $jumlah_bayar = $total_bayar;
+        }
+
+        $kembali = (int)$jumlah_bayar - (int)$total_bayar;
+
+        $return = [];
+
+        $return['jumlahbayar'] = $jumlah_bayar;
+        $return['kembali'] = $kembali;
+
+        return $return;
+
     }
 }

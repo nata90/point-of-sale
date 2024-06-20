@@ -17,6 +17,19 @@ $style = <<< CSS
     font-weight: bold !important;
     color: #000000 !important;
 } 
+
+/* styles.css */
+.btn-primary.active,
+.btn-primary:active,
+.btn-primary:focus,
+.btn-block:active,
+.btn-block:focus {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    box-shadow: none !important; /* optional: remove shadow on focus */
+    color: #fff !important;
+}
+
 CSS;
 $this->registerCss($style);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
@@ -24,6 +37,7 @@ $this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";')
 $this->registerJs('var url_proses_transaksi = "' .Url::to(['site/prosestransaksi']). '";');
 $this->registerJs('var url_create_item = "' .Url::to(['filebarang/createnewbarang']). '";');
 $this->registerJs('var url_generate_code = "' .Url::to(['filebarang/getkodebarang']). '";');
+$this->registerJs('var url_button_bayar = "' .Url::to(['transaksi/hitungpembayaran']). '";');
 $this->registerJs(<<<JS
 	$('#field-kode-barang').focus();
 
@@ -156,7 +170,6 @@ $this->registerJs(<<<JS
 					title: "Jumlah Bayar Kurang dari Total",
 					icon: "error"
 				});
-				
 	    	}else{
 	    		$.ajax({
 					type: 'post',
@@ -423,6 +436,43 @@ $this->registerJs(<<<JS
             },
         });
     });
+
+	$(document).on("click", "#uang-pas, #uang-5000, #uang-10000, #uang-20000, #uang-50000, #uang-100000", function () {
+        let jumlah_bayar = $(this).attr('rel');
+		let total_bayar = $('#field-total-tagihan').val();
+		$.ajax({
+            type: 'get',
+            url: url_button_bayar,
+			data:{
+				'jumlah_bayar':jumlah_bayar,
+				'total_bayar':total_bayar
+			},
+            dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
+            success: function(v){
+                $('#field-total-bayar').val(v.jumlahbayar);
+                $('#field-total-cashback').val(v.kembali);
+				$('#jumlah-bayar').val(formatRupiah(v.jumlahbayar, 'Rp. '));
+
+				var cashback = v.kembali;
+				var nilai = formatRupiah(cashback.toString(), 'Rp. ');
+
+				if(cashback < 0){
+					$('#cashback').html("<b>Rp. 0,00</b>");
+				}else{
+					$('#cashback').html("<b>"+nilai+"</b>");
+				}
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+                $('#proses-trans').focus();
+            },
+        });
+    });
     
 JS
 );
@@ -520,9 +570,38 @@ JS
 					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
 					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="14" tabindex="5"></span></li>
+					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="14" tabindex="5" style="text-align:right;"></span></li>
+						<li>
+							<div class="box-body">
+								<div class="row">
+									<div class="col-xs-4">
+										<button rel="pas" id="uang-pas" type="button" class="btn btn-block btn-info btn-flat" tabindex="6">UANG PAS</button>
+									</div>
+									<div class="col-xs-4">
+										<button rel="5000" id="uang-5000" type="button" class="btn btn-block btn-success btn-flat" tabindex="7">5.000</button>
+									</div>
+									<div class="col-xs-4">
+										<button rel="10000" id="uang-10000" type="button" class="btn btn-block btn-warning btn-flat" tabindex="8">10.000</button>
+									</div>
+								</div>
+							</div>
+							<div class="box-body">
+								<div class="row">
+									<div class="col-xs-4">
+										<button rel="20000" id="uang-20000" type="button" class="btn btn-block bg-purple btn-flat" tabindex="9">20.000</button>
+									</div>
+									<div class="col-xs-4">
+										<button rel="50000" id="uang-50000" type="button" class="btn btn-block bg-olive btn-flat" tabindex="10">50.000</button>
+									</div>
+									<div class="col-xs-4">
+										<button rel="100000" id="uang-100000" type="button" class="btn btn-block bg-navy btn-flat" tabindex="11">100.000</button>
+									</div>
+								</div>
+							</div>
+							
+						</li>
 					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
-					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans" tabindex="6">PROSES</button></li>
+					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans" tabindex="12">PROSES</button></li>
 					</ul>	
 				    
 				</div>
