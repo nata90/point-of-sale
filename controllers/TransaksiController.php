@@ -219,13 +219,16 @@ class TransaksiController extends Controller
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
 
+        $setting = SettingApp::findOne(1);
+
         $dataProvider = $searchModel->searchReport(Yii::$app->request->queryParams);
         $model = $dataProvider->getModels();
 
         // get your HTML raw content without any layouts or scripts
         $content = $this->renderPartial('report_penjualan_pdf', [
             'model' => $model,
-            'searchModel'=>$searchModel
+            'searchModel'=>$searchModel,
+            'setting'=>$setting
         ]);
         
         // setup kartik\mpdf\Pdf component
@@ -235,7 +238,7 @@ class TransaksiController extends Controller
             // A4 paper format
             'format' => Pdf::FORMAT_A4, 
             // portrait orientation
-            'orientation' => Pdf::ORIENT_PORTRAIT, 
+            'orientation' => Pdf::ORIENT_LANDSCAPE, 
             // stream to browser inline
             'destination' => Pdf::DEST_BROWSER, 
             // your html content input
@@ -244,12 +247,47 @@ class TransaksiController extends Controller
             // enhanced bootstrap css built by Krajee for mPDF formatting 
             'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
             // any css to be embedded if required
-            'cssInline' => '.kv-heading-1{font-size:18px}', 
+            'cssInline' => '.kv-heading-1{font-size:18px}
+            body {
+                font-family: Arial, sans-serif;
+            }
+        
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+        
+            th, td {
+                border: none;
+                padding: 8px;
+                text-align: left;
+            }
+        
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+        
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        
+            tr:hover {
+                background-color: #e2e2e2;
+            }
+        
+            caption {
+                caption-side: top;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px 0;
+            }', 
              // set mPDF properties on the fly
-            'options' => ['title' => 'LAPORAN REPORT PENJUALAN'],
+            'options' => ['title' => 'LAPORAN PENJUALAN '.$setting->app_name],
              // call mPDF methods on the fly
             'methods' => [ 
-                'SetHeader'=>['LAPORAN REPORT PENJUALAN'], 
+                'SetHeader'=>['LAPORAN PENJUALAN '.strtoupper($setting->app_name)], 
                 'SetFooter'=>['{PAGENO}'],
             ]
         ]);

@@ -10,28 +10,6 @@ use yii\helpers\Url;
 
 
 $this->title = 'PENJUALAN - POS';
-$style = <<< CSS
-
-.ui-menu-item .ui-menu-item-wrapper.ui-state-active {
-    background: #ADD8E6 !important;
-    font-weight: bold !important;
-    color: #000000 !important;
-} 
-
-/* styles.css */
-.btn-primary.active,
-.btn-primary:active,
-.btn-primary:focus,
-.btn-block:active,
-.btn-block:focus {
-    background-color: #007bff !important;
-    border-color: #007bff !important;
-    box-shadow: none !important; /* optional: remove shadow on focus */
-    color: #fff !important;
-}
-
-CSS;
-$this->registerCss($style);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";');
 $this->registerJs('var url_proses_transaksi = "' .Url::to(['site/prosestransaksi']). '";');
@@ -574,26 +552,26 @@ JS
 						<li>
 							<div class="box-body">
 								<div class="row">
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="pas" id="uang-pas" type="button" class="btn btn-block btn-info btn-flat" tabindex="6">UANG PAS</button>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="5000" id="uang-5000" type="button" class="btn btn-block btn-success btn-flat" tabindex="7">5.000</button>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="10000" id="uang-10000" type="button" class="btn btn-block btn-warning btn-flat" tabindex="8">10.000</button>
 									</div>
 								</div>
 							</div>
 							<div class="box-body">
 								<div class="row">
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="20000" id="uang-20000" type="button" class="btn btn-block bg-purple btn-flat" tabindex="9">20.000</button>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="50000" id="uang-50000" type="button" class="btn btn-block bg-olive btn-flat" tabindex="10">50.000</button>
 									</div>
-									<div class="col-xs-4">
+									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
 										<button rel="100000" id="uang-100000" type="button" class="btn btn-block bg-navy btn-flat" tabindex="11">100.000</button>
 									</div>
 								</div>

@@ -120,3 +120,33 @@ a.desc:after {
   color: black;
   font-weight: bold;
 }
+
+/* styles.css */
+.btn-primary.active,
+.btn-primary:active,
+.btn-success.active,
+.btn-success:focus,
+.btn-danger.active,
+.btn-danger:focus,
+.btn-warning.active,
+.btn-warning:focus,
+.btn-primary:focus,
+.btn-block:active,
+.btn-block:focus {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+    box-shadow: none !important; /* optional: remove shadow on focus */
+    color: #fff !important;
+}
+
+input.form-control {
+    font-size: 15px; /* Ukuran teks lebih besar */
+    font-weight: bold; /* Teks tebal (bold) */
+    padding: 10px; /* Padding untuk kenyamanan */
+}
+
+.ui-menu-item .ui-menu-item-wrapper.ui-state-active {
+    background: #ADD8E6 !important;
+    font-weight: bold !important;
+    color: #000000 !important;
+} 
