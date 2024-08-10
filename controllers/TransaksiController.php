@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\Modal;
 use app\models\Pengeluaran;
 use Yii;
 use app\models\DtTransaksi;
@@ -539,5 +540,68 @@ class TransaksiController extends Controller
 
         return $return;
 
+    }
+
+    public function actionModal(){
+        $model = new Modal();
+
+        $modal_hari_ini = Modal::find()->where(['tanggal'=>date('Y-m-d')])->one();
+
+        return $this->render('modal', [
+            'model' => $model,
+            'modal_hari_ini'=>$modal_hari_ini
+        ]);
+    }
+
+    public function actionSimpanmodal(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        try {
+
+            $keterangan = Yii::$app->request->post('keterangan');
+            $modal = Yii::$app->request->post('modal');
+
+            $return = [];
+            $model = Modal::find()->where(['tanggal'=>date('Y-m-d')])->one();
+            if($model == null){
+                $model = new Modal();
+            }
+            $model->keterangan = $keterangan;
+            $model->modal_awal = $modal;
+            $model->tanggal = date('Y-m-d');
+            if($model->save()){
+                Yii::$app->session->setFlash('success', 'Modal Awal Berhasil Disimpan');
+                $return['success'] = 1;
+            }else{
+                $return['success'] = 0;
+            }
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+
+        return $return;
+    }
+
+    public function actionDeletepengeluaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        try {
+            $id = Yii::$app->request->get('id');
+
+            $return = [];
+            $model = Pengeluaran::findOne($id);
+            if($model->delete()){
+                Yii::$app->session->setFlash('success', 'Pengeluaran '.$model->deskripsi.' Berhasil Dihapus');
+                $return['success'] = 1;
+            }else{
+                $return['success'] = 0;
+            }
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+
+        return $return;
     }
 }

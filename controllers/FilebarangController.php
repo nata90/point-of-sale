@@ -162,12 +162,29 @@ class FilebarangController extends Controller
     public function actionAutocompletebarang($term){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $data = FileBarang::find()
-        ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
-        ->where(['like','nama_barang', $term])
-        ->andWhere(['aktif'=>1])
-        ->asArray()
-        ->all();
+        if(strpos($term,'|')){
+            $array_string = explode('|',$term);
+
+            $data = FileBarang::find()
+            ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
+            ->where(['aktif' => 1])
+            ->andWhere([
+                'AND', 
+                ['like', 'nama_barang', trim($array_string[0])],
+                ['like', 'CAST(harga_jual AS CHAR)', trim($array_string[1])]
+            ])
+            ->asArray()
+            ->all();
+        }else{
+            $data = FileBarang::find()
+            ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
+            ->where(['like','nama_barang', $term])
+            ->andWhere(['aktif'=>1])
+            ->asArray()
+            ->all();
+        }
+
+        
 
         return $data;
     }

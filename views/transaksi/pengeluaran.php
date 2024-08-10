@@ -10,7 +10,8 @@ use yii\helpers\Url;
 
 $this->title = Yii::t('app', 'Pengeluaran');
 $this->params['breadcrumbs'][] = $this->title;
-$this->registerJs('var url = "' . Url::to(['/transaksi/simpanpengeluaran']) . '";');
+$this->registerJs('var url = "' . Url::to(['/transaksi/simpanpengeluaran']) . '"');
+$this->registerJs('var url_delete = "' . Url::to(['/transaksi/deletepengeluaran']) . '"');
 $this->registerJs(<<<JS
 	$(document).on("click", "#simpan-pengeluaran", function () {
 		var deskripsi = $('#pengeluaran-deskripsi').val();
@@ -32,9 +33,43 @@ $this->registerJs(<<<JS
                 if(v.success == 1){
                     location.reload();
                 }else{
-                    
+                    Swal.fire({
+                        title: v.msg,
+                        icon: "error"
+                    });
                 }
                 
+            },
+            'complete':function(json)
+            {
+                SimpleLoading.stop();
+            },
+        });
+	});
+
+    $(document).on("click", ".delete-pengeluaran", function () {
+		var id = $(this).attr('id');
+
+		$.ajax({
+            type: 'get',
+            url: url_delete,
+            dataType: 'json',
+            'beforeSend':function(json)
+            { 
+                SimpleLoading.start('gears'); 
+            },
+            data: {
+                'id':id
+            },
+            success: function(v){
+                if(v.success == 1){
+                    location.reload();
+                }else{
+                    Swal.fire({
+                        title: v.msg,
+                        icon: "error"
+                    });
+                }
             },
             'complete':function(json)
             {
@@ -101,7 +136,7 @@ JS
                         <td>
                             <?php echo Utility::rupiah($val['nilai']);?>
                         </td>
-                        <td><span class="badge bg-red">Hapus</span></td>
+                        <td><?= Html::button(Yii::t('app', 'Hapus'), ['class' => 'btn btn-sm btn-danger pull-right delete-pengeluaran', 'id'=>$val['id']]) ?></td>
                     </tr>
             <?php 
                     $number++;
