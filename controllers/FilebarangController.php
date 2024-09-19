@@ -13,6 +13,7 @@ use yii\filters\VerbFilter;
 use app\models\KodeGenerate;
 use yii\filters\AccessControl;
 use yii\web\Session;
+use Exception;
 
 /**
  * FilebarangController implements the CRUD actions for FileBarang model.
@@ -202,42 +203,52 @@ class FilebarangController extends Controller
     public function actionSimpanupdateharga(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $kodebarang = Yii::$app->request->get('kodebarang');
-        $harga = Yii::$app->request->get('harga');
-        $subtotal = 0;
-        $diskon = 0;
-        $total = 0;
+        try{
+            $kodebarang = Yii::$app->request->get('kodebarang');
+            $harga = Yii::$app->request->get('harga');
+            $subtotal = 0;
+            $diskon = 0;
+            $total = 0;
 
-        $model = FileBarang::find()->where(['kd_barang'=>$kodebarang])->one();
+            $model = FileBarang::find()->where(['kd_barang'=>$kodebarang])->one();
 
-        if($model){
-            $model->harga_jual = $harga;
-            $model->save(false);
+            if($model){
+                $model->harga_jual = $harga;
+                if(!$model->save(false)){
+                    throw new Exception($this->formatErrors($model->getErrors()));
+                }
+            }else{
+                throw new Exception('Barang Tidak Ditemukan !');
+            }
+
+            $session = new Session;
+            $session->open();
+            $arr_data = $session['datatransaksi'];
+
+            $arr_data[$kodebarang]['harga'] = $model->harga_jual;
+            $arr_data[$kodebarang]['total'] = $model->harga_jual*$arr_data[$kodebarang]['qty'];
+
+            $session['datatransaksi'] = $arr_data;
+
+            $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+
+            $return['data'] = $this->renderPartial('/site/data_transaksi',[
+                'datatransaksi'=>$arr_data,
+                'subtotal'=>$subtotal,
+                'diskon'=>$diskon,
+                'total'=>$total
+            ]);
+
+            $return['success'] = 1;
+            $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+            $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+            $return['hidtotal'] = $totalTransaksi['total'];
+            $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
         }
-
-        $session = new Session;
-        $session->open();
-        $arr_data = $session['datatransaksi'];
-
-        $arr_data[$kodebarang]['harga'] = $model->harga_jual;
-        $arr_data[$kodebarang]['total'] = $model->harga_jual*$arr_data[$kodebarang]['qty'];
-
-        $session['datatransaksi'] = $arr_data;
-
-        $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
-
-        $return['data'] = $this->renderPartial('/site/data_transaksi',[
-            'datatransaksi'=>$arr_data,
-            'subtotal'=>$subtotal,
-            'diskon'=>$diskon,
-            'total'=>$total
-        ]);
-
-
-        $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
-        $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
-        $return['hidtotal'] = $totalTransaksi['total'];
-        $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+        
 
         return $return;
     }
@@ -309,13 +320,26 @@ class FilebarangController extends Controller
                 $return['hidtotal'] = $totalTransaksi['total'];
                 $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
             }else{
-                $return['success'] = 0;
+                throw new Exception($this->formatErrors($model->getErrors()));
             }
 
-            return $return;
+            
         } catch (\Exception $e) {
-            Yii::error($e->getMessage());
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
         }
-        
+
+        return $return;
+    }
+
+    private function formatErrors($errors) {
+        $errorMessages = '<ul style="text-align: left;">';
+        foreach ($errors as $fieldName => $fieldErrors) {
+            foreach ($fieldErrors as $error) {
+                $errorMessages .= '<li>' . strtoupper($error) . '</li>';
+            }
+        }
+        $errorMessages .= '</ul>';
+        return $errorMessages;
     }
 }

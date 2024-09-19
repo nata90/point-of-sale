@@ -9,7 +9,6 @@ use yii\helpers\Url;
 /* @var $model app\models\AppUser */
 
 $this->title = Yii::t('app', 'Set Modal Awal');
-$this->params['breadcrumbs'][] = $this->title;
 $this->registerJs('var url = "' . Url::to(['/transaksi/simpanmodal']) . '";');
 $this->registerJs(<<<JS
 	$(document).on("click", "#simpan-modal", function () {

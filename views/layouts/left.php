@@ -14,18 +14,6 @@
             </div>
         </div>
 
-        <!-- search form -->
-        <form action="#" method="get" class="sidebar-form">
-            <div class="input-group">
-                <input type="text" name="q" class="form-control" placeholder="Search..."/>
-              <span class="input-group-btn">
-                <button type='submit' name='search' id='search-btn' class="btn btn-flat"><i class="fa fa-search"></i>
-                </button>
-              </span>
-            </div>
-        </form>
-        <!-- /.search form -->
-
         <?= dmstr\widgets\Menu::widget(
             [
                 'options' => ['class' => 'sidebar-menu tree', 'data-widget'=> 'tree'],
@@ -34,7 +22,7 @@
                     ['label' => 'Dashboard', 'icon' => 'bar-chart', 'url' => ['site/dashboard']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
                     ['label' => 'Pengeluaran', 'icon' => 'money', 'url' => ['transaksi/pengeluaran']],
-                    ['label' => 'Set Modal', 'icon' => 'server', 'url' => ['transaksi/modal']],
+                    ['label' => 'Modal', 'icon' => 'server', 'url' => ['transaksi/modal']],
                     ['label' => 'Kelola Penjualan', 'icon' => 'clone', 'url' => ['transaksi/kelolapenjualan']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
                     ['label' => 'Master Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],

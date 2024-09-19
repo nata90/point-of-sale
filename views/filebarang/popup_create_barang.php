@@ -13,6 +13,16 @@ use yii\helpers\Url;
 <?php $form = ActiveForm::begin(); ?>
 <div class="box-body">
     <div class="row">
+        <div class="col-md-12">
+            <div class="callout callout-danger">
+                <p class="callout-description">BUAT BARANG BARU</p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="box-footer">
+
+    <div class="row">
         <div class="col-md-8">
             <?= $form->field($model, 'kd_barang')->textInput(['maxlength' => true, 'value'=>$kodebarang]);?>
         </div>

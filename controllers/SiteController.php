@@ -20,6 +20,7 @@ use yii\helpers\Json;
 use yii\helpers\Url;
 use yii\web\Session;
 use yii\data\ActiveDataProvider;
+use Exception;
 
 class SiteController extends Controller
 {
@@ -278,45 +279,63 @@ class SiteController extends Controller
     public function actionSimpantransaksi(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $total_tagihan = $_POST['totaltagihan'];
-        $total_bayar = $_POST['totalbayar'];
-        $cashback = $_POST['cashback'];
+        $connection = \Yii::$app->db;
+        $transaction = $connection->beginTransaction();
 
-        $session = new Session;
-        $session->open();
+        try {
+            $total_tagihan = $_POST['totaltagihan'];
+            $total_bayar = $_POST['totalbayar'];
+            $cashback = $_POST['cashback'];
 
-        $return = array();
-        $arr_item = array();
+            $session = new Session;
+            $session->open();
 
-        $model = new HdTransaksi;
-        $model->no_transaksi = Utility::getNoTransaksi(1);
-        $model->tgl_bayar = date('Y-m-d H:i:s');
-        $model->status_bayar = 1;
-        $model->total = $total_tagihan;
-        $model->jumlah_bayar = $total_bayar;
-        if($model->save()){
-            if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
-                foreach($session['datatransaksi'] as $key=>$value){
-                    $nama_barang = FileBarang::find()->where(['kd_barang'=>$value['kodebarang']])->one();
-                    $arr_item[] = $nama_barang->nama_barang.' : '.$value['qty'].' item';
-                    $detail = new DtTransaksi;
-                    $detail->no_transaksi = $model->no_transaksi;
-                    $detail->kd_barang = $value['kodebarang'];
-                    $detail->harga_satuan = $value['harga'];
-                    $detail->qty = $value['qty'];
-                    $detail->total_harga = $value['harga'] * $value['qty'];
-                    $detail->id_stok_barang = 0;
-                    $detail->save();
+            $return = array();
+            $arr_item = array();
+
+            $model = new HdTransaksi;
+            $model->no_transaksi = Utility::getNoTransaksi(1);
+            $model->tgl_bayar = date('Y-m-d H:i:s');
+            $model->status_bayar = 1;
+            $model->total = $total_tagihan;
+            $model->jumlah_bayar = $total_bayar;
+            if($model->save()){
+                if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
+                    foreach($session['datatransaksi'] as $key=>$value){
+                        $nama_barang = FileBarang::find()->where(['kd_barang'=>$value['kodebarang']])->one();
+                        $arr_item[] = $nama_barang->nama_barang.' : '.$value['qty'].' item';
+                        $detail = new DtTransaksi;
+                        $detail->no_transaksi = $model->no_transaksi;
+                        $detail->kd_barang = $value['kodebarang'];
+                        $detail->harga_satuan = $value['harga'];
+                        $detail->qty = $value['qty'];
+                        $detail->total_harga = $value['harga'] * $value['qty'];
+                        $detail->id_stok_barang = 0;
+                        if(!$detail->save()){
+                            throw new Exception($this->formatErrors($detail->getErrors()));
+                        }
+                    }
+                }else{
+                    throw new Exception('List Barang Tidak Boleh Kosong !');
                 }
+
+                HdTransaksi::cetakNota($model->no_transaksi);
+
+                $return['success'] = 1;
+                $return['nopenjualan'] = $model->no_transaksi;
+                $return['items'] = $arr_item;
+                $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
+
+                $transaction->commit();
+            }else{
+                throw new Exception($this->formatErrors($model->getErrors()));
             }
-
-            HdTransaksi::cetakNota($model->no_transaksi);
-
-            $return['success'] = 1;
-            $return['nopenjualan'] = $model->no_transaksi;
-            $return['items'] = $arr_item;
-            $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $transaction->rollBack();
+            $return['msg'] = $e->getMessage();
         }
+        
 
         return $return;
     }
@@ -523,5 +542,16 @@ class SiteController extends Controller
 
         return $return;
 
+    }
+
+    private function formatErrors($errors) {
+        $errorMessages = '<ul style="text-align: left;">';
+        foreach ($errors as $fieldName => $fieldErrors) {
+            foreach ($fieldErrors as $error) {
+                $errorMessages .= '<li>' . strtoupper($error) . '</li>';
+            }
+        }
+        $errorMessages .= '</ul>';
+        return $errorMessages;
     }
 }

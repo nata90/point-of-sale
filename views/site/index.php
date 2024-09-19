@@ -163,9 +163,18 @@ $this->registerJs(<<<JS
 						'cashback':cashback
 					},
 					success: function(v){
-						var head = 'Penjualan : '+v.nopenjualan;
-					    var msg = v.items;
-						location.replace(v.redirect);
+						if(v.success == 1){
+							var head = 'Penjualan : '+v.nopenjualan;
+							var msg = v.items;
+							location.replace(v.redirect);
+						}else{
+							Swal.fire({
+								title: 'Gagal Simpan',
+								html: v.msg,
+								icon: "error"
+							});
+						}
+						
 					},
 					'complete':function(json)
 					{
@@ -318,18 +327,27 @@ $this->registerJs(<<<JS
 				'kodebarang':kodebarang
 			},
 			success: function(v){
-				$('#modal').modal('hide');
-				$('#data-transaksi').html(v.data);
-				$('#subtotal').html(v.subtotal);
-				$('#total').html(v.total);
-				$('#diskon').html(v.diskon);
-				$('#field-total-tagihan').val(v.hidtotal);
+				if(v.success == 1){
+					$('#modal').modal('hide');
+					$('#data-transaksi').html(v.data);
+					$('#subtotal').html(v.subtotal);
+					$('#total').html(v.total);
+					$('#diskon').html(v.diskon);
+					$('#field-total-tagihan').val(v.hidtotal);
 
-				$('#jumlah-bayar').val('');
-				$('#cashback').html('<b>Rp.0,00</b>');
-				$('#field-total-bayar').val('');
-				$('#field-total-cashback').val('');
-				$('#field-kode-barang').focus();
+					$('#jumlah-bayar').val('');
+					$('#cashback').html('<b>Rp.0,00</b>');
+					$('#field-total-bayar').val('');
+					$('#field-total-cashback').val('');
+					$('#field-kode-barang').focus();
+				}else{
+					Swal.fire({
+						title: 'Gagal Update !',
+						html: v.msg,
+						icon: "error"
+					});
+				}
+				
 
 				SimpleLoading.stop();
 			}
@@ -371,6 +389,12 @@ $this->registerJs(<<<JS
 					$('#field-total-cashback').val('');
 					$('#field-kode-barang').val('');
 					$('#field-kode-barang').focus();
+				}else{
+					Swal.fire({
+						title: 'Gagal Simpan',
+						html: v.msg,
+						icon: "error"
+					});
 				}
 
 				SimpleLoading.stop();
@@ -387,7 +411,7 @@ $this->registerJs(<<<JS
 		.load(urlcreate, function (responseTxt, statusTxt, xhr) {
 			
 		});
-		$('#modal .modal-header #header-info').html('<h4>BUAT BARANG BARU</h4>');
+		
 
 		$("#modal").on('shown.bs.modal', function () {
 			$("#filebarang-kd_barang").focus();
@@ -459,8 +483,15 @@ JS
 
 
 	<div class="row">
-
+		
 		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="callout callout-danger">
+						<p class="callout-description">FORM PEMBELIAN</p>
+					</div>
+				</div>
+			</div>
 			<div class="box box-danger">
 				
 				<div class="box-body">
@@ -513,6 +544,13 @@ JS
 	</div>
 	<div class="row">
 		<div class="col-md-8">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="callout callout-danger">
+						<p class="callout-description">LIST PEMBELIAN BARANG</p>
+					</div>
+				</div>
+			</div>
 			<div class="box box-danger">
 				
 				<div class="box-body" id="data-transaksi">
@@ -528,20 +566,18 @@ JS
 							</tr>
 							
 						</tbody>
-						<?php /*<tfoot>
-							<tr>
-								<td colspan="6">
-									<div class="col-xs-4">
-										<button type="button" class="btn btn-block btn-danger btn-sm">BATALKAN TRANSAKSI</button>
-									</div>
-								</td>
-							</tr>
-						</tfoot>*/ ?>
 					</table>
 				</div>
 			</div>
 		</div>	
 		<div class="col-md-4">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="callout callout-danger">
+						<p class="callout-description">PEMBAYARAN</p>
+					</div>
+				</div>
+			</div>
 			<div class="box box-danger">
 				<div class="box-body">
 					<ul class="todo-list ui-sortable">
