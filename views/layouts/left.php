@@ -20,12 +20,12 @@
                 'items' => [
                     ['label' => 'MENU', 'options' => ['class' => 'header']],
                     ['label' => 'Dashboard', 'icon' => 'bar-chart', 'url' => ['site/dashboard']],
+                    ['label' => 'Modal Awal', 'icon' => 'server', 'url' => ['transaksi/modal']],
                     ['label' => 'Penjualan', 'icon' => 'opencart', 'url' => ['site/index']],
                     ['label' => 'Pengeluaran', 'icon' => 'money', 'url' => ['transaksi/pengeluaran']],
-                    ['label' => 'Modal', 'icon' => 'server', 'url' => ['transaksi/modal']],
                     ['label' => 'Kelola Penjualan', 'icon' => 'clone', 'url' => ['transaksi/kelolapenjualan']],
                     ['label' => 'Laporan Rekap Penjualan', 'icon' => 'archive', 'url' => ['transaksi/index']],
-                    ['label' => 'Master Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
+                    ['label' => 'Data Barang', 'icon' => 'folder', 'url' => ['filebarang/index'],],
                     ['label' => 'User', 'icon' => 'user', 'url' => ['user/index'],],
                     /*['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],*/

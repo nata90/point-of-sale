@@ -47,4 +47,14 @@ class Modal extends \yii\db\ActiveRecord
             'keterangan' => 'Keterangan',
         ];
     }
+
+    public static function getModalAwal($date){
+        $sql = 'SELECT COALESCE(modal_awal,0) FROM modal WHERE tanggal = :date';
+
+        $params = [
+            ':date' => $date
+        ];
+        
+        return Yii::$app->db->createCommand($sql, $params)->queryScalar();
+    }
 }

@@ -9,11 +9,9 @@ $this->title = Yii::t('app', 'Create User');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'App Users'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="row">
+<?= $this->render('_form', [
+    'model' => $model,
+    'listData'=>$listData
+]) ?>
 
-    <?= $this->render('_form', [
-        'model' => $model,
-        'listData'=>$listData
-    ]) ?>
 
-</div>

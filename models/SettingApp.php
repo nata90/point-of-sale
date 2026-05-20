@@ -42,7 +42,7 @@ class SettingApp extends \yii\db\ActiveRecord
     {
         return [
             'id' => Yii::t('app', 'ID'),
-            'app_name' => Yii::t('app', 'Nama Aplikasi'),
+            'app_name' => Yii::t('app', 'Nama Toko'),
             'email' => Yii::t('app', 'Email'),
             'ip_address' => Yii::t('app', 'Alamat IP'),
         ];

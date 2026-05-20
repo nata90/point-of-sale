@@ -45,4 +45,15 @@ class Pengeluaran extends \yii\db\ActiveRecord
             'tanggal' => 'Tanggal',
         ];
     }
+
+    public static function getTotalPengeluaran($start_date, $end_date){
+        $sql = 'SELECT COALESCE(SUM(nilai),0) FROM pengeluaran WHERE tanggal BETWEEN :start_date AND :end_date';
+
+        $params = [
+            ':start_date' => $start_date. ' 00:00:00',
+            ':end_date' => $end_date.' 23:59:59'
+        ];
+        
+        return Yii::$app->db->createCommand($sql, $params)->queryScalar();
+    }
 }

@@ -37,7 +37,7 @@ use yii\helpers\Url;
     <?= $form->field($model, 'harga_jual')->textInput(['type'=>'number']) ?>
 
     <div class="form-group">
-        <?= Html::button(Yii::t('app', 'CREATE'), ['class' => 'btn btn-success', 'id'=>'create-item-button', 'link'=>Url::to(['filebarang/popupcreatebarang'])]) ?>
+        <?= Html::button(Yii::t('app', 'TAMBAH BARANG'), ['class' => 'btn btn-success', 'id'=>'create-item-button', 'link'=>Url::to(['filebarang/popupcreatebarang'])]) ?>
     </div>
 </div>
 <?php ActiveForm::end(); ?>

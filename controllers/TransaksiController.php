@@ -40,7 +40,7 @@ class TransaksiController extends Controller
                 'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','hitungtotalpenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan','hitungpembayaran'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan','hitungpembayaran','laporankeuangan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -163,7 +163,13 @@ class TransaksiController extends Controller
                         return $model->no_transaksi;
                     },
                 ],
-                'kd_barang',
+                [
+                    'label'=>'Kode Barang',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return "`".$model->kd_barang;
+                    },
+                ],
                 [
                     'label'=>'Tanggal Transaksi',
                     'format'=>'raw',
@@ -603,5 +609,30 @@ class TransaksiController extends Controller
         }
 
         return $return;
+    }
+
+    public function actionLaporankeuangan(){
+        $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = date('Y-m-d');
+        $searchModel->end_date = date('Y-m-d');
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $setting = SettingApp::find()->one();
+
+        $modal_awal = Modal::getModalAwal(date('Y-m-d'));
+        $total_penjualan = HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d'));
+        $pengeluaran = Pengeluaran::getTotalPengeluaran(date('Y-m-d'),date('Y-m-d'));
+        $keuntungan = $modal_awal + $total_penjualan - $pengeluaran;
+
+        
+
+        return $this->render('laporan_keuangan', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'setting'=>$setting,
+            'modal_awal'=>$modal_awal,
+            'total_penjualan'=>$total_penjualan,
+            'pengeluaran'=>$pengeluaran,
+            'keuntungan'=>$keuntungan
+        ]);
     }
 }

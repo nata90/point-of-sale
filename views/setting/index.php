@@ -49,42 +49,38 @@ $this->registerJs(<<<JS
 JS
 );
 ?>
-
 <div class="row">
+    <div class="col-md-12">
+        <div class="box box-danger box-solid">
+            <div class="box-header with-border">
+                <h3 class="box-title">Setting Aplikasi</h3>
+            </div>
+			<div class="box-body">
+				<?php $form = ActiveForm::begin([
+					
+					'options'=>[
+						'layout' => 'horizontal',
+						'class'=>'form-horizontal',
+					],
+					'fieldConfig' => [
+						'template' => '<label class="col-sm-2 control-label">{label}</label><div class="col-sm-10">{input}</div>',
+					]
+				]); ?>
+					<div class="box-body">
+					
+					<?= $form->field($model, 'app_name')->textInput(['maxlength' => true]) ?>
+						
+					<?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
 
-    <div class="col-md-8">
-	    <div class="box box-danger">
-	        <div class="box-header with-border">
-	            <h3 class="box-title">
-	                Setting Aplikasi
-	            </h3>
-	        </div>
-	        <?php $form = ActiveForm::begin([
-	            
-	            'options'=>[
-	                'layout' => 'horizontal',
-	                'class'=>'form-horizontal',
-	            ],
-	            'fieldConfig' => [
-	                'template' => '<label class="col-sm-2 control-label">{label}</label><div class="col-sm-10">{input}</div>',
-	            ]
-	        ]); ?>
-	            <div class="box-body">
-	               
-	            <?= $form->field($model, 'app_name')->textInput(['maxlength' => true]) ?>
-	                
-	            <?= $form->field($model, 'email')->textInput(['maxlength' => true]) ?>
-
-	            <?= $form->field($model, 'ip_address')->textInput(['maxlength' => true]) ?>
+					<?= $form->field($model, 'ip_address')->textInput(['maxlength' => true]) ?>
 
 
-	                <div class="box-footer">
-	                    <?= Html::button(Yii::t('app', 'Save'), ['class' => 'btn btn-success pull-right', 'id'=>'simpan-setting']) ?>
-	                </div>
-	            </div>
-	        <?php ActiveForm::end(); ?>
-	    </div>
-
+						<div class="box-footer">
+							<?= Html::button(Yii::t('app', 'Save'), ['class' => 'btn btn-success pull-right', 'id'=>'simpan-setting']) ?>
+						</div>
+					</div>
+				<?php ActiveForm::end(); ?>
+			</div>
+		</div>
 	</div>
-
 </div>

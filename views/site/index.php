@@ -481,147 +481,253 @@ JS
 
 ?>
 
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
+.pin-pos-wrap { font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
+.pin-pos-wrap *, .pin-pos-wrap *::before, .pin-pos-wrap *::after { box-sizing: border-box; }
+
+.pin-section-label {
+	font-size: 14px; font-weight: 700; letter-spacing: 0.02em; color: #33332e;
+	margin: 0 0 12px; padding: 10px 20px;
+	background: #f6f6f3; border-radius: 16px; display: inline-block;
+}
+.pin-card {
+	background: #ffffff; border-radius: 16px; padding: 24px;
+	border: 1px solid #e5e5e0; margin-bottom: 16px;
+}
+.pin-card-soft {
+	background: #fbfbf9; border-radius: 16px; padding: 24px;
+	border: 1px solid #e5e5e0; margin-bottom: 16px;
+}
+
+.pin-input {
+	font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 500; color: #000;
+	background: #f6f6f3; border: 2px solid transparent; border-radius: 16px;
+	padding: 10px 16px; height: 44px; width: 100%;
+	transition: background .15s, border-color .15s;
+}
+.pin-input::placeholder { color: #91918c; font-weight: 400; }
+.pin-input:focus { outline: none; background: #fff; border-color: #000; }
+.pin-input:focus-visible { box-shadow: 0 0 0 3px #435ee5; }
+.pin-input-group { position: relative; }
+.pin-input-group .pin-input { padding-left: 42px; }
+.pin-input-group .pin-input-icon {
+	position: absolute; left: 14px; top: 50%; transform: translateY(-50%);
+	color: #91918c; font-size: 14px; pointer-events: none;
+}
+
+.pin-btn-primary {
+	font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; line-height: 1;
+	background: #e60023; color: #fff; border: none; border-radius: 16px;
+	padding: 0 20px; height: 44px; cursor: pointer; width: 100%;
+	transition: background .15s;
+}
+.pin-btn-primary:hover, .pin-btn-primary:focus { background: #cc001f; color: #fff; }
+
+.pin-btn-secondary {
+	font-family: 'Inter', sans-serif; font-size: 14px; font-weight: 700; line-height: 1;
+	background: #e5e5e0; color: #000; border: none; border-radius: 16px;
+	padding: 0 20px; height: 44px; cursor: pointer; width: 100%;
+	transition: background .15s;
+}
+.pin-btn-secondary:hover, .pin-btn-secondary:focus { background: #c8c8c1; color: #000; }
+
+.pin-btn-accent {
+	font-family: 'Inter', sans-serif; font-size: 13px; font-weight: 700; line-height: 1;
+	background: #f6f6f3; color: #000; border: 1px solid #e5e5e0; border-radius: 9999px;
+	padding: 0 14px; height: 40px; cursor: pointer; width: 100%;
+	transition: background .15s, border-color .15s;
+}
+.pin-btn-accent:hover { background: #e5e5e0; border-color: #c8c8c1; }
+
+.pin-btn-process {
+	font-family: 'Inter', sans-serif; font-size: 16px; font-weight: 700; line-height: 1;
+	background: #e60023; color: #fff; border: none; border-radius: 16px;
+	padding: 0 24px; height: 52px; cursor: pointer; width: 100%;
+	transition: background .15s; letter-spacing: -0.02em;
+}
+.pin-btn-process:hover, .pin-btn-process:focus { background: #cc001f; color: #fff; }
+
+.pin-table { width: 100%; border-collapse: separate; border-spacing: 0; }
+.pin-table thead th {
+	font-size: 12px; font-weight: 700; color: #62625b; text-transform: uppercase;
+	padding: 12px 16px; border-bottom: 1px solid #e5e5e0; letter-spacing: 0.04em;
+}
+.pin-table tbody td {
+	font-size: 14px; font-weight: 500; color: #000; padding: 14px 16px;
+	border-bottom: 1px solid #f6f6f3;
+}
+.pin-table tbody tr:last-child td { border-bottom: none; }
+
+.pin-pay-row {
+	display: flex; justify-content: space-between; align-items: center;
+	padding: 14px 0; border-bottom: 1px solid #f6f6f3;
+}
+.pin-pay-row:last-child { border-bottom: none; }
+.pin-pay-label { font-size: 14px; font-weight: 500; color: #62625b; }
+.pin-pay-value { font-size: 16px; font-weight: 700; color: #000; text-align: right; }
+.pin-pay-total {
+	display: flex; justify-content: space-between; align-items: center;
+	padding: 16px 0; margin-top: 4px;
+	border-top: 2px solid #000;
+}
+.pin-pay-total .pin-pay-label { font-size: 16px; font-weight: 700; color: #000; }
+.pin-pay-total .pin-pay-value { font-size: 22px; font-weight: 700; color: #e60023; letter-spacing: -0.02em; }
+
+.pin-pay-input {
+	font-family: 'Inter', sans-serif; font-size: 18px; font-weight: 700; color: #000;
+	background: #f6f6f3; border: 2px solid transparent; border-radius: 16px;
+	padding: 10px 16px; height: 52px; width: 100%; text-align: right;
+	transition: background .15s, border-color .15s;
+}
+.pin-pay-input:focus { outline: none; background: #fff; border-color: #000; }
+.pin-pay-input:focus-visible { box-shadow: 0 0 0 3px #435ee5; }
+
+.pin-cashback-row {
+	display: flex; justify-content: space-between; align-items: center;
+	padding: 16px 20px; margin-top: 12px;
+	background: #f6f6f3; border-radius: 16px;
+}
+.pin-cashback-row .pin-pay-label { font-size: 14px; font-weight: 700; color: #33332e; }
+.pin-cashback-row .pin-pay-value { font-size: 18px; font-weight: 700; color: #103c25; }
+
+.pin-quick-pay { display: grid; grid-template-columns: repeat(3,1fr); gap: 8px; margin: 16px 0; }
+
+.pin-heading-section {
+	font-size: 22px; font-weight: 600; color: #000; letter-spacing: -0.02em;
+	margin: 0 0 16px; line-height: 1.25;
+}
+</style>
+
+<div class="pin-pos-wrap">
+
+	<!-- Form Input -->
 	<div class="row">
-		
 		<div class="col-md-12">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="callout callout-danger">
-						<p class="callout-description">FORM PEMBELIAN</p>
+			<span class="pin-section-label"><i class="fa fa-shopping-cart" style="margin-right:6px;color:#e60023;"></i> Form Pembelian</span>
+			<div class="pin-card">
+				<div class="row" style="display:flex;flex-wrap:wrap;align-items:flex-end;gap:8px 0;">
+					<div class="col-xs-2" style="padding-right:4px;">
+						<label style="font-size:12px;font-weight:600;color:#62625b;margin-bottom:6px;display:block;">Kode Barang</label>
+						<input type="text" class="pin-input" placeholder="Scan / ketik kode" id="field-kode-barang" tabindex="1">
 					</div>
-				</div>
-			</div>
-			<div class="box box-danger">
-				
-				<div class="box-body">
-					<div class="row">
-							<div class="col-xs-2">
-								<input type="text" class="form-control input-sm" placeholder="KODE BARANG" id="field-kode-barang" tabindex="1">
-							</div>
-							<div class="col-xs-4">
-								<div class="input-group">
-									<span class="input-group-addon"><i class="fa fa-tasks"></i></span>
-
-										<?php 
-										
-										/*echo Html::hiddenInput('id_stok', '', ['id'=>'field-id-stokbarang']);*/
-										echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
-										echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
-										echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
-										echo AutoComplete::widget([
-											'model' => $model,
-											'attribute' => 'nama_barang',
-											'options' => ['class' => 'form-control input-sm','placeholder'=>'NAMA BARANG','tabindex'=>2],
-											'clientOptions' => [
-												'source'=> Url::to(['filebarang/autocompletebarang']),
-												'minLength'=>'2', 
-												'autoFill'=>true,
-												'select' => new JsExpression("function( event, ui ) {
-													$('#field-kode-barang').val(ui.item.id);
-													$('#qty-barang').focus();
-												}")
-											],
-										]); ?>
-								</div>
-								
-							</div>
-							<div class="col-xs-2">
-								<input type="number" class="form-control input-sm" placeholder="JUMLAH" id="qty-barang" tabindex="3">
-							</div>
-							<div class="col-xs-2">
-								<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="btn btn-block btn-primary btn-sm" tabindex="4">ADD</button>
-							</div>
-							<div class="col-xs-2">
-								<button url="<?php echo Url::to(['site/prosestransaksi']);?>"type="button" class="btn btn-block btn-success btn-sm" tabindex="4" id="create-new-item">CREATE BARANG</button>
-							</div>
+					<div class="col-xs-4" style="padding-left:4px;padding-right:4px;">
+						<label style="font-size:12px;font-weight:600;color:#62625b;margin-bottom:6px;display:block;">Nama Barang</label>
+						<div class="pin-input-group">
+							<i class="fa fa-search pin-input-icon"></i>
+							<?php
+								echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
+								echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
+								echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
+								echo AutoComplete::widget([
+									'model' => $model,
+									'attribute' => 'nama_barang',
+									'options' => ['class' => 'pin-input','placeholder'=>'Cari nama barang...','tabindex'=>2, 'style'=>'padding-left:42px;'],
+									'clientOptions' => [
+										'source'=> Url::to(['filebarang/autocompletebarang']),
+										'minLength'=>'2',
+										'autoFill'=>true,
+										'select' => new JsExpression("function( event, ui ) {
+											$('#field-kode-barang').val(ui.item.id);
+											$('#qty-barang').focus();
+										}")
+									],
+								]); ?>
+						</div>
 					</div>
-					
+					<div class="col-xs-2" style="padding-left:4px;padding-right:4px;">
+						<label style="font-size:12px;font-weight:600;color:#62625b;margin-bottom:6px;display:block;">Jumlah</label>
+						<input type="number" class="pin-input" placeholder="Qty" id="qty-barang" tabindex="3" style="text-align:center;">
+					</div>
+					<div class="col-xs-2" style="padding-left:4px;padding-right:4px;">
+						<button url="<?php echo Url::to(['site/prosestransaksi']);?>" id="process-transaction" type="button" class="pin-btn-primary" tabindex="4">
+							<i class="fa fa-plus" style="margin-right:6px;"></i>Tambah
+						</button>
+					</div>
+					<div class="col-xs-2" style="padding-left:4px;">
+						<button url="<?php echo Url::to(['site/prosestransaksi']);?>" type="button" class="pin-btn-secondary" tabindex="4" id="create-new-item">
+							<i class="fa fa-plus-circle" style="margin-right:6px;"></i>Barang Baru
+						</button>
+					</div>
 				</div>
 			</div>
 		</div>
-		
 	</div>
+
+	<!-- Transaction List + Payment -->
 	<div class="row">
 		<div class="col-md-8">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="callout callout-danger">
-						<p class="callout-description">LIST PEMBELIAN BARANG</p>
-					</div>
-				</div>
-			</div>
-			<div class="box box-danger">
-				
-				<div class="box-body" id="data-transaksi">
-					<table class="table table-stripped">
-						<tbody>
-							<tr class="table-title">
-								<th>NO</th>
-								<th>NAMA BARANG</th>
-								<th>HARGA</th>
-								<th>QTY</th>
-								<th>SUBTOTAL</th>
-								<th></th>
+			<span class="pin-section-label"><i class="fa fa-list-ul" style="margin-right:6px;color:#e60023;"></i> Daftar Belanja</span>
+			<div class="pin-card" style="padding:0;overflow:hidden;">
+				<div id="data-transaksi" style="padding:0;">
+					<table class="pin-table">
+						<thead>
+							<tr>
+								<th style="width:50px;">No</th>
+								<th>Nama Barang</th>
+								<th>Harga</th>
+								<th style="width:70px;">Qty</th>
+								<th>Subtotal</th>
+								<th style="width:80px;"></th>
 							</tr>
-							
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="6" style="text-align:center;padding:48px 16px;color:#91918c;font-size:14px;font-weight:500;">
+									<i class="fa fa-inbox" style="font-size:32px;display:block;margin-bottom:12px;color:#c8c8c1;"></i>
+									Belum ada barang ditambahkan
+								</td>
+							</tr>
 						</tbody>
 					</table>
 				</div>
 			</div>
-		</div>	
+		</div>
 		<div class="col-md-4">
-			<div class="row">
-				<div class="col-md-12">
-					<div class="callout callout-danger">
-						<p class="callout-description">PEMBAYARAN</p>
-					</div>
+			<span class="pin-section-label"><i class="fa fa-credit-card" style="margin-right:6px;color:#e60023;"></i> Pembayaran</span>
+			<div class="pin-card-soft">
+
+				<div class="pin-pay-row">
+					<span class="pin-pay-label">Subtotal</span>
+					<span class="pin-pay-value" id="subtotal"><strong>Rp. 0,00</strong></span>
 				</div>
-			</div>
-			<div class="box box-danger">
-				<div class="box-body">
-					<ul class="todo-list ui-sortable">
-					    <li><span class="text">SUBTOTAL</span><span class="pull-right" id="subtotal"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">DISKON</span><span class="pull-right" id="diskon"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">TOTAL</span><span class="pull-right" id="total"><strong>Rp. 0,00</strong></span></li>
-					    <li><span class="text">BAYAR</span><span class="pull-right"><input id="jumlah-bayar" type="text" class="form-control input-sm" size="14" tabindex="5" style="text-align:right;"></span></li>
-						<li>
-							<div class="box-body">
-								<div class="row">
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="pas" id="uang-pas" type="button" class="btn btn-block btn-info btn-flat" tabindex="6">UANG PAS</button>
-									</div>
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="5000" id="uang-5000" type="button" class="btn btn-block btn-success btn-flat" tabindex="7">5.000</button>
-									</div>
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="10000" id="uang-10000" type="button" class="btn btn-block btn-warning btn-flat" tabindex="8">10.000</button>
-									</div>
-								</div>
-							</div>
-							<div class="box-body">
-								<div class="row">
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="20000" id="uang-20000" type="button" class="btn btn-block bg-purple btn-flat" tabindex="9">20.000</button>
-									</div>
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="50000" id="uang-50000" type="button" class="btn btn-block bg-olive btn-flat" tabindex="10">50.000</button>
-									</div>
-									<div class="col-xs-4" style="padding-left:5px;padding-right:5px;">
-										<button rel="100000" id="uang-100000" type="button" class="btn btn-block bg-navy btn-flat" tabindex="11">100.000</button>
-									</div>
-								</div>
-							</div>
-							
-						</li>
-					    <li><span class="text">KEMBALI</span><span class="pull-right" id="cashback"><strong>Rp. 0,00</strong></span></li>
-					    <li><button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="btn btn-block btn-success" id="proses-trans" tabindex="12">PROSES</button></li>
-					</ul>	
-				    
+				<div class="pin-pay-row">
+					<span class="pin-pay-label">Diskon</span>
+					<span class="pin-pay-value" id="diskon"><strong>Rp. 0,00</strong></span>
 				</div>
+				<div class="pin-pay-total">
+					<span class="pin-pay-label">Total</span>
+					<span class="pin-pay-value" id="total"><strong>Rp. 0,00</strong></span>
+				</div>
+
+				<div style="margin-top:20px;">
+					<label style="font-size:12px;font-weight:700;color:#62625b;margin-bottom:8px;display:block;text-transform:uppercase;letter-spacing:0.04em;">Jumlah Bayar</label>
+					<input id="jumlah-bayar" type="text" class="pin-pay-input" tabindex="5" placeholder="Rp. 0">
+				</div>
+
+				<div class="pin-quick-pay">
+					<button rel="pas" id="uang-pas" type="button" class="pin-btn-accent" tabindex="6">Uang Pas</button>
+					<button rel="5000" id="uang-5000" type="button" class="pin-btn-accent" tabindex="7">5.000</button>
+					<button rel="10000" id="uang-10000" type="button" class="pin-btn-accent" tabindex="8">10.000</button>
+					<button rel="20000" id="uang-20000" type="button" class="pin-btn-accent" tabindex="9">20.000</button>
+					<button rel="50000" id="uang-50000" type="button" class="pin-btn-accent" tabindex="10">50.000</button>
+					<button rel="100000" id="uang-100000" type="button" class="pin-btn-accent" tabindex="11">100.000</button>
+				</div>
+
+				<div class="pin-cashback-row">
+					<span class="pin-pay-label">Kembali</span>
+					<span class="pin-pay-value" id="cashback"><strong>Rp. 0,00</strong></span>
+				</div>
+
+				<div style="margin-top:16px;">
+					<button url="<?php echo Url::to(['site/simpantransaksi']);?>" type="button" class="pin-btn-process" id="proses-trans" tabindex="12">
+						<i class="fa fa-check-circle" style="margin-right:8px;"></i>Proses Pembayaran
+					</button>
+				</div>
+
 			</div>
-		</div>		
+		</div>
 	</div>
 
-
-
+</div>
