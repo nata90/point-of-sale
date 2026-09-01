@@ -20,7 +20,6 @@ use yii2tech\spreadsheet\Spreadsheet;
 use yii\data\ArrayDataProvider;
 use yii\data\ActiveDataProvider;
 use app\components\Utility;
-use yii\web\Session;
 use kartik\mpdf\Pdf;
 use yii\helpers\Json;
 
@@ -133,19 +132,69 @@ class TransaksiController extends Controller
      */
     public function actionDelete($id)
     {
-        $model = HdTransaksi::findOne($id);
-        $model->status_hapus = 1;
-        $model->tgl_hapus = date('Y-m-d H:i:s');
+        $transaction = Yii::$app->db->beginTransaction();
 
-        if($model->save()){
-            return $this->redirect(['kelolapenjualan']);
+        try {
+            $model = HdTransaksi::findOne($id);
+            $model->status_hapus = 1;
+            $model->tgl_hapus = date('Y-m-d H:i:s');
+
+            if($model->save(false)){
+                // Kembalikan stok barang yang sudah terjual
+                $this->kembalikanStokPenjualan($model->no_transaksi);
+                $transaction->commit();
+                return $this->redirect(['kelolapenjualan']);
+            }
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('error', $e->getMessage());
         }
 
+        return $this->redirect(['kelolapenjualan']);
+    }
+
+    /**
+     * Mengembalikan stok (utama + batch) untuk transaksi penjualan yang dibatalkan.
+     */
+    private function kembalikanStokPenjualan($no_transaksi)
+    {
+        $details = DtTransaksi::find()->where(['no_transaksi' => $no_transaksi])->all();
+
+        foreach ($details as $detail) {
+            $file_barang = \app\models\FileBarang::find()->where(['kd_barang' => $detail->kd_barang])->one();
+            if ($file_barang !== null) {
+                $file_barang->stok = (int) $file_barang->stok + (int) $detail->qty;
+                $file_barang->save(false);
+            }
+
+            $this->tambahStokBatch($detail->kd_barang, $detail->qty, $detail->id_stok_barang);
+        }
+    }
+
+    private function tambahStokBatch($kd_barang, $qty, $id_stok_barang = null)
+    {
+        if ($id_stok_barang) {
+            $batch = \app\models\FileStokBarang::findOne($id_stok_barang);
+            if ($batch !== null && $batch->kd_barang == $kd_barang) {
+                $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+                $batch->save();
+                return;
+            }
+        }
+
+        $batch = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->one();
+
+        if ($batch !== null) {
+            $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+            $batch->save();
+        }
     }
 
     public function actionExcelrekap(){
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
@@ -219,8 +268,7 @@ class TransaksiController extends Controller
     }
 
     public function actionReportpenjualan(){
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
@@ -329,20 +377,88 @@ class TransaksiController extends Controller
     }
 
     public function actionDeletepembelian($id){
-        $model = HeaderPembelian::findOne($id);
+        $transaction = Yii::$app->db->beginTransaction();
 
-        $model->status_delete = 1;
-        $model->tgl_delete = date('Y-m-d H:i:s');
-        $model->save(false);
+        try {
+            $model = HeaderPembelian::findOne($id);
+
+            $model->status_delete = 1;
+            $model->tgl_delete = date('Y-m-d H:i:s');
+            $model->save(false);
+
+            // Kurangi stok yang masuk dari pembelian yang dihapus
+            $this->kurangiStokPembelian($model->id_pembelian);
+
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
 
         return $this->redirect(['kelolapembelian']);
+    }
+
+    /**
+     * Mengurangi stok (utama + batch) akibat pembelian yang dihapus.
+     */
+    private function kurangiStokPembelian($id_pembelian)
+    {
+        $details = \app\models\DetailPembelian::find()->where(['id_pembelian' => $id_pembelian])->all();
+
+        foreach ($details as $detail) {
+            $file_barang = \app\models\FileBarang::find()->where(['kd_barang' => $detail->kd_barang])->one();
+            if ($file_barang !== null) {
+                $file_barang->stok = max(0, (int) $file_barang->stok - (int) $detail->jumlah);
+                $file_barang->save(false);
+            }
+
+            $this->kurangiStokBatch($detail->kd_barang, (int) $detail->jumlah);
+        }
+    }
+
+    private function kurangiStokBatch($kd_barang, $qty)
+    {
+        $sisa = (float) $qty;
+        if ($sisa <= 0) {
+            return;
+        }
+
+        $batches = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['>', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        $sisa_batches = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['<=', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        foreach (array_merge($batches, $sisa_batches) as $batch) {
+            if ($sisa <= 0) {
+                break;
+            }
+            if ((float) $batch->stok_akhir <= 0) {
+                continue;
+            }
+            if ((float) $batch->stok_akhir >= $sisa) {
+                $batch->stok_akhir = (float) $batch->stok_akhir - $sisa;
+                $sisa = 0;
+            } else {
+                $sisa = $sisa - (float) $batch->stok_akhir;
+                $batch->stok_akhir = 0;
+            }
+            $batch->save();
+        }
     }
 
     public function actionSendpenjualan(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
@@ -513,8 +629,7 @@ class TransaksiController extends Controller
     public function actionHitungtotalpenjualan(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $start_date = date('Y-m-d', strtotime($session['start-date']));
         $end_date = date('Y-m-d', strtotime($session['end-date']));

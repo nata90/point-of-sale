@@ -7,6 +7,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\web\Response;
 use yii\filters\VerbFilter;
+use app\models\Penjualan;
 use app\models\LoginForm;
 use app\models\ContactForm;
 use app\models\FileBarang;
@@ -18,12 +19,19 @@ use app\models\SettingApp;
 use app\components\Utility;
 use yii\helpers\Json;
 use yii\helpers\Url;
-use yii\web\Session;
 use yii\data\ActiveDataProvider;
 use Exception;
 
 class SiteController extends Controller
 {
+
+    public $penjualan;
+    public function init()
+    {
+        parent::init();
+        $this->penjualan = new Penjualan();
+    }
+
     /**
      * {@inheritdoc}
      */
@@ -73,17 +81,24 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
         unset($session['datatransaksi']);
 
         $model = new FileBarang();
 
-        $data = FileBarang::find()
-        ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
-        ->where(['aktif'=>1])
-        ->asArray()
-        ->all();
+        $rows = FileBarang::find()
+            ->select(['nama_barang', 'harga_jual', 'kd_barang'])
+            ->where(['aktif' => 1])
+            ->asArray()
+            ->all();
+
+        $data = array_map(static function ($row) {
+            return [
+                'value' => $row['nama_barang'],
+                'label' => $row['nama_barang'] . ' | ' . Utility::rupiah($row['harga_jual']),
+                'id' => $row['kd_barang'],
+            ];
+        }, $rows);
 
         $setting = SettingApp::find()->one();
 
@@ -188,8 +203,7 @@ class SiteController extends Controller
 
         $total = $file_barang->harga_jual * $qty;
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         if(!isset($session['datatransaksi'])){
             $array_data = array();
@@ -250,8 +264,7 @@ class SiteController extends Controller
         $total = 0;
         $arr_return = array();
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $arr_data = $session['datatransaksi'];
         unset($arr_data[$key]);
@@ -279,65 +292,98 @@ class SiteController extends Controller
     public function actionSimpantransaksi(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $connection = \Yii::$app->db;
-        $transaction = $connection->beginTransaction();
+        $transaction = Yii::$app->db->beginTransaction();
 
         try {
-            $total_tagihan = $_POST['totaltagihan'];
-            $total_bayar = $_POST['totalbayar'];
-            $cashback = $_POST['cashback'];
+            $total_tagihan = Yii::$app->request->post('totaltagihan');
+            $total_bayar = Yii::$app->request->post('totalbayar');
 
-            $session = new Session;
-            $session->open();
+            $session = Yii::$app->session;
 
-            $return = array();
-            $arr_item = array();
+            if (!isset($session['datatransaksi']) || empty($session['datatransaksi'])) {
+                throw new Exception('List Barang Tidak Boleh Kosong !');
+            }
 
-            $model = new HdTransaksi;
+            $cartItems = $session['datatransaksi'];
+
+            foreach ($cartItems as $value) {
+                $file_barang = FileBarang::find()
+                    ->where(['kd_barang' => $value['kodebarang'], 'aktif' => 1])
+                    ->one();
+
+                if ($file_barang === null) {
+                    throw new Exception('Barang ' . $value['kodebarang'] . ' tidak ditemukan');
+                }
+
+                if ((int) $file_barang->stok < (int) $value['qty']) {
+                    throw new Exception(
+                        'Stok "' . $file_barang->nama_barang . '" tidak mencukupi. Tersedia: ' . (int) $file_barang->stok
+                    );
+                }
+            }
+
+            $model = new HdTransaksi();
             $model->no_transaksi = Utility::getNoTransaksi(1);
             $model->tgl_bayar = date('Y-m-d H:i:s');
             $model->status_bayar = 1;
             $model->total = $total_tagihan;
             $model->jumlah_bayar = $total_bayar;
-            if($model->save()){
-                if(isset($session['datatransaksi']) && !empty($session['datatransaksi'])){
-                    foreach($session['datatransaksi'] as $key=>$value){
-                        $nama_barang = FileBarang::find()->where(['kd_barang'=>$value['kodebarang']])->one();
-                        $arr_item[] = $nama_barang->nama_barang.' : '.$value['qty'].' item';
-                        $detail = new DtTransaksi;
-                        $detail->no_transaksi = $model->no_transaksi;
-                        $detail->kd_barang = $value['kodebarang'];
-                        $detail->harga_satuan = $value['harga'];
-                        $detail->qty = $value['qty'];
-                        $detail->total_harga = $value['harga'] * $value['qty'];
-                        $detail->id_stok_barang = 0;
-                        if(!$detail->save()){
-                            throw new Exception($this->formatErrors($detail->getErrors()));
-                        }
-                    }
-                }else{
-                    throw new Exception('List Barang Tidak Boleh Kosong !');
-                }
 
-                HdTransaksi::cetakNota($model->no_transaksi);
-
-                $return['success'] = 1;
-                $return['nopenjualan'] = $model->no_transaksi;
-                $return['items'] = $arr_item;
-                $return['redirect'] = Url::to(['site/resumetransaksi','id'=>$model->id]);
-
-                $transaction->commit();
-            }else{
+            if (!$model->save()) {
                 throw new Exception($this->formatErrors($model->getErrors()));
             }
-        } catch (\Exception $e) {
-            $return['success'] = 0;
-            $transaction->rollBack();
-            $return['msg'] = $e->getMessage();
-        }
-        
 
-        return $return;
+            $arr_item = [];
+
+            foreach ($cartItems as $value) {
+                $file_barang = FileBarang::find()
+                    ->where(['kd_barang' => $value['kodebarang']])
+                    ->one();
+
+                $arr_item[] = $file_barang->nama_barang . ' : ' . $value['qty'] . ' item';
+
+                $detail = new DtTransaksi();
+                $detail->no_transaksi = $model->no_transaksi;
+                $detail->kd_barang = $value['kodebarang'];
+                $detail->harga_satuan = $value['harga'];
+                $detail->qty = $value['qty'];
+                $detail->total_harga = $value['harga'] * $value['qty'];
+                $detail->id_stok_barang = 0;
+
+                if (!$detail->save()) {
+                    throw new Exception($this->formatErrors($detail->getErrors()));
+                }
+
+                // Kurangi stok utama barang
+                $file_barang->stok = (int) $file_barang->stok - (int) $value['qty'];
+                if (!$file_barang->save(false)) {
+                    throw new Exception($this->formatErrors($file_barang->getErrors()));
+                }
+
+                // Kurangi stok batch (file_stok_barang) dengan metode FEFO (ed terlama dijual lebih dulu)
+                $this->kurangiStokBatch($value['kodebarang'], (int) $value['qty']);
+            }
+
+            HdTransaksi::cetakNota($model->no_transaksi);
+
+            $transaction->commit();
+
+            unset($session['datatransaksi']);
+
+            return [
+                'success' => 1,
+                'nopenjualan' => $model->no_transaksi,
+                'items' => $arr_item,
+                'redirect' => Url::to(['site/resumetransaksi', 'id' => $model->id]),
+            ];
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+
+            return [
+                'success' => 0,
+                'msg' => $e->getMessage(),
+            ];
+        }
     }
 
     public function actionResumetransaksi($id){
@@ -352,17 +398,46 @@ class SiteController extends Controller
     public function actionCanceltransaction($id){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $model = HdTransaksi::findOne($id);
-        $model->status_hapus = 1;
-        $model->tgl_hapus = date('Y-m-d H:i:s');
+        $transaction = Yii::$app->db->beginTransaction();
 
-        $return = array();
-        if($model->save()){
-            
-            $return['redirect'] = Url::to(['site/index']);
+        try {
+            $model = HdTransaksi::findOne($id);
+            $model->status_hapus = 1;
+            $model->tgl_hapus = date('Y-m-d H:i:s');
+
+            $return = array();
+            if($model->save(false)){
+                // Kembalikan stok barang yang sudah terjual
+                $this->kembalikanStokPenjualan($model->no_transaksi);
+                $transaction->commit();
+                $return['redirect'] = Url::to(['site/index']);
+            }else{
+                throw new Exception($this->formatErrors($model->getErrors()));
+            }
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            $return['msg'] = $e->getMessage();
         }
 
         return $return;
+    }
+
+    /**
+     * Mengembalikan stok (utama + batch) untuk transaksi penjualan yang dibatalkan.
+     */
+    private function kembalikanStokPenjualan($no_transaksi)
+    {
+        $details = DtTransaksi::find()->where(['no_transaksi' => $no_transaksi])->all();
+
+        foreach ($details as $detail) {
+            $file_barang = FileBarang::find()->where(['kd_barang' => $detail->kd_barang])->one();
+            if ($file_barang !== null) {
+                $file_barang->stok = (int) $file_barang->stok + (int) $detail->qty;
+                $file_barang->save(false);
+            }
+
+            $this->tambahStokBatch($detail->kd_barang, $detail->qty, $detail->id_stok_barang);
+        }
     }
 
     public function actionRekaptransaksi(){
@@ -396,8 +471,27 @@ class SiteController extends Controller
 
         $convert_days_ago = date('Y-m-d', strtotime($days_ago));
         $convert_days_now = date('Y-m-d', strtotime($days_now));
+
+        $total_penjualan = $this->penjualan->getTotalPenjualan(date('Y-m-d'), date('Y-m-d'));
+        $total_penjualan_kemarin = $this->penjualan->getTotalPenjualan(date('Y-m-d', strtotime('-1 day')), date('Y-m-d', strtotime('-1 day')));
+
+        $total_transaksi = $this->penjualan->getTotalTransaksi(date('Y-m-d'), date('Y-m-d'));
+        $total_transaksi_kemarin = $this->penjualan->getTotalTransaksi(date('Y-m-d', strtotime('-1 day')), date('Y-m-d', strtotime('-1 day')));
+
+        $total_item_terjual = $this->penjualan->getTotalItemTerjual(date('Y-m-d'), date('Y-m-d'));
+
+        $transaksi_terbaru = $this->penjualan->getTransaksiTerbaru(7);
         
         $popular = HdTransaksi::getProdukTerlaris($convert_days_ago, $convert_days_now);
+
+        // Stok menipis: barang aktif dengan stok <= min_stok (ambang minimal)
+        $stok_menipis = FileBarang::find()
+            ->where(['aktif' => 1])
+            ->andWhere(['>', 'stok', 0])
+            ->andWhere('stok <= IFNULL(min_stok, 5)')
+            ->orderBy(['stok' => SORT_ASC])
+            ->limit(5)
+            ->all();
 
         $setting = SettingApp::find()->one();
 
@@ -405,7 +499,14 @@ class SiteController extends Controller
             'days_ago'=>$days_ago,
             'days_now'=>$days_now,
             'popular'=>$popular,
-            'setting'=>$setting
+            'setting'=>$setting,
+            'total_penjualan'=>$total_penjualan,
+            'total_transaksi'=>$total_transaksi,
+            'total_item_terjual'=>$total_item_terjual,
+            'total_penjualan_kemarin'=>$total_penjualan_kemarin,
+            'total_transaksi_kemarin'=>$total_transaksi_kemarin,
+            'transaksi_terbaru'=>$transaksi_terbaru,
+            'stok_menipis'=>$stok_menipis
         ]);
     }
 
@@ -553,5 +654,83 @@ class SiteController extends Controller
         }
         $errorMessages .= '</ul>';
         return $errorMessages;
+    }
+
+    /**
+     * Mengurangi stok batch (file_stok_barang) memakai metode FEFO:
+     * batch dengan tgl_ed terlama (belum lewat) diambil lebih dulu.
+     * Batch placeholder tanpa ED (1970-01-01) menjadi cadangan terakhir.
+     */
+    private function kurangiStokBatch($kd_barang, $qty)
+    {
+        $sisa = (float) $qty;
+        if ($sisa <= 0) {
+            return;
+        }
+
+        // Batch ber-ED (belum lewat), urut dari ED terlama (FEFO)
+        $batches = FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['>', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        // Batch placeholder (tanpa ED / 1970-01-01) dan batch yang sudah lewat ED
+        $sisa_batches = FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['<=', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        foreach (array_merge($batches, $sisa_batches) as $batch) {
+            if ($sisa <= 0) {
+                break;
+            }
+            $tersedia = (float) $batch->stok_akhir;
+            if ($tersedia <= 0) {
+                continue;
+            }
+            if ($tersedia >= $sisa) {
+                $batch->stok_akhir = $tersedia - $sisa;
+                $sisa = 0;
+            } else {
+                $batch->stok_akhir = 0;
+                $sisa = $sisa - $tersedia;
+            }
+            if (!$batch->save()) {
+                throw new Exception('Gagal mengupdate stok batch ' . $batch->kd_barang);
+            }
+        }
+    }
+
+    /**
+     * Mengembalikan (menambah) stok batch sesuai detail transaksi yang dibatalkan.
+     * Pencocokan batch memakai id_stok_barang jika tersedia, bila tidak maka
+     * dimasukkan ke batch dengan tgl_ed yang paling dekat (terlama) atau batch placeholder.
+     */
+    private function tambahStokBatch($kd_barang, $qty, $id_stok_barang = null)
+    {
+        // Jika menyimpan referensi batch asal saat penjualan, kembalikan ke batch tsb.
+        if ($id_stok_barang) {
+            $batch = FileStokBarang::findOne($id_stok_barang);
+            if ($batch !== null && $batch->kd_barang == $kd_barang) {
+                $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+                $batch->save();
+                return;
+            }
+        }
+
+        // Fallback: tambahkan ke batch dengan ED terdekat yang belum lewat, atau batch placeholder.
+        $batch = FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->one();
+
+        if ($batch !== null) {
+            $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+            $batch->save();
+        }
     }
 }

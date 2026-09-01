@@ -5,7 +5,6 @@ namespace app\models;
 use yii\base\Model;
 use yii\data\ActiveDataProvider;
 use app\models\DtTransaksi;
-use yii\web\Session;
 
 /**
  * DtTransaksiSearch represents the model behind the search form of `app\models\DtTransaksi`.
@@ -58,8 +57,7 @@ class DtTransaksiSearch extends DtTransaksi
     public function search($params)
     {
         $query = DtTransaksi::find()->leftJoin('hd_transaksi','dt_transaksi.no_transaksi = hd_transaksi.no_transaksi');
-        $session = new Session;
-        $session->open();
+        $session = \Yii::$app->session;
 
         // add conditions that should always apply here
 
@@ -114,8 +112,7 @@ class DtTransaksiSearch extends DtTransaksi
     public function searchReport($params)
     {
         $query = DtTransaksi::find()->leftJoin('hd_transaksi','dt_transaksi.no_transaksi = hd_transaksi.no_transaksi');
-        $session = new Session;
-        $session->open();
+        $session = \Yii::$app->session;
 
         // add conditions that should always apply here
 

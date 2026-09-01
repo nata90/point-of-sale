@@ -3,29 +3,38 @@ use yii\helpers\Url;
 
 /* ── DUMMY DATA — hapus & ganti query nyata saat production ── */
 $dummy_kpi = [
-    'penjualan_hari_ini' => 4875000,
-    'transaksi_hari_ini' => 37,
-    'item_terjual'       => 124,
-    'rata_rata'          => 131757,
-    'penjualan_kemarin'  => 3920000,
-    'transaksi_kemarin'  => 29,
+    'penjualan_hari_ini' => $total_penjualan,
+    'transaksi_hari_ini' => $total_transaksi,
+    'item_terjual'       => $total_item_terjual,
+    'rata_rata'          => $total_transaksi != 0 ? round($total_penjualan / $total_transaksi,0) : 0,
+    'penjualan_kemarin'  => $total_penjualan_kemarin,
+    'transaksi_kemarin'  => $total_transaksi_kemarin,
 ];
-$dummy_transaksi = [
-    ['no_transaksi'=>'TRX-20260530-037','waktu'=>'19:48','kasir'=>'Rina','items'=>5,'total'=>187500,'metode'=>'Tunai'],
-    ['no_transaksi'=>'TRX-20260530-036','waktu'=>'19:31','kasir'=>'Budi','items'=>2,'total'=>64000,'metode'=>'QRIS'],
-    ['no_transaksi'=>'TRX-20260530-035','waktu'=>'18:55','kasir'=>'Rina','items'=>8,'total'=>312000,'metode'=>'Tunai'],
-    ['no_transaksi'=>'TRX-20260530-034','waktu'=>'18:22','kasir'=>'Ani','items'=>3,'total'=>95000,'metode'=>'Debit'],
-    ['no_transaksi'=>'TRX-20260530-033','waktu'=>'17:44','kasir'=>'Budi','items'=>11,'total'=>478500,'metode'=>'QRIS'],
-    ['no_transaksi'=>'TRX-20260530-032','waktu'=>'17:05','kasir'=>'Rina','items'=>1,'total'=>22000,'metode'=>'Tunai'],
-    ['no_transaksi'=>'TRX-20260530-031','waktu'=>'16:30','kasir'=>'Ani','items'=>6,'total'=>215000,'metode'=>'Tunai'],
-];
-$dummy_stok_menipis = [
-    ['kd_barang'=>'BRG-041','nama_barang'=>'Mie Goreng Indomie','stok'=>3,'min_stok'=>10,'satuan'=>'Pcs'],
-    ['kd_barang'=>'BRG-017','nama_barang'=>'Teh Botol Sosro 350ml','stok'=>5,'min_stok'=>24,'satuan'=>'Btl'],
-    ['kd_barang'=>'BRG-089','nama_barang'=>'Aqua Galon 19L','stok'=>2,'min_stok'=>5,'satuan'=>'Galon'],
-    ['kd_barang'=>'BRG-023','nama_barang'=>'Sabun Lifebuoy 85gr','stok'=>7,'min_stok'=>15,'satuan'=>'Pcs'],
-    ['kd_barang'=>'BRG-055','nama_barang'=>'Gula Pasir 1kg','stok'=>4,'min_stok'=>20,'satuan'=>'Kg'],
-];
+
+$dummy_transaksi = $transaksi_terbaru;
+// $dummy_transaksi = [
+//     ['no_transaksi'=>'TRX-20260530-037','waktu'=>'19:48','kasir'=>'Rina','items'=>5,'total'=>187500,'metode'=>'Tunai'],
+//     ['no_transaksi'=>'TRX-20260530-036','waktu'=>'19:31','kasir'=>'Budi','items'=>2,'total'=>64000,'metode'=>'QRIS'],
+//     ['no_transaksi'=>'TRX-20260530-035','waktu'=>'18:55','kasir'=>'Rina','items'=>8,'total'=>312000,'metode'=>'Tunai'],
+//     ['no_transaksi'=>'TRX-20260530-034','waktu'=>'18:22','kasir'=>'Ani','items'=>3,'total'=>95000,'metode'=>'Debit'],
+//     ['no_transaksi'=>'TRX-20260530-033','waktu'=>'17:44','kasir'=>'Budi','items'=>11,'total'=>478500,'metode'=>'QRIS'],
+//     ['no_transaksi'=>'TRX-20260530-032','waktu'=>'17:05','kasir'=>'Rina','items'=>1,'total'=>22000,'metode'=>'Tunai'],
+//     ['no_transaksi'=>'TRX-20260530-031','waktu'=>'16:30','kasir'=>'Ani','items'=>6,'total'=>215000,'metode'=>'Tunai'],
+// ];
+// Data stok menipis diambil dari query nyata (site/dashboard) — bukan dummy
+$dummy_stok_menipis = [];
+if (isset($stok_menipis) && !empty($stok_menipis)) {
+    foreach ($stok_menipis as $b) {
+        $min = (int) $b->min_stok > 0 ? (int) $b->min_stok : 5;
+        $dummy_stok_menipis[] = [
+            'kd_barang' => $b->kd_barang,
+            'nama_barang' => $b->nama_barang,
+            'stok' => (int) $b->stok,
+            'min_stok' => $min,
+            'satuan' => 'Pcs',
+        ];
+    }
+}
 $this->registerJs('var url = "' . Url::to(['/site/grafikpenjualan']) . '";');
 $this->registerJs('var daysago = "' . $days_ago . '";');
 $this->registerJs('var daysnow = "' . $days_now . '";');
@@ -636,7 +645,7 @@ JS
 
     <div class="pin-kpi-card">
       <div class="pin-kpi-icon"><i class="fa fa-shopping-cart"></i></div>
-      <span class="pin-kpi-label">Transaksi</span>
+      <span class="pin-kpi-label">Transaksi Hari Ini</span>
       <span class="pin-kpi-value"><?php echo number_format($dummy_kpi['transaksi_hari_ini']); ?></span>
       <span class="pin-kpi-diff <?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>">
         <i class="fa fa-arrow-<?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>"></i>
@@ -659,6 +668,25 @@ JS
     </div>
 
   </div><!-- /.pin-kpi-grid -->
+
+
+  <!-- ══ GRAFIK ══ -->
+  <div class="pin-card-main">
+    <div class="pin-filter-row">
+      <div class="pin-input-wrap">
+        <i class="fa fa-calendar"></i>
+        <input type="text" id="reservation" placeholder="Pilih rentang tanggal…">
+      </div>
+      <button class="pin-btn-primary" id="search-grafik">
+        <i class="fa fa-search" style="margin-right:6px;font-size:12px;"></i>Cari
+      </button>
+    </div>
+    <p class="pin-chart-title">Grafik Penjualan</p>
+    <div class="pin-chart-wrap chart">
+      <canvas id="barChart" style="height:230px;"></canvas>
+    </div>
+  </div>
+
 
   <!-- ══ TRANSAKSI TERBARU + STOK MENIPIS ══ -->
   <div class="pin-two-col">
@@ -709,6 +737,12 @@ JS
         <a href="#" class="pin-section-link">Kelola stok</a>
       </div>
       <ul class="pin-stock-list">
+        <?php if (empty($dummy_stok_menipis)): ?>
+          <li class="pin-empty">
+            <i class="fa fa-check-circle" style="font-size:24px;display:block;margin-bottom:8px;"></i>
+            Stok semua barang aman
+          </li>
+        <?php else: ?>
         <?php foreach ($dummy_stok_menipis as $stok):
           $pct_stok = $stok['min_stok'] > 0 ? min(100, round(($stok['stok'] / $stok['min_stok']) * 100)) : 0;
         ?>
@@ -726,29 +760,12 @@ JS
             <div class="pin-stock-min">min <?php echo $stok['min_stok']; ?></div>
           </div>
         </li>
-        <?php endforeach; ?>
+        <?php endforeach; endif; ?>
       </ul>
     </div>
 
   </div><!-- /.pin-two-col -->
 
-
-  <!-- ══ GRAFIK ══ -->
-  <div class="pin-card-main">
-    <div class="pin-filter-row">
-      <div class="pin-input-wrap">
-        <i class="fa fa-calendar"></i>
-        <input type="text" id="reservation" placeholder="Pilih rentang tanggal…">
-      </div>
-      <button class="pin-btn-primary" id="search-grafik">
-        <i class="fa fa-search" style="margin-right:6px;font-size:12px;"></i>Cari
-      </button>
-    </div>
-    <p class="pin-chart-title">Grafik Penjualan</p>
-    <div class="pin-chart-wrap chart">
-      <canvas id="barChart" style="height:230px;"></canvas>
-    </div>
-  </div>
 
   <!-- ══ 10 BARANG TERLARIS ══ -->
   <div class="pin-section-card">

@@ -31,9 +31,18 @@ $this->params['breadcrumbs'][] = $this->title;
         'attributes' => [
             'id',
             'username',
-            'password',
-            'authkey',
-            'accesstoken',
+            [
+                'label' => 'password',
+                'value' => str_repeat('•', 8),
+            ],
+            [
+                'label' => 'authkey',
+                'value' => str_repeat('•', 8),
+            ],
+            [
+                'label' => 'accesstoken',
+                'value' => str_repeat('•', 8),
+            ],
             'name',
             'id_group',
             'aktif',

@@ -16,7 +16,6 @@ use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
-use yii\web\Session;
 use yii\helpers\Json;
 use yii\helpers\Url;
 
@@ -80,8 +79,7 @@ class PembelianController extends Controller
      */
     public function actionCreate()
     {
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         unset($session['datapembelian']);
 
@@ -158,8 +156,7 @@ class PembelianController extends Controller
        }
         
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         if(!isset($session['datapembelian'])){
             $array_data = array();
@@ -201,8 +198,7 @@ class PembelianController extends Controller
 
         $key = $_GET['key'];
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $arr_data = $session['datapembelian'];
         unset($arr_data[$key]);
@@ -274,8 +270,7 @@ class PembelianController extends Controller
     public function actionSimpanpembelian(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $arr_data = $session['datapembelian'];
         $arr_item = array();
@@ -287,54 +282,76 @@ class PembelianController extends Controller
                 $id_supplier = $_POST['supplier'];
             }
 
-            $model = new HeaderPembelian;
-            $model->tgl_pembelian = date('Y-m-d', strtotime($_POST['tgl']));
-            $model->keterangan = '-';
-            $model->total_pembelian = 0;
-            $model->id_supplier = $id_supplier;
-            $model->no_faktur = $_POST['no_faktur'];
-            $return = array();
-            if($model->save()){
-               foreach($arr_data as $val){
-                    $nama_barang = FileBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
-                    $arr_item[] = $nama_barang->nama_barang.' : '.$val['jumlah'].' item';
+            $transaction = Yii::$app->db->beginTransaction();
 
-                    $detail = new DetailPembelian;
-                    $detail->id_pembelian = $model->id_pembelian;
-                    $detail->kd_barang = $val['kodebarang'];
-                    $detail->satuan = '-';
-                    $detail->jumlah = $val['jumlah'];
-                    $detail->harga_beli = $val['hargabeli'];
-                    $detail->harga_jual = $val['hargajual'];
-                    $detail->save();
+            try {
+                $model = new HeaderPembelian;
+                $model->tgl_pembelian = date('Y-m-d', strtotime($_POST['tgl']));
+                $model->keterangan = '-';
+                $model->total_pembelian = 0;
+                $model->id_supplier = $id_supplier;
+                $model->no_faktur = $_POST['no_faktur'];
+                $return = array();
+                if($model->save()){
+                   foreach($arr_data as $val){
+                        $nama_barang = FileBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
+                        $arr_item[] = $nama_barang->nama_barang.' : '.$val['jumlah'].' item';
 
-                    if($val['tgled'] != '-'){
-                        $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->andWhere(['tgl_ed'=>date('Y-m-d', strtotime($val['tgled']))])->one();
-                    }else{
-                        $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang']])->one();
-                    }
-                    
+                        $detail = new DetailPembelian;
+                        $detail->id_pembelian = $model->id_pembelian;
+                        $detail->kd_barang = $val['kodebarang'];
+                        $detail->satuan = '-';
+                        $detail->jumlah = $val['jumlah'];
+                        $detail->harga_beli = $val['hargabeli'];
+                        $detail->harga_jual = $val['hargajual'];
+                        if(!$detail->save()){
+                            throw new \Exception($this->formatErrors($detail->getErrors()));
+                        }
 
-                    if($stok_barang == null){
-                        $stok_barang = new FileStokBarang;
-                        $jum_stok = $val['jumlah'];
-                    }else{
-                        $jum_stok = $stok_barang->stok_akhir + $val['jumlah'];
-                    }
+                        $tgl_ed = ($val['tgled'] != '-' && $val['tgled'] != '') ? date('Y-m-d', strtotime($val['tgled'])) : '1970-01-01';
 
-                    $stok_barang->kd_barang = $val['kodebarang'];
-                   
-                    
-                    $stok_barang->tgl_ed = date('Y-m-d', strtotime($val['tgled']));
-                    
-                    $stok_barang->stok_akhir = $jum_stok;
-                    $stok_barang->nomor_batch = '-';
-                    $stok_barang->save();
-                } 
-                $return['error'] = 0;
-                $return['nopembelian'] = $model->no_faktur;
-                $return['items'] = $arr_item;
-                $return['redirect'] = Url::to(['transaksi/kelolapembelian']);
+                        $stok_barang = FileStokBarang::find()->where(['kd_barang'=>$val['kodebarang'], 'tgl_ed'=>$tgl_ed])->orderBy(['id'=>SORT_DESC])->one();
+
+                        if($stok_barang == null){
+                            $stok_barang = new FileStokBarang;
+                            $jum_stok = (float)$val['jumlah'];
+                        }else{
+                            $jum_stok = (float)$stok_barang->stok_akhir + (float)$val['jumlah'];
+                        }
+
+                        $stok_barang->kd_barang = $val['kodebarang'];
+                        $stok_barang->tgl_ed = $tgl_ed;
+                        $stok_barang->stok_akhir = $jum_stok;
+                        $stok_barang->nomor_batch = '-';
+                        if(!$stok_barang->save()){
+                            throw new \Exception($this->formatErrors($stok_barang->getErrors()));
+                        }
+
+                        // Hubungkan stok: tambahkan jumlah ke stok utama barang
+                        $nama_barang->stok = (int)$nama_barang->stok + (int)$val['jumlah'];
+                        if (!empty($val['hargabeli'])) {
+                            $nama_barang->harga_beli = (int)$val['hargabeli'];
+                        }
+                        if (!empty($val['hargajual'])) {
+                            $nama_barang->harga_jual = (int)$val['hargajual'];
+                        }
+                        if(!$nama_barang->save(false)){
+                            throw new \Exception($this->formatErrors($nama_barang->getErrors()));
+                        }
+                    } 
+                    $transaction->commit();
+                    unset($session['datapembelian']);
+                    $return['error'] = 0;
+                    $return['nopembelian'] = $model->no_faktur;
+                    $return['items'] = $arr_item;
+                    $return['redirect'] = Url::to(['transaksi/kelolapembelian']);
+                }else{
+                    throw new \Exception($this->formatErrors($model->getErrors()));
+                }
+            } catch (\Exception $e) {
+                $transaction->rollBack();
+                $return['error'] = 1;
+                $return['msg'] = "<p style='color:red;'><strong>".$e->getMessage()."</strong></p>";
             }
         }else{
             $return['error'] = 1;
@@ -379,6 +396,17 @@ class PembelianController extends Controller
      * @return HeaderPembelian the loaded model
      * @throws NotFoundHttpException if the model cannot be found
      */
+    private function formatErrors($errors) {
+        $errorMessages = '<ul style="text-align: left;">';
+        foreach ($errors as $fieldName => $fieldErrors) {
+            foreach ($fieldErrors as $error) {
+                $errorMessages .= '<li>' . strtoupper($error) . '</li>';
+            }
+        }
+        $errorMessages .= '</ul>';
+        return $errorMessages;
+    }
+
     protected function findModel($id)
     {
         if (($model = HeaderPembelian::findOne($id)) !== null) {

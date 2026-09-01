@@ -12,7 +12,6 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\KodeGenerate;
 use yii\filters\AccessControl;
-use yii\web\Session;
 use Exception;
 
 /**
@@ -163,31 +162,40 @@ class FilebarangController extends Controller
     public function actionAutocompletebarang($term){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        if(strpos($term,'|')){
-            $array_string = explode('|',$term);
+        $query = FileBarang::find()
+            ->select(['nama_barang', 'harga_jual', 'kd_barang', 'stok'])
+            ->where(['aktif' => 1]);
 
-            $data = FileBarang::find()
-            ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
-            ->where(['aktif' => 1])
-            ->andWhere([
-                'AND', 
-                ['like', 'nama_barang', trim($array_string[0])],
-                ['like', 'CAST(harga_jual AS CHAR)', trim($array_string[1])]
-            ])
-            ->asArray()
-            ->all();
-        }else{
-            $data = FileBarang::find()
-            ->select(['nama_barang as value', 'CONCAT(nama_barang, " | ", CONCAT("Rp ", FORMAT(harga_jual, 0))) as  label','kd_barang as id'])
-            ->where(['like','nama_barang', $term])
-            ->andWhere(['aktif'=>1])
-            ->asArray()
-            ->all();
+        if (strpos($term, '|') !== false) {
+            $parts = explode('|', $term, 2);
+            $query->andWhere(['like', 'nama_barang', trim($parts[0])]);
+            $rows = $query->asArray()->all();
+
+            if (isset($parts[1]) && trim($parts[1]) !== '') {
+                $priceTerm = trim($parts[1]);
+                $rows = array_filter($rows, static function ($row) use ($priceTerm) {
+                    return strpos((string) $row['harga_jual'], $priceTerm) !== false;
+                });
+            }
+        } else {
+            $rows = $query
+                ->andWhere(['like', 'nama_barang', $term])
+                ->asArray()
+                ->all();
         }
 
-        
+        return $this->formatAutocompleteBarang($rows);
+    }
 
-        return $data;
+    private function formatAutocompleteBarang(array $rows): array
+    {
+        return array_values(array_map(static function ($row) {
+            return [
+                'value' => $row['nama_barang'],
+                'label' => $row['nama_barang'] . ' | ' . Utility::rupiah($row['harga_jual']).' | STOK : '.$row['stok'],
+                'id' => $row['kd_barang'],
+            ];
+        }, $rows));
     }
 
     public function actionUpdateharga(){
@@ -221,8 +229,7 @@ class FilebarangController extends Controller
                 throw new Exception('Barang Tidak Ditemukan !');
             }
 
-            $session = new Session;
-            $session->open();
+            $session = Yii::$app->session;
             $arr_data = $session['datatransaksi'];
 
             $arr_data[$kodebarang]['harga'] = $model->harga_jual;
@@ -291,8 +298,7 @@ class FilebarangController extends Controller
                 $subtotal = 0;
                 $diskon = 0;
                 $total = 0;
-                $session = new Session;
-                $session->open();
+                $session = Yii::$app->session;
 
                 $arr_data = $session['datatransaksi'];
                 $arr_data[$model->kd_barang] = [

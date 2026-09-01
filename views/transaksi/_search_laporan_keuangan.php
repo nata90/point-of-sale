@@ -9,37 +9,24 @@ use yii\jui\DatePicker;
 /* @var $form yii\widgets\ActiveForm */
 ?>
 
-<div class="dt-transaksi-search">
+<?php $form = ActiveForm::begin([
+    'action' => ['index'],
+    'method' => 'get',
+    'options' => ['data-pjax' => 1, 'style' => 'display:contents;'],
+]); ?>
 
-    <?php $form = ActiveForm::begin([
-        'action' => ['index'],
-        'method' => 'get',
-        'options' => [
-            'data-pjax' => 1
-        ],
+<div class="pin-filter-group">
+    <?php echo Html::label('Tanggal Transaksi', 'tgl-transaksi', ['class' => 'pin-filter-label']); ?>
+    <?php echo DatePicker::widget([
+        'name'    => 'start_date',
+        'value'   => date('Y-m-d'),
+        'options' => ['class' => 'pin-filter-input', 'id' => 'tgl-transaksi'],
     ]); ?>
-
-    <div class="box-body">
-        <div class="col-lg-2">
-            <div class="input-group">
-                <?php echo Html::label('Tanggal Transaksi', 'start_date'); ?>
-                <?php echo DatePicker::widget([
-                    'name' => 'start_date',
-                    'value' => date('Y-m-d'),
-                    'options' => ['class' => 'form-control', 'id'=>'tgl-transaksi'],
-                ]); ?>
-            </div>
-        </div> 
-                  
-    </div>
-    <div class="box-footer">
-        <div class="col-lg-6">
-            <div class="input-group">
-                <?= Html::button(Yii::t('app', 'Cari'), ['class' => 'btn btn-primary', 'id'=>'search-laporan-keuangan']) ?>
-            </div>
-        </div>
-    </div>
-
-    <?php ActiveForm::end(); ?>
-
 </div>
+
+<?= Html::button('<i class="fa fa-search"></i> ' . Yii::t('app', 'Cari'), [
+    'class' => 'pin-btn-primary',
+    'id'    => 'search-laporan-keuangan',
+]) ?>
+
+<?php ActiveForm::end(); ?>

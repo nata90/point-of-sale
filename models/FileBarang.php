@@ -13,9 +13,10 @@ use app\models\KodeGenerate;
  * @property string $nama_barang
  * @property int $harga_beli
  * @property int $harga_jual
- * @property int $qty
- * @property int $aktif
- */
+     * @property int $qty
+     * @property int $aktif
+     * @property int $min_stok
+     */
 class FileBarang extends \yii\db\ActiveRecord
 {
     /**
@@ -34,7 +35,7 @@ class FileBarang extends \yii\db\ActiveRecord
         return [
             [['kd_barang', 'nama_barang', 'harga_beli', 'harga_jual',], 'required', 'message' => '{attribute} wajib diisi'],
             [['kd_barang'], 'unique', 'message' => '{attribute} sudah dipakai'],
-            [['harga_beli', 'harga_jual', 'aktif', 'stok'], 'integer'],
+            [['harga_beli', 'harga_jual', 'aktif', 'stok', 'min_stok'], 'integer'],
             [['kd_barang'], 'string', 'max' => 30],
             [['nama_barang'], 'string', 'max' => 200],
             [['lokasi'], 'string', 'max' => 100],
@@ -55,6 +56,7 @@ class FileBarang extends \yii\db\ActiveRecord
             'harga_jual' => 'Harga Jual',
             'aktif' => 'Aktif',
             'stok' => 'Stok',
+            'min_stok' => 'Stok Minimal',
         ];
     }
 

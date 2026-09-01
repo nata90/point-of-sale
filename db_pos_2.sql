@@ -69,6 +69,7 @@ CREATE TABLE `file_barang` (
   `harga_jual` int DEFAULT '0',
   `stok` int DEFAULT '0',
   `aktif` tinyint(1) DEFAULT '1',
+  `min_stok` int DEFAULT '5',
   PRIMARY KEY (`id`),
   KEY `kd_barang` (`kd_barang`)
 ) ENGINE=InnoDB AUTO_INCREMENT=236 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

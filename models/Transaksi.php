@@ -11,7 +11,7 @@ class Transaksi
         $sql = 'SELECT 
             dt.no_transaksi AS no_transaksi,
             dt.kd_barang AS kode_barang,
-            DATE_FORMAT(ht.tgl_bayar,"%d-%m-%Y %H:%i:%s") AS tgl_transaksi,
+            ht.tgl_bayar AS tgl_transaksi,
             fb.nama_barang,
             dt.harga_satuan,
             dt.qty,
@@ -22,11 +22,20 @@ class Transaksi
         WHERE ht.tgl_bayar BETWEEN :start_date AND :end_date';
 
         $params = [
-            ':start_date' => $start_date. ' 00:00:00',
-            ':end_date' => $end_date.' 23:59:59'
+            ':start_date' => $start_date . ' 00:00:00',
+            ':end_date' => $end_date . ' 23:59:59',
         ];
-        
-        return Yii::$app->db->createCommand($sql, $params)->queryAll();
+
+        $rows = Yii::$app->db->createCommand($sql, $params)->queryAll();
+
+        foreach ($rows as &$row) {
+            if (!empty($row['tgl_transaksi'])) {
+                $row['tgl_transaksi'] = date('d-m-Y H:i:s', strtotime($row['tgl_transaksi']));
+            }
+        }
+        unset($row);
+
+        return $rows;
     }
 
     public function getDataPengeluaran($start_date, $end_date){

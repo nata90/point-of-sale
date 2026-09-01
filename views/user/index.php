@@ -37,7 +37,7 @@ $this->params['breadcrumbs'][] = $this->title;
                             'attribute'=>'password',
                             'format'=>'raw',
                             'value'=>function($model){
-                                return $model->password;
+                                return str_repeat('•', 8);
                             },
                             'filter'=>false
                         ],

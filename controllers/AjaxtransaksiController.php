@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\components\Utility;
+use app\models\HdTransaksi;
 use app\models\Modal;
 use app\models\Pengeluaran;
 use app\models\Transaksi;
@@ -46,6 +48,34 @@ class AjaxtransaksiController extends Controller
         $data = $this->transaksi->getDataPengeluaran($start_date, $end_date);
 
         return $data;
+    }
+
+    /**
+     * Hitung ringkasan (KPI) laporan keuangan untuk tanggal tertentu:
+     * modal awal, total penjualan, total pengeluaran, dan keuntungan.
+     */
+    public function actionHitungkpi(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $tgl = Yii::$app->request->get('tgl_transaksi');
+
+        if (empty($tgl)) {
+            $date = date('Y-m-d');
+        } else {
+            $date = date('Y-m-d', strtotime($tgl));
+        }
+
+        $modal_awal = (float) Modal::getModalAwal($date);
+        $total_penjualan = (float) HdTransaksi::getTotalRupiahJual($date, $date);
+        $pengeluaran = (float) Pengeluaran::getTotalPengeluaran($date, $date);
+        $keuntungan = $modal_awal + $total_penjualan - $pengeluaran;
+
+        return [
+            'modal_awal'        => Utility::rupiah($modal_awal),
+            'total_penjualan'   => Utility::rupiah($total_penjualan),
+            'pengeluaran'       => Utility::rupiah($pengeluaran),
+            'keuntungan'        => Utility::rupiah($keuntungan),
+        ];
     }
 
     public function actionSearchlaporankeuangan(){
