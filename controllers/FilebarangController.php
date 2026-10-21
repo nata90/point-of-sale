@@ -214,8 +214,8 @@ class FilebarangController extends Controller
         try{
             $kodebarang = Yii::$app->request->get('kodebarang');
             $harga = Yii::$app->request->get('harga');
+            $diskon = (int) Yii::$app->request->get('diskon', 0);
             $subtotal = 0;
-            $diskon = 0;
             $total = 0;
 
             $model = FileBarang::find()->where(['kd_barang'=>$kodebarang])->one();
@@ -237,20 +237,22 @@ class FilebarangController extends Controller
 
             $session['datatransaksi'] = $arr_data;
 
-            $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+            $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data, $diskon);
 
             $return['data'] = $this->renderPartial('/site/data_transaksi',[
                 'datatransaksi'=>$arr_data,
                 'subtotal'=>$subtotal,
-                'diskon'=>$diskon,
+                'diskon'=>$totalTransaksi['diskon'],
                 'total'=>$total
             ]);
 
             $return['success'] = 1;
             $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
             $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+            $return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+            $return['hidsubtotal'] = $totalTransaksi['subtotal'];
             $return['hidtotal'] = $totalTransaksi['total'];
-            $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+            $return['hiddiskon'] = $totalTransaksi['diskon'];
         } catch (\Exception $e) {
             $return['success'] = 0;
             $return['msg'] = $e->getMessage();
@@ -276,6 +278,7 @@ class FilebarangController extends Controller
         $kodebarang = Yii::$app->request->post('kodebarang');
         $namabarang = Yii::$app->request->post('namabarang');
         $hargajual = Yii::$app->request->post('hargajual');
+        $stok = Yii::$app->request->post('stok', 0);
 
         try {
             $return = [];
@@ -285,7 +288,7 @@ class FilebarangController extends Controller
             $model->harga_beli = 0;
             $model->harga_jual = $hargajual;
             $model->lokasi = '-';
-            $model->stok = 0;
+            $model->stok = $stok;
             $model->aktif = 1;
             if($model->save()){
                 $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();
@@ -295,8 +298,8 @@ class FilebarangController extends Controller
 
                 $return['success'] = 1;
 
+                $diskon = (int) Yii::$app->request->post('diskon', 0);
                 $subtotal = 0;
-                $diskon = 0;
                 $total = 0;
                 $session = Yii::$app->session;
 
@@ -311,20 +314,22 @@ class FilebarangController extends Controller
 
                 $session['datatransaksi'] = $arr_data;
 
-                $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+                $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data, $diskon);
 
                 $return['data'] = $this->renderPartial('/site/data_transaksi',[
                     'datatransaksi'=>$arr_data,
                     'subtotal'=>$subtotal,
-                    'diskon'=>$diskon,
+                    'diskon'=>$totalTransaksi['diskon'],
                     'total'=>$total
                 ]);
 
 
                 $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
                 $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+                $return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+                $return['hidsubtotal'] = $totalTransaksi['subtotal'];
                 $return['hidtotal'] = $totalTransaksi['total'];
-                $return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+                $return['hiddiskon'] = $totalTransaksi['diskon'];
             }else{
                 throw new Exception($this->formatErrors($model->getErrors()));
             }

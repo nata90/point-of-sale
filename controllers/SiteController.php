@@ -179,11 +179,11 @@ class SiteController extends Controller
         $kd_barang = Yii::$app->request->get('kodebarang');
         $qty = Yii::$app->request->get('qty');
         $nm_barang = Yii::$app->request->get('namabarang');
+        $diskon = (int) Yii::$app->request->get('diskon', 0);
         $arr_return = [];
         $arr_return['datafound'] = 1;
 
         $subtotal = 0;
-        $diskon = 0;
         $total = 0;
 
         $file_barang = FileBarang::find()->where(['kd_barang'=>$kd_barang])->one();
@@ -236,18 +236,20 @@ class SiteController extends Controller
             $session['datatransaksi'] = $array_data;
         }
 
-        $totalTransaksi = Utility::getTotalTransaksiPenjualan($array_data,$diskon);
+        $totalTransaksi = Utility::getTotalTransaksiPenjualan($array_data, $diskon);
         
         $arr_return['data'] = $this->renderPartial('data_transaksi',[
             'datatransaksi'=>$session['datatransaksi'],
             'subtotal'=>$subtotal,
-            'diskon'=>$diskon,
+            'diskon'=>$totalTransaksi['diskon'],
             'total'=>$total
         ]);
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
-        $arr_return['diskon'] = $diskon;
+        $arr_return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+        $arr_return['hidsubtotal'] = $totalTransaksi['subtotal'];
         $arr_return['hidtotal'] = $totalTransaksi['total'];
+        $arr_return['hiddiskon'] = $totalTransaksi['diskon'];
 
         return $arr_return;
 
@@ -257,10 +259,10 @@ class SiteController extends Controller
     public function actionDeleteitem(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $key = Yii::$app->request->get('rel');;
+        $key = Yii::$app->request->get('rel');
+        $diskon = (int) Yii::$app->request->get('diskon', 0);
 
         $subtotal = 0;
-        $diskon = 0;
         $total = 0;
         $arr_return = array();
 
@@ -271,19 +273,21 @@ class SiteController extends Controller
 
         $session['datatransaksi'] = $arr_data;
 
-        $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data,$diskon);
+        $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data, $diskon);
 
         $arr_return['data'] = $this->renderPartial('data_transaksi',[
             'datatransaksi'=>$arr_data,
             'subtotal'=>$subtotal,
-            'diskon'=>$diskon,
+            'diskon'=>$totalTransaksi['diskon'],
             'total'=>$total
         ]);
 
         $arr_return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
         $arr_return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+        $arr_return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+        $arr_return['hidsubtotal'] = $totalTransaksi['subtotal'];
         $arr_return['hidtotal'] = $totalTransaksi['total'];
-        $arr_return['diskon'] = '<strong>'.Utility::rupiah($diskon).'</strong>';
+        $arr_return['hiddiskon'] = $totalTransaksi['diskon'];
 
         return $arr_return;
     }
@@ -297,6 +301,7 @@ class SiteController extends Controller
         try {
             $total_tagihan = Yii::$app->request->post('totaltagihan');
             $total_bayar = Yii::$app->request->post('totalbayar');
+            $diskon = (int) Yii::$app->request->post('diskon', 0);
 
             $session = Yii::$app->session;
 
@@ -326,8 +331,9 @@ class SiteController extends Controller
             $model->no_transaksi = Utility::getNoTransaksi(1);
             $model->tgl_bayar = date('Y-m-d H:i:s');
             $model->status_bayar = 1;
-            $model->total = $total_tagihan;
-            $model->jumlah_bayar = $total_bayar;
+            $model->total = (int) $total_tagihan;
+            $model->jumlah_bayar = (int) $total_bayar;
+            $model->diskon = (int) $diskon;
 
             if (!$model->save()) {
                 throw new Exception($this->formatErrors($model->getErrors()));

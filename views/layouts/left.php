@@ -5,8 +5,6 @@ $username = !Yii::$app->user->isGuest ? Yii::$app->user->identity->username : 'G
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 /* ── Pinterest sidebar tokens ── */
 .pin-sidebar {
   --pin-primary:        #e60023;

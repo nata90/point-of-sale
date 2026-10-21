@@ -109,6 +109,17 @@ $this->registerJs(<<<JS
                 data: 'total',
                 render: $.fn.dataTable.render.number( ',', '.', 0, 'Rp ' )
             },
+            {
+                data: 'diskon_transaksi',
+                className: 'right-text',
+                render: function(data) {
+                    var val = parseInt(data) || 0;
+                    if (val > 0) {
+                        return '<span style="color:#e60023;font-weight:700;">- ' + $.fn.dataTable.render.number( ',', '.', 0, 'Rp ' ).display(val) + '</span>';
+                    }
+                    return '<span style="color:#91918c;">Rp 0</span>';
+                }
+            },
         ],
 
     });
@@ -164,6 +175,7 @@ $this->registerJs(<<<JS
             success: function(v){
                 $('.total-rupiah-jual').html(v.modal_awal);
                 $('.total-quantity-jual').html(v.total_penjualan);
+                $('.kpi-diskon').html(v.total_diskon);
                 $('.kpi-pengeluaran').html(v.pengeluaran);
                 $('.kpi-keuntungan').html(v.keuntungan);
             }
@@ -175,8 +187,6 @@ JS
 );
 ?>
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 /* ── Pinterest Design System tokens ── */
 :root {
   --pin-primary:         #e60023;
@@ -273,7 +283,7 @@ JS
 /* ── KPI summary strip ── */
 .pin-kpi-strip {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 12px;
   margin-bottom: 16px;
 }
@@ -299,6 +309,7 @@ JS
 }
 .pin-kpi.modal-awal::before    { background: #f59e0b; }
 .pin-kpi.penjualan::before     { background: var(--pin-primary); }
+.pin-kpi.diskon::before        { background: #ef4444; }
 .pin-kpi.pengeluaran::before   { background: #cc001f; }
 .pin-kpi.keuntungan::before    { background: #059669; }
 
@@ -311,6 +322,7 @@ JS
 }
 .pin-kpi.modal-awal  .pin-kpi-icon-wrap { background: #fef3c7; color: #b45309; }
 .pin-kpi.penjualan   .pin-kpi-icon-wrap { background: #fde8eb; color: var(--pin-primary); }
+.pin-kpi.diskon      .pin-kpi-icon-wrap { background: #fee2e2; color: #ef4444; }
 .pin-kpi.pengeluaran .pin-kpi-icon-wrap { background: #fde8eb; color: #cc001f; }
 .pin-kpi.keuntungan  .pin-kpi-icon-wrap { background: var(--pin-success-pale); color: var(--pin-success-deep); }
 
@@ -477,6 +489,12 @@ JS
       <span class="pin-kpi-value total-quantity-jual"><?php echo Utility::rupiah($total_penjualan); ?></span>
     </div>
 
+    <div class="pin-kpi diskon">
+      <div class="pin-kpi-icon-wrap"><i class="fa fa-tag"></i></div>
+      <span class="pin-kpi-label">Total Diskon</span>
+      <span class="pin-kpi-value kpi-diskon"><?php echo Utility::rupiah($total_diskon ?? 0); ?></span>
+    </div>
+
     <div class="pin-kpi pengeluaran">
       <div class="pin-kpi-icon-wrap"><i class="fa fa-shopping-cart"></i></div>
       <span class="pin-kpi-label">Total Pengeluaran</span>
@@ -519,6 +537,7 @@ JS
             <th>Harga Satuan</th>
             <th>Qty</th>
             <th>Total</th>
+            <th>Diskon</th>
           </tr>
         </thead>
       </table>

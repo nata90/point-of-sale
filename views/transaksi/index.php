@@ -63,6 +63,7 @@ $this->registerJs(<<<JS
             },
             success: function(v){
                 $('.total-rupiah-jual').html(v.rupiahtotal);
+                $('.total-diskon-jual').html(v.diskontotal);
                 $('.total-quantity-jual').html(v.qtytotal);
             },
             'complete':function(json)
@@ -94,23 +95,32 @@ JS
         </div>
     </div>
 </div>
-<div class="col-md-5 col-sm-6 col-xs-12" style="padding-left:0px;">
-    <div class="info-box">
-        <span class="info-box-icon bg-yellow"><i class="fa fa-money"></i></span>
-        <div class="info-box-content">
-            
-            <span class="info-box-text">TOTAL PENJUALAN</span>
-            <span class="info-box-number total-rupiah-jual"><?php echo $rupiah_total;?></span>
+<div class="row" style="margin-bottom:16px;">
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-yellow"><i class="fa fa-money"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">TOTAL PENJUALAN</span>
+                <span class="info-box-number total-rupiah-jual"><?php echo $rupiah_total;?></span>
+            </div>
         </div>
-        
     </div>
-</div>
-<div class="col-md-5 col-sm-6 col-xs-12" style="padding-left:0px;">
-    <div class="info-box">
-        <span class="info-box-icon bg-green"><i class="fa fa-tags"></i></span>
-        <div class="info-box-content">
-            <span class="info-box-text">TOTAL ITEM TERJUAL</span>
-            <span class="info-box-number total-quantity-jual"><?php echo $qty_total;?></span>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-red"><i class="fa fa-tag"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">TOTAL DISKON</span>
+                <span class="info-box-number total-diskon-jual"><?php echo $diskon_total;?></span>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 col-sm-6 col-xs-12">
+        <div class="info-box">
+            <span class="info-box-icon bg-green"><i class="fa fa-tags"></i></span>
+            <div class="info-box-content">
+                <span class="info-box-text">TOTAL ITEM TERJUAL</span>
+                <span class="info-box-number total-quantity-jual"><?php echo $qty_total;?></span>
+            </div>
         </div>
     </div>
 </div>
@@ -167,7 +177,16 @@ JS
                             'value'=>function($model){
                                 return Utility::rupiah($model->harga_satuan * $model->qty);
                             },
-                            //'footer' => '<strong>'.Utility::rupiah(DtTransaksiSearch::getTotal($dataProvider->models, 'harga_satuan','qty')).'</strong>',
+                        ],
+                        [
+                            'label'=>'Diskon Transaksi',
+                            'format'=>'raw',
+                            'value'=>function($model){
+                                if (!empty($model->header->diskon) && $model->header->diskon > 0) {
+                                    return '<span class="label label-danger" style="font-weight:700;">- ' . Utility::rupiah($model->header->diskon) . '</span>';
+                                }
+                                return '<span class="text-muted">Rp 0</span>';
+                            },
                         ],
                         //'total_harga',
                         //'status_hapus',

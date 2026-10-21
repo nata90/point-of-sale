@@ -96,13 +96,34 @@ class UserController extends Controller
     public function actionUpdate($id)
     {
         $model = $this->findModel($id);
+        $oldPassword = $model->password;
+        $oldAuthkey = $model->authkey;
+        $oldCreatedAt = $model->created_at;
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        $listData = ArrayHelper::map(AppUserGroup::find()->where('aktif = 1')->all(), 'id_group', 'group_name');
+
+        if ($model->load(Yii::$app->request->post())) {
+            $newPassword = $model->password;
+            if (empty($newPassword)) {
+                $model->password = $oldPassword;
+                $model->authkey = $oldAuthkey;
+                $model->created_at = $oldCreatedAt;
+                $model->updated_at = date('Y-m-d H:i:s');
+                if ($model->save(false)) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            } else {
+                if ($model->save()) {
+                    return $this->redirect(['view', 'id' => $model->id]);
+                }
+            }
         }
+
+        $model->password = '';
 
         return $this->render('update', [
             'model' => $model,
+            'listData' => $listData,
         ]);
     }
 

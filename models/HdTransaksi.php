@@ -14,6 +14,7 @@ use app\models\DtTransaksi;
  * @property int $status_bayar
  * @property int $total
  * @property int $jumlah_bayar
+ * @property int $diskon
  * @property int $status_hapus
  * @property string $tgl_hapus
  */
@@ -35,7 +36,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
         return [
             [['no_transaksi'], 'required'],
             [['tgl_bayar', 'tgl_hapus'], 'safe'],
-            [['status_bayar', 'total', 'status_hapus','jumlah_bayar'], 'integer'],
+            [['status_bayar', 'total', 'status_hapus', 'jumlah_bayar', 'diskon'], 'integer'],
             [['no_transaksi'], 'string', 'max' => 64],
         ];
     }
@@ -52,6 +53,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
             'status_bayar' => 'Status Bayar',
             'total' => 'Total',
             'jumlah_bayar' => 'Jumlah Bayar',
+            'diskon' => 'Diskon',
             'status_hapus' => 'Status Hapus',
             'tgl_hapus' => 'Tgl Hapus',
         ];
@@ -105,6 +107,7 @@ class HdTransaksi extends \yii\db\ActiveRecord
     public static function cetakNota($no_transaksi){
         $detail = DtTransaksi::find()->where(['no_transaksi'=>$no_transaksi])->all();
         $header = HdTransaksi::find()->where(['no_transaksi'=>$no_transaksi])->one();
+        $setting = \app\models\SettingApp::find()->one();
 
         $template = 'cetak_nota'; 
         ob_start();
@@ -121,23 +124,37 @@ class HdTransaksi extends \yii\db\ActiveRecord
         return $output;
     }
 
-    public static function getTotalRupiahJual($start_date, $end_date){
-        $command = Yii::$app->db->createCommand('SELECT SUM(dt.total_harga) from dt_transaksi dt 
-        left join hd_transaksi ht on dt.no_transaksi = ht.no_transaksi 
-        WHERE dt.status_hapus = 0 AND ht.tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
+    public static function getTotalRupiahJual($start_date = null, $end_date = null){
+        $start_date = $start_date ?: date('Y-m-d');
+        $end_date = $end_date ?: date('Y-m-d');
+        $command = Yii::$app->db->createCommand('SELECT SUM(total) from hd_transaksi 
+        WHERE status_hapus = 0 AND tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
 
-        $result= $command->queryScalar();
+        $result = $command->queryScalar();
 
-        return $result;
+        return (float) ($result ?: 0);
     }
 
-    public static function getTotalItemJual($start_date, $end_date){
+    public static function getTotalDiskonJual($start_date = null, $end_date = null){
+        $start_date = $start_date ?: date('Y-m-d');
+        $end_date = $end_date ?: date('Y-m-d');
+        $command = Yii::$app->db->createCommand('SELECT SUM(diskon) from hd_transaksi 
+        WHERE status_hapus = 0 AND tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
+
+        $result = $command->queryScalar();
+
+        return (float) ($result ?: 0);
+    }
+
+    public static function getTotalItemJual($start_date = null, $end_date = null){
+        $start_date = $start_date ?: date('Y-m-d');
+        $end_date = $end_date ?: date('Y-m-d');
         $command = Yii::$app->db->createCommand('SELECT SUM(dt.qty) from dt_transaksi dt 
         left join hd_transaksi ht on dt.no_transaksi = ht.no_transaksi 
         WHERE dt.status_hapus = 0 AND ht.tgl_bayar BETWEEN "'.$start_date.' 00:00:00" AND "'.$end_date.' 23:59:59"');
 
         $result= $command->queryScalar();
 
-        return $result;
+        return (float) ($result ?: 0);
     }
 }

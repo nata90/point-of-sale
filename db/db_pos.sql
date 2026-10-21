@@ -180,12 +180,14 @@ CREATE TABLE `setting_app` (
   `app_name` varchar(200) NOT NULL,
   `email` varchar(100) NOT NULL,
   `ip_address` varchar(30) DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `no_telp` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 
 /*Data for the table `setting_app` */
 
-insert  into `setting_app`(`id`,`app_name`,`email`,`ip_address`) values (1,'POS System','nataklaten@gmail.com','127.0.0.1');
+insert  into `setting_app`(`id`,`app_name`,`email`,`ip_address`,`alamat`,`no_telp`) values (1,'POS System','nataklaten@gmail.com','127.0.0.1','KAUMAN PEDAN KLATEN','(0272) 898246');
 
 /*Table structure for table `supplier` */
 

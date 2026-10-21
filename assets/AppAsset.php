@@ -23,9 +23,11 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/ionicons.min.css',
         'css/googlefont.css',
+        'css/inter.css',
         'css/daterangepicker.css',
         'css/jquery.toast.css',
         'css/handsontable.min.css',
+        'css/theme.css',
     ];
     public $js = [
         'js/Chart.js',
@@ -41,5 +43,6 @@ class AppAsset extends AssetBundle
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'dmstr\web\AdminLteAsset',
     ];
 }

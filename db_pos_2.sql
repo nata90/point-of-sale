@@ -104,6 +104,7 @@ CREATE TABLE `hd_transaksi` (
   `status_bayar` tinyint(1) DEFAULT '0',
   `total` int DEFAULT NULL,
   `jumlah_bayar` int DEFAULT NULL,
+  `diskon` int DEFAULT '0',
   `status_hapus` tinyint(1) DEFAULT '0',
   `tgl_hapus` datetime DEFAULT NULL,
   PRIMARY KEY (`id`)
@@ -184,12 +185,14 @@ CREATE TABLE `setting_app` (
   `app_name` varchar(200) NOT NULL,
   `email` varchar(100) NOT NULL,
   `ip_address` varchar(30) DEFAULT NULL,
+  `alamat` text DEFAULT NULL,
+  `no_telp` varchar(50) DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
 /*Data for the table `setting_app` */
 
-insert  into `setting_app`(`id`,`app_name`,`email`,`ip_address`) values (1,'POS System','rahanata9@gmail.com','127.0.0.1');
+insert  into `setting_app`(`id`,`app_name`,`email`,`ip_address`,`alamat`,`no_telp`) values (1,'POS System','rahanata9@gmail.com','127.0.0.1','KAUMAN PEDAN KLATEN','(0272) 898246');
 
 /*Table structure for table `supplier` */
 

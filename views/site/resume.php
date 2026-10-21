@@ -43,21 +43,38 @@ $this->registerJs(<<<JS
 
 	$('#new-transaction').focus();
 
-	$(document).on("click", "#print-transaction", function () {
+	$(document).on("click", "#print-transaction", function (e) {
+        e.preventDefault();
         var link = $(this).attr('url');
-        $.ajax({
-            type: 'get',
-            url: link,
-            dataType: 'json',
-            'beforeSend':function(json)
-            { 
-                SimpleLoading.start('gears'); 
-            },
-            'complete':function(json)
-            {
-                SimpleLoading.stop();
-            },
-        });
+        $('#iframe-preview-nota').attr('src', link);
+        $('#btn-open-pdf-tab').attr('href', link);
+        $('#modal-preview-nota').modal('show');
+    });
+
+    $(document).on("click", "#btn-print-iframe", function (e) {
+        e.preventDefault();
+        var iframe = document.getElementById('iframe-preview-nota');
+        if (iframe) {
+            try {
+                iframe.contentWindow.focus();
+                iframe.contentWindow.print();
+            } catch (err) {
+                var tabUrl = $('#btn-open-pdf-tab').attr('href');
+                if (tabUrl && tabUrl !== '#') {
+                    window.open(tabUrl, '_blank');
+                }
+            }
+        }
+    });
+
+    // Pintasan keyboard: Tekan P untuk cetak nota 80mm
+    $(document).on("keydown", function (e) {
+        if ((e.key === 'p' || e.key === 'P') && !$('input, textarea').is(':focus')) {
+            if (!$('#modal-preview-nota').hasClass('in')) {
+                e.preventDefault();
+                $('#print-transaction').click();
+            }
+        }
     });
 
 JS
@@ -66,8 +83,6 @@ JS
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 :root {
   --pin-primary:         #e60023;
   --pin-primary-pressed: #cc001f;
@@ -322,7 +337,17 @@ JS
     </div>
 
     <!-- Summary -->
-    <div class="pin-resume-summary">
+    <div class="pin-resume-summary" style="<?php echo (!empty($model->diskon) && $model->diskon > 0) ? 'grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));' : ''; ?>">
+      <?php if (!empty($model->diskon) && $model->diskon > 0): ?>
+      <div class="pin-summary-item">
+        <div class="pin-summary-label">Subtotal</div>
+        <div class="pin-summary-value"><?php echo Utility::rupiah($model->total + $model->diskon); ?></div>
+      </div>
+      <div class="pin-summary-item" style="background:#fff1f2;border:1px dashed #fca5a5;">
+        <div class="pin-summary-label" style="color:#e60023;">Diskon</div>
+        <div class="pin-summary-value" style="color:#e60023;">- <?php echo Utility::rupiah($model->diskon); ?></div>
+      </div>
+      <?php endif; ?>
       <div class="pin-summary-item highlight">
         <div class="pin-summary-label">Total</div>
         <div class="pin-summary-value"><?php echo Utility::rupiah($model->total); ?></div>
@@ -344,8 +369,9 @@ JS
         <i class="fa fa-plus"></i> Baru
       </button>
       <button type="button" class="pin-btn pin-btn-secondary" id="print-transaction"
-              url="<?php echo Url::to(['transaksi/cetaknota', 'id' => $model->no_transaksi]); ?>">
-        <i class="fa fa-print"></i> Print
+              url="<?php echo Url::to(['transaksi/cetaknota', 'id' => $model->no_transaksi]); ?>"
+              title="Cetak Nota Ukuran 80 mm (Tekan P)">
+        <i class="fa fa-print"></i> Cetak Nota (80 mm)
       </button>
       <button type="button" class="pin-btn pin-btn-danger" id="cancel-transaction"
               url="<?php echo Url::to(['site/canceltransaction', 'id' => $id]); ?>">
@@ -353,6 +379,38 @@ JS
       </button>
     </div>
 
+  </div>
+</div>
+
+<!-- Modal Preview Nota PDF Ukuran 80 mm -->
+<div class="modal fade" id="modal-preview-nota" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog" role="document" style="max-width: 440px; margin: 25px auto;">
+    <div class="modal-content" style="border-radius: 16px; overflow: hidden; border: none; box-shadow: 0 12px 36px rgba(0,0,0,.22);">
+      <div class="modal-header" style="background: var(--pin-primary, #e60023); color: #fff; padding: 14px 20px; display: flex; align-items: center; justify-content: space-between;">
+        <h4 class="modal-title" style="font-weight: 700; font-size: 15px; margin: 0; display: flex; align-items: center; gap: 8px;">
+          <i class="fa fa-print"></i> Cetak Nota Struk (Thermal 80 mm)
+        </h4>
+        <button type="button" class="close" data-dismiss="modal" style="color: #fff; opacity: 0.9; font-size: 22px; font-weight: 300; border: none; background: transparent; cursor: pointer;">&times;</button>
+      </div>
+      <div class="modal-body" style="padding: 16px; background: #eef0f3;">
+        <div style="background: #fff; border-radius: 8px; overflow: hidden; border: 1px solid #dcdfe4; box-shadow: 0 4px 16px rgba(0,0,0,.08); max-width: 360px; margin: 0 auto;">
+          <iframe id="iframe-preview-nota" src="" style="width: 100%; height: 500px; border: none; display: block;"></iframe>
+        </div>
+      </div>
+      <div class="modal-footer" style="background: #fff; border-top: 1px solid #e5e5e0; padding: 12px 20px; display: flex; justify-content: space-between; align-items: center; gap: 8px; flex-wrap: wrap;">
+        <div style="display: flex; gap: 8px;">
+          <button type="button" class="pin-btn pin-btn-primary" id="btn-print-iframe" style="height: 38px; padding: 0 16px; font-size: 13px;">
+            <i class="fa fa-print"></i> Cetak
+          </button>
+          <a id="btn-open-pdf-tab" href="#" target="_blank" class="pin-btn pin-btn-secondary" style="height: 38px; padding: 0 14px; font-size: 13px; text-decoration: none;">
+            <i class="fa fa-external-link"></i> Tab Baru
+          </a>
+        </div>
+        <button type="button" class="pin-btn pin-btn-secondary" data-dismiss="modal" style="height: 38px; padding: 0 16px; font-size: 13px;">
+          Tutup
+        </button>
+      </div>
+    </div>
   </div>
 </div>
 

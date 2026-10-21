@@ -11,8 +11,6 @@ $formTitle = $model->isNewRecord ? 'Buat Barang Baru' : 'Ubah Data Barang';
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 .pin-form-barang {
   --pin-primary:          #e60023;
   --pin-primary-pressed:  #cc001f;

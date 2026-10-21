@@ -67,12 +67,14 @@ class AjaxtransaksiController extends Controller
 
         $modal_awal = (float) Modal::getModalAwal($date);
         $total_penjualan = (float) HdTransaksi::getTotalRupiahJual($date, $date);
+        $total_diskon = (float) HdTransaksi::getTotalDiskonJual($date, $date);
         $pengeluaran = (float) Pengeluaran::getTotalPengeluaran($date, $date);
         $keuntungan = $modal_awal + $total_penjualan - $pengeluaran;
 
         return [
             'modal_awal'        => Utility::rupiah($modal_awal),
             'total_penjualan'   => Utility::rupiah($total_penjualan),
+            'total_diskon'      => Utility::rupiah($total_diskon),
             'pengeluaran'       => Utility::rupiah($pengeluaran),
             'keuntungan'        => Utility::rupiah($keuntungan),
         ];

@@ -11,6 +11,8 @@ use Yii;
  * @property string $app_name
  * @property string $email
  * @property string|null $ip_address
+ * @property string|null $alamat
+ * @property string|null $no_telp
  */
 class SettingApp extends \yii\db\ActiveRecord
 {
@@ -32,6 +34,8 @@ class SettingApp extends \yii\db\ActiveRecord
             [['app_name'], 'string', 'max' => 200],
             [['email'], 'string', 'max' => 100],
             [['ip_address'], 'string', 'max' => 30],
+            [['alamat'], 'string', 'max' => 500],
+            [['no_telp'], 'string', 'max' => 50],
         ];
     }
 
@@ -45,6 +49,8 @@ class SettingApp extends \yii\db\ActiveRecord
             'app_name' => Yii::t('app', 'Nama Toko'),
             'email' => Yii::t('app', 'Email'),
             'ip_address' => Yii::t('app', 'Alamat IP'),
+            'alamat' => Yii::t('app', 'Alamat Toko'),
+            'no_telp' => Yii::t('app', 'Kontak Toko / No. Telp'),
         ];
     }
 

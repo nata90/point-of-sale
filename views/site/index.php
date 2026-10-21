@@ -9,7 +9,8 @@ use yii\helpers\Url;
 
 
 
-$this->title = 'PENJUALAN - POS';
+$storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS';
+$this->title = 'PENJUALAN - ' . strtoupper($storeName);
 $this->registerJs('var ip_addr = "' . $setting->ip_address . '";');
 $this->registerJs('var url_get_nama = "' .Url::to(['site/getnamabarang']). '";');
 $this->registerJs('var url_proses_transaksi = "' .Url::to(['site/prosestransaksi']). '";');
@@ -19,12 +20,120 @@ $this->registerJs('var url_button_bayar = "' .Url::to(['transaksi/hitungpembayar
 $this->registerJs(<<<JS
 	$('#field-kode-barang').focus();
 
+	var diskonMode = 'rp'; // 'rp' or 'percent'
+
+	function hitungUlangTagihan() {
+		var rawSubtotal = parseInt($('#field-subtotal').val()) || 0;
+		var inputVal = ($('#field-input-diskon').val() || '').trim();
+		var rawDiskon = 0;
+
+		if (diskonMode === 'percent') {
+			var pct = parseFloat(inputVal.replace('%', '').replace(',', '.')) || 0;
+			if (pct < 0) pct = 0;
+			if (pct > 100) pct = 100;
+			rawDiskon = Math.round(rawSubtotal * (pct / 100));
+		} else {
+			var remrp = inputVal.replace("Rp. ", "").replace("Rp ", "").replace("Rp.", "");
+			var remdot = remrp.split(".").join("");
+			rawDiskon = parseInt(remdot) || 0;
+		}
+
+		if (rawDiskon < 0) rawDiskon = 0;
+		if (rawDiskon > rawSubtotal) rawDiskon = rawSubtotal;
+
+		var totalTagihan = rawSubtotal - rawDiskon;
+		if (totalTagihan < 0) totalTagihan = 0;
+
+		$('#field-diskon').val(rawDiskon);
+		$('#field-total-tagihan').val(totalTagihan);
+
+		// Format display subtotal
+		$('#subtotal').html('<strong>' + formatRupiah(rawSubtotal.toString(), 'Rp. ') + '</strong>');
+
+		// Format display diskon
+		if (rawDiskon > 0) {
+			var diskonText = '- ' + formatRupiah(rawDiskon.toString(), 'Rp. ');
+			if (diskonMode === 'percent') {
+				var pctDisplay = parseFloat(inputVal) || 0;
+				diskonText += ' <span style="font-size:12px;font-weight:600;opacity:0.85;">(' + pctDisplay + '%)</span>';
+			}
+			$('#diskon').html('<strong>' + diskonText + '</strong>');
+			$('#btn-reset-diskon').show();
+		} else {
+			$('#diskon').html('<strong>Rp. 0,00</strong>');
+			$('#btn-reset-diskon').hide();
+		}
+
+		// Format display total
+		$('#total').html('<strong>' + formatRupiah(totalTagihan.toString(), 'Rp. ') + '</strong>');
+
+		// Hitung ulang cashback jika jumlah bayar sudah diisi
+		var bayar = $('#jumlah-bayar').val();
+		if (bayar) {
+			var remrp = bayar.replace("Rp. ", "").replace("Rp ", "").replace("Rp.", "");
+			var remdot = remrp.split(".").join("");
+			var bayarNominal = parseInt(remdot) || 0;
+			var cashback = bayarNominal - totalTagihan;
+
+			$('#field-total-bayar').val(bayarNominal);
+			$('#field-total-cashback').val(cashback);
+
+			if (cashback < 0) {
+				$('#cashback').html("<b>Rp. 0,00</b>");
+			} else {
+				$('#cashback').html("<b>" + formatRupiah(cashback.toString(), 'Rp. ') + "</b>");
+			}
+		}
+	}
+
+	$(document).on("click", ".pin-btn-mode", function () {
+		var mode = $(this).data('mode');
+		diskonMode = mode;
+		$('.pin-btn-mode').removeClass('active');
+		$(this).addClass('active');
+		if (mode === 'percent') {
+			$('#field-input-diskon').attr('placeholder', 'Ketik diskon (% 0-100)...');
+		} else {
+			$('#field-input-diskon').attr('placeholder', 'Ketik diskon (Rp)...');
+		}
+		$('#field-input-diskon').val('');
+		hitungUlangTagihan();
+		$('#field-input-diskon').focus();
+	});
+
+	$(document).on("keyup", "#field-input-diskon", function () {
+		if (diskonMode === 'rp') {
+			this.value = formatRupiah(this.value, 'Rp. ');
+		} else {
+			var clean = this.value.replace(/[^0-9.]/g, '');
+			if (parseFloat(clean) > 100) clean = '100';
+			this.value = clean;
+		}
+		hitungUlangTagihan();
+	});
+
+	$(document).on("click", ".pin-pill-diskon", function () {
+		var pct = $(this).data('val');
+		diskonMode = 'percent';
+		$('.pin-btn-mode').removeClass('active');
+		$('#btn-mode-percent').addClass('active');
+		$('#field-input-diskon').attr('placeholder', 'Ketik diskon (% 0-100)...');
+		$('#field-input-diskon').val(pct > 0 ? pct : '');
+		hitungUlangTagihan();
+	});
+
+	$(document).on("click", "#btn-reset-diskon", function () {
+		$('#field-input-diskon').val('');
+		hitungUlangTagihan();
+		$('#field-input-diskon').focus();
+	});
+
 	$(document).on("click", "#process-transaction", function () {
 		var url = $(this).attr('url');
 		var kodebarang = $('#field-kode-barang').val();
 		var namabarang = $('#filebarang-nama_barang').val();
 		var qty = $('#qty-barang').val();
-		/*var idstok = $('#field-id-stokbarang').val();*/
+		var diskon = $('#field-diskon').val() || 0;
 
 		if(kodebarang == ''){
 			Swal.fire({
@@ -49,14 +158,13 @@ $this->registerJs(<<<JS
 				data: {
 					'kodebarang':kodebarang, 
 					'qty':qty, 
-					'namabarang':namabarang
-					/*'idstok':idstok*/
+					'namabarang':namabarang,
+					'diskon':diskon
 				},
 				success: function(v){
 					if(v.datafound == 0){
-
 						Swal.fire({
-							title: v.ms,
+							title: v.msg || v.ms,
 							icon: "error"
 						});
 					}else{
@@ -65,13 +173,9 @@ $this->registerJs(<<<JS
 						$('#field-kode-barang').val('');
 						$('#qty-barang').val('');
 						$('#filebarang-nama_barang').focus();
-						$('#subtotal').html(v.subtotal);
-						$('#total').html(v.total);
-						$('#field-total-tagihan').val(v.hidtotal);
-						$('#jumlah-bayar').val('');
-						$('#cashback').html('<b>Rp.0,00</b>');
-						$('#field-total-bayar').val('');
-						$('#field-total-cashback').val('');
+						var subtotal = (v.hidsubtotal !== undefined) ? v.hidsubtotal : (v.hidtotal || 0);
+						$('#field-subtotal').val(subtotal);
+						hitungUlangTagihan();
 						$('#field-kode-barang').focus();
 					}
 					
@@ -82,45 +186,41 @@ $this->registerJs(<<<JS
     });
 
     $(document).on("click", ".delete-item", function () {
-    	rel = $(this).attr('rel');
-    	url = $(this).attr('url');
+    	var rel = $(this).attr('rel');
+    	var url = $(this).attr('url');
+    	var diskon = $('#field-diskon').val() || 0;
 
     	$.ajax({
 			type: 'get',
 			url: url,
 			dataType: 'json',
-			data: {'rel':rel},
+			data: {'rel':rel, 'diskon':diskon},
 			success: function(v){
 				$('#data-transaksi').html(v.data);
-				$('#subtotal').html(v.subtotal);
-				$('#total').html(v.total);
-				$('#diskon').html(v.diskon);
-				$('#field-total-tagihan').val(v.hidtotal);
-
-				$('#jumlah-bayar').val('');
-				$('#cashback').html('<b>Rp.0,00</b>');
-				$('#field-total-bayar').val('');
-				$('#field-total-cashback').val('');
+				var subtotal = (v.hidsubtotal !== undefined) ? v.hidsubtotal : (v.hidtotal || 0);
+				$('#field-subtotal').val(subtotal);
+				hitungUlangTagihan();
 			}
 		});
     });
     
     var rupiah = document.getElementById('jumlah-bayar');
-	rupiah.addEventListener('keyup', function(e){
-		rupiah.value = formatRupiah(this.value, 'Rp. ');
-		
-	});
+	if (rupiah) {
+		rupiah.addEventListener('keyup', function(e){
+			rupiah.value = formatRupiah(this.value, 'Rp. ');
+		});
+	}
     
 	$(document).on("keyup", "#jumlah-bayar", function () {
     	var bayar = $(this).val();
-    	var remrp = bayar.replace("Rp. ","");
+    	var remrp = bayar.replace("Rp. ","").replace("Rp ","").replace("Rp.","");
     	var remdot = remrp.split(".").join("");
 
 		var total = $('#field-total-tagihan').val();
-		var cashback = parseInt(remdot) - parseInt(total);
+		var cashback = parseInt(remdot || 0) - parseInt(total || 0);
 		var nilai = formatRupiah(cashback.toString(), 'Rp. ');
 
-		$('#field-total-bayar').val(remdot);
+		$('#field-total-bayar').val(remdot || 0);
 		$('#field-total-cashback').val(cashback);
 
 		if(cashback < 0){
@@ -135,15 +235,25 @@ $this->registerJs(<<<JS
     	var totaltagihan = $('#field-total-tagihan').val();
     	var totalbayar = $('#field-total-bayar').val();
     	var cashback = $('#field-total-cashback').val();
+    	var diskon = $('#field-diskon').val() || 0;
     	var url = $(this).attr('url');
 
-    	if(totalbayar == 0){
+    	if(!totaltagihan || parseInt(totaltagihan) < 0 || $('#field-subtotal').val() == 0){
+			Swal.fire({
+				title: "Belum Ada Item Belanja",
+				text: "Silakan masukkan barang belanja terlebih dahulu.",
+				icon: "warning"
+			});
+			return;
+		}
+
+    	if(!totalbayar || parseInt(totalbayar) === 0){
 			Swal.fire({
 				title: "Jumlah Bayar Wajib Di Isi",
 				icon: "error"
 			});
 		}else{
-			if(cashback < 0){
+			if(parseInt(cashback) < 0){
 				Swal.fire({
 					title: "Jumlah Bayar Kurang dari Total",
 					icon: "error"
@@ -160,12 +270,11 @@ $this->registerJs(<<<JS
 					data: {
 						'totaltagihan':totaltagihan, 
 						'totalbayar':totalbayar, 
-						'cashback':cashback
+						'cashback':cashback,
+						'diskon':diskon
 					},
 					success: function(v){
 						if(v.success == 1){
-							var head = 'Penjualan : '+v.nopenjualan;
-							var msg = v.items;
 							location.replace(v.redirect);
 						}else{
 							Swal.fire({
@@ -218,7 +327,8 @@ $this->registerJs(<<<JS
 								data: {
 									'kodebarang':kodebarang, 
 									'qty':1, 
-									'namabarang':v.nama_barang
+									'namabarang':v.nama_barang,
+									'diskon': $('#field-diskon').val() || 0
 								},
 								success: function(v){
 									if(v.datafound == 0){
@@ -232,13 +342,9 @@ $this->registerJs(<<<JS
 										$('#field-kode-barang').val('');
 										$('#qty-barang').val('');
 										$('#filebarang-nama_barang').focus();
-										$('#subtotal').html(v.subtotal);
-										$('#total').html(v.total);
-										$('#field-total-tagihan').val(v.hidtotal);
-										$('#jumlah-bayar').val('');
-										$('#cashback').html('<b>Rp.0,00</b>');
-										$('#field-total-bayar').val('');
-										$('#field-total-cashback').val('');
+										var subtotal = (v.hidsubtotal !== undefined) ? v.hidsubtotal : (v.hidtotal || 0);
+										$('#field-subtotal').val(subtotal);
+										hitungUlangTagihan();
 										$('#field-kode-barang').focus();
 									}
 									
@@ -312,6 +418,7 @@ $this->registerJs(<<<JS
 	$(document).on("click", "#update-button", function () {
 		let harga = $('#filebarang-harga_jual').val();
 		let kodebarang = $('#filebarang-kd_barang').val();
+		let diskon = $('#field-diskon').val() || 0;
 		let url = $(this).attr('link');
 
 		$.ajax({
@@ -324,21 +431,16 @@ $this->registerJs(<<<JS
 			},
 			data: {
 				'harga':harga,
-				'kodebarang':kodebarang
+				'kodebarang':kodebarang,
+				'diskon':diskon
 			},
 			success: function(v){
 				if(v.success == 1){
 					$('#modal').modal('hide');
 					$('#data-transaksi').html(v.data);
-					$('#subtotal').html(v.subtotal);
-					$('#total').html(v.total);
-					$('#diskon').html(v.diskon);
-					$('#field-total-tagihan').val(v.hidtotal);
-
-					$('#jumlah-bayar').val('');
-					$('#cashback').html('<b>Rp.0,00</b>');
-					$('#field-total-bayar').val('');
-					$('#field-total-cashback').val('');
+					var subtotal = (v.hidsubtotal !== undefined) ? v.hidsubtotal : (v.hidtotal || 0);
+					$('#field-subtotal').val(subtotal);
+					hitungUlangTagihan();
 					$('#field-kode-barang').focus();
 				}else{
 					Swal.fire({
@@ -359,6 +461,8 @@ $this->registerJs(<<<JS
 		let kodebarang = $('#filebarang-kd_barang').val();
 		let namabarang = $('#popup-namabarang').val();
 		let hargajual = $('#filebarang-harga_jual').val();
+		let stok = $('#filebarang-stok').val();
+		let diskon = $('#field-diskon').val() || 0;
 		let url = $(this).attr('link');
 
 		$.ajax({
@@ -372,21 +476,17 @@ $this->registerJs(<<<JS
 			data: {
 				'kodebarang':kodebarang,
 				'namabarang':namabarang,
-				'hargajual':hargajual
+				'hargajual':hargajual,
+				'stok':stok,
+				'diskon':diskon
 			},
 			success: function(v){
 				if(v.success == 1){
 					$('#modal').modal('hide');
 					$('#data-transaksi').html(v.data);
-					$('#subtotal').html(v.subtotal);
-					$('#total').html(v.total);
-					$('#diskon').html(v.diskon);
-					$('#field-total-tagihan').val(v.hidtotal);
-
-					$('#jumlah-bayar').val('');
-					$('#cashback').html('<b>Rp.0,00</b>');
-					$('#field-total-bayar').val('');
-					$('#field-total-cashback').val('');
+					var subtotal = (v.hidsubtotal !== undefined) ? v.hidsubtotal : (v.hidtotal || 0);
+					$('#field-subtotal').val(subtotal);
+					hitungUlangTagihan();
 					$('#field-kode-barang').val('');
 					$('#field-kode-barang').focus();
 				}else{
@@ -482,8 +582,6 @@ JS
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 .pin-pos-wrap { font-family: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; }
 .pin-pos-wrap *, .pin-pos-wrap *::before, .pin-pos-wrap *::after { box-sizing: border-box; }
 
@@ -598,6 +696,53 @@ JS
 	font-size: 22px; font-weight: 600; color: #000; letter-spacing: -0.02em;
 	margin: 0 0 16px; line-height: 1.25;
 }
+
+.pin-diskon-card {
+	background: #ffffff;
+	border: 1px solid #e5e5e0;
+	border-radius: 16px;
+	padding: 14px 16px;
+	margin-top: 14px;
+	transition: border-color .15s;
+}
+.pin-diskon-card:focus-within {
+	border-color: #000;
+}
+.pin-btn-mode {
+	border: none;
+	background: transparent;
+	color: #62625b;
+	font-family: 'Inter', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 4px 12px;
+	border-radius: 9999px;
+	cursor: pointer;
+	transition: background .15s, color .15s;
+}
+.pin-btn-mode.active {
+	background: #000 !important;
+	color: #fff !important;
+}
+.pin-pill-diskon {
+	border: 1px solid #e5e5e0;
+	background: #f6f6f3;
+	color: #000;
+	font-family: 'Inter', sans-serif;
+	font-size: 11px;
+	font-weight: 700;
+	padding: 5px 8px;
+	border-radius: 9999px;
+	cursor: pointer;
+	text-align: center;
+	transition: background .15s, border-color .15s, color .15s;
+	flex: 1;
+}
+.pin-pill-diskon:hover {
+	background: #000;
+	color: #fff;
+	border-color: #000;
+}
 </style>
 
 <div class="pin-pos-wrap">
@@ -617,7 +762,9 @@ JS
 						<div class="pin-input-group">
 							<i class="fa fa-search pin-input-icon"></i>
 							<?php
-								echo Html::hiddenInput('total_tagihan', '', ['id'=>'field-total-tagihan']);
+								echo Html::hiddenInput('total_subtotal', '0', ['id'=>'field-subtotal']);
+								echo Html::hiddenInput('diskon', '0', ['id'=>'field-diskon']);
+								echo Html::hiddenInput('total_tagihan', '0', ['id'=>'field-total-tagihan']);
 								echo Html::hiddenInput('total_bayar', '', ['id'=>'field-total-bayar']);
 								echo Html::hiddenInput('total_cashback', '', ['id'=>'field-total-cashback']);
 								echo AutoComplete::widget([
@@ -692,13 +839,45 @@ JS
 					<span class="pin-pay-label">Subtotal</span>
 					<span class="pin-pay-value" id="subtotal"><strong>Rp. 0,00</strong></span>
 				</div>
-				<div class="pin-pay-row">
-					<span class="pin-pay-label">Diskon</span>
-					<span class="pin-pay-value" id="diskon"><strong>Rp. 0,00</strong></span>
+				<div class="pin-pay-row" style="background:#fff;border-radius:12px;padding:10px 14px;margin:8px 0;border:1px dashed #e5e5e0;">
+					<span class="pin-pay-label" style="display:flex;align-items:center;gap:6px;font-weight:600;color:#33332e;">
+						<i class="fa fa-tag" style="color:#e60023;"></i>
+						Diskon
+					</span>
+					<span class="pin-pay-value" id="diskon" style="color:#e60023;"><strong>Rp. 0,00</strong></span>
 				</div>
 				<div class="pin-pay-total">
-					<span class="pin-pay-label">Total</span>
+					<span class="pin-pay-label">Total Tagihan</span>
 					<span class="pin-pay-value" id="total"><strong>Rp. 0,00</strong></span>
+				</div>
+
+				<!-- Form Input Diskon Penjualan -->
+				<div class="pin-diskon-card">
+					<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px;">
+						<label style="font-size:12px;font-weight:700;color:#33332e;margin:0;display:flex;align-items:center;gap:6px;text-transform:uppercase;letter-spacing:0.04em;">
+							<i class="fa fa-percent" style="color:#e60023;font-size:11px;"></i> Form Diskon
+						</label>
+						<div class="pin-diskon-toggle" style="display:inline-flex;background:#f6f6f3;padding:2px;border-radius:9999px;">
+							<button type="button" class="pin-btn-mode active" id="btn-mode-rp" data-mode="rp">Rp</button>
+							<button type="button" class="pin-btn-mode" id="btn-mode-percent" data-mode="percent">%</button>
+						</div>
+					</div>
+
+					<div style="position:relative;">
+						<input type="text" id="field-input-diskon" class="pin-input" placeholder="Ketik nominal diskon (Rp)..." style="height:40px;font-size:14px;font-weight:600;padding-right:32px;">
+						<button type="button" id="btn-reset-diskon" title="Hapus Diskon" style="position:absolute;right:8px;top:50%;transform:translateY(-50%);border:none;background:transparent;color:#91918c;cursor:pointer;padding:4px;display:none;">
+							<i class="fa fa-times-circle" style="font-size:16px;"></i>
+						</button>
+					</div>
+
+					<div class="pin-quick-diskon" style="display:flex;gap:4px;margin-top:8px;flex-wrap:wrap;">
+						<button type="button" class="pin-pill-diskon" data-val="0">0%</button>
+						<button type="button" class="pin-pill-diskon" data-val="5">5%</button>
+						<button type="button" class="pin-pill-diskon" data-val="10">10%</button>
+						<button type="button" class="pin-pill-diskon" data-val="15">15%</button>
+						<button type="button" class="pin-pill-diskon" data-val="20">20%</button>
+						<button type="button" class="pin-pill-diskon" data-val="50">50%</button>
+					</div>
 				</div>
 
 				<div style="margin-top:20px;">

@@ -5,6 +5,19 @@ use yii\bootstrap\Modal;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
+$setting = \app\models\SettingApp::find()->one();
+$storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS System';
+$storeAddress = ($setting && !empty($setting->alamat)) ? $setting->alamat : '';
+$storeTelp = ($setting && !empty($setting->no_telp)) ? $setting->no_telp : '';
+
+$words = preg_split('/\s+/', trim($storeName));
+if (count($words) >= 2) {
+    $logoMini = mb_substr($words[0], 0, 1) . mb_substr($words[1], 0, 1);
+    $logoLg = '<b>' . Html::encode($words[0]) . '</b> ' . Html::encode(implode(' ', array_slice($words, 1)));
+} else {
+    $logoMini = mb_substr($storeName, 0, 3);
+    $logoLg = '<b>' . Html::encode($storeName) . '</b>';
+}
 ?>
 <style>
 /* Pinterest layout tokens — defined on body so all layout children can use them */
@@ -100,13 +113,39 @@ body.sidebar-mini.sidebar-collapse .main-footer { margin-left: 50px !important; 
 
 <header class="main-header pin-header">
 
-    <?= Html::a('<span class="logo-mini">POS</span><span class="logo-lg"><b>POS</b> System</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+    <?= Html::a('<span class="logo-mini">' . strtoupper(Html::encode($logoMini)) . '</span><span class="logo-lg">' . $logoLg . '</span>', Yii::$app->homeUrl, [
+        'class' => 'logo',
+        'title' => Html::encode($storeName . ($storeAddress ? ' - ' . $storeAddress : '') . ($storeTelp ? ' • Telp: ' . $storeTelp : ''))
+    ]) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
+
+        <div class="pin-store-header-title hidden-xs" style="float: left; padding: 7px 16px; color: #fff; line-height: 1.25; max-width: 500px;">
+            <div style="font-weight: 700; font-size: 14px; letter-spacing: 0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 6px;">
+                <i class="fa fa-shopping-bag" style="font-size: 12px; opacity: 0.9;"></i>
+                <span class="store-title-text"><?= Html::encode($storeName) ?></span>
+            </div>
+            <?php if (!empty($storeAddress) || !empty($storeTelp)): ?>
+                <div style="font-size: 11px; opacity: 0.88; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 8px;" title="<?= Html::encode(($storeAddress ? $storeAddress : '') . ($storeTelp ? ' • Telp: ' . $storeTelp : '')) ?>">
+                    <?php if (!empty($storeAddress)): ?>
+                        <span style="display: inline-flex; align-items: center; gap: 4px;">
+                            <i class="fa fa-map-marker" style="font-size: 11px;"></i>
+                            <span class="store-address-text"><?= Html::encode($storeAddress) ?></span>
+                        </span>
+                    <?php endif; ?>
+                    <?php if (!empty($storeTelp)): ?>
+                        <span style="display: inline-flex; align-items: center; gap: 4px;">
+                            <i class="fa fa-phone" style="font-size: 10px;"></i>
+                            <span class="store-telp-text"><?= Html::encode($storeTelp) ?></span>
+                        </span>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
 
         <div class="navbar-custom-menu">
 

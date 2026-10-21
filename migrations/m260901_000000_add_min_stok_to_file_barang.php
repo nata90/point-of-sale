@@ -10,7 +10,10 @@ class m260901_000000_add_min_stok_to_file_barang extends Migration
 {
     public function safeUp()
     {
-        $this->addColumn('file_barang', 'min_stok', $this->integer(11)->defaultValue(5));
+        $table = Yii::$app->db->schema->getTableSchema('file_barang');
+        if (!isset($table->columns['min_stok'])) {
+            $this->addColumn('file_barang', 'min_stok', $this->integer(11)->defaultValue(5));
+        }
     }
 
     public function safeDown()

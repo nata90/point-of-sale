@@ -12,8 +12,6 @@ $this->title = Yii::t('app', 'Barang');
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
 .pin-barang-page {
   --pin-primary:          #e60023;
   --pin-primary-pressed:  #cc001f;

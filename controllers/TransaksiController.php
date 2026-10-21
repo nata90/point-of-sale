@@ -61,6 +61,7 @@ class TransaksiController extends Controller
         $setting = SettingApp::find()->one();
 
         $rupiah_total = Utility::rupiah(HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d')));
+        $diskon_total = Utility::rupiah(HdTransaksi::getTotalDiskonJual(date('Y-m-d'),date('Y-m-d')));
         $qty_total = HdTransaksi::getTotalItemJual(date('Y-m-d'),date('Y-m-d'));
 
         return $this->render('index', [
@@ -68,6 +69,7 @@ class TransaksiController extends Controller
             'dataProvider' => $dataProvider,
             'setting'=>$setting,
             'rupiah_total'=>$rupiah_total,
+            'diskon_total'=>$diskon_total,
             'qty_total'=>$qty_total
         ]);
     }
@@ -248,6 +250,13 @@ class TransaksiController extends Controller
                         return $model->harga_satuan * $model->qty;
                     },
                 ],
+                [
+                    'label'=>'Diskon Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return (!empty($model->header->diskon) && $model->header->diskon > 0) ? $model->header->diskon : 0;
+                    },
+                ],
             ],
         ]);
 
@@ -258,7 +267,7 @@ class TransaksiController extends Controller
             [
                 'header' => 'LAPORAN PENJUALAN '.date('d/m/Y', strtotime($searchModel->start_date)).' - '.date('d/m/Y', strtotime($searchModel->end_date)),
                 'offset' => 0,
-                'length' => 6,
+                'length' => 7,
             ]
         ];
 
@@ -617,13 +626,105 @@ class TransaksiController extends Controller
     }
 
     public function actionCetaknota(){
-        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
-
         $id = Yii::$app->request->get('id');
 
-        HdTransaksi::cetakNota($id);
+        $header = HdTransaksi::find()->where(['no_transaksi' => $id])->one();
+        if (!$header) {
+            $header = HdTransaksi::findOne($id);
+        }
 
-        return ['success'=>1];
+        if (!$header) {
+            throw new \yii\web\NotFoundHttpException("Transaksi {$id} tidak ditemukan.");
+        }
+
+        $detail = DtTransaksi::find()->where(['no_transaksi' => $header->no_transaksi, 'status_hapus' => 0])->all();
+        $setting = SettingApp::find()->one();
+
+        $content = $this->renderPartial('nota_pdf', [
+            'header' => $header,
+            'detail' => $detail,
+            'setting' => $setting,
+        ]);
+
+        $itemCount = count($detail);
+
+        // Hitung estimasi tinggi kertas 80mm dinamis agar pas 1 halaman continuous roll
+        $headerLines = 1; // Nama toko
+        if ($setting && !empty($setting->alamat)) {
+            $headerLines += max(1, substr_count($setting->alamat, "\n") + 1);
+        } else {
+            $headerLines += 1;
+        }
+        if ($setting && !empty($setting->no_telp)) {
+            $headerLines += 1;
+        }
+        if ($setting && !empty($setting->email)) {
+            $headerLines += 1;
+        }
+
+        $itemLines = 0;
+        foreach ($detail as $item) {
+            $nameLen = ($item->barang && !empty($item->barang->nama_barang)) ? mb_strlen($item->barang->nama_barang) : 10;
+            $nameLines = max(1, ceil($nameLen / 30));
+            $itemLines += $nameLines + 1; // baris nama + baris qty x harga & subtotal
+        }
+        if (empty($detail)) {
+            $itemLines = 2;
+        }
+
+        // Base height (mm): margins (8) + metadata (16) + summary (24) + dividers (16) + footer (20) + feed buffer (16)
+        $height = 100 + ($headerLines * 4.5) + ($itemLines * 5.5);
+        $height = max(130, (int) ceil($height));
+
+        $pdf = new Pdf([
+            'mode' => Pdf::MODE_UTF8,
+            'format' => [80, $height],
+            'orientation' => Pdf::ORIENT_PORTRAIT,
+            'destination' => Pdf::DEST_BROWSER,
+            'content' => $content,
+            'cssInline' => '
+                body {
+                    font-family: "Courier New", Courier, monospace;
+                    font-size: 10px;
+                    color: #000;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.25;
+                }
+                .nota-wrapper {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                .text-center { text-align: center; }
+                .text-right { text-align: right; }
+                .text-left { text-align: left; }
+                .bold { font-weight: bold; }
+                .header-title { font-size: 13px; font-weight: bold; margin-bottom: 2px; }
+                .header-sub { font-size: 8.5px; line-height: 1.25; color: #111; }
+                .divider { border-top: 1px dashed #000; margin: 4px 0; }
+                .meta-table { width: 100%; font-size: 9px; margin-bottom: 2px; border-collapse: collapse; }
+                .meta-table td { padding: 1px 0; }
+                .item-table { width: 100%; font-size: 9.5px; border-collapse: collapse; }
+                .item-table td { padding: 2px 0; vertical-align: top; }
+                .summary-table { width: 100%; font-size: 9.5px; border-collapse: collapse; }
+                .summary-table td { padding: 1.5px 0; }
+                .footer-text { font-size: 8.5px; text-align: center; margin-top: 6px; line-height: 1.3; }
+            ',
+            'marginLeft' => 3,
+            'marginRight' => 3,
+            'marginTop' => 4,
+            'marginBottom' => 4,
+            'filename' => 'Nota_' . $header->no_transaksi . '.pdf',
+            'options' => [
+                'title' => 'Nota Penjualan ' . $header->no_transaksi,
+            ],
+            'methods' => [
+                'SetHeader' => [''],
+                'SetFooter' => [''],
+            ],
+        ]);
+
+        return $pdf->render();
     }
 
     public function actionHitungtotalpenjualan(){
@@ -637,6 +738,7 @@ class TransaksiController extends Controller
         $return = [];
 
         $return['rupiahtotal'] = Utility::rupiah(HdTransaksi::getTotalRupiahJual($start_date,$end_date));
+        $return['diskontotal'] = Utility::rupiah(HdTransaksi::getTotalDiskonJual($start_date,$end_date));
         $return['qtytotal'] = HdTransaksi::getTotalItemJual($start_date,$end_date);
 
         return $return;
@@ -735,10 +837,9 @@ class TransaksiController extends Controller
 
         $modal_awal = Modal::getModalAwal(date('Y-m-d'));
         $total_penjualan = HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d'));
+        $total_diskon = HdTransaksi::getTotalDiskonJual(date('Y-m-d'),date('Y-m-d'));
         $pengeluaran = Pengeluaran::getTotalPengeluaran(date('Y-m-d'),date('Y-m-d'));
         $keuntungan = $modal_awal + $total_penjualan - $pengeluaran;
-
-        
 
         return $this->render('laporan_keuangan', [
             'searchModel' => $searchModel,
@@ -746,6 +847,7 @@ class TransaksiController extends Controller
             'setting'=>$setting,
             'modal_awal'=>$modal_awal,
             'total_penjualan'=>$total_penjualan,
+            'total_diskon'=>$total_diskon,
             'pengeluaran'=>$pengeluaran,
             'keuntungan'=>$keuntungan
         ]);

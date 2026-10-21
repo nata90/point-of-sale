@@ -15,7 +15,8 @@ class Transaksi
             fb.nama_barang,
             dt.harga_satuan,
             dt.qty,
-            dt.total_harga AS total
+            dt.total_harga AS total,
+            COALESCE(ht.diskon, 0) AS diskon_transaksi
         FROM dt_transaksi dt
         LEFT JOIN file_barang fb ON dt.kd_barang = fb.kd_barang 
         LEFT JOIN hd_transaksi ht ON ht.no_transaksi = dt.no_transaksi

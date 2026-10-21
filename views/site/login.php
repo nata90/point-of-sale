@@ -6,7 +6,12 @@ use yii\bootstrap\ActiveForm;
 /* @var $form yii\bootstrap\ActiveForm */
 /* @var $model \common\models\LoginForm */
 
-$this->title = 'Masuk';
+$setting = \app\models\SettingApp::find()->one();
+$storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS System';
+$storeAddress = ($setting && !empty($setting->alamat)) ? $setting->alamat : '';
+$storeTelp = ($setting && !empty($setting->no_telp)) ? $setting->no_telp : '';
+
+$this->title = 'Masuk - ' . $storeName;
 
 $fieldOptions1 = [
     'options' => ['class' => 'pin-field-group'],
@@ -20,7 +25,7 @@ $fieldOptions2 = [
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('<?= Yii::$app->request->baseUrl ?>/css/inter.css');
 
 /* ── Reset AdminLTE login page chrome ── */
 body.login-page { background: #fbfbf9 !important; }
@@ -205,8 +210,24 @@ body.login-page { background: #fbfbf9 !important; }
     <!-- Brand -->
     <div class="pin-brand">
       <div class="pin-brand-dot"><i class="fa fa-shopping-bag"></i></div>
-      <span class="pin-brand-name"><span>POS</span> System</span>
+      <span class="pin-brand-name"><?= Html::encode($storeName) ?></span>
     </div>
+    <?php if (!empty($storeAddress) || !empty($storeTelp)): ?>
+      <p style="text-align: center; font-size: 12px; color: var(--pin-mute); margin-top: -20px; margin-bottom: 22px; display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 8px;">
+        <?php if (!empty($storeAddress)): ?>
+          <span style="display: inline-flex; align-items: center; gap: 4px;">
+            <i class="fa fa-map-marker" style="color: var(--pin-primary);"></i>
+            <span><?= Html::encode($storeAddress) ?></span>
+          </span>
+        <?php endif; ?>
+        <?php if (!empty($storeTelp)): ?>
+          <span style="display: inline-flex; align-items: center; gap: 4px;">
+            <i class="fa fa-phone" style="color: var(--pin-primary);"></i>
+            <span><?= Html::encode($storeTelp) ?></span>
+          </span>
+        <?php endif; ?>
+      </p>
+    <?php endif; ?>
 
     <!-- Heading -->
     <h1 class="pin-login-title">Selamat datang</h1>
@@ -237,7 +258,7 @@ body.login-page { background: #fbfbf9 !important; }
     <?php ActiveForm::end(); ?>
 
     <p class="pin-login-footer">
-      &copy; <?php echo date('Y'); ?> POS System. All rights reserved.
+      &copy; <?php echo date('Y'); ?> <?= Html::encode($storeName) ?>. All rights reserved.
     </p>
 
   </div>

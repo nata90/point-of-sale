@@ -180,8 +180,6 @@ JS
 ?>
 
 <style>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-
   /* ── Pinterest Design System tokens ── */
   :root {
     --pin-primary:          #e60023;
@@ -392,75 +390,225 @@ JS
     font-size: 14px;
   }
 
-  /* ── KPI cards ── */
+  /* ── KPI cards (Full Color Elegant & Modern) ── */
   .pin-kpi-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
+    gap: 16px;
     margin-bottom: 24px;
   }
-  @media (max-width: 1024px) { .pin-kpi-grid { grid-template-columns: repeat(2,1fr); } }
-  @media (max-width: 480px)  { .pin-kpi-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 1024px) { .pin-kpi-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; } }
+  @media (max-width: 540px)  { .pin-kpi-grid { grid-template-columns: 1fr; gap: 12px; } }
 
   .pin-kpi-card {
-    background: var(--pin-canvas);
-    border-radius: var(--pin-r-md);
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
     position: relative;
     overflow: hidden;
+    border-radius: 18px;
+    padding: 20px 22px 18px 22px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+    color: #ffffff;
+    border: none;
+    cursor: default;
+    transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s cubic-bezier(0.16, 1, 0.3, 1);
   }
-  .pin-kpi-card::before {
+  .pin-kpi-card:hover {
+    transform: translateY(-4px);
+  }
+
+  /* Radial ambient highlight */
+  .pin-kpi-card::after {
     content: '';
     position: absolute;
-    top: 0; left: 0; right: 0;
-    height: 3px;
-    background: var(--pin-hairline-soft);
-    border-radius: var(--pin-r-md) var(--pin-r-md) 0 0;
+    top: -30px;
+    right: -30px;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0) 70%);
+    pointer-events: none;
   }
-  .pin-kpi-card.accent::before { background: var(--pin-primary); }
+
+  /* Watermark background icon */
+  .pin-kpi-bg-icon {
+    position: absolute;
+    right: -10px;
+    bottom: -12px;
+    font-size: 88px;
+    color: rgba(255, 255, 255, 0.12);
+    pointer-events: none;
+    line-height: 1;
+    transform: rotate(-10deg);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), color 0.35s ease;
+  }
+  .pin-kpi-card:hover .pin-kpi-bg-icon {
+    transform: rotate(0deg) scale(1.08);
+    color: rgba(255, 255, 255, 0.18);
+  }
+
+  /* Card 1: Penjualan Hari Ini (Ruby Crimson - Brand Accent) */
+  .pin-kpi-card.pin-kpi-penjualan {
+    background-color: #dc2626;
+    background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 55%), linear-gradient(135deg, #991b1b 0%, #dc2626 55%, #f43f5e 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 10px 25px -5px rgba(220, 38, 38, 0.38), 0 8px 10px -6px rgba(220, 38, 38, 0.2);
+  }
+  .pin-kpi-card.pin-kpi-penjualan:hover {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 16px 32px -4px rgba(220, 38, 38, 0.48), 0 10px 14px -5px rgba(220, 38, 38, 0.25);
+  }
+
+  /* Card 2: Transaksi Hari Ini (Royal Sapphire Ocean Blue) */
+  .pin-kpi-card.pin-kpi-transaksi {
+    background-color: #2563eb;
+    background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 55%), linear-gradient(135deg, #1e3a8a 0%, #2563eb 55%, #38bdf8 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 10px 25px -5px rgba(37, 99, 235, 0.38), 0 8px 10px -6px rgba(37, 99, 235, 0.2);
+  }
+  .pin-kpi-card.pin-kpi-transaksi:hover {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 16px 32px -4px rgba(37, 99, 235, 0.48), 0 10px 14px -5px rgba(37, 99, 235, 0.25);
+  }
+
+  /* Card 3: Item Terjual (Emerald Jade) */
+  .pin-kpi-card.pin-kpi-item {
+    background-color: #059669;
+    background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 55%), linear-gradient(135deg, #065f46 0%, #059669 55%, #34d399 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 10px 25px -5px rgba(16, 185, 129, 0.38), 0 8px 10px -6px rgba(16, 185, 129, 0.2);
+  }
+  .pin-kpi-card.pin-kpi-item:hover {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 16px 32px -4px rgba(16, 185, 129, 0.48), 0 10px 14px -5px rgba(16, 185, 129, 0.25);
+  }
+
+  /* Card 4: Rata - rata Transaksi (Royal Amethyst Violet) */
+  .pin-kpi-card.pin-kpi-ratarata {
+    background-color: #7c3aed;
+    background-image: radial-gradient(circle at 85% 15%, rgba(255, 255, 255, 0.22) 0%, transparent 55%), linear-gradient(135deg, #5b21b6 0%, #7c3aed 55%, #c084fc 100%);
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 10px 25px -5px rgba(124, 58, 237, 0.38), 0 8px 10px -6px rgba(124, 58, 237, 0.2);
+  }
+  .pin-kpi-card.pin-kpi-ratarata:hover {
+    box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.45), 0 16px 32px -4px rgba(124, 58, 237, 0.48), 0 10px 14px -5px rgba(124, 58, 237, 0.25);
+  }
+
+  /* Header row with icon & tag */
+  .pin-kpi-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    position: relative;
+    z-index: 1;
+  }
 
   .pin-kpi-icon {
-    width: 36px; height: 36px;
-    border-radius: var(--pin-r-full);
-    background: var(--pin-surface-card);
-    display: flex; align-items: center; justify-content: center;
-    font-size: 15px;
-    color: var(--pin-mute);
-    margin-bottom: 4px;
+    width: 42px;
+    height: 42px;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+    color: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   }
-  .pin-kpi-card.accent .pin-kpi-icon { background: #fde8eb; color: var(--pin-primary); }
 
+  .pin-kpi-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: rgba(255, 255, 255, 0.92);
+    background: rgba(255, 255, 255, 0.16);
+    padding: 4px 10px;
+    border-radius: 9999px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+  .pin-kpi-tag i {
+    font-size: 6px;
+    color: #86efac;
+    animation: pin-pulse 2s infinite ease-in-out;
+  }
+  @keyframes pin-pulse {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.35; transform: scale(0.85); }
+  }
+
+  /* Body */
+  .pin-kpi-body {
+    position: relative;
+    z-index: 1;
+    margin-bottom: 10px;
+  }
   .pin-kpi-label {
     font-size: 12px;
     font-weight: 500;
-    color: var(--pin-mute);
+    color: rgba(255, 255, 255, 0.85);
     text-transform: uppercase;
-    letter-spacing: .5px;
+    letter-spacing: 0.5px;
+    margin-bottom: 4px;
+    display: block;
   }
   .pin-kpi-value {
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 700;
-    color: var(--pin-ink);
+    color: #ffffff;
     letter-spacing: -0.5px;
-    line-height: 1.1;
+    line-height: 1.15;
+    display: block;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
   }
-  .pin-kpi-card.accent .pin-kpi-value { color: var(--pin-primary); }
+  .pin-kpi-unit {
+    font-size: 14px;
+    font-weight: 500;
+    opacity: 0.88;
+    margin-left: 2px;
+  }
 
+  /* Footer & Diff pill */
+  .pin-kpi-footer {
+    position: relative;
+    z-index: 1;
+  }
   .pin-kpi-diff {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    font-size: 12px;
+    gap: 5px;
+    font-size: 11.5px;
     font-weight: 600;
-    padding: 2px 8px;
-    border-radius: var(--pin-r-full);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    width: fit-content;
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
   }
-  .pin-kpi-diff.up   { background: var(--pin-success-pale); color: var(--pin-success-deep); }
-  .pin-kpi-diff.down { background: #fde8eb; color: var(--pin-error-deep, #cc001f); }
-  .pin-kpi-diff.neutral { background: var(--pin-surface-card); color: var(--pin-mute); }
+  .pin-kpi-diff.up {
+    background: rgba(16, 185, 129, 0.28);
+    color: #ffffff;
+    border: 1px solid rgba(167, 243, 208, 0.4);
+  }
+  .pin-kpi-diff.up i {
+    color: #a7f3d0;
+  }
+  .pin-kpi-diff.down {
+    background: rgba(239, 68, 68, 0.3);
+    color: #ffffff;
+    border: 1px solid rgba(254, 202, 202, 0.4);
+  }
+  .pin-kpi-diff.down i {
+    color: #fecaca;
+  }
+  .pin-kpi-diff.neutral {
+    background: rgba(255, 255, 255, 0.18);
+    color: rgba(255, 255, 255, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+  }
 
   /* ── 2-column grid ── */
   .pin-two-col {
@@ -633,38 +781,78 @@ JS
   <!-- ══ KPI CARDS ══ -->
   <div class="pin-kpi-grid">
 
-    <div class="pin-kpi-card accent">
-      <div class="pin-kpi-icon"><i class="fa fa-money"></i></div>
-      <span class="pin-kpi-label">Penjualan Hari Ini</span>
-      <span class="pin-kpi-value">Rp <?php echo number_format($dummy_kpi['penjualan_hari_ini'],0,',','.'); ?></span>
-      <span class="pin-kpi-diff <?php echo $pct_penjualan >= 0 ? 'up' : 'down'; ?>">
-        <i class="fa fa-arrow-<?php echo $pct_penjualan >= 0 ? 'up' : 'down'; ?>"></i>
-        <?php echo abs($pct_penjualan); ?>% vs kemarin
-      </span>
+    <!-- Card 1: Penjualan Hari Ini -->
+    <div class="pin-kpi-card pin-kpi-penjualan">
+      <div class="pin-kpi-bg-icon"><i class="fa fa-money"></i></div>
+      <div class="pin-kpi-header">
+        <div class="pin-kpi-icon"><i class="fa fa-money"></i></div>
+        <span class="pin-kpi-tag"><i class="fa fa-circle"></i> Omzet</span>
+      </div>
+      <div class="pin-kpi-body">
+        <span class="pin-kpi-label">Penjualan Hari Ini</span>
+        <span class="pin-kpi-value">Rp <?php echo number_format($dummy_kpi['penjualan_hari_ini'],0,',','.'); ?></span>
+      </div>
+      <div class="pin-kpi-footer">
+        <span class="pin-kpi-diff <?php echo $pct_penjualan >= 0 ? 'up' : 'down'; ?>">
+          <i class="fa fa-arrow-<?php echo $pct_penjualan >= 0 ? 'up' : 'down'; ?>"></i>
+          <?php echo abs($pct_penjualan); ?>% vs kemarin
+        </span>
+      </div>
     </div>
 
-    <div class="pin-kpi-card">
-      <div class="pin-kpi-icon"><i class="fa fa-shopping-cart"></i></div>
-      <span class="pin-kpi-label">Transaksi Hari Ini</span>
-      <span class="pin-kpi-value"><?php echo number_format($dummy_kpi['transaksi_hari_ini']); ?></span>
-      <span class="pin-kpi-diff <?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>">
-        <i class="fa fa-arrow-<?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>"></i>
-        <?php echo abs($pct_trx); ?>% vs kemarin
-      </span>
+    <!-- Card 2: Transaksi Hari Ini -->
+    <div class="pin-kpi-card pin-kpi-transaksi">
+      <div class="pin-kpi-bg-icon"><i class="fa fa-shopping-cart"></i></div>
+      <div class="pin-kpi-header">
+        <div class="pin-kpi-icon"><i class="fa fa-shopping-cart"></i></div>
+        <span class="pin-kpi-tag"><i class="fa fa-circle"></i> Order</span>
+      </div>
+      <div class="pin-kpi-body">
+        <span class="pin-kpi-label">Transaksi Hari Ini</span>
+        <span class="pin-kpi-value"><?php echo number_format($dummy_kpi['transaksi_hari_ini']); ?> <span class="pin-kpi-unit">struk</span></span>
+      </div>
+      <div class="pin-kpi-footer">
+        <span class="pin-kpi-diff <?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>">
+          <i class="fa fa-arrow-<?php echo $pct_trx >= 0 ? 'up' : 'down'; ?>"></i>
+          <?php echo abs($pct_trx); ?>% vs kemarin
+        </span>
+      </div>
     </div>
 
-    <div class="pin-kpi-card">
-      <div class="pin-kpi-icon"><i class="fa fa-cubes"></i></div>
-      <span class="pin-kpi-label">Item Terjual</span>
-      <span class="pin-kpi-value"><?php echo number_format($dummy_kpi['item_terjual']); ?> pcs</span>
-      <span class="pin-kpi-diff neutral">Hari ini</span>
+    <!-- Card 3: Item Terjual -->
+    <div class="pin-kpi-card pin-kpi-item">
+      <div class="pin-kpi-bg-icon"><i class="fa fa-cubes"></i></div>
+      <div class="pin-kpi-header">
+        <div class="pin-kpi-icon"><i class="fa fa-cubes"></i></div>
+        <span class="pin-kpi-tag"><i class="fa fa-circle"></i> Produk</span>
+      </div>
+      <div class="pin-kpi-body">
+        <span class="pin-kpi-label">Item Terjual</span>
+        <span class="pin-kpi-value"><?php echo number_format($dummy_kpi['item_terjual']); ?> <span class="pin-kpi-unit">pcs</span></span>
+      </div>
+      <div class="pin-kpi-footer">
+        <span class="pin-kpi-diff neutral">
+          <i class="fa fa-clock-o"></i> Hari ini
+        </span>
+      </div>
     </div>
 
-    <div class="pin-kpi-card">
-      <div class="pin-kpi-icon"><i class="fa fa-bar-chart"></i></div>
-      <span class="pin-kpi-label">Rata-rata / Transaksi</span>
-      <span class="pin-kpi-value">Rp <?php echo number_format($dummy_kpi['rata_rata'],0,',','.'); ?></span>
-      <span class="pin-kpi-diff neutral">Per struk</span>
+    <!-- Card 4: Rata - rata Transaksi -->
+    <div class="pin-kpi-card pin-kpi-ratarata">
+      <div class="pin-kpi-bg-icon"><i class="fa fa-bar-chart"></i></div>
+      <div class="pin-kpi-header">
+        <div class="pin-kpi-icon"><i class="fa fa-bar-chart"></i></div>
+        <span class="pin-kpi-tag"><i class="fa fa-circle"></i> Rata-rata</span>
+      </div>
+      <div class="pin-kpi-body">
+        <span class="pin-kpi-label">Rata-rata / Transaksi</span>
+        <span class="pin-kpi-value">Rp <?php echo number_format($dummy_kpi['rata_rata'],0,',','.'); ?></span>
+      </div>
+      <div class="pin-kpi-footer">
+        <span class="pin-kpi-diff neutral">
+          <i class="fa fa-file-text-o"></i> Per struk
+        </span>
+      </div>
     </div>
 
   </div><!-- /.pin-kpi-grid -->

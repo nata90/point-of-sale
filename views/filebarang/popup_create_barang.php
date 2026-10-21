@@ -271,6 +271,12 @@ use yii\helpers\Url;
         'class' => 'form-control',
     ]) ?>
 
+    <?= $form->field($model, 'stok')->textInput([
+        'type' => 'number',
+        'class' => 'form-control',
+        'value' => 0,
+    ]) ?>
+
     <div class="pin-popup-actions">
         <?= Html::button(Yii::t('app', 'Tambah Barang'), [
             'class' => 'pin-btn pin-btn-primary',

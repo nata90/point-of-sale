@@ -30,16 +30,34 @@
 			</tr>
 <?php	$no++;
 		$all_total = $all_total + ($val->harga_satuan * $val->qty);
-		} ?>
+		} 
+		$distinct_discounts = [];
+		foreach($model as $val){
+			if(!isset($distinct_discounts[$val->no_transaksi])){
+				$distinct_discounts[$val->no_transaksi] = (!empty($val->header->diskon)) ? (int)$val->header->diskon : 0;
+			}
+		}
+		$total_diskon = array_sum($distinct_discounts);
+		?>
+		<?php if ($total_diskon > 0): ?>
 			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td colspan="2"><b>TOTAL</b></td>
-				<td align="right"><strong><?php echo Utility::rupiah($all_total)?></strong></td>
+				<td colspan="6" align="right"><b>SUBTOTAL</b></td>
+				<td colspan="2" align="right"><strong><?php echo Utility::rupiah($all_total)?></strong></td>
 			</tr>
+			<tr>
+				<td colspan="6" align="right" style="color:red;"><b>TOTAL DISKON</b></td>
+				<td colspan="2" align="right" style="color:red;"><strong>- <?php echo Utility::rupiah($total_diskon)?></strong></td>
+			</tr>
+			<tr>
+				<td colspan="6" align="right"><b>TOTAL PENJUALAN BERSIH</b></td>
+				<td colspan="2" align="right"><strong><?php echo Utility::rupiah($all_total - $total_diskon)?></strong></td>
+			</tr>
+		<?php else: ?>
+			<tr>
+				<td colspan="6" align="right"><b>TOTAL</b></td>
+				<td colspan="2" align="right"><strong><?php echo Utility::rupiah($all_total)?></strong></td>
+			</tr>
+		<?php endif; ?>
 		</table>
 <?php }
 ?>

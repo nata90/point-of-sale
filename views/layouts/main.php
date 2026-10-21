@@ -28,6 +28,14 @@ if (Yii::$app->controller->action->id === 'login') {
 
     $directoryAsset = Yii::$app->assetManager->getPublishedUrl('@vendor/almasaeed2010/adminlte/dist');
 
+    $setting = \app\models\SettingApp::find()->one();
+    $storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS System';
+    if (!empty($this->title)) {
+        $pageTitle = (stripos($this->title, $storeName) === false) ? ($this->title . ' - ' . $storeName) : $this->title;
+    } else {
+        $pageTitle = $storeName;
+    }
+
     SimpleLoading::widget();
     ?>
     <?php $this->beginPage() ?>
@@ -37,7 +45,7 @@ if (Yii::$app->controller->action->id === 'login') {
             <meta charset="<?= Yii::$app->charset ?>"/>
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <?= Html::csrfMetaTags() ?>
-            <title><?= Html::encode($this->title) ?></title>
+            <title><?= Html::encode($pageTitle) ?></title>
             <?php $this->head() ?>
             <script type="text/javascript">
                 /* Fungsi formatRupiah */
