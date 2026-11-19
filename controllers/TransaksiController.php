@@ -568,10 +568,10 @@ class TransaksiController extends Controller
             ->setSubject('Message subject')
             ->setTextBody('Plain text content')
             ->setHtmlBody($html)
-            ->attach($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file)
+            ->attach(Yii::getAlias('@webroot') . '/' . $name_file)
             ->send();
 
-        unlink($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file);
+        unlink(Yii::getAlias('@webroot') . '/' . $name_file);
         $rows['email'] = $setting->email;
 
         return $rows;
