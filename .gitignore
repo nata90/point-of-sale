@@ -32,3 +32,11 @@ runtime/*
 
 #vagrant folder
 /.vagrant
+
+# build & temp artifacts
+dist_staging/
+*.zip
+.desktop_backup/
+.agents/
+.claude/
+.playwright-mcp/
