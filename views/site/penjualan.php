@@ -8,7 +8,9 @@ use yii\web\JsExpression;
 use yii\helpers\Url;
 
 
-$this->title = 'PENJUALAN - POS';
+$setting = \app\models\SettingApp::find()->one();
+$storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS';
+$this->title = 'PENJUALAN - ' . strtoupper($storeName);
 $this->registerJs('var url = "' . Url::to(['site/autocompletebarang']) . '";');
 $this->registerJs('var new_url = "' . Url::to(['site/loaddatabarang']) . '";');
 $this->registerJs(<<<JS

@@ -5,16 +5,147 @@ use yii\bootstrap\Modal;
 /* @var $this \yii\web\View */
 /* @var $content string */
 
-?>
-<header class="main-header">
+$setting = \app\models\SettingApp::find()->one();
+$storeName = ($setting && !empty($setting->app_name)) ? $setting->app_name : 'POS System';
+$storeAddress = ($setting && !empty($setting->alamat)) ? $setting->alamat : '';
+$storeTelp = ($setting && !empty($setting->no_telp)) ? $setting->no_telp : '';
 
-    <?= Html::a('<span class="logo-mini">APP</span><span class="logo-lg">POS System</span>', Yii::$app->homeUrl, ['class' => 'logo']) ?>
+$words = preg_split('/\s+/', trim($storeName));
+if (count($words) >= 2) {
+    $logoMini = mb_substr($words[0], 0, 1) . mb_substr($words[1], 0, 1);
+    $logoLg = '<b>' . Html::encode($words[0]) . '</b> ' . Html::encode(implode(' ', array_slice($words, 1)));
+} else {
+    $logoMini = mb_substr($storeName, 0, 3);
+    $logoLg = '<b>' . Html::encode($storeName) . '</b>';
+}
+?>
+<style>
+/* Pinterest layout tokens — defined on body so all layout children can use them */
+body.skin-red {
+  --pin-primary:         #e60023;
+  --pin-primary-pressed: #cc001f;
+  --pin-on-primary:      #ffffff;
+  --pin-sidebar-width:   230px; /* AdminLTE default */
+  --pin-font: 'Inter', -apple-system, system-ui, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Pinterest header */
+.pin-header.main-header {
+  font-family: var(--pin-font);
+  background: var(--pin-primary) !important;
+  box-shadow: none;
+  border-bottom: 1px solid var(--pin-primary-pressed);
+  max-height: 50px;
+  overflow: hidden;
+}
+.skin-red .pin-header .logo,
+.pin-header .logo {
+  background: var(--pin-primary) !important;
+  color: var(--pin-on-primary) !important;
+  border-bottom: none !important;
+  border-right: none !important;
+  width: var(--pin-sidebar-width) !important;
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  font-weight: 700;
+  letter-spacing: -0.3px;
+  transition: background .15s;
+}
+.skin-red .pin-header .logo:hover,
+.pin-header .logo:hover {
+  background: var(--pin-primary-pressed) !important;
+  color: var(--pin-on-primary) !important;
+}
+.pin-header .logo .logo-mini {
+  font-size: 14px;
+  font-weight: 700;
+}
+.pin-header .logo .logo-lg b,
+.pin-header .logo .logo-lg strong { font-weight: 700; }
+
+.skin-red .pin-header .navbar,
+.pin-header .navbar {
+  background: var(--pin-primary) !important;
+  border: none !important;
+  margin-left: var(--pin-sidebar-width) !important;
+  min-height: 50px;
+}
+
+/* Keep content & footer aligned with sidebar width */
+body.skin-red .pin-sidebar.main-sidebar {
+  width: var(--pin-sidebar-width) !important;
+}
+body.skin-red .content-wrapper,
+body.skin-red .main-footer {
+  margin-left: var(--pin-sidebar-width) !important;
+}
+.pin-header .sidebar-toggle {
+  color: var(--pin-on-primary) !important;
+  padding: 15px 16px;
+  transition: background .15s;
+}
+.pin-header .sidebar-toggle:hover,
+.pin-header .sidebar-toggle:focus {
+  background: var(--pin-primary-pressed) !important;
+  color: var(--pin-on-primary) !important;
+}
+.pin-header .navbar-custom-menu > .navbar-nav > li > a {
+  color: var(--pin-on-primary) !important;
+}
+.pin-header .navbar-custom-menu > .navbar-nav > li > a:hover,
+.pin-header .navbar-custom-menu > .navbar-nav > li > a:focus {
+  background: var(--pin-primary-pressed) !important;
+  color: var(--pin-on-primary) !important;
+}
+
+/* Sidebar collapsed / mobile */
+@media (max-width: 767px) {
+  .pin-header .navbar { margin-left: 0 !important; }
+  body.skin-red .content-wrapper,
+  body.skin-red .main-footer { margin-left: 0 !important; }
+}
+body.sidebar-mini.sidebar-collapse .pin-header .logo { width: 50px !important; }
+body.sidebar-mini.sidebar-collapse .pin-header .navbar { margin-left: 50px !important; }
+body.sidebar-mini.sidebar-collapse .content-wrapper,
+body.sidebar-mini.sidebar-collapse .main-footer { margin-left: 50px !important; }
+</style>
+
+<header class="main-header pin-header">
+
+    <?= Html::a('<span class="logo-mini">' . strtoupper(Html::encode($logoMini)) . '</span><span class="logo-lg">' . $logoLg . '</span>', Yii::$app->homeUrl, [
+        'class' => 'logo',
+        'title' => Html::encode($storeName . ($storeAddress ? ' - ' . $storeAddress : '') . ($storeTelp ? ' • Telp: ' . $storeTelp : ''))
+    ]) ?>
 
     <nav class="navbar navbar-static-top" role="navigation">
 
         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
             <span class="sr-only">Toggle navigation</span>
         </a>
+
+        <div class="pin-store-header-title hidden-xs" style="float: left; padding: 7px 16px; color: #fff; line-height: 1.25; max-width: 500px;">
+            <div style="font-weight: 700; font-size: 14px; letter-spacing: 0.2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 6px;">
+                <i class="fa fa-shopping-bag" style="font-size: 12px; opacity: 0.9;"></i>
+                <span class="store-title-text"><?= Html::encode($storeName) ?></span>
+            </div>
+            <?php if (!empty($storeAddress) || !empty($storeTelp)): ?>
+                <div style="font-size: 11px; opacity: 0.88; margin-top: 1px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; display: flex; align-items: center; gap: 8px;" title="<?= Html::encode(($storeAddress ? $storeAddress : '') . ($storeTelp ? ' • Telp: ' . $storeTelp : '')) ?>">
+                    <?php if (!empty($storeAddress)): ?>
+                        <span style="display: inline-flex; align-items: center; gap: 4px;">
+                            <i class="fa fa-map-marker" style="font-size: 11px;"></i>
+                            <span class="store-address-text"><?= Html::encode($storeAddress) ?></span>
+                        </span>
+                    <?php endif; ?>
+                    <?php if (!empty($storeTelp)): ?>
+                        <span style="display: inline-flex; align-items: center; gap: 4px;">
+                            <i class="fa fa-phone" style="font-size: 10px;"></i>
+                            <span class="store-telp-text"><?= Html::encode($storeTelp) ?></span>
+                        </span>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
 
         <div class="navbar-custom-menu">
 

@@ -12,6 +12,7 @@ use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
 use app\models\KodeGenerate;
 use yii\filters\AccessControl;
+use Exception;
 
 /**
  * FilebarangController implements the CRUD actions for FileBarang model.
@@ -29,7 +30,7 @@ class FilebarangController extends Controller
                 'only' => ['index','update','delete','create'],
                 'rules' => [
                     [
-                        'actions' => ['index','update','delete','create'],
+                        'actions' => ['index','update','delete','create','autocompletebarang','updateharga','createnewbarang','popupcreatebarang'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -44,9 +45,6 @@ class FilebarangController extends Controller
      */
     public function actionIndex()
     {
-        /*$dataProvider = new ActiveDataProvider([
-            'query' => FileBarang::find(),
-        ]);*/
         $searchModel = new FileBarangSearch();
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $dataProvider2 = $searchModel->searchStokKosong(Yii::$app->request->queryParams);
@@ -84,8 +82,8 @@ class FilebarangController extends Controller
     {
         $model = new FileBarang();
 
-        $kode_barang = Utility::generateKodeBarang();
-        $model->kd_barang = $kode_barang;
+        //$kode_barang = Utility::generateKodeBarang();
+        //$model->kd_barang = $kode_barang;
         $model->aktif = true;
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
@@ -137,6 +135,14 @@ class FilebarangController extends Controller
         return $this->redirect(['index']);
     }
 
+    public function actionGetkodebarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $kode = Utility::generateKodeBarang();
+
+        return ['kode'=>$kode];
+    }
+
     /**
      * Finds the FileBarang model based on its primary key value.
      * If the model is not found, a 404 HTTP exception will be thrown.
@@ -151,5 +157,200 @@ class FilebarangController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    public function actionAutocompletebarang($term){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $query = FileBarang::find()
+            ->select(['nama_barang', 'harga_jual', 'kd_barang', 'stok'])
+            ->where(['aktif' => 1]);
+
+        if (strpos($term, '|') !== false) {
+            $parts = explode('|', $term, 2);
+            $query->andWhere(['like', 'nama_barang', trim($parts[0])]);
+            $rows = $query->asArray()->all();
+
+            if (isset($parts[1]) && trim($parts[1]) !== '') {
+                $priceTerm = trim($parts[1]);
+                $rows = array_filter($rows, static function ($row) use ($priceTerm) {
+                    return strpos((string) $row['harga_jual'], $priceTerm) !== false;
+                });
+            }
+        } else {
+            $rows = $query
+                ->andWhere(['like', 'nama_barang', $term])
+                ->asArray()
+                ->all();
+        }
+
+        return $this->formatAutocompleteBarang($rows);
+    }
+
+    private function formatAutocompleteBarang(array $rows): array
+    {
+        return array_values(array_map(static function ($row) {
+            return [
+                'value' => $row['nama_barang'],
+                'label' => $row['nama_barang'] . ' | ' . Utility::rupiah($row['harga_jual']).' | STOK : '.$row['stok'],
+                'id' => $row['kd_barang'],
+            ];
+        }, $rows));
+    }
+
+    public function actionUpdateharga(){
+        $kdBarang = Yii::$app->request->get('id');
+
+        $model = FileBarang::find()->where(['kd_barang'=>$kdBarang])->one();
+
+        return $this->renderPartial('popup_update_harga',[
+            'model'=>$model
+        ]);
+    }
+
+    public function actionSimpanupdateharga(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        try{
+            $kodebarang = Yii::$app->request->get('kodebarang');
+            $harga = Yii::$app->request->get('harga');
+            $diskon = (int) Yii::$app->request->get('diskon', 0);
+            $subtotal = 0;
+            $total = 0;
+
+            $model = FileBarang::find()->where(['kd_barang'=>$kodebarang])->one();
+
+            if($model){
+                $model->harga_jual = $harga;
+                if(!$model->save(false)){
+                    throw new Exception($this->formatErrors($model->getErrors()));
+                }
+            }else{
+                throw new Exception('Barang Tidak Ditemukan !');
+            }
+
+            $session = Yii::$app->session;
+            $arr_data = $session['datatransaksi'];
+
+            $arr_data[$kodebarang]['harga'] = $model->harga_jual;
+            $arr_data[$kodebarang]['total'] = $model->harga_jual*$arr_data[$kodebarang]['qty'];
+
+            $session['datatransaksi'] = $arr_data;
+
+            $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data, $diskon);
+
+            $return['data'] = $this->renderPartial('/site/data_transaksi',[
+                'datatransaksi'=>$arr_data,
+                'subtotal'=>$subtotal,
+                'diskon'=>$totalTransaksi['diskon'],
+                'total'=>$total
+            ]);
+
+            $return['success'] = 1;
+            $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+            $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+            $return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+            $return['hidsubtotal'] = $totalTransaksi['subtotal'];
+            $return['hidtotal'] = $totalTransaksi['total'];
+            $return['hiddiskon'] = $totalTransaksi['diskon'];
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+        
+
+        return $return;
+    }
+
+    public function actionCreatenewbarang(){
+        $kodebarang = Yii::$app->request->get('kodebarang','');
+
+        $model = new FileBarang;
+
+        return $this->renderPartial('popup_create_barang',[
+            'kodebarang'=>$kodebarang,
+            'model'=>$model
+        ]);
+    }
+
+    public function actionPopupcreatebarang(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+        $kodebarang = Yii::$app->request->post('kodebarang');
+        $namabarang = Yii::$app->request->post('namabarang');
+        $hargajual = Yii::$app->request->post('hargajual');
+        $stok = Yii::$app->request->post('stok', 0);
+
+        try {
+            $return = [];
+            $model = new FileBarang();
+            $model->kd_barang = $kodebarang;
+            $model->nama_barang = $namabarang;
+            $model->harga_beli = 0;
+            $model->harga_jual = $hargajual;
+            $model->lokasi = '-';
+            $model->stok = $stok;
+            $model->aktif = 1;
+            if($model->save()){
+                $update = KodeGenerate::find()->where('nama_alias = "BRG"')->one();
+
+                $update->urutan = $update->urutan + 1;
+                $update->save(false);
+
+                $return['success'] = 1;
+
+                $diskon = (int) Yii::$app->request->post('diskon', 0);
+                $subtotal = 0;
+                $total = 0;
+                $session = Yii::$app->session;
+
+                $arr_data = $session['datatransaksi'];
+                $arr_data[$model->kd_barang] = [
+                    'kodebarang'=>$model->kd_barang,
+                    'namabarang'=>$model->nama_barang,
+                    'qty'=>1,
+                    'harga'=>$model->harga_jual,
+                    'total'=>$model->harga_jual
+                ];
+
+                $session['datatransaksi'] = $arr_data;
+
+                $totalTransaksi = Utility::getTotalTransaksiPenjualan($arr_data, $diskon);
+
+                $return['data'] = $this->renderPartial('/site/data_transaksi',[
+                    'datatransaksi'=>$arr_data,
+                    'subtotal'=>$subtotal,
+                    'diskon'=>$totalTransaksi['diskon'],
+                    'total'=>$total
+                ]);
+
+
+                $return['subtotal'] = '<strong>'.Utility::rupiah($totalTransaksi['subtotal']).'</strong>';
+                $return['total'] = '<strong>'.Utility::rupiah($totalTransaksi['total']).'</strong>';
+                $return['diskon'] = '<strong>'.Utility::rupiah($totalTransaksi['diskon']).'</strong>';
+                $return['hidsubtotal'] = $totalTransaksi['subtotal'];
+                $return['hidtotal'] = $totalTransaksi['total'];
+                $return['hiddiskon'] = $totalTransaksi['diskon'];
+            }else{
+                throw new Exception($this->formatErrors($model->getErrors()));
+            }
+
+            
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+
+        return $return;
+    }
+
+    private function formatErrors($errors) {
+        $errorMessages = '<ul style="text-align: left;">';
+        foreach ($errors as $fieldName => $fieldErrors) {
+            foreach ($fieldErrors as $error) {
+                $errorMessages .= '<li>' . strtoupper($error) . '</li>';
+            }
+        }
+        $errorMessages .= '</ul>';
+        return $errorMessages;
     }
 }

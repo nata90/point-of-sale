@@ -59,7 +59,7 @@ class Utility extends Model
         return $kode_barang;
     }
 
-    function getUserIP(){
+    public static function getUserIP(){
         $client  = @$_SERVER['HTTP_CLIENT_IP'];
         $forward = @$_SERVER['HTTP_X_FORWARDED_FOR'];
         $remote  = $_SERVER['REMOTE_ADDR'];
@@ -82,5 +82,26 @@ class Utility extends Model
         }
 
         return $ip;
+    }
+
+    public static function getTotalTransaksiPenjualan($arrDataTransaksi, $diskon = 0){
+        $total = 0;
+        $subtotal = 0;
+        $diskon = max(0, (int)$diskon);
+        if($arrDataTransaksi){
+            foreach($arrDataTransaksi as $key=>$value){
+                $val = isset($value['total']) ? $value['total'] : (isset($value['total_harga']) ? $value['total_harga'] : 0);
+                $subtotal = $subtotal + (int)$val;
+            }
+            if ($diskon > $subtotal) {
+                $diskon = $subtotal;
+            }
+            $total = $subtotal - $diskon;
+        } else {
+            $diskon = 0;
+            $total = 0;
+        }
+
+        return ['total'=>$total, 'subtotal'=>$subtotal, 'diskon'=>$diskon];
     }
 }

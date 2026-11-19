@@ -48,16 +48,33 @@ use app\components\Utility;
         $Data .= $alignCenter1;
         $Data .= $jarakFont;
 
-        $Data .= $condensed4."\n";
-        $Data .= "Toko Taman Hati\n";
-        $Data .= "Kauman Pedan Klaten\n";
-        $Data .= "Nota Pembayaran\n";
-        $Data .= "------------------------------\n";
+        if (!isset($setting) || $setting === null) {
+            $setting = \app\models\SettingApp::find()->one();
+        }
+        $storeName = ($setting && !empty($setting->app_name)) ? strtoupper($setting->app_name) : 'TOKO TAMAN HATI';
+        $storeAddress = ($setting && !empty($setting->alamat)) ? strtoupper($setting->alamat) : 'KAUMAN PEDAN KLATEN';
+        $storeTelp = ($setting && !empty($setting->no_telp)) ? $setting->no_telp : '';
+        $storeEmail = ($setting && !empty($setting->email)) ? $setting->email : '';
 
-        $Data .= $jarakFont0;
         $Data .= $condensed4."\n";
+        $Data .= "------------------------------\n";
+        $Data .= $storeName."\n";
+        $Data .= $storeAddress."\n";
+        if (!empty($storeTelp)) {
+            $Data .= "TELP : ".$storeTelp."\n";
+        }
+        if (!empty($storeEmail)) {
+            $Data .= "EMAIL: ".$storeEmail."\n";
+        }
+        
+        $Data .= "------------------------------\n";
         $Data .= $alignCenter0;
-        $Data .= $jarakFont;
+        $Data .= "Faktur Penjualan\n";
+        $Data .= "No Faktur     : ".$no_transaksi."\n";
+        $Data .= "Tanggal       : ".date('d/m/Y')."\n";
+        $Data .= "------------------------------\n";
+        $Data .= $condensed4."\n";
+        $Data .= $jarakFont0;
 
         $all_total = 0;
         if($detail != null){
@@ -71,12 +88,25 @@ use app\components\Utility;
         }else{
                 $Data .= "Data Tidak ada\n";  
         }
+        $Data .= $jarakFont;
         
         
         $Data .= "------------------------------\n";
-        $Data .= "Total           ".Utility::rupiah($all_total)."\n";
+        if (!empty($header->diskon) && $header->diskon > 0) {
+            $Data .= "Subtotal        ".Utility::rupiah($all_total)."\n";
+            $Data .= "Diskon         -".Utility::rupiah($header->diskon)."\n";
+        }
+        $Data .= "Total           ".Utility::rupiah($header->total)."\n";
+        $Data .= "Jumlah Bayar    ".Utility::rupiah($header->jumlah_bayar)."\n";
+        $cashback = $header->jumlah_bayar - $header->total;
+        $Data .= "Kembali         ".Utility::rupiah($cashback)."\n";
         $Data .= "------------------------------\n";
-        $Data .= "Barang yang sudah dibeli tidak dapat dikembalikan\n";
+        $Data .= $alignCenter1;
+        $Data .= "BARANG YANG SUDAH DIBELI\n";
+        $Data .= "TIDAK DAPAT DITUKAR\n";
+        $Data .= "TERIMA KASIH\n";
+        $Data .= "ATAS KUNJUNGAN ANDA\n";
+        $Data .= $alignCenter0;
         $Data .= $condensed4."\n";
         $Data .= "\n";
         $Data .= "\n";

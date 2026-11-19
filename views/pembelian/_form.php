@@ -150,8 +150,8 @@ $this->registerJs(<<<JS
                     var head = 'Pembelian : '+v.nopembelian;
                     var msg = v.items;
 
-                    var socket = io.connect( 'http://'+ip_addr+':3000');
-                    socket.emit('notif',{name: head, message: msg});
+                    //var socket = io.connect( 'http://'+ip_addr+':3000');
+                    //socket.emit('notif',{name: head, message: msg});
 
                     location.replace(v.redirect);
                 }else{

@@ -28,9 +28,13 @@ class SettingController extends \yii\web\Controller
     }
 
     public function actionSimpansetting(){
-        $nama_app = $_POST['nama_app'];
-        $email = $_POST['email'];
-        $ip_addr = $_POST['ip_addr'];
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_RAW;
+
+        $nama_app = Yii::$app->request->post('nama_app');
+        $email = Yii::$app->request->post('email');
+        $ip_addr = Yii::$app->request->post('ip_addr');
+        $alamat = Yii::$app->request->post('alamat');
+        $no_telp = Yii::$app->request->post('no_telp');
 
         $model = SettingApp::findOne(1);
 
@@ -39,12 +43,17 @@ class SettingController extends \yii\web\Controller
 
         $model->app_name = $nama_app;
         $model->email = $email;
-        $model->ip_address = $ip_addr;
+        if ($ip_addr !== null) {
+            $model->ip_address = $ip_addr;
+        }
+        $model->alamat = $alamat;
+        $model->no_telp = $no_telp;
 
         if($model->save()) {
-            echo 'sukses';
+            return 'sukses';
+        } else {
+            return json_encode($model->getErrors());
         }
-
     }
 
 }

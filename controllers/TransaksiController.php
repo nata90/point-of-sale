@@ -2,6 +2,8 @@
 
 namespace app\controllers;
 
+use app\models\Modal;
+use app\models\Pengeluaran;
 use Yii;
 use app\models\DtTransaksi;
 use app\models\DtTransaksiSearch;
@@ -18,7 +20,6 @@ use yii2tech\spreadsheet\Spreadsheet;
 use yii\data\ArrayDataProvider;
 use yii\data\ActiveDataProvider;
 use app\components\Utility;
-use yii\web\Session;
 use kartik\mpdf\Pdf;
 use yii\helpers\Json;
 
@@ -35,10 +36,10 @@ class TransaksiController extends Controller
         return [
             'access' => [
                 'class' => AccessControl::className(),
-                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
+                'only' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','hitungtotalpenjualan'],
                 'rules' => [
                     [
-                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian'],
+                        'actions' => ['index','excelrekap','reportpenjualan','kelolapenjualan','kelolapembelian','deletepembelian','simpanpengeluaran','cetaknota','hitungtotalpenjualan','hitungpembayaran','laporankeuangan'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -59,10 +60,17 @@ class TransaksiController extends Controller
         $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
         $setting = SettingApp::find()->one();
 
+        $rupiah_total = Utility::rupiah(HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d')));
+        $diskon_total = Utility::rupiah(HdTransaksi::getTotalDiskonJual(date('Y-m-d'),date('Y-m-d')));
+        $qty_total = HdTransaksi::getTotalItemJual(date('Y-m-d'),date('Y-m-d'));
+
         return $this->render('index', [
             'searchModel' => $searchModel,
             'dataProvider' => $dataProvider,
-            'setting'=>$setting
+            'setting'=>$setting,
+            'rupiah_total'=>$rupiah_total,
+            'diskon_total'=>$diskon_total,
+            'qty_total'=>$qty_total
         ]);
     }
 
@@ -126,25 +134,75 @@ class TransaksiController extends Controller
      */
     public function actionDelete($id)
     {
-        $model = HdTransaksi::findOne($id);
-        $model->status_hapus = 1;
-        $model->tgl_hapus = date('Y-m-d H:i:s');
+        $transaction = Yii::$app->db->beginTransaction();
 
-        if($model->save()){
-            return $this->redirect(['kelolapenjualan']);
+        try {
+            $model = HdTransaksi::findOne($id);
+            $model->status_hapus = 1;
+            $model->tgl_hapus = date('Y-m-d H:i:s');
+
+            if($model->save(false)){
+                // Kembalikan stok barang yang sudah terjual
+                $this->kembalikanStokPenjualan($model->no_transaksi);
+                $transaction->commit();
+                return $this->redirect(['kelolapenjualan']);
+            }
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('error', $e->getMessage());
         }
 
+        return $this->redirect(['kelolapenjualan']);
+    }
+
+    /**
+     * Mengembalikan stok (utama + batch) untuk transaksi penjualan yang dibatalkan.
+     */
+    private function kembalikanStokPenjualan($no_transaksi)
+    {
+        $details = DtTransaksi::find()->where(['no_transaksi' => $no_transaksi])->all();
+
+        foreach ($details as $detail) {
+            $file_barang = \app\models\FileBarang::find()->where(['kd_barang' => $detail->kd_barang])->one();
+            if ($file_barang !== null) {
+                $file_barang->stok = (int) $file_barang->stok + (int) $detail->qty;
+                $file_barang->save(false);
+            }
+
+            $this->tambahStokBatch($detail->kd_barang, $detail->qty, $detail->id_stok_barang);
+        }
+    }
+
+    private function tambahStokBatch($kd_barang, $qty, $id_stok_barang = null)
+    {
+        if ($id_stok_barang) {
+            $batch = \app\models\FileStokBarang::findOne($id_stok_barang);
+            if ($batch !== null && $batch->kd_barang == $kd_barang) {
+                $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+                $batch->save();
+                return;
+            }
+        }
+
+        $batch = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->one();
+
+        if ($batch !== null) {
+            $batch->stok_akhir = (float) $batch->stok_akhir + (float) $qty;
+            $batch->save();
+        }
     }
 
     public function actionExcelrekap(){
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
 
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $dataProvider = $searchModel->searchReport(Yii::$app->request->queryParams);
 
         $exporter = new Spreadsheet([
             'dataProvider' => $dataProvider,
@@ -156,7 +214,13 @@ class TransaksiController extends Controller
                         return $model->no_transaksi;
                     },
                 ],
-                'kd_barang',
+                [
+                    'label'=>'Kode Barang',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return "`".$model->kd_barang;
+                    },
+                ],
                 [
                     'label'=>'Tanggal Transaksi',
                     'format'=>'raw',
@@ -186,6 +250,13 @@ class TransaksiController extends Controller
                         return $model->harga_satuan * $model->qty;
                     },
                 ],
+                [
+                    'label'=>'Diskon Transaksi',
+                    'format'=>'raw',
+                    'value'=>function($model){
+                        return (!empty($model->header->diskon) && $model->header->diskon > 0) ? $model->header->diskon : 0;
+                    },
+                ],
             ],
         ]);
 
@@ -196,7 +267,7 @@ class TransaksiController extends Controller
             [
                 'header' => 'LAPORAN PENJUALAN '.date('d/m/Y', strtotime($searchModel->start_date)).' - '.date('d/m/Y', strtotime($searchModel->end_date)),
                 'offset' => 0,
-                'length' => 6,
+                'length' => 7,
             ]
         ];
 
@@ -206,20 +277,22 @@ class TransaksiController extends Controller
     }
 
     public function actionReportpenjualan(){
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
         $searchModel->end_date = $session['end-date'];
 
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $setting = SettingApp::findOne(1);
+
+        $dataProvider = $searchModel->searchReport(Yii::$app->request->queryParams);
         $model = $dataProvider->getModels();
 
         // get your HTML raw content without any layouts or scripts
         $content = $this->renderPartial('report_penjualan_pdf', [
             'model' => $model,
-            'searchModel'=>$searchModel
+            'searchModel'=>$searchModel,
+            'setting'=>$setting
         ]);
         
         // setup kartik\mpdf\Pdf component
@@ -229,7 +302,7 @@ class TransaksiController extends Controller
             // A4 paper format
             'format' => Pdf::FORMAT_A4, 
             // portrait orientation
-            'orientation' => Pdf::ORIENT_PORTRAIT, 
+            'orientation' => Pdf::ORIENT_LANDSCAPE, 
             // stream to browser inline
             'destination' => Pdf::DEST_BROWSER, 
             // your html content input
@@ -238,12 +311,47 @@ class TransaksiController extends Controller
             // enhanced bootstrap css built by Krajee for mPDF formatting 
             'cssFile' => '@vendor/kartik-v/yii2-mpdf/src/assets/kv-mpdf-bootstrap.min.css',
             // any css to be embedded if required
-            'cssInline' => '.kv-heading-1{font-size:18px}', 
+            'cssInline' => '.kv-heading-1{font-size:18px}
+            body {
+                font-family: Arial, sans-serif;
+            }
+        
+            table {
+                width: 100%;
+                border-collapse: collapse;
+                margin-bottom: 20px;
+            }
+        
+            th, td {
+                border: none;
+                padding: 8px;
+                text-align: left;
+            }
+        
+            th {
+                background-color: #f2f2f2;
+                font-weight: bold;
+            }
+        
+            tr:nth-child(even) {
+                background-color: #f9f9f9;
+            }
+        
+            tr:hover {
+                background-color: #e2e2e2;
+            }
+        
+            caption {
+                caption-side: top;
+                font-size: 18px;
+                font-weight: bold;
+                margin: 10px 0;
+            }', 
              // set mPDF properties on the fly
-            'options' => ['title' => 'LAPORAN REPORT PENJUALAN'],
+            'options' => ['title' => 'LAPORAN PENJUALAN '.$setting->app_name],
              // call mPDF methods on the fly
             'methods' => [ 
-                'SetHeader'=>['LAPORAN REPORT PENJUALAN'], 
+                'SetHeader'=>['LAPORAN PENJUALAN '.strtoupper($setting->app_name)], 
                 'SetFooter'=>['{PAGENO}'],
             ]
         ]);
@@ -278,20 +386,88 @@ class TransaksiController extends Controller
     }
 
     public function actionDeletepembelian($id){
-        $model = HeaderPembelian::findOne($id);
+        $transaction = Yii::$app->db->beginTransaction();
 
-        $model->status_delete = 1;
-        $model->tgl_delete = date('Y-m-d H:i:s');
-        $model->save(false);
+        try {
+            $model = HeaderPembelian::findOne($id);
+
+            $model->status_delete = 1;
+            $model->tgl_delete = date('Y-m-d H:i:s');
+            $model->save(false);
+
+            // Kurangi stok yang masuk dari pembelian yang dihapus
+            $this->kurangiStokPembelian($model->id_pembelian);
+
+            $transaction->commit();
+        } catch (\Exception $e) {
+            $transaction->rollBack();
+            Yii::$app->session->setFlash('error', $e->getMessage());
+        }
 
         return $this->redirect(['kelolapembelian']);
+    }
+
+    /**
+     * Mengurangi stok (utama + batch) akibat pembelian yang dihapus.
+     */
+    private function kurangiStokPembelian($id_pembelian)
+    {
+        $details = \app\models\DetailPembelian::find()->where(['id_pembelian' => $id_pembelian])->all();
+
+        foreach ($details as $detail) {
+            $file_barang = \app\models\FileBarang::find()->where(['kd_barang' => $detail->kd_barang])->one();
+            if ($file_barang !== null) {
+                $file_barang->stok = max(0, (int) $file_barang->stok - (int) $detail->jumlah);
+                $file_barang->save(false);
+            }
+
+            $this->kurangiStokBatch($detail->kd_barang, (int) $detail->jumlah);
+        }
+    }
+
+    private function kurangiStokBatch($kd_barang, $qty)
+    {
+        $sisa = (float) $qty;
+        if ($sisa <= 0) {
+            return;
+        }
+
+        $batches = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['>', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        $sisa_batches = \app\models\FileStokBarang::find()
+            ->where(['kd_barang' => $kd_barang])
+            ->andWhere(['<=', 'tgl_ed', date('Y-m-d')])
+            ->andWhere(['>', 'stok_akhir', 0])
+            ->orderBy(['tgl_ed' => SORT_ASC])
+            ->all();
+
+        foreach (array_merge($batches, $sisa_batches) as $batch) {
+            if ($sisa <= 0) {
+                break;
+            }
+            if ((float) $batch->stok_akhir <= 0) {
+                continue;
+            }
+            if ((float) $batch->stok_akhir >= $sisa) {
+                $batch->stok_akhir = (float) $batch->stok_akhir - $sisa;
+                $sisa = 0;
+            } else {
+                $sisa = $sisa - (float) $batch->stok_akhir;
+                $batch->stok_akhir = 0;
+            }
+            $batch->save();
+        }
     }
 
     public function actionSendpenjualan(){
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
 
-        $session = new Session;
-        $session->open();
+        $session = Yii::$app->session;
 
         $searchModel = new DtTransaksiSearch();
         $searchModel->start_date = $session['start-date'];
@@ -392,10 +568,10 @@ class TransaksiController extends Controller
             ->setSubject('Message subject')
             ->setTextBody('Plain text content')
             ->setHtmlBody($html)
-            ->attach($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file)
+            ->attach(Yii::getAlias('@webroot') . '/' . $name_file)
             ->send();
 
-        unlink($_SERVER['DOCUMENT_ROOT'].'/pos/web/'.$name_file);
+        unlink(Yii::getAlias('@webroot') . '/' . $name_file);
         $rows['email'] = $setting->email;
 
         return $rows;
@@ -415,5 +591,265 @@ class TransaksiController extends Controller
         }
 
         throw new NotFoundHttpException(Yii::t('app', 'The requested page does not exist.'));
+    }
+
+    public function actionPengeluaran(){
+        $model = new Pengeluaran();
+
+        $pengeluaran_hari_ini = Pengeluaran::find()->where(['BETWEEN', 'tanggal', date('Y-m-d').' 00:00:00', date('Y-m-d').' 23:59:59'])->all();
+
+        return $this->render('pengeluaran', [
+            'model' => $model,
+            'pengeluaran_hari_ini'=>$pengeluaran_hari_ini
+        ]);
+    }
+
+    public function actionSimpanpengeluaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $deskripsi = Yii::$app->request->post('deskripsi');
+        $nilai = Yii::$app->request->post('nilai');
+
+        $return = [];
+        $model = new Pengeluaran();
+        $model->deskripsi = $deskripsi;
+        $model->nilai = $nilai;
+        $model->tanggal = date('Y-m-d H:i:s');
+        if($model->save()){
+            Yii::$app->session->setFlash('success', 'Pengeluaran '.$model->deskripsi.' Berhasil Disimpan');
+            $return['success'] = 1;
+        }else{
+            $return['success'] = 0;
+        }
+
+        return $return;
+    }
+
+    public function actionCetaknota(){
+        $id = Yii::$app->request->get('id');
+
+        $header = HdTransaksi::find()->where(['no_transaksi' => $id])->one();
+        if (!$header) {
+            $header = HdTransaksi::findOne($id);
+        }
+
+        if (!$header) {
+            throw new \yii\web\NotFoundHttpException("Transaksi {$id} tidak ditemukan.");
+        }
+
+        $detail = DtTransaksi::find()->where(['no_transaksi' => $header->no_transaksi, 'status_hapus' => 0])->all();
+        $setting = SettingApp::find()->one();
+
+        $content = $this->renderPartial('nota_pdf', [
+            'header' => $header,
+            'detail' => $detail,
+            'setting' => $setting,
+        ]);
+
+        $itemCount = count($detail);
+
+        // Hitung estimasi tinggi kertas 80mm dinamis agar pas 1 halaman continuous roll
+        $headerLines = 1; // Nama toko
+        if ($setting && !empty($setting->alamat)) {
+            $headerLines += max(1, substr_count($setting->alamat, "\n") + 1);
+        } else {
+            $headerLines += 1;
+        }
+        if ($setting && !empty($setting->no_telp)) {
+            $headerLines += 1;
+        }
+        if ($setting && !empty($setting->email)) {
+            $headerLines += 1;
+        }
+
+        $itemLines = 0;
+        foreach ($detail as $item) {
+            $nameLen = ($item->barang && !empty($item->barang->nama_barang)) ? mb_strlen($item->barang->nama_barang) : 10;
+            $nameLines = max(1, ceil($nameLen / 30));
+            $itemLines += $nameLines + 1; // baris nama + baris qty x harga & subtotal
+        }
+        if (empty($detail)) {
+            $itemLines = 2;
+        }
+
+        // Base height (mm): margins (8) + metadata (16) + summary (24) + dividers (16) + footer (20) + feed buffer (16)
+        $height = 100 + ($headerLines * 4.5) + ($itemLines * 5.5);
+        $height = max(130, (int) ceil($height));
+
+        $pdf = new Pdf([
+            'mode' => Pdf::MODE_UTF8,
+            'format' => [80, $height],
+            'orientation' => Pdf::ORIENT_PORTRAIT,
+            'destination' => Pdf::DEST_BROWSER,
+            'content' => $content,
+            'cssInline' => '
+                body {
+                    font-family: "Courier New", Courier, monospace;
+                    font-size: 10px;
+                    color: #000;
+                    margin: 0;
+                    padding: 0;
+                    line-height: 1.25;
+                }
+                .nota-wrapper {
+                    width: 100%;
+                    box-sizing: border-box;
+                }
+                .text-center { text-align: center; }
+                .text-right { text-align: right; }
+                .text-left { text-align: left; }
+                .bold { font-weight: bold; }
+                .header-title { font-size: 13px; font-weight: bold; margin-bottom: 2px; }
+                .header-sub { font-size: 8.5px; line-height: 1.25; color: #111; }
+                .divider { border-top: 1px dashed #000; margin: 4px 0; }
+                .meta-table { width: 100%; font-size: 9px; margin-bottom: 2px; border-collapse: collapse; }
+                .meta-table td { padding: 1px 0; }
+                .item-table { width: 100%; font-size: 9.5px; border-collapse: collapse; }
+                .item-table td { padding: 2px 0; vertical-align: top; }
+                .summary-table { width: 100%; font-size: 9.5px; border-collapse: collapse; }
+                .summary-table td { padding: 1.5px 0; }
+                .footer-text { font-size: 8.5px; text-align: center; margin-top: 6px; line-height: 1.3; }
+            ',
+            'marginLeft' => 3,
+            'marginRight' => 3,
+            'marginTop' => 4,
+            'marginBottom' => 4,
+            'filename' => 'Nota_' . $header->no_transaksi . '.pdf',
+            'options' => [
+                'title' => 'Nota Penjualan ' . $header->no_transaksi,
+            ],
+            'methods' => [
+                'SetHeader' => [''],
+                'SetFooter' => [''],
+            ],
+        ]);
+
+        return $pdf->render();
+    }
+
+    public function actionHitungtotalpenjualan(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $session = Yii::$app->session;
+
+        $start_date = date('Y-m-d', strtotime($session['start-date']));
+        $end_date = date('Y-m-d', strtotime($session['end-date']));
+
+        $return = [];
+
+        $return['rupiahtotal'] = Utility::rupiah(HdTransaksi::getTotalRupiahJual($start_date,$end_date));
+        $return['diskontotal'] = Utility::rupiah(HdTransaksi::getTotalDiskonJual($start_date,$end_date));
+        $return['qtytotal'] = HdTransaksi::getTotalItemJual($start_date,$end_date);
+
+        return $return;
+    }
+
+    public function actionHitungpembayaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        $jumlah_bayar = Yii::$app->request->get('jumlah_bayar');
+        $total_bayar = Yii::$app->request->get('total_bayar');
+
+        if($jumlah_bayar == 'pas'){
+            $jumlah_bayar = $total_bayar;
+        }
+
+        $kembali = (int)$jumlah_bayar - (int)$total_bayar;
+
+        $return = [];
+
+        $return['jumlahbayar'] = $jumlah_bayar;
+        $return['kembali'] = $kembali;
+
+        return $return;
+
+    }
+
+    public function actionModal(){
+        $model = new Modal();
+
+        $modal_hari_ini = Modal::find()->where(['tanggal'=>date('Y-m-d')])->one();
+
+        return $this->render('modal', [
+            'model' => $model,
+            'modal_hari_ini'=>$modal_hari_ini
+        ]);
+    }
+
+    public function actionSimpanmodal(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        try {
+
+            $keterangan = Yii::$app->request->post('keterangan');
+            $modal = Yii::$app->request->post('modal');
+
+            $return = [];
+            $model = Modal::find()->where(['tanggal'=>date('Y-m-d')])->one();
+            if($model == null){
+                $model = new Modal();
+            }
+            $model->keterangan = $keterangan;
+            $model->modal_awal = $modal;
+            $model->tanggal = date('Y-m-d');
+            if($model->save()){
+                Yii::$app->session->setFlash('success', 'Modal Awal Berhasil Disimpan');
+                $return['success'] = 1;
+            }else{
+                $return['success'] = 0;
+            }
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+
+        return $return;
+    }
+
+    public function actionDeletepengeluaran(){
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+
+        try {
+            $id = Yii::$app->request->get('id');
+
+            $return = [];
+            $model = Pengeluaran::findOne($id);
+            if($model->delete()){
+                Yii::$app->session->setFlash('success', 'Pengeluaran '.$model->deskripsi.' Berhasil Dihapus');
+                $return['success'] = 1;
+            }else{
+                $return['success'] = 0;
+            }
+        } catch (\Exception $e) {
+            $return['success'] = 0;
+            $return['msg'] = $e->getMessage();
+        }
+
+        return $return;
+    }
+
+    public function actionLaporankeuangan(){
+        $searchModel = new DtTransaksiSearch();
+        $searchModel->start_date = date('Y-m-d');
+        $searchModel->end_date = date('Y-m-d');
+        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
+        $setting = SettingApp::find()->one();
+
+        $modal_awal = Modal::getModalAwal(date('Y-m-d'));
+        $total_penjualan = HdTransaksi::getTotalRupiahJual(date('Y-m-d'),date('Y-m-d'));
+        $total_diskon = HdTransaksi::getTotalDiskonJual(date('Y-m-d'),date('Y-m-d'));
+        $pengeluaran = Pengeluaran::getTotalPengeluaran(date('Y-m-d'),date('Y-m-d'));
+        $keuntungan = $modal_awal + $total_penjualan - $pengeluaran;
+
+        return $this->render('laporan_keuangan', [
+            'searchModel' => $searchModel,
+            'dataProvider' => $dataProvider,
+            'setting'=>$setting,
+            'modal_awal'=>$modal_awal,
+            'total_penjualan'=>$total_penjualan,
+            'total_diskon'=>$total_diskon,
+            'pengeluaran'=>$pengeluaran,
+            'keuntungan'=>$keuntungan
+        ]);
     }
 }

@@ -23,9 +23,11 @@ class AppAsset extends AssetBundle
         'css/site.css',
         'css/ionicons.min.css',
         'css/googlefont.css',
+        'css/inter.css',
         'css/daterangepicker.css',
         'css/jquery.toast.css',
         'css/handsontable.min.css',
+        'css/theme.css',
     ];
     public $js = [
         'js/Chart.js',
@@ -33,13 +35,14 @@ class AppAsset extends AssetBundle
         'js/moment.min.js',
         'js/daterangepicker.js',
         'js/jquery.toast.js',
-        'js/socket.io.js',
-        'js/notif.js',
+        //'js/socket.io.js',
+        //'js/notif.js',
         'js/handsontable.full.min.js',
         'js/sweetalert.min.js',
     ];
     public $depends = [
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
+        'dmstr\web\AdminLteAsset',
     ];
 }

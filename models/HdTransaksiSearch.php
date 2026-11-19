@@ -17,7 +17,7 @@ class HdTransaksiSearch extends HdTransaksi
     public function rules()
     {
         return [
-            [['id', 'status_bayar', 'total', 'jumlah_bayar', 'status_hapus'], 'integer'],
+            [['id', 'status_bayar', 'total', 'jumlah_bayar', 'diskon', 'status_hapus'], 'integer'],
             [['no_transaksi', 'tgl_bayar', 'tgl_hapus'], 'safe'],
         ];
     }
@@ -63,6 +63,7 @@ class HdTransaksiSearch extends HdTransaksi
             'status_bayar' => $this->status_bayar,
             'total' => $this->total,
             'jumlah_bayar' => $this->jumlah_bayar,
+            'diskon' => $this->diskon,
             'status_hapus' => 0,
             'tgl_hapus' => $this->tgl_hapus,
         ]);

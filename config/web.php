@@ -5,7 +5,9 @@ $db = require __DIR__ . '/db.php';
 
 $config = [
     'id' => 'basic',
+    'name' => 'Warungku POS',
     'basePath' => dirname(__DIR__),
+    'runtimePath' => getenv('POS_RUNTIME_PATH') ?: (dirname(__DIR__) . '/runtime'),
     'bootstrap' => ['log'],
     'aliases' => [
         '@bower' => '@vendor/bower-asset',
@@ -38,18 +40,15 @@ $config = [
         ],
         'mailer' => [
             'class' => 'yii\swiftmailer\Mailer',
-            // send all mails to a file by default. You have to set
-            // 'useFileTransport' to false and configure a transport
-            // for the mailer to send real emails.
-            'useFileTransport' => false,
+            'useFileTransport' => empty(getenv('POS_SMTP_USER')),
             'transport' => [
                 'class' => 'Swift_SmtpTransport',
                 'encryption' => 'tls',
-                'host' => 'smtp.gmail.com',
-                'port' => '587',
-                'username' => 'rahanata9@gmail.com',
-                'password' => 'h0wd0y0uturnth1s0n',
-            ],  
+                'host' => getenv('POS_SMTP_HOST') ?: 'smtp.gmail.com',
+                'port' => getenv('POS_SMTP_PORT') ?: '587',
+                'username' => getenv('POS_SMTP_USER') ?: '',
+                'password' => getenv('POS_SMTP_PASS') ?: '',
+            ],
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -68,6 +67,10 @@ $config = [
                 "localhost",
                 "127.0.0.1"
             ],
+        ],
+        'assetManager' => [
+            'basePath' => getenv('POS_ASSETS_PATH') ?: '@webroot/assets',
+            'baseUrl' => '@web/assets',
         ],
         /*'view' => [
              'theme' => [
@@ -103,14 +106,14 @@ if (YII_ENV_DEV) {
     $config['modules']['debug'] = [
         'class' => 'yii\debug\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'],
     ];
 
     $config['bootstrap'][] = 'gii';
     $config['modules']['gii'] = [
         'class' => 'yii\gii\Module',
         // uncomment the following to add your IP if you are not connecting from localhost.
-        //'allowedIPs' => ['127.0.0.1', '::1'],
+        'allowedIPs' => ['*'],
     ];
 }
 
