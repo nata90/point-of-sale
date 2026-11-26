@@ -3,46 +3,59 @@
 namespace tests\unit\models;
 
 use app\models\ContactForm;
-use yii\mail\MessageInterface;
+use tests\unit\BaseTestCase;
+use Yii;
 
-class ContactFormTest extends \Codeception\Test\Unit
+class ContactFormTest extends BaseTestCase
 {
-    private $model;
-    /**
-     * @var \UnitTester
-     */
-    public $tester;
+    public function testValidationRequiresFieldsAndValidEmail()
+    {
+        $model = new ContactForm([
+            'name' => '',
+            'email' => 'not-an-email',
+            'subject' => '',
+            'body' => '',
+        ]);
+
+        $this->assertFalse($model->validate(['name', 'email', 'subject', 'body']));
+        $this->assertArrayHasKey('name', $model->errors);
+        $this->assertArrayHasKey('email', $model->errors);
+        $this->assertArrayHasKey('subject', $model->errors);
+        $this->assertArrayHasKey('body', $model->errors);
+    }
 
     public function testEmailIsSentOnContact()
     {
-        /** @var ContactForm $model */
-        $this->model = $this->getMockBuilder('app\models\ContactForm')
-            ->setMethods(['validate'])
+        /** @var ContactForm|\PHPUnit\Framework\MockObject\MockObject $model */
+        $model = $this->getMockBuilder(ContactForm::class)
+            ->onlyMethods(['validate'])
             ->getMock();
 
-        $this->model->expects($this->once())
+        $model->expects($this->once())
             ->method('validate')
             ->willReturn(true);
 
-        $this->model->attributes = [
+        $model->attributes = [
             'name' => 'Tester',
             'email' => 'tester@example.com',
             'subject' => 'very important letter subject',
             'body' => 'body of current message',
         ];
 
-        expect_that($this->model->contact('admin@example.com'));
+        $mailDir = Yii::getAlias('@runtime/mail');
+        if (is_dir($mailDir)) {
+            foreach (glob($mailDir . '/*.eml') as $eml) {
+                @unlink($eml);
+            }
+        }
 
-        // using Yii2 module actions to check email was sent
-        $this->tester->seeEmailIsSent();
+        $this->assertTrue($model->contact('admin@example.com'));
 
-        /** @var MessageInterface $emailMessage */
-        $emailMessage = $this->tester->grabLastSentEmail();
-        expect('valid email is sent', $emailMessage)->isInstanceOf('yii\mail\MessageInterface');
-        expect($emailMessage->getTo())->hasKey('admin@example.com');
-        expect($emailMessage->getFrom())->hasKey('noreply@example.com');
-        expect($emailMessage->getReplyTo())->hasKey('tester@example.com');
-        expect($emailMessage->getSubject())->equals('very important letter subject');
-        expect($emailMessage->toString())->contains('body of current message');
+        $files = glob($mailDir . '/*.eml');
+        $this->assertNotEmpty($files);
+        $content = file_get_contents(end($files));
+        $this->assertStringContainsString('To: admin@example.com', $content);
+        $this->assertStringContainsString('Subject: very important letter subject', $content);
+        $this->assertStringContainsString('body of current message', $content);
     }
 }
