@@ -1,0 +1,60 @@
+name: Unit Tests
+
+on:
+  push:
+    branches:
+      - development
+      - master
+  pull_request:
+    branches:
+      - development
+      - master
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  phpunit:
+    name: PHPUnit (PHP 7.4)
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup PHP 7.4 & PHPUnit 9.6
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '7.4'
+          extensions: mbstring, pdo, pdo_sqlite, sqlite3, gd, zip, intl, dom, xml, json, fileinfo
+          tools: composer:2.2, phpunit:9.6
+          coverage: none
+
+      - name: Get Composer cache directory
+        id: composer-cache
+        run: echo "dir=$(composer config cache-files-dir)" >> "$GITHUB_OUTPUT"
+
+      - name: Cache Composer packages
+        uses: actions/cache@v4
+        with:
+          path: ${{ steps.composer-cache.outputs.dir }}
+          key: ${{ runner.os }}-composer-${{ hashFiles('**/composer.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-composer-
+
+      - name: Prepare runtime directories
+        run: |
+          mkdir -p runtime web/assets
+          chmod 777 runtime web/assets
+
+      - name: Install dependencies
+        run: composer install --no-dev --no-interaction --prefer-dist --no-progress
+
+      - name: PHP syntax check (lint)
+        run: |
+          find components controllers models migrations tests -name '*.php' -print0 | xargs -0 -n1 php -l
+
+      - name: Run PHPUnit unit tests
+        run: phpunit --configuration phpunit.xml.dist --testdox

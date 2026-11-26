@@ -2,50 +2,74 @@
 
 namespace tests\unit\models;
 
+use app\models\AppUser;
 use app\models\LoginForm;
+use tests\unit\BaseTestCase;
+use Yii;
 
-class LoginFormTest extends \Codeception\Test\Unit
+class LoginFormTest extends BaseTestCase
 {
-    private $model;
-
-    protected function _after()
+    private function createUser($username = 'admin', $password = 'admin123')
     {
-        \Yii::$app->user->logout();
+        $user = new AppUser([
+            'username' => $username,
+            'password' => $password,
+            'name' => 'Admin Test',
+            'id_group' => 1,
+            'aktif' => 1,
+        ]);
+        $this->assertTrue($user->save());
+        return $user;
+    }
+
+    public function testLoginRequiresUsernameAndPassword()
+    {
+        $model = new LoginForm();
+
+        $this->assertFalse($model->validate());
+        $this->assertArrayHasKey('username', $model->errors);
+        $this->assertArrayHasKey('password', $model->errors);
     }
 
     public function testLoginNoUser()
     {
-        $this->model = new LoginForm([
+        $model = new LoginForm([
             'username' => 'not_existing_username',
             'password' => 'not_existing_password',
         ]);
 
-        expect_not($this->model->login());
-        expect_that(\Yii::$app->user->isGuest);
+        $this->assertFalse($model->login());
+        $this->assertTrue(Yii::$app->user->isGuest);
+        $this->assertArrayHasKey('password', $model->errors);
     }
 
     public function testLoginWrongPassword()
     {
-        $this->model = new LoginForm([
-            'username' => 'demo',
-            'password' => 'wrong_password',
+        $this->createUser('kasir', 'rahasia');
+
+        $model = new LoginForm([
+            'username' => 'kasir',
+            'password' => 'salah',
         ]);
 
-        expect_not($this->model->login());
-        expect_that(\Yii::$app->user->isGuest);
-        expect($this->model->errors)->hasKey('password');
+        $this->assertFalse($model->login());
+        $this->assertTrue(Yii::$app->user->isGuest);
+        $this->assertArrayHasKey('password', $model->errors);
     }
 
     public function testLoginCorrect()
     {
-        $this->model = new LoginForm([
-            'username' => 'demo',
-            'password' => 'demo',
+        $user = $this->createUser('kasir', 'rahasia');
+
+        $model = new LoginForm([
+            'username' => 'kasir',
+            'password' => 'rahasia',
+            'rememberMe' => true,
         ]);
 
-        expect_that($this->model->login());
-        expect_not(\Yii::$app->user->isGuest);
-        expect($this->model->errors)->hasntKey('password');
+        $this->assertTrue($model->login());
+        $this->assertFalse(Yii::$app->user->isGuest);
+        $this->assertEmpty($model->errors);
+        $this->assertEquals($user->id, Yii::$app->user->id);
     }
-
 }

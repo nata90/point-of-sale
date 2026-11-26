@@ -1,6 +1,11 @@
 <?php
-$db = require __DIR__ . '/db.php';
-// test database! Important not to run tests on production or development databases
-$db['dsn'] = 'mysql:host=localhost;dbname=yii2_basic_tests';
 
-return $db;
+$testDbPath = getenv('POS_TEST_DB_PATH');
+$dsn = ($testDbPath !== false && $testDbPath !== '')
+    ? 'sqlite:' . $testDbPath
+    : 'sqlite::memory:';
+
+return [
+    'class' => 'yii\db\Connection',
+    'dsn' => $dsn,
+];

@@ -200,7 +200,7 @@ DROP TABLE IF EXISTS `supplier`;
 
 CREATE TABLE `supplier` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `nama_supllier` varchar(100) NOT NULL DEFAULT '-',
+  `nama_supplier` varchar(100) NOT NULL DEFAULT '-',
   `alamat_supplier` varchar(100) NOT NULL DEFAULT '-',
   `no_telp` varchar(100) NOT NULL,
   `cp` varchar(100) NOT NULL,
@@ -209,7 +209,7 @@ CREATE TABLE `supplier` (
 
 /*Data for the table `supplier` */
 
-insert  into `supplier`(`id`,`nama_supllier`,`alamat_supplier`,`no_telp`,`cp`) values (1,'-','-','0','0');
+insert  into `supplier`(`id`,`nama_supplier`,`alamat_supplier`,`no_telp`,`cp`) values (1,'-','-','0','0');
 
 /*Table structure for table `urutan_transaksi` */
 
